@@ -1,0 +1,27 @@
+#ifndef STOS_HH
+#define STOS_HH
+
+#include <stack>
+#include <cstring>
+#include <string>
+#include <cstdio>
+#include <iostream>
+#include <cctype>
+#include "dana.hh"
+
+using namespace std;
+
+class Stos : private stack<string> {
+public:
+	Stos() {}
+	~Stos() {}
+	int rozmiar() { return size(); }
+	string szczyt() { return rozmiar() > 0 ? top() : "Stos jest pusty."; }
+	void usun() { if (rozmiar() > 0) pop(); else cout << "Stos jest pusty." << endl; }
+	void doloz(const string& x) { push(x); }
+	bool czyDwa() { return rozmiar() > 1; }
+	void czysc() { while (rozmiar() > 0) pop(); }
+	void drukuj();
+};
+
+#endif

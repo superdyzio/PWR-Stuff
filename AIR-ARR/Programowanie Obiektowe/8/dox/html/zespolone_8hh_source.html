@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Dawidek: Plik źródłowy zespolone.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Dawidek
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">zespolone.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="zespolone_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef ZESPOLONE_HH</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define ZESPOLONE_HH</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;cstdio&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;cctype&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;cstring&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;ctime&gt;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;iomanip&gt;</span>
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013 <span class="keyword">using namespace </span>std;
+<a name="l00014"></a>00014 
+<a name="l00026"></a><a class="code" href="class_zespolona.html">00026</a> <span class="keyword">class </span><a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona, która służy do przechowywania liczb zespolonych. Składa się ona z dwóch pó...">Zespolona</a> {
+<a name="l00027"></a>00027 <span class="keyword">public</span>:
+<a name="l00029"></a><a class="code" href="class_zespolona.html#abdab4e35500d137ddc79dee628b05939">00029</a>         <span class="keywordtype">float</span> <a class="code" href="class_zespolona.html#abdab4e35500d137ddc79dee628b05939" title="Część rzeczywista liczby zespolonej.">Re</a>;
+<a name="l00031"></a><a class="code" href="class_zespolona.html#a37f7c36b331b8c7a05ac7d847f2146ec">00031</a>         <span class="keywordtype">float</span> <a class="code" href="class_zespolona.html#a37f7c36b331b8c7a05ac7d847f2146ec" title="Część urojona liczby zespolonej.">Im</a>;
+<a name="l00033"></a><a class="code" href="class_zespolona.html#a29782d5aac11df83c652f6d68c23aed6">00033</a>         <span class="keywordtype">bool</span> <a class="code" href="class_zespolona.html#a29782d5aac11df83c652f6d68c23aed6" title="Zmienna przechowująca informację o możliwości dzielenia przez daną liczbę.">OK</a>;
+<a name="l00035"></a><a class="code" href="class_zespolona.html#a25a251162706c2ac29dfd156ae091893">00035</a>         <a class="code" href="class_zespolona.html#a25a251162706c2ac29dfd156ae091893" title="Konstruktor bezparametrowy, tworzy wyzerowany obiekt.">Zespolona</a>() { Re = Im = 0; }
+<a name="l00037"></a><a class="code" href="class_zespolona.html#a6afef0355948f36bc9339904d154ed71">00037</a>         <a class="code" href="class_zespolona.html#a6afef0355948f36bc9339904d154ed71" title="Konstruktor dwuparametrowy.">Zespolona</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y) { Re = x; Im = y; }
+<a name="l00043"></a><a class="code" href="class_zespolona.html#a59c21b12624cc5453ce96e6fe422c493">00043</a>         <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona, która służy do przechowywania liczb zespolonych. Składa się ona z dwóch pó...">Zespolona</a> <a class="code" href="symbole_8hh.html#a5bf618776d10e41103a7f411da3a37e2" title="Operator jednoargumentowy &#39;/+&#39;.">operator + </a>(<a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona, która służy do przechowywania liczb zespolonych. Składa się ona z dwóch pó...">Zespolona</a> <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa91fb0824da12f8bb3b74dd78fb13b63">a</a>) { <span class="keywordflow">return</span> <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona, która służy do przechowywania liczb zespolonych. Składa się ona z dwóch pó...">Zespolona</a>(Re+a.<a class="code" href="class_zespolona.html#abdab4e35500d137ddc79dee628b05939" title="Część rzeczywista liczby zespolonej.">Re</a>,Im+a.<a class="code" href="class_zespolona.html#a37f7c36b331b8c7a05ac7d847f2146ec" title="Część urojona liczby zespolonej.">Im</a>); }
+<a name="l00049"></a><a class="code" href="class_zespolona.html#a27907e827308cf1f0f428ac1d5b331ba">00049</a>         <span class="keywordtype">void</span> <a class="code" href="class_zespolona.html#a27907e827308cf1f0f428ac1d5b331ba" title="Funkcja dająca sprzężenie liczby zespolonej.">Sprzezenie</a> () { Im = -Im; }
+<a name="l00055"></a><a class="code" href="class_zespolona.html#a7cae9dc1c07bf1397feb74c10debfacf">00055</a>         <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona, która służy do przechowywania liczb zespolonych. Składa się ona z dwóch pó...">Zespolona</a> <a class="code" href="symbole_8hh.html#a8c125a9910b68482b7a95233f34d494e" title="Operator jednoargumentowy &#39;-&#39;.">operator - </a>(<a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona, która służy do przechowywania liczb zespolonych. Składa się ona z dwóch pó...">Zespolona</a> <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa91fb0824da12f8bb3b74dd78fb13b63">a</a>) { <span class="keywordflow">return</span> <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona, która służy do przechowywania liczb zespolonych. Składa się ona z dwóch pó...">Zespolona</a>(Re-a.<a class="code" href="class_zespolona.html#abdab4e35500d137ddc79dee628b05939" title="Część rzeczywista liczby zespolonej.">Re</a>,Im-a.<a class="code" href="class_zespolona.html#a37f7c36b331b8c7a05ac7d847f2146ec" title="Część urojona liczby zespolonej.">Im</a>); }
+<a name="l00061"></a><a class="code" href="class_zespolona.html#a268e3510ee2a0ce412b47efee5241d27">00061</a>         <span class="keywordtype">bool</span> operator == (<a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona, która służy do przechowywania liczb zespolonych. Składa się ona z dwóch pó...">Zespolona</a> <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa91fb0824da12f8bb3b74dd78fb13b63">a</a>) { <span class="keywordflow">return</span> ((Re == a.<a class="code" href="class_zespolona.html#abdab4e35500d137ddc79dee628b05939" title="Część rzeczywista liczby zespolonej.">Re</a>) &amp;&amp; (Im == a.<a class="code" href="class_zespolona.html#a37f7c36b331b8c7a05ac7d847f2146ec" title="Część urojona liczby zespolonej.">Im</a>)); }
+<a name="l00062"></a>00062 
+<a name="l00068"></a>00068         <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona, która służy do przechowywania liczb zespolonych. Składa się ona z dwóch pó...">Zespolona</a> <a class="code" href="symbole_8hh.html#ae59416860a4e092f654dea87eae1edcc" title="Operator dwuargumentowy &#39;*&#39;.">operator * </a>(<a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona, która służy do przechowywania liczb zespolonych. Składa się ona z dwóch pó...">Zespolona</a> <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa91fb0824da12f8bb3b74dd78fb13b63">a</a>);
+<a name="l00075"></a>00075         <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona, która służy do przechowywania liczb zespolonych. Składa się ona z dwóch pó...">Zespolona</a> <a class="code" href="symbole_8hh.html#add91838c8cb059b0e677588656d840c8" title="Operator dwuargumentowy &#39;/&#39;.">operator / </a>(<a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona, która służy do przechowywania liczb zespolonych. Składa się ona z dwóch pó...">Zespolona</a> <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa91fb0824da12f8bb3b74dd78fb13b63">a</a>);
+<a name="l00076"></a>00076 };
+<a name="l00077"></a>00077 
+<a name="l00083"></a>00083 <span class="keywordtype">void</span> <a class="code" href="liczba_8hh.html#a91f8f95affe7aa92e783aef5db29a1c3" title="Metoda zerująca zmienną typu double.">Zeruj</a>(<a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona, która służy do przechowywania liczb zespolonych. Składa się ona z dwóch pó...">Zespolona</a> &amp;x);
+<a name="l00089"></a>00089 ostream &amp; <a class="code" href="macierz_8hh.html#a6e35430a44ffb4c11b32d82c2038dd70" title="Przeciążenie operatora wypisywania dla klasy Macierz.">operator &lt;&lt; </a>(ostream &amp; wyj, <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona, która służy do przechowywania liczb zespolonych. Składa się ona z dwóch pó...">Zespolona</a> x);
+<a name="l00095"></a>00095 istream &amp; <a class="code" href="macierz_8hh.html#a294fd4185cd28d379eefdb275349c054" title="Przeciążenie operatora wczytywania dla klasy Macierz.">operator &gt;&gt; </a>(istream &amp; wej, <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona, która służy do przechowywania liczb zespolonych. Składa się ona z dwóch pó...">Zespolona</a> &amp; x);
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Mon Apr 29 2013 19:07:17 dla Dawidek programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

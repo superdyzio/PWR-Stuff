@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ja: Plik źródłowy macierz.cpp</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ja
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('macierz_8cpp.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">macierz.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="macierz_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="macierz_8hh.html" title="Moduł zawiera definicję klasy Macierz wraz z przeciążeniami wybranych operatorów. Klasa &#39;Macierz&#39; prz...">macierz.hh</a>&quot;</span>
+<a name="l00002"></a>00002 
+<a name="l00008"></a><a class="code" href="macierz_8cpp.html#a52adcde18c69db2486e571fa68e923c6">00008</a> ostream &amp; <a class="code" href="macierz_8hh.html#a52adcde18c69db2486e571fa68e923c6" title="Przeciążenie operatora wypisywania dla klasy Macierz.">operator &lt;&lt; </a>(ostream &amp; wyj, <a class="code" href="class_macierz.html" title="Definicja klasy &#39;Macierz&#39;.">Macierz</a> &amp; m) {
+<a name="l00009"></a>00009         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {
+<a name="l00010"></a>00010                 cout &lt;&lt; <span class="stringliteral">&quot;| &quot;</span>;
+<a name="l00011"></a>00011                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 3; j++) {
+<a name="l00012"></a>00012                         cout.width(5);
+<a name="l00013"></a>00013                         cout &lt;&lt; m(i,j) &lt;&lt; <span class="stringliteral">&quot;   &quot;</span>;
+<a name="l00014"></a>00014                 }
+<a name="l00015"></a>00015                 cout &lt;&lt; <span class="stringliteral">&quot; |&quot;</span> &lt;&lt; endl;
+<a name="l00016"></a>00016         }
+<a name="l00017"></a>00017         <span class="keywordflow">return</span> wyj;
+<a name="l00018"></a>00018 }
+<a name="l00019"></a>00019 
+<a name="l00020"></a><a class="code" href="macierz_8cpp.html#a4eda755fc28cd34805427bf0b566ff65">00020</a> istream &amp; <a class="code" href="macierz_8hh.html#a4eda755fc28cd34805427bf0b566ff65" title="Przeciążenie operatora wczytywania dla klasy Macierz.">operator &gt;&gt; </a>(istream &amp; wej,  <a class="code" href="class_macierz.html" title="Definicja klasy &#39;Macierz&#39;.">Macierz</a> &amp; m) {
+<a name="l00021"></a>00021         <span class="keywordtype">char</span> znak;
+<a name="l00022"></a>00022         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {
+<a name="l00023"></a>00023                 wej &gt;&gt; znak;    
+<a name="l00024"></a>00024                 <span class="keywordflow">if</span> (znak != <span class="charliteral">&#39;|&#39;</span>) {
+<a name="l00025"></a>00025                         wej.setstate(ios::failbit); 
+<a name="l00026"></a>00026                         <span class="keywordflow">return</span> wej;
+<a name="l00027"></a>00027                 }
+<a name="l00028"></a>00028                 <span class="keywordflow">else</span> {
+<a name="l00029"></a>00029                         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 3; j++) {
+<a name="l00030"></a>00030                                 wej &gt;&gt; m(i,j);
+<a name="l00031"></a>00031                                 <span class="keywordflow">if</span> (wej.fail()) <span class="keywordflow">return</span> wej;
+<a name="l00032"></a>00032                         }
+<a name="l00033"></a>00033                         wej &gt;&gt; znak;
+<a name="l00034"></a>00034                         <span class="keywordflow">if</span> (znak != <span class="charliteral">&#39;|&#39;</span>) {
+<a name="l00035"></a>00035                                 wej.setstate(ios::failbit); 
+<a name="l00036"></a>00036                                 <span class="keywordflow">return</span> wej;
+<a name="l00037"></a>00037                         }
+<a name="l00038"></a>00038                 }
+<a name="l00039"></a>00039         }
+<a name="l00040"></a>00040         <span class="keywordflow">return</span> wej;
+<a name="l00041"></a>00041 }
+<a name="l00042"></a>00042 
+<a name="l00043"></a><a class="code" href="macierz_8cpp.html#a5285480e7ba439d1d6050da5892d1462">00043</a> <a class="code" href="class_macierz.html" title="Definicja klasy &#39;Macierz&#39;.">Macierz</a> <a class="code" href="macierz_8hh.html#a5285480e7ba439d1d6050da5892d1462" title="Przeciążenie operatora mnożenia &#39;*&#39; dla działania Macierz X Macierz.">operator * </a>(<a class="code" href="class_macierz.html" title="Definicja klasy &#39;Macierz&#39;.">Macierz</a> <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa91fb0824da12f8bb3b74dd78fb13b63">a</a>, <a class="code" href="class_macierz.html" title="Definicja klasy &#39;Macierz&#39;.">Macierz</a> <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa06b03e4cd5c7c464c513a95a7fcf9bf">b</a>) {
+<a name="l00044"></a>00044         <a class="code" href="class_macierz.html" title="Definicja klasy &#39;Macierz&#39;.">Macierz</a> w;
+<a name="l00045"></a>00045         <span class="keywordtype">int</span> k;
+<a name="l00046"></a>00046         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {
+<a name="l00047"></a>00047                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 3; j++) {
+<a name="l00048"></a>00048                         w(i,j) = <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa91fb0824da12f8bb3b74dd78fb13b63">a</a>(i,k) * <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa06b03e4cd5c7c464c513a95a7fcf9bf">b</a>(k,j);
+<a name="l00049"></a>00049                         k = 0;
+<a name="l00050"></a>00050                         <span class="keywordflow">for</span> (k = 1; k &lt; 3; k++) {
+<a name="l00051"></a>00051                                 w(i,j) = w(i,j) + ( <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa91fb0824da12f8bb3b74dd78fb13b63">a</a>(i,k) * <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa06b03e4cd5c7c464c513a95a7fcf9bf">b</a>(k,i) );
+<a name="l00052"></a>00052                         }
+<a name="l00053"></a>00053                 }
+<a name="l00054"></a>00054         }
+<a name="l00055"></a>00055         <span class="keywordflow">return</span> w;
+<a name="l00056"></a>00056 }
+<a name="l00057"></a>00057                 
+<a name="l00058"></a><a class="code" href="macierz_8cpp.html#a7663239456df7dcbb08535e9b796660b">00058</a> <a class="code" href="typ_8hh.html#a6bd1e6fed9c87b2e6af0cd3eac4cf12f">TYP</a> <a class="code" href="macierz_8hh.html#a7663239456df7dcbb08535e9b796660b" title="Funkcja wyliczająca wyznacznik macierzy.">det</a>(<a class="code" href="class_macierz.html" title="Definicja klasy &#39;Macierz&#39;.">Macierz</a> m) {
+<a name="l00059"></a>00059         <a class="code" href="typ_8hh.html#a6bd1e6fed9c87b2e6af0cd3eac4cf12f">TYP</a> wynik = <a class="code" href="liczba_8hh.html#a9f00901b0352e2e70919b56533206d30">Zeruj</a>(wynik);
+<a name="l00060"></a>00060         <span class="keywordtype">int</span> pom1, pom2;
+<a name="l00061"></a>00061         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {
+<a name="l00062"></a>00062                 pom1 = (i+1) % 3;
+<a name="l00063"></a>00063                 pom2 = (i+2) % 3;
+<a name="l00064"></a>00064                 wynik = wynik + ( m(0,i) * m(1,pom1) * m(2,pom2) );
+<a name="l00065"></a>00065         }       
+<a name="l00066"></a>00066         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {
+<a name="l00067"></a>00067                 pom1 = (i+1) % 3;
+<a name="l00068"></a>00068                 pom2 = (i+2) % 3;
+<a name="l00069"></a>00069                 wynik = wynik - ( m(0,pom2) * m(1,pom1) * m(2,i) );
+<a name="l00070"></a>00070         }
+<a name="l00071"></a>00071         <span class="keywordflow">return</span> wynik;
+<a name="l00072"></a>00072 } 
+</pre></div></div><!-- contents -->
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="macierz_8cpp.html">macierz.cpp</a>      </li>
+
+    <li class="footer">Wygenerowano Sun Apr 28 2013 19:16:11 dla ja programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

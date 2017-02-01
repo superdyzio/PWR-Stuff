@@ -1,0 +1,10 @@
+#include "liczba.hh"
+
+/*!
+ *\file
+ *\brief	Plik zawiera implementacje metod z pliku 'liczba.hh'.
+*/
+
+double Zeruj() {
+	return 0;
+}

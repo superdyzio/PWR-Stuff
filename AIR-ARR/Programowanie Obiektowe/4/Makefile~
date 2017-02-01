@@ -1,0 +1,32 @@
+
+KOM=g++
+
+__start__: zespolone
+	./zespolone
+
+zespolone: obj obj/LZespolone.o obj/testy.o obj/main.o
+	$(KOM) -Wall -o zespolone obj/LZespolone.o obj/testy.o obj/main.o
+
+obj/LZespolone.o: inc/LZespolone.hh src/LZespolone.cpp
+	$(KOM) -c -Wall -pedantic -iquote inc -o obj/LZespolone.o inc/LZespolone.hh src/LZespolone.cpp
+
+obj/testy.o: inc/testy.hh src/testy.cpp
+	$(KOM) -c -Wall -pedantic -iquote inc -o obj/testy.o inc/testy.hh src/testy.cpp
+
+obj/main.o: src/main.cpp
+	$(KOM) -c -Wall -pedantic -iquote inc -o obj/main.o src/main.cpp
+
+obj:
+	mkdir obj
+
+clean:
+	rm -f obj/* zespolone
+
+help:
+	@echo
+	@echo  " Dostarczony plik Makefile pozwala wywolac polecenie make"
+	@echo  " w nastepujacy sposob:"
+	@echo  
+	@echo  "  make        - powoduje kompilacje, konsolidacje i uruchomienie programu,"
+	@echo  "  make clean  - powoduj usuniecie produktow komilacji i konsolidacji."
+	@echo

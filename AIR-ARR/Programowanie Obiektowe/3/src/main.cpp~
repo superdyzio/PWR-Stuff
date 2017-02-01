@@ -1,0 +1,7 @@
+#include "przeciazenia.hh"
+
+int main(){
+	Konkurs();
+	return 0;
+}
+	

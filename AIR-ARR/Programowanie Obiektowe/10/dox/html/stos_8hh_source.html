@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>okidoki: Plik źródłowy stos.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">okidoki
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">stos.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="stos_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef STOS_HH</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define STOS_HH</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;cstdio&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;cctype&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;cstring&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;ctime&gt;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;iomanip&gt;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;stack&gt;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="zespolone_8hh.html" title="Plik zawierający definicję klasy Zespolona oraz przeciążenia potrzebnych operatorów.">zespolone.hh</a>&quot;</span>
+<a name="l00014"></a>00014 
+<a name="l00020"></a>00020 <span class="keyword">using namespace </span>std;
+<a name="l00021"></a>00021 
+<a name="l00025"></a><a class="code" href="class_stos.html">00025</a> <span class="keyword">class </span><a class="code" href="class_stos.html" title="Definicja klasy Stos dziedziczącej po klasie stack. Przystosowana jest ona do obiektów typu Zespolona...">Stos</a> : <span class="keyword">public</span> stack&lt;Zespolona&gt; {
+<a name="l00026"></a>00026 <span class="keyword">public</span>: 
+<a name="l00028"></a><a class="code" href="class_stos.html#a798736ba16bbbdfbee71b8cbf7353964">00028</a>         <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a> *<a class="code" href="class_stos.html#a798736ba16bbbdfbee71b8cbf7353964" title="Wskaźnik na zmienną typu Zespolona, przechowującą początek stosu.">pocz</a>;
+<a name="l00030"></a><a class="code" href="class_stos.html#a1de3b50386d5dfb56ddece17d0ea2389">00030</a>         <a class="code" href="class_stos.html#a1de3b50386d5dfb56ddece17d0ea2389" title="Konstuktor bezparametrowy, ustawia początek stosu na NULL.">Stos</a>() { pocz = NULL; }
+<a name="l00032"></a><a class="code" href="class_stos.html#a33cae3a366710abadcb0a924e549fbda">00032</a>         <a class="code" href="class_stos.html#a33cae3a366710abadcb0a924e549fbda" title="Konstruktor jednoargumentowy.">Stos</a>(<a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a> &amp;x) { pocz = &amp;x; }
+<a name="l00034"></a><a class="code" href="class_stos.html#af9a198e2540e18adcc0b5259105fd78e">00034</a>         <a class="code" href="class_stos.html#af9a198e2540e18adcc0b5259105fd78e" title="Destruktor dla klasy Stos.">~Stos</a>() {};
+<a name="l00036"></a>00036         <span class="keywordtype">void</span> zamien();
+<a name="l00038"></a>00038         <span class="keywordtype">void</span> duplikuj();
+<a name="l00040"></a>00040         <span class="keywordtype">void</span> wyswietl();
+<a name="l00042"></a>00042         <span class="keywordtype">void</span> dodaj();
+<a name="l00044"></a>00044         <span class="keywordtype">void</span> odejmij();
+<a name="l00046"></a>00046         <span class="keywordtype">void</span> mnoz();
+<a name="l00048"></a>00048         <span class="keywordtype">void</span> dziel();
+<a name="l00050"></a>00050         <span class="keywordtype">void</span> usun();
+<a name="l00052"></a><a class="code" href="class_stos.html#a8d1ee4fd01825371ef14b8a7c43506f4">00052</a>         <span class="keywordtype">void</span> <a class="code" href="class_stos.html#a8d1ee4fd01825371ef14b8a7c43506f4" title="Bezargumentowa funkcja ustawiająca notację wykładniczą na wyjście programu.">wyjNotWyk</a>() { <a class="code" href="class_zespolona.html#a2f1207edbaa93b450700fba5d21dc5de" title="Pole statyczne przechowujące informację o tym czy liczby zespolone mają być wypisywane w notacji wykł...">Zespolona::NotacjaWykWyj</a> = <span class="keyword">true</span>; }
+<a name="l00054"></a><a class="code" href="class_stos.html#a3d570a1c023a09ba99a8c93e5c9bebc0">00054</a>         <span class="keywordtype">void</span> <a class="code" href="class_stos.html#a3d570a1c023a09ba99a8c93e5c9bebc0" title="Bezargumentowa funkcja ustawiająca notację tradycyjną na wyjście programu.">wyjNotTrad</a>() { <a class="code" href="class_zespolona.html#a2f1207edbaa93b450700fba5d21dc5de" title="Pole statyczne przechowujące informację o tym czy liczby zespolone mają być wypisywane w notacji wykł...">Zespolona::NotacjaWykWyj</a> = <span class="keyword">false</span>; }
+<a name="l00056"></a><a class="code" href="class_stos.html#a4bd2869b5afdad3abb20f4a5f7998966">00056</a>         <span class="keywordtype">void</span> <a class="code" href="class_stos.html#a4bd2869b5afdad3abb20f4a5f7998966" title="Bezargumentowa funkcja ustawiająca notację wykładniczą na wejście programu.">wejNotWyk</a>() { <a class="code" href="class_zespolona.html#a476c3e310edca2caccf098b716e56138" title="Pole statyczne przechowujące informację o tym czy liczby zespolone mają być wczytywane w notacji wykł...">Zespolona::NotacjaWykWej</a> = <span class="keyword">true</span>; }
+<a name="l00058"></a><a class="code" href="class_stos.html#a294e0476c17db301073c87016e186fcb">00058</a>         <span class="keywordtype">void</span> <a class="code" href="class_stos.html#a294e0476c17db301073c87016e186fcb" title="Bezargumentowa funkcja ustawiająca notację tradycyjną na wejśćie programu.">wejNotTrad</a>() { <a class="code" href="class_zespolona.html#a476c3e310edca2caccf098b716e56138" title="Pole statyczne przechowujące informację o tym czy liczby zespolone mają być wczytywane w notacji wykł...">Zespolona::NotacjaWykWej</a> = <span class="keyword">false</span>; }
+<a name="l00060"></a>00060         <span class="keywordtype">void</span> czysc();
+<a name="l00061"></a>00061 };
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Mon May 13 2013 18:27:05 dla okidoki programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Zeruj",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Macierz::det",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_macierz.html#ad549218e7760f652fae7880f3a795bf9",tooltip="Funkcja wyliczająca wyznacznik macierzy."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Uklad::Rozwiaz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_uklad.html#a020737e587ee13154b1d0c9aca2fa3d2",tooltip="Funkcja ma za zadanie rozwiązać układ równań Cramera."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#ac4c0f8a8146b128f1b8f920e3a9c3b1e"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Wektor::Wektor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_wektor.html#a7b4a28e8d4e8de72cf148e5c5479e212",tooltip="Konstruktor bezparametrowy. Tworzy wyzerowany obiekt."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Wektor::Zero",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_wektor.html#a6d72cdc59eeb2247297a063f04f987ce"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="operator*",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uklad_8hh.html#afca98edd1b16a6e9eee2663b6b8b5ac0",tooltip="Operator dwuargumentowy &#39;*&#39;, w tym miejscu służący do mnożenia macierzy przez wektor."];
+}

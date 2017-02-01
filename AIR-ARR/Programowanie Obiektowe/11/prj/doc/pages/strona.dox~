@@ -1,0 +1,13 @@
+/*!
+\mainpage	Super program.
+\author		Dawid Perdek
+\date		20.05.2013
+\version	1.1
+
+\brief		Fajny program, robi wszystko. Kalkulator liczb zespolonych. Pozwala na wprowadzanie bezpośrednio liczb lub nazw zmiennych, 
+		którym można przypisywać wartości. Zlicza ilość wystąpień każdej z takich zmiennych. Umożliwia wykonywanie czterech 
+		podstawowych operacji arytmetycznych na liczbach zespolonych.
+
+\img html "Diagram1.png" DIAGRAMY
+
+*/

@@ -1,0 +1,345 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+#include <stdlib.h>
+#define MAX 512                /* MAX to maksymalny wymiar obrazka w pikselach (maksymalny wymiar tablicy) */
+#define DL_LINII 80            /* DL_LINII to maksymalna dlugosc linii jaka mozna wczytaj jednorazowo z pliku */
+
+
+/* PRE: Funkcja czytaj ma za zadanie wczytanie obrazu z pliku do tablicy na ktorej pozniej program wykonuje operacje. W przypadku wystapienia jakiegokolwiek
+bledu funkcja zwroci 0 i wypisany zostanie odpowiedni komunikat o bledzie, a jesli wszystko pojdzie bezproblemowo zwrocony zostanie iloczyn wymiarow obrazu.
+Argumenty wymx i wymy reprezentuja wymiary obrazka w pikselach, natomiast szarosci to ilosc odcieni szarosci danego obrazka. Tablica obraz_pgm to miejsce 
+zapisu wczytanego obrazka z pliku *p. Argumenty sa przekazywane przez wskazniki, aby dokonane zmiany byly widoczne poza funkcja.   */
+
+int czytaj(FILE *p, int obraz_pgm[][MAX], int *wymx, int *wymy, int *szarosci)
+{
+  char s[DL_LINII];
+  int znak, koniec=0, i, j;
+  if (p==NULL)                                        /* sprawdzenie czy podano prawidlowy uchwyt pliku */
+    {
+      fprintf(stderr,"Blad: Nie podano uchwytu do pliku.\n");
+      return 0;
+    }
+  if (fgets(s,DL_LINII,p)==NULL)
+    koniec=1;
+  if ( (s[0]!='P') || (s[1]!='2') || koniec)
+    {  
+      fprintf(stderr,"Blad: To nie jest plik PGM.\n");        /* sprawdzenie numeru magicznego - powinno byc P2 */
+      return 0;
+    }
+  do {
+    if ((znak=fgetc(p))=='#')
+      {						
+	if (fgets(s,DL_LINII,p)==NULL)                  /* pominiecie komentarzy */
+	  koniec=1;
+      }
+    else ungetc(znak,p);
+  } while (!koniec && znak=='#');
+  if ( (fscanf(p,"%d",wymx)!=1) || (fscanf(p,"%d",wymy)!=1) || (fscanf(p,"%d",szarosci)!=1) )
+    {                                                   /* wprowadzilem tu zmiane opisana w sprawozdaniu */
+      fprintf(stderr,"Blad: Brak wymiarow obrazu lub liczby stopni szarosci.\n");   /* pobranie wymiarow oraz liczby odcieni szarosci */
+      return 0;
+    }
+  if ( (*wymx<0) || (*wymx>MAX) || (*wymy<0) || (*wymy>MAX) )   /* druga wprowadzona poprawka */
+    {
+      fprintf(stderr,"Blad: Bledne wymiary obrazu.\n");              /* sprawdzenie poprawnosci wymiarow */
+      return 0;
+    }
+  for (i=0; i<*wymy; i++)
+    for (j=0; j<*wymx; j++)                                   /* pobranie obrazu i zapisanie go w tablicy obraz_pgm */
+      if (fscanf(p,"%d",&(obraz_pgm[i][j]))!=1)
+	{
+	  fprintf(stderr,"Blad: Niewlasciwe wymiary obrazu.\n");
+	  return 0;
+	}
+  return (*wymx)*(*wymy);
+}
+
+/* POST: Jesli w czasie dzialania funkcji wystapil jakis blad, zwrocone zostalo 0, a funkcja przerwana po jego napotkaniu. Jezeli nie bylo bledu zwrocony
+zostanie iloczyn wymiarow obrazu, ktory w wyniku dzialania funkcji zostal zapisany w tablicy obraz_pgm.   */
+
+
+/* PRE: Funkcja ta sluzy do wyswietlania obrazu o zadanej nazwie za pomoca programu 'display'. Przyjmuje jeden argument typu string, bedacy nazwa pliku z
+obrazem do wyswietlenia.   */
+
+void wyswietl(char *n_pliku)
+{
+  char polecenie[1024];
+  strcpy(polecenie,"display ");
+  strcat(polecenie,n_pliku);
+  strcat(polecenie," &");
+  printf("%s\n",polecenie);
+  system(polecenie);
+}
+
+/* POST: Funkcja nie zwraca zadnej wartosci. W wyniku jej dzialania w nowym oknie otworzy sie podglad obrazu.  */
+
+
+/* PRE: Funkcja przyjmuje jako argumenty wskaznik do pliku, tablice z zapisanym obrazem (w ktorym sa uwzglednione efekty wywolywanych przez nas operacji),
+   wymiary obrazu (wymx, wymy) oraz liczbe odcienie szarosci. Funkcja ma za zadanie zapisac do nowego pliku (lub nadpisac stary plik) obraz w formacie pgm. */
+
+int zapisz(FILE *p, int obraz_pgm[][MAX], int wymx, int wymy, int szarosci)
+{
+  char s[DL_LINII];    /* lancuch pomocniczy sluzacy do wprowadzania danych do pliku */
+  int znak, koniec=0, i, j;
+  if (p==NULL)
+    {
+      fprintf(stderr,"Blad: Nie podano uchwytu do pliku.\n");  /* sprawdzenie czy podano prawidlowy uchwyt pliku */
+      return 0;
+    }
+  fputs("P2\n",p);     /* wpisanie na poczatek numeru magicznego */
+  sprintf(s,"%d ",wymx);  /* konwersja int na string - wykonywana przed wprowadzeniem kazdej liczby do pliku */
+  fputs(s,p);
+  sprintf(s,"%d\n",wymy);
+  fputs(s,p);                 /* wprowadzanie do pliku kolejno wymiarow obrazu w jednej linii oddzielonych spacja, a ponizej liczby odcieni szarosci */
+  sprintf(s,"%d\n",szarosci);
+  fputs(s,p);
+  for (i=0; i<wymy; i++)
+    {
+      for (j=0; j<wymx; j++)
+	{
+	  sprintf(s,"%d ",obraz_pgm[i][j]);   /* konwersja int na string wartosci danego piksela */
+	  fputs(s,p);                         /* wprowadzenie piksela do pliku */
+	}
+      fputs("\n",p);                        /* koniec wiersza, przejscie do nowego w pliku */
+    }
+  return wymx*wymy;
+}
+
+/* POST: Funkcja zwraca 0 w przypadku wystapienia bledu. W przeciwnym razie zwraca wartosc iloczynu wymiarow obrazu, a wynikiem jej dzialania jest powstanie 
+   (lub nadpisanie pierwotnego) pliku z obrazem, w ktorym widoczne sa efekty naszych poprzednich dzialan - np. progowanie. */
+
+
+/* PRE: Funkcja  przyjmuje jako argumenty tablice z zapisanym obrazem, jego wymiary (wymx, wymy) oraz liczbe odcieni szarosci. Sluzy do zmienienia wartosci w 
+tablicy tak, aby zapisany w niej byl negatyw przyjetego obrazu. */
+
+void negatyw(int obraz_pgm[][MAX], int wymx, int wymy, int szarosci)
+{
+  int i,j;
+  for (i=0; i<wymy; i++)
+    for (j=0; j<wymx; j++)
+      obraz_pgm[i][j]=szarosci-obraz_pgm[i][j];
+}
+
+/* POST: Funkcja nie zwraca zadnej wartosci, a w wyniku jej dzialania w tablicy obraz_pgm zapisany zostaje negatyw obrazu sprzed wywolania funkcji.   */
+
+
+/* PRE: Funkcja przyjmuje jako argumenty tablice z zapisanym obrazem, jego wymiary (wymx, wymy), liczbe odcieni szarosci oraz podawany przez uzytkownika prog,
+reprezentowany przez parametr prog. Funkcja zmienia wartosci w tablicy tak, ze piksele jasniejsze niz wartosc prog zmieniane sa w biale, natomiast pozostale
+na czarne. Wprowadzana wartosc prog moze byc dowolna liczba calkowita. */
+
+void progowanie(int obraz_pgm[][MAX], int wymx, int wymy, int szarosci, int prog)
+{
+  int i,j;
+  for (i=0; i<wymy; i++)
+    for (j=0; j<wymx; j++)
+      if (obraz_pgm[i][j]>prog)
+	obraz_pgm[i][j]=szarosci;
+      else obraz_pgm[i][j]=0;
+}
+
+/* POST: Wynik dzialania funkcji zalezy od parametru prog. Jesli wartosc prog bedzie mniejsza od 0 lub jemu rowna, wszystkie piksele stana sie biale, a jesli 
+bedzie wieksza lub rowna liczbie odcieni szarosci to wszystkie piksele stana sie czarne. Jesli jednak prog bedzie zawieralo sie w przedziale otwartym od 0 do
+szarosci to zmiany wartosci w tablicy odbeda sie zgodnie z opisem w specyfikacji PRE. */
+
+
+/* PRE: Funkcja przyjmuje jako argumenty tablice z zapisanym obrazem, jego wymiary (wymx, wymy) oraz liczbe odcieni szarosci. Jej zadaniem jest przyciemnienie
+lub rozjasnienie poszczegolnych pikseli ze wzgledu na piksele sasiednie. */
+
+void konturowanie(int obraz_pgm[][MAX], int wymx, int wymy, int szarosci)
+{
+  int i,j, wynik;
+  for (i=0; i<wymy-1; i++)
+    for (j=0; j<wymx-1; j++)
+      {               /* jesli piksel mocno rozni sie od dwoch sasiednich to zmienna pomocnicza wynik przyjmie wartosc wieksza od liczby odcienie szarosci */
+	wynik=abs(obraz_pgm[i+1][j]-obraz_pgm[i][j])+abs(obraz_pgm[i][j+1]-obraz_pgm[i][j]);
+	if (wynik>szarosci)          /* w opisanym wyzej przypadku przyjmujemy dla danego piksela wartosc maksymalna, czyli kolor bialy */
+	  obraz_pgm[i][j]=szarosci;
+	else obraz_pgm[i][j]=wynik;   /* w przeciwnym razem przypisujemy mu wartosc zmiennej wynik  */
+      }
+  for (i=0; i<wymy; i++)
+    obraz_pgm[i][wymx-1]=0;  /* porownania pikseli odbywaja sie z pikselem po prawej i pikselem nizej, trzeba zatem skrajny dolny wiersz */
+  for (j=0; j<wymx; j++)     /* oraz skrajna prawa kolumne wypelnic na czarno                                                            */
+    obraz_pgm[wymy-1][j]=0;  
+}
+
+/* POST: W wyniku dzialania funkcji w tablicy obraz_pgm zapisany zostje wynik konturowania obrazu zapisanego w niej przed wywolaniem funkcji. */
+
+
+/* PRE: Funkcja przyjmuje jako argumenty tablice w ktorej zapisany jest obraz oraz jego wymiary (wymx, wymy). Jej zadaniem jest przefiltrowanie obrazu
+   przy uzyciu filtra usredniajacego ze wzmocnieniem. Filtr mozna latwo zmienic poprzez zmiane wartosci tablicy w. */
+
+void filtr(int obraz_pgm[][MAX], int wymx, int wymy)
+{
+  int i,j;
+  int w[9]={1,1,1,1,2,1,1,1,1};  /* tablica wspolczynnikow w formie jednowymiarowej (wiersz po wierszu) */
+  for (i=1; i<wymy-1; i++)
+    for (j=1; j<wymx-1; j++)
+      obraz_pgm[i][j] = (w[0]*obraz_pgm[i-1][j-1] + w[1]*obraz_pgm[i-1][j] + w[2]*obraz_pgm[i-1][j+1]
+	               + w[3]*obraz_pgm[i][j-1] + w[4]*obraz_pgm[i][j] + w[5]*obraz_pgm[i][j+1]
+			 + w[6]*obraz_pgm[i+1][j-1] + w[7]*obraz_pgm[i+1][j] + w[8]*obraz_pgm[i+1][j+1])/(w[0]+w[1]+w[2]+w[3]+w[4]+w[5]+w[6]+w[7]+w[8]);
+  /* piksel(i,j) przyjmuje wartosc zgodnie ze wzorem - jego sasiednie piksele sa przemnozone przez odpowiednie wspolczynniki, a nastepnie calosc 
+     znormalizowana poprzez podzielenie przez sume wspolczynnikow */
+}
+
+/* POST: W wyniku dzialania funkcji otrzymujemy, zapisany w tablicy, przefiltrowany obraz. Funkcja nie zwraca zadnej wartosci. */
+
+
+/* PRE: Funkcja przyjmuje jako argumenty tablice w ktorej zapisany jest obraz, jego wymiary (wymx, wymy) oraz liczbe odcienie szarosci. Jej zadaniem jest
+   przefiltrowanie obrazu przy uzyciu gradientu Robertsa. Filtr mozna latwo zmienic poprzez zmiane wartosci tablicy w. */
+
+void filtr2(int obraz_pgm[][MAX], int wymx, int wymy, int szarosci)
+{
+  int i,j;  
+  int w[9]={0,0,0,-1,0,0,0,1,0};   /* tablica wspolczynnikow w formie jednowymiarowej (wiersz po wierszu) */
+  int max = w[0]*obraz_pgm[0][0] + w[1]*obraz_pgm[0][1] + w[2]*obraz_pgm[0][2]
+            + w[3]*obraz_pgm[1][0] + w[4]*obraz_pgm[1][1] + w[5]*obraz_pgm[1][2]
+	     + w[6]*obraz_pgm[2][0] + w[7]*obraz_pgm[2][1] + w[8]*obraz_pgm[2][2];
+  int min=max;                   /* max i min to skrajne wartosci pikseli po filtracji */
+  for (i=1; i<wymy-1; i++)
+    for (j=1; j<wymx-1; j++)
+      {    /* mimo, ze tylko dwa pola tablicy wspolczynnikow sa rozne od zera, przypisanie wartosci jest kompletne, by mozna bylo zmienic filtr poprzez sama 
+	      zmiane wartosci w tablicy wspolczynnikow */
+	obraz_pgm[i][j] = w[0]*obraz_pgm[i-1][j-1] + w[1]*obraz_pgm[i-1][j] + w[2]*obraz_pgm[i-1][j+1]
+                         + w[3]*obraz_pgm[i][j-1] + w[4]*obraz_pgm[i][j] + w[5]*obraz_pgm[i][j+1]
+	                 + w[6]*obraz_pgm[i+1][j-1] + w[7]*obraz_pgm[i+1][j] + w[8]*obraz_pgm[i+1][j+1];
+	if (obraz_pgm[i][j]>max)
+	  max=obraz_pgm[i][j];
+	if (obraz_pgm[i][j]<min)
+	  min=obraz_pgm[i][j];
+      }
+  for (i=1; i<wymy-1; i++)
+    for (j=1; j<wymx-1; j++)
+      obraz_pgm[i][j] = ((obraz_pgm[i][j]-min)*szarosci)/(max-min);
+}
+
+/* POST: Funkcja nie zwraca zadnej wartosci, a w wyniku jej dzialania w tablicy obraz_pgm zapisany zostaje przefiltrowany obraz. */
+
+
+int main()
+{
+  int wymx,wymy,szarosci,prog;
+  int obraz_pgm[MAX][MAX];           /* nazwa to nazwa pliku z ktorego wczytujemy obraz i ktory mozemy aktualnie wyswietlac */
+  int operacja=0;                    /* nazwa2 dotyczy pliku w ktorym mozemy zapisac efekt naszych dotychczasowych dzialan */
+  FILE *plik;                        /* przy czym mozna podac nazwe pliku z ktorego wczytywalismy obraz i go nadpisac, lub utworzyc nowy plik */
+  char nazwa[100],nazwa2[100], wybor='a';  /* zmienna operacja sluzy do przejmowania wartosci zwracanych przez funkcje czytaj i zapisz, aby sprawdzic czy */
+  while (wybor!='0')                                             /* wykonaly sie poprawnie */
+    {
+      printf("----------MENU----------\n");
+      printf("1 - wczytanie obrazu z pliku\n");
+      printf("2 - zapisanie obrazu do pliku\n");
+      printf("3 - wyswietlanie obrazu\n");
+      printf("4 - negatyw\n");
+      printf("5 - progowanie\n");
+      printf("6 - konturowanie\n");
+      printf("7 - filtr usredniajacy ze wzmocnieniem\n");
+      printf("8 - filtrowanie przy uzyciu gradientu Robertsa\n");
+      printf("0 - zakonczenie dzialania programu\n");
+      scanf("%c",&wybor);
+      switch (wybor)
+	{	
+	case '1':
+	  printf("Podaj nazwe pliku:\n");
+	  scanf("%s",nazwa);
+	  plik=fopen(nazwa,"r");
+	  if (plik!=NULL)
+	    operacja=czytaj(plik,obraz_pgm,&wymx,&wymy,&szarosci);
+	  if (operacja!=0)
+	    printf("Wczytywanie obrazu powiodlo sie.\n");
+	  fclose(plik);
+	  break;
+	case '2':
+	  printf("Podaj nazwe pliku do zapisu:\n");
+	  scanf("%s",nazwa2);
+	  plik=fopen(nazwa2,"w");
+	  if (plik!=NULL)
+	    operacja=zapisz(plik,obraz_pgm,wymx,wymy,szarosci);
+	  if (operacja!=0)
+	    printf("Zapis obrazu do pliku powiodl sie.\n");
+	  fclose(plik);
+	  break;
+        case '3':
+	  wyswietl(nazwa);
+	  break;
+        case '4':
+	  negatyw(obraz_pgm,wymx,wymy,szarosci);
+	  printf("Utworzono negatyw obrazu.\n");
+	  break;
+	case '5':
+	  printf("Podaj prog:\n");
+	  scanf("%i",&prog);
+	  progowanie(obraz_pgm,wymx,wymy,szarosci,prog);
+	  printf("Progowanie obrazu przy progu %i zakonczone.\n",prog);
+	  break;
+	case '6':
+	  konturowanie(obraz_pgm,wymx,wymy,szarosci);
+	  printf("Konturowanie obrazu zakonczone.\n");
+	  break;
+	case '7':
+	  filtr(obraz_pgm,wymx,wymy);
+	  printf("Obraz zostal przefiltrowany przy uzyciu filtra usredniajacego ze wzmocnieniem.\n");
+	  break;
+	case '8':
+	  filtr2(obraz_pgm,wymx,wymy,szarosci);
+	  printf("Obraz zostal przefiltrowany przy pomocy gradientu Robertsa.\n");
+	  break;
+	case '0':
+	  printf("Milego dnia!\n");
+	}
+    } 
+  return 0;
+}
+
+
+/*          Dawid Perdek     200450     Przetwarzanie obrazow 1 - PN TP 18.55-20.35
+
+Testow wymagaly wszystkie funkcje majace zmieniac obraz oraz oczywiscie funkcja zapisujaca do pliku oraz do niego wczytujaca.
+
+W moim programie obraz jest wczytywany z pliku i tylko ten wczytany obraz moze byc wyswietlony za pomoca trzeciej opcji - wyswietl.
+Aby wyswietlic plik po jakiejs zmianie (np. po progowaniu) nalezy uprzednio zapisac (przy pomocy opcji 2) obraz do pliku z ktorego go wczesniej wczytywalismy
+(wtedy zostanie nadpisany i bedzie mozna go od razu wyswietlic opcja nr 3) lub do nowego pliku (wtedy bedzie trzeba wczytac obraz z tego nowego pliku opcja nr
+1 i dopiero potem go wyswietlic opcja nr 3). 
+
+Test 1 - wczytywanie, zapisywanie, negatyw:
+   Wczytalem do pliku obraz kubus.pgm, wyswietlilem go i nastepnie zastosowalem negatyw, ktory zapisalem do pliku negatyw.pgm. Nastepnie wczytalem ten plik i
+   rowniez go wyswietlilem. Kolejnym krokiem bylo porownanie oryginalnego kubus.pgm oraz negatyw.pgm z odpowiednikami na stronie z opisem zadania. "Na oko" 
+   wszystko sie zgadzalo, wiec aby to potwierdzic przeliczylem recznie kilkanascie pikseli z roznych miejsc pliku kubus.pgm i otrzymane wyniki zgadzaly sie z 
+   odpowiednimi wartosciami z pliku negatyw.pgm.
+
+Test 2 - wczytywanie, zapisywanie, konturowanie:
+   Schemat dzialania byl analogiczny jak w tescie 1, z ta roznica, ze wywolalem funkcje konturowania w miejscu negatywu. Porownanie wizualne rowniez wypadlo
+   dobrze, a po recznym przeliczeniu wartosci kilkunastu pikseli uzyskalem pewnosc co do poprawnosci dzialania funkcji konturowania. Aby sprawdzic czy skrajny
+   dolny wiersz oraz skrajna prawa kolumna faktycznie sa wypelniane niezaleznie od funkcji zmieniajacej pozostala czesc tablicy, w odpowiednim fragmencie kodu
+   wstawilem kolor bialy w miejsce czarnego i w wyniku faktycznie otrzymalem obrazek kubus.pgm z bialymi krawedziami po prawej i na dole. Zatem funkcja
+   konturowania rowniez dziala poprawnie.
+
+Test 3 - wczytywanie, zapisywanie, progowanie:
+   Schemat dzialania znow byl analogiczny z tym, ze wywolywalem funkcje progowania trzykrotnie, raz zadajac jej prog 100, drugim razem -10, a trzecim 300, tak
+   aby byl wiekszy od liczby stopni szarosci. W pierwszym przypadku obraz kubus.pgm zostal zmieniony poprawnie (na podstawie wizualnego porownania oraz
+   przeliczenia recznie wartosci kilkunastu pikseli), w drugim przypadku caly obrazek stal sie bialy, a w trzecim przypadku caly obrazek stal sie czarny.
+   
+Wszystkie te testy przeprowadzilem rowniez dla obrazka Lena.pgm.
+
+                                 ZADANIA DODATKOWE
+Testy funkcji filtrujacych przeprowadzalem na obrazku Lena2.pgm, bo jest fajniejszy niz ten caly kubus!
+
+Test 1 - wczytywanie, zapisywanie, filtr dolnoprzepustowy (usredniajacy ze wzmocnieniem)
+   Wczytalem plik Lena2.pgm, wyswietlilem go, po czym przefiltrowalem go przy pomocy opcji nr 7 i zapisalem do pliku filtr.pgm, ktory nastepnie wczytalem
+   i wyswietlilem. Porownanie obrazow dalo efekt zgodny z opisem z pliku filtrsplot-1.pdf.
+
+Test 2 - wczytywanie, zapisywanie, filtr gornoprzepustowy (gradient Robertsa)
+   Analogicznie jak wyzej, z tym ze wykorzystana zostala opcja nr 8, a plik nazwany filtr2.pgm. Wizualne porownanie rowniez dalo efekt zgodny z opisem z pliku
+   filtrsplot-1.pdf.
+
+Co do zadania 1 - ewentualnych poprawek w funkcji czytaj.
+  Zmienilem warunek przy wczytywaniu wymiarow obrazu i liczby odcieni szarosci z pliku - przy wczytywaniu ich wszystkich za jednym zamachem zawsze wychodzil
+  mi blad. Uznalem, ze to przez fakt, ze wymiary sa w jednej linii, a liczba odcieni szarosci linie nizej i po rozbiciu procesu wczytywania na trzy funkcje
+  fscanf wszystko dziala jak nalezy.
+  Dodalem rowniez warunek sprawdzajacy czy podane w pliku rozmiary obrazu mieszcza sie w przedziale [0...MAX] - brak tego zestawu warunku pozwalal na
+  wczytanie do tablicy obrazka o "ujemnych rozmiarach" (faktyczny rozmiar by sie nie zmienil, lecz nie dzialaly by poprawnie wszystkie petle w programie) lub
+  przekroczenie zakresu tablicy.
+
+Co do zadania 2 - poprawek w konturowaniu.
+  Zakres odcieni szarosci nie powinien byc zmieniany, gdyz wymagaloby to proporcjonalnego zmienienia wszystkich pikseli. Warto natomiast dodac warunek
+  sprawdzajacy czy wynik jest wiekszy od liczby odcieni szarosci i w takim przypadku danemu pikselowi przypisac wlasnie wartosc parametru szarosc.
+*/

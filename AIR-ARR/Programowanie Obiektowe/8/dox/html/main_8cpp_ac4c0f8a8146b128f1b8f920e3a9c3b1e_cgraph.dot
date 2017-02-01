@@ -1,0 +1,15 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Uklad::Rozwiaz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_uklad.html#a020737e587ee13154b1d0c9aca2fa3d2",tooltip="Funkcja ma za zadanie rozwiązać układ równań Cramera."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Macierz::det",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_macierz.html#ad549218e7760f652fae7880f3a795bf9",tooltip="Funkcja wyliczająca wyznacznik macierzy."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Zeruj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$liczba_8hh.html#a91f8f95affe7aa92e783aef5db29a1c3",tooltip="Metoda zerująca zmienną typu double."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Blad",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uklad_8hh.html#a41a08f1dbd1b273c947d66fb982d7c78",tooltip="Funkcja wyliczająca błąd wyliczenia rozwiązania układu równań."];
+}

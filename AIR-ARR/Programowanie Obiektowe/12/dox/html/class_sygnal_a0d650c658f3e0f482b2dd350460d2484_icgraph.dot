@@ -1,0 +1,23 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Sygnal::WezCzas",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="BlokCalkujacy::WyliczSygnalWyj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_blok_calkujacy.html#ab06dc5a7e9c54453ab8ed7bbb13135ff",tooltip="Przeciążenie metody wyliczającej sygnał wyjściowy."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="BlokDyskryminujacy::WyliczSygnalWyj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_blok_dyskryminujacy.html#a27af15a6d797bda1b180c3cab86ef8d1",tooltip="Przeciążenie metody wyliczającej sygnał wyjściowy."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="BlokPotegujacy::WyliczSygnalWyj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_blok_potegujacy.html#ad1ff4382afa69328fb1693d28b4a5133",tooltip="Przeciążenie metody wyliczającej sygnał wyjściowy."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="BlokProstujacy::WyliczSygnalWyj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_blok_prostujacy.html#ab8459cc4bbb0b7f7f4e35def1259a84b",tooltip="Przeciążenie metody wyliczającej sygnał wyjściowy."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="BlokPrzesuwajacy::WyliczSygnalWyj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_blok_przesuwajacy.html#a77febc284faea8ee6b6bf2396a081c01",tooltip="Przeciążenie metody wyliczającej sygnał wyjściowy."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="BlokRejestratora::WyliczSygnalWyj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_blok_rejestratora.html#a34504935446fc17c4530f46a037d0068",tooltip="Zapisuje koleją wartość do pliku."];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="BlokWzmacniajacy::WyliczSygnalWyj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_blok_wzmacniajacy.html#af586689fa32def6d005b2522126a520b",tooltip="Przeciążenie metody wyliczającej sygnał wyjściowy."];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="operator\<\<",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_sygnal_8cpp.html#a841f0bd1c998439e875896a2da55ee6d",tooltip="Umożliwia zapis czasu i wartości sygnału."];
+}

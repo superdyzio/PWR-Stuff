@@ -1,0 +1,96 @@
+HOST=panamint
+
+CPPFLAGS=-pedantic -Wall -Iinc -I/home/Dokumenty/obiektowe/12/prj/inc -c
+LDFLAGS=-Wall -L -pedantic
+
+# CPPFLAGS=-Wall -pedantic -Iinc -I/home/bk/edu/kpo/zad/z12/zasoby/inc -c
+# LDFLAGS=-Wall -L/home/bk/edu/kpo/zad/z12/zasoby/lib/${HOST}
+
+__start__: obj przetwarzanie_sygnalu
+	./przetwarzanie_sygnalu
+
+obj:
+	mkdir obj
+
+przetwarzanie_sygnalu: obj/main.o obj/BlokGeneratora.o obj/BlokPotegujacy.o obj/BlokProstujacy.o obj/UkladSygnalowy.o\
+                       obj/BlokRejestratora.o obj/BlokOscyloskopu.o obj/BlokPrzesuwajacy.o obj/BlokWzmacniajacy.o\
+                       obj/BlokDyskryminujacy.o obj/BlokCalkujacy.o obj/lacze_do_gnuplota.o obj/BlokSygnalowy.o obj/ListaBlokow.o\
+		       obj/Sygnal.o
+	g++ -Wall -o przetwarzanie_sygnalu obj/main.o obj/UkladSygnalowy.o obj/BlokPrzesuwajacy.o obj/BlokWzmacniajacy.o\
+                        obj/BlokGeneratora.o obj/BlokPotegujacy.o obj/BlokProstujacy.o obj/BlokRejestratora.o\
+                        obj/BlokOscyloskopu.o obj/BlokDyskryminujacy.o obj/BlokCalkujacy.o obj/lacze_do_gnuplota.o obj/BlokSygnalowy.o\
+			obj/ListaBlokow.o obj/Sygnal.o
+
+obj/main.o: src/main.cpp inc/BlokGeneratora.hh 
+	g++ ${CPPFLAGS} -o obj/main.o src/main.cpp
+
+obj/BlokGeneratora.o: src/BlokGeneratora.cpp inc/BlokGeneratora.hh
+	g++ ${CPPFLAGS} -o obj/BlokGeneratora.o src/BlokGeneratora.cpp
+	
+obj/BlokPrzesuwajacy.o: src/BlokPrzesuwajacy.cpp inc/BlokPrzesuwajacy.hh
+	g++ ${CPPFLAGS} -o obj/BlokPrzesuwajacy.o src/BlokPrzesuwajacy.cpp	
+
+obj/BlokCalkujacy.o: src/BlokCalkujacy.cpp inc/BlokCalkujacy.hh
+	g++ ${CPPFLAGS} -o obj/BlokCalkujacy.o src/BlokCalkujacy.cpp	
+	
+obj/BlokWzmacniajacy.o: src/BlokWzmacniajacy.cpp inc/BlokWzmacniajacy.hh
+	g++ ${CPPFLAGS} -o obj/BlokWzmacniajacy.o src/BlokWzmacniajacy.cpp	
+
+obj/BlokPotegujacy.o: src/BlokPotegujacy.cpp inc/BlokPotegujacy.hh
+	g++ ${CPPFLAGS} -o obj/BlokPotegujacy.o src/BlokPotegujacy.cpp
+	
+obj/BlokDyskryminujacy.o: src/BlokDyskryminujacy.cpp inc/BlokDyskryminujacy.hh
+	g++ ${CPPFLAGS} -o obj/BlokDyskryminujacy.o src/BlokDyskryminujacy.cpp
+	
+obj/BlokProstujacy.o: src/BlokProstujacy.cpp inc/BlokProstujacy.hh
+	g++ ${CPPFLAGS} -o obj/BlokProstujacy.o src/BlokProstujacy.cpp
+
+obj/BlokRejestratora.o: src/BlokRejestratora.cpp inc/BlokRejestratora.hh
+	g++ ${CPPFLAGS} -o obj/BlokRejestratora.o src/BlokRejestratora.cpp
+
+obj/BlokOscyloskopu.o: src/BlokOscyloskopu.cpp inc/BlokOscyloskopu.hh
+	g++ ${CPPFLAGS} -o obj/BlokOscyloskopu.o src/BlokOscyloskopu.cpp
+
+obj/lacze_do_gnuplota.o: src/lacze_do_gnuplota.cpp inc/lacze_do_gnuplota.hh
+	g++  ${CPPFLAGS} -o obj/lacze_do_gnuplota.o src/lacze_do_gnuplota.cpp
+
+obj/UkladSygnalowy.o: src/UkladSygnalowy.cpp inc/UkladSygnalowy.hh\
+              inc/BlokGeneratora.hh inc/BlokRejestratora.hh inc/BlokWzmacniajacy.hh\
+              inc/BlokOscyloskopu.hh inc/BlokPotegujacy.hh inc/BlokProstujacy.hh inc/BlokPrzesuwajacy.hh inc/BlokDyskryminujacy.hh\
+	      inc/BlokCalkujacy.hh
+	g++ ${CPPFLAGS} -o obj/UkladSygnalowy.o src/UkladSygnalowy.cpp
+
+obj/BlokSygnalowy.o: src/BlokSygnalowy.cpp inc/BlokSygnalowy.hh inc/Sygnal.hh
+	g++ ${CPPFLAGS} -o obj/BlokSygnalowy.o src/BlokSygnalowy.cpp
+
+obj/ListaBlokow.o: src/ListaBlokow.cpp inc/ListaBlokow.hh inc/BlokSygnalowy.hh
+	g++ ${CPPFLAGS} -o obj/ListaBlokow.o src/ListaBlokow.cpp
+
+obj/Sygnal.o: src/Sygnal.cpp inc/Sygnal.hh
+	g++ ${CPPFLAGS} -o obj/Sygnal.o src/Sygnal.cpp
+
+clean:
+	rm -f przetwarzanie_sygnalu obj/* core*
+
+
+doc: __generuj_doc__
+
+__generuj_doc__:
+	cd ../dox;  make
+
+help:
+	@echo
+	@echo "  Lista podcelow dla polecenia make"
+	@echo 
+	@echo "        - (wywolanie bez specyfikacji celu) wymusza"
+	@echo "          kompilacje i uruchomienie programu."
+	@echo "  clean - usuwa produkty kompilacji oraz program"
+	@echo "  doc   - powoduje generowanie dokumentacji"
+	@echo "  help  - wyswietla niniejszy komunikat"
+	@echo
+	@echo " Przykladowe wywolania dla poszczegolnych wariantow. "
+	@echo "  make           # kompilacja i uruchomienie programu."
+	@echo "  make clean     # usuwa produkty kompilacji."
+	@echo "  make doc       # generuje dokumentacje w doc/html"
+	@echo
+ 

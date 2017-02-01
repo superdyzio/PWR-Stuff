@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Superprogram: Plik źródłowy ListaBlokow.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Superprogram
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">ListaBlokow.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_lista_blokow_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef LISTABLOKOW_HH</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define LISTABLOKOW_HH</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#ifdef __GNUG__</span>
+<a name="l00005"></a>00005 <span class="preprocessor"></span><span class="preprocessor"># pragma interface</span>
+<a name="l00006"></a>00006 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;list&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_blok_sygnalowy_8hh.html" title="Zawiera definicję klas BlokSygnalowy.">BlokSygnalowy.hh</a>&quot;</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 
+<a name="l00027"></a><a class="code" href="class_lista_blokow.html">00027</a> <span class="keyword">class </span><a class="code" href="class_lista_blokow.html" title="Modeluje listę bloków sygnałowych.">ListaBlokow</a>: <span class="keyword">public</span> std::list&lt;BlokSygnalowy*&gt; {
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029   <span class="keyword">public</span>:
+<a name="l00033"></a>00033   <span class="keywordtype">bool</span> <a class="code" href="class_lista_blokow.html#acc94cb1f57abd2ea11c9bc88b59b8b3e" title="Realizuje przeliczenie sygnału dla całej listy bloków.">WyliczSygnal</a>();
+<a name="l00047"></a>00047   <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_lista_blokow.html#aa04d076c3824fc7034998d7829f25395" title="Metoda ta inicjalizuje wszystkie bloki sygnałowe z listy.">RozpocznijPrace</a>();
+<a name="l00055"></a><a class="code" href="class_lista_blokow.html#ab77e5d62f4959fc61d2461a454bd7a68">00055</a>    <span class="keywordtype">void</span> <a class="code" href="class_lista_blokow.html#ab77e5d62f4959fc61d2461a454bd7a68" title="Dodaje nowy blok sygnałowy.">DodajBlokSygnalowy</a>( <a class="code" href="class_blok_sygnalowy.html" title="Modeluje najważniejsze elementy bloku sygnałowego.">BlokSygnalowy</a>* wBlok) { push_back(wBlok); }
+<a name="l00061"></a>00061    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_lista_blokow.html#a6eaed622e04fdd01246ffda3879b9631" title="Wyświetla typy bloków.">WyswietlTypBlokowWLiscie</a>() <span class="keyword">const</span>;
+<a name="l00062"></a>00062 
+<a name="l00068"></a>00068    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_lista_blokow.html#ad41eb2d742f5d144c6f5e4704357294b" title="Wyświetla typy bloków.">WyswietlOpis</a>() <span class="keyword">const</span>;
+<a name="l00069"></a>00069 
+<a name="l00073"></a>00073    <span class="keyword">virtual</span> <a class="code" href="class_lista_blokow.html#a6904912356daedf04fd801d8ddbe8429" title="Usuwa dynamicznie stworzone elementy listy.">~ListaBlokow</a>();
+<a name="l00074"></a>00074 
+<a name="l00078"></a>00078   <span class="keywordtype">void</span> <a class="code" href="class_lista_blokow.html#ad35fa127514dc93ba034e29eee5d0081" title="Kończy pracę wszystkich bloków.">ZakonczPrace</a>();
+<a name="l00079"></a>00079  <span class="keyword">private</span>:
+<a name="l00080"></a>00080 };
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Mon Jun 3 2013 18:52:06 dla Superprogram programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

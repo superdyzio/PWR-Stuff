@@ -1,0 +1,10 @@
+#include "dzialania.hh"
+#include "test.hh"
+#include <cstdlib>
+
+int main() {
+	//srand(time(NULL));
+	//Konkurs();
+	cout<<Odejmij(a,d)<<endl;
+	return 0;
+}

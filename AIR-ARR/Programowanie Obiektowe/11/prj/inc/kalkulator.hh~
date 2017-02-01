@@ -1,0 +1,38 @@
+#ifndef KALKULATOR_HH
+#define KALKULATOR_HH
+
+#include <cstdio>
+#include <iostream>
+#include <cstdlib>
+#include <cstring>
+#include <string>
+#include "stos.hh"
+#include "mapa.hh"
+#include "dana.hh"
+#include "zespolona.hh"
+
+using namespace std;
+
+class Kalkulator {
+public:
+	Mapa mapka;
+	Stos stosik;
+	Kalkulator() {}
+	~Kalkulator() {}
+	void dodaj();
+	void odejmij();
+	void mnoz();
+	void dziel();
+	void duplikuj();
+	void zamien();
+	void uruchom();
+	void wypiszStos();
+	void nadajWartosc();
+	void usunDana();
+	void wejNotWyk() { Zespolona::NotacjaWykWej = true; }
+	void wejNotTrad() { Zespolona::NotacjaWykWej = false; }
+	void wyjNotWyk() { Zespolona::NotacjaWykWyj = true; }
+	void wyjNotTrad() { Zespolona::NotacjaWykWyj = false; }
+};
+
+#endif

@@ -1,0 +1,23 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Zespolona::getIloscA",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Stos::dodaj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#a54dcfe620d15fb7ca60794a55db4defe",tooltip="Bezargumentowa funkcja dodająca do siebie dwa wierzchnie elementy i zapisująca na stos wynik operacji..."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Stos::odejmij",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#a49e311375d9745accf5e0e84d6a85d14",tooltip="Bezargumentowa funkcja odejmująca od wierzchni element od kolejnego i zapisująca na stos wynik operac..."];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Stos::mnoz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#a598155585f692950096c5fd7d8125b9c",tooltip="Bezargumentowa funkcja mnożąca dwa wierzchnie elementy i zapisująca na stos wynik operacji..."];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Stos::dziel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#a78534a6df51bb374f96473cd0b0e5c0d",tooltip="Bezargumentowa funkcja dzieląca drugi element przez wierzchni i zapisująca na stos wynik operacji..."];
+  Node6 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Stos::czysc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#afd2d62615f8d809e1ce836f7cf75d7e7",tooltip="Bezargumentowa funkcja czyszcząca stos."];
+  Node7 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

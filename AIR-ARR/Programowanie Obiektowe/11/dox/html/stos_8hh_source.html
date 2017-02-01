@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>SUPERPROGRAM: Plik źródłowy stos.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">SUPERPROGRAM
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">stos.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="stos_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef STOS_HH</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define STOS_HH</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;stack&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;cstring&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;cstdio&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;cctype&gt;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="dana_8hh.html" title="Plik zawierający definicję klasy Dana, służącej do przechowywania elementu mapy.">dana.hh</a>&quot;</span>
+<a name="l00011"></a>00011 
+<a name="l00017"></a>00017 <span class="keyword">using namespace </span>std;
+<a name="l00018"></a>00018 
+<a name="l00022"></a><a class="code" href="class_stos.html">00022</a> <span class="keyword">class </span><a class="code" href="class_stos.html" title="Definicja klasy Stos dziedziczącej po szablonie std::stack. Klasa dostosowana jest do przechowywania ...">Stos</a> : <span class="keyword">private</span> stack&lt;string&gt; {
+<a name="l00023"></a>00023 <span class="keyword">public</span>:
+<a name="l00025"></a><a class="code" href="class_stos.html#a1de3b50386d5dfb56ddece17d0ea2389">00025</a>         <a class="code" href="class_stos.html#a1de3b50386d5dfb56ddece17d0ea2389" title="Konstruktor bezparametrowy.">Stos</a>() {}
+<a name="l00027"></a><a class="code" href="class_stos.html#af9a198e2540e18adcc0b5259105fd78e">00027</a>         <a class="code" href="class_stos.html#af9a198e2540e18adcc0b5259105fd78e" title="Destruktor bezparametrowy.">~Stos</a>() {}
+<a name="l00029"></a><a class="code" href="class_stos.html#a66e658929cc85d93e66ea49d627402b2">00029</a>         <span class="keywordtype">int</span> <a class="code" href="class_stos.html#a66e658929cc85d93e66ea49d627402b2" title="Obudowa funkcji size().">rozmiar</a>() { <span class="keywordflow">return</span> size(); }
+<a name="l00031"></a><a class="code" href="class_stos.html#adefd481d405f9b0f9355f32f57d525af">00031</a>         <span class="keywordtype">string</span> <a class="code" href="class_stos.html#adefd481d405f9b0f9355f32f57d525af" title="Obudowa funkcji top().">szczyt</a>() { <span class="keywordflow">return</span> rozmiar() &gt; 0 ? top() : <span class="stringliteral">&quot;Stos jest pusty.&quot;</span>; }
+<a name="l00033"></a><a class="code" href="class_stos.html#a1155a53b512ed3badc6c2fda97d7928a">00033</a>         <span class="keywordtype">void</span> <a class="code" href="class_stos.html#a1155a53b512ed3badc6c2fda97d7928a" title="Obudowa funkcji pop().">usun</a>() { <span class="keywordflow">if</span> (rozmiar() &gt; 0) pop(); <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;Stos jest pusty.&quot;</span> &lt;&lt; endl; }
+<a name="l00035"></a><a class="code" href="class_stos.html#ab3090525b8a392f922679600f6821e72">00035</a>         <span class="keywordtype">void</span> <a class="code" href="class_stos.html#ab3090525b8a392f922679600f6821e72" title="Obudowa funkcji push(string).">doloz</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; x) { push(x); }
+<a name="l00037"></a><a class="code" href="class_stos.html#ab4036a7510abea889bdf4ed65c161fdc">00037</a>         <span class="keywordtype">bool</span> <a class="code" href="class_stos.html#ab4036a7510abea889bdf4ed65c161fdc" title="Funkcja sprawdzająca czy na stosie są choć dwa elementy.">czyDwa</a>() { <span class="keywordflow">return</span> rozmiar() &gt; 1; }
+<a name="l00039"></a><a class="code" href="class_stos.html#afd2d62615f8d809e1ce836f7cf75d7e7">00039</a>         <span class="keywordtype">void</span> <a class="code" href="class_stos.html#afd2d62615f8d809e1ce836f7cf75d7e7" title="Funkcja czyszcząca stos. Ściąga kolejno wszystkie elementy.">czysc</a>() { <span class="keywordflow">while</span> (rozmiar() &gt; 0) pop(); }
+<a name="l00041"></a>00041         <span class="keywordtype">void</span> drukuj();
+<a name="l00042"></a>00042 };
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Wed May 22 2013 21:18:58 dla SUPERPROGRAM programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

@@ -1,0 +1,701 @@
+Warning: The selected output language "polish" has not been updated
+since release 1.6.3.  As a result some sentences may appear in English.
+Searching for include files...
+Searching for example files...
+Searching for images...
+Searching for dot files...
+Searching for msc files...
+Searching for files to exclude
+Searching for files to process...
+Searching for files in directory /home/dawidek/Dokumenty/obiektowe/7/prj
+Searching for files in directory /home/dawidek/Dokumenty/obiektowe/7/prj/dane
+Searching for files in directory /home/dawidek/Dokumenty/obiektowe/7/prj/inc
+Searching for files in directory /home/dawidek/Dokumenty/obiektowe/7/prj/obj
+Searching for files in directory /home/dawidek/Dokumenty/obiektowe/7/prj/src
+Reading and parsing tag files
+Preprocessing /home/dawidek/Dokumenty/obiektowe/7/prj/inc/liczba.hh...
+Parsing file /home/dawidek/Dokumenty/obiektowe/7/prj/inc/liczba.hh...
+Preprocessing /home/dawidek/Dokumenty/obiektowe/7/prj/inc/macierz.hh...
+Parsing file /home/dawidek/Dokumenty/obiektowe/7/prj/inc/macierz.hh...
+Preprocessing /home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh...
+Parsing file /home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh...
+Preprocessing /home/dawidek/Dokumenty/obiektowe/7/prj/inc/typ.hh...
+Parsing file /home/dawidek/Dokumenty/obiektowe/7/prj/inc/typ.hh...
+Preprocessing /home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh...
+Parsing file /home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh...
+Preprocessing /home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh...
+Parsing file /home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh...
+Preprocessing /home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh...
+Parsing file /home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh...
+Preprocessing /home/dawidek/Dokumenty/obiektowe/7/prj/src/liczba.cpp...
+Parsing file /home/dawidek/Dokumenty/obiektowe/7/prj/src/liczba.cpp...
+Preprocessing /home/dawidek/Dokumenty/obiektowe/7/prj/src/macierz.cpp...
+Parsing file /home/dawidek/Dokumenty/obiektowe/7/prj/src/macierz.cpp...
+Preprocessing /home/dawidek/Dokumenty/obiektowe/7/prj/src/main.cpp...
+Parsing file /home/dawidek/Dokumenty/obiektowe/7/prj/src/main.cpp...
+Preprocessing /home/dawidek/Dokumenty/obiektowe/7/prj/src/symbole.cpp...
+Parsing file /home/dawidek/Dokumenty/obiektowe/7/prj/src/symbole.cpp...
+Preprocessing /home/dawidek/Dokumenty/obiektowe/7/prj/src/uklad.cpp...
+Parsing file /home/dawidek/Dokumenty/obiektowe/7/prj/src/uklad.cpp...
+Preprocessing /home/dawidek/Dokumenty/obiektowe/7/prj/src/wektor.cpp...
+Parsing file /home/dawidek/Dokumenty/obiektowe/7/prj/src/wektor.cpp...
+Preprocessing /home/dawidek/Dokumenty/obiektowe/7/prj/src/zespolone.cpp...
+Parsing file /home/dawidek/Dokumenty/obiektowe/7/prj/src/zespolone.cpp...
+Building group list...
+Building directory list...
+Building namespace list...
+Building file list...
+Building class list...
+Associating documentation with classes...
+Computing nesting relations for classes...
+Building example list...
+Searching for enumerations...
+Searching for documented typedefs...
+Searching for members imported via using declarations...
+Searching for included using directives...
+Searching for documented variables...
+Building member list...
+Searching for friends...
+Searching for documented defines...
+Computing class inheritance relations...
+Computing class usage relations...
+Flushing cached template relations that have become invalid...
+Creating members for template instances...
+Computing class relations...
+Add enum values to enums...
+Searching for member function documentation...
+Building page list...
+Search for main page...
+Computing page relations...
+Determining the scope of groups...
+Sorting lists...
+Freeing entry tree
+Determining which enums are documented
+Computing member relations...
+Building full member lists recursively...
+Adding members to member groups.
+Computing member references...
+Inheriting documentation...
+Generating disk names...
+Adding source references...
+Adding xrefitems...
+Sorting member lists...
+Generating citations page...
+Counting data structures...
+Resolving user defined references...
+Finding anchors and sections in the documentation...
+Combining using relations...
+Adding members to index pages...
+Generating style sheet...
+Generating example documentation...
+Generating file sources...
+Generating code for file liczba.cpp...
+Generating code for file liczba.hh...
+Generating code for file macierz.cpp...
+Generating code for file macierz.hh...
+Generating code for file main.cpp...
+Generating code for file symbole.cpp...
+Generating code for file symbole.hh...
+Generating code for file typ.hh...
+Generating code for file uklad.cpp...
+Generating code for file uklad.hh...
+Generating code for file wektor.cpp...
+Generating code for file wektor.hh...
+Generating code for file zespolone.cpp...
+Generating code for file zespolone.hh...
+Generating file documentation...
+Generating docs for file liczba.cpp...
+Generating caller graph for function Zeruj
+Generating docs for file liczba.hh...
+Generating caller graph for function Zeruj
+Generating docs for file macierz.cpp...
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/macierz.hh:63: warning: argument 'Argument' of command @param is not found in the argument list of det(Macierz m)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/macierz.hh:63: warning: The following parameters of det(Macierz m) are not documented:
+  parameter 'm'
+Generating call graph for function det
+Generating caller graph for function det
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/macierz.hh:56: warning: argument 'Dwa' of command @param is not found in the argument list of operator*(Macierz a, Macierz b)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/macierz.hh:56: warning: The following parameters of operator*(Macierz a, Macierz b) are not documented:
+  parameter 'a'
+  parameter 'b'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/macierz.hh:42: warning: argument 'Jako' of command @param is not found in the argument list of operator<<(ostream &wyj, Macierz &m)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/macierz.hh:42: warning: The following parameters of operator<<(ostream &wyj, Macierz &m) are not documented:
+  parameter 'wyj'
+  parameter 'm'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/macierz.hh:49: warning: argument 'Jako' of command @param is not found in the argument list of operator>>(istream &wej, Macierz &m)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/macierz.hh:49: warning: The following parameters of operator>>(istream &wej, Macierz &m) are not documented:
+  parameter 'wej'
+  parameter 'm'
+Generating docs for file macierz.hh...
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/macierz.hh:63: warning: argument 'Argument' of command @param is not found in the argument list of det(Macierz m)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/macierz.hh:63: warning: The following parameters of det(Macierz m) are not documented:
+  parameter 'm'
+Generating call graph for function det
+Generating caller graph for function det
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/macierz.hh:56: warning: argument 'Dwa' of command @param is not found in the argument list of operator*(Macierz a, Macierz b)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/macierz.hh:56: warning: The following parameters of operator*(Macierz a, Macierz b) are not documented:
+  parameter 'a'
+  parameter 'b'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/macierz.hh:42: warning: argument 'Jako' of command @param is not found in the argument list of operator<<(ostream &wyj, Macierz &m)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/macierz.hh:42: warning: The following parameters of operator<<(ostream &wyj, Macierz &m) are not documented:
+  parameter 'wyj'
+  parameter 'm'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/macierz.hh:49: warning: argument 'Jako' of command @param is not found in the argument list of operator>>(istream &wej, Macierz &m)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/macierz.hh:49: warning: The following parameters of operator>>(istream &wej, Macierz &m) are not documented:
+  parameter 'wej'
+  parameter 'm'
+Generating docs for file main.cpp...
+Generating call graph for function main
+Generating docs for file symbole.cpp...
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:53: warning: argument 'Jako' of command @param is not found in the argument list of operator*(Symbol x, Symbol y)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:53: warning: The following parameters of operator*(Symbol x, Symbol y) are not documented:
+  parameter 'x'
+  parameter 'y'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:32: warning: argument 'Jako' of command @param is not found in the argument list of operator+(Symbol x)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:32: warning: The following parameters of operator+(Symbol x) are not documented:
+  parameter 'x'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:39: warning: argument 'Jako' of command @param is not found in the argument list of operator+(Symbol x, Symbol y)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:39: warning: The following parameters of operator+(Symbol x, Symbol y) are not documented:
+  parameter 'x'
+  parameter 'y'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:25: warning: argument 'Jako' of command @param is not found in the argument list of operator-(Symbol x)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:25: warning: The following parameters of operator-(Symbol x) are not documented:
+  parameter 'x'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:46: warning: argument 'Jako' of command @param is not found in the argument list of operator-(Symbol x, Symbol y)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:46: warning: The following parameters of operator-(Symbol x, Symbol y) are not documented:
+  parameter 'x'
+  parameter 'y'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:60: warning: argument 'Jako' of command @param is not found in the argument list of operator/(Symbol x, Symbol y)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:60: warning: The following parameters of operator/(Symbol x, Symbol y) are not documented:
+  parameter 'x'
+  parameter 'y'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:67: warning: argument 'Jako' of command @param is not found in the argument list of operator<<(ostream &wyj, Symbol x)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:67: warning: The following parameters of operator<<(ostream &wyj, Symbol x) are not documented:
+  parameter 'wyj'
+  parameter 'x'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:74: warning: argument 'Jako' of command @param is not found in the argument list of operator>>(istream &wej, Symbol &x)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:74: warning: The following parameters of operator>>(istream &wej, Symbol &x) are not documented:
+  parameter 'wej'
+  parameter 'x'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:81: warning: argument 'Jako' of command @param is not found in the argument list of Zeruj(Symbol x)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:81: warning: The following parameters of Zeruj(Symbol x) are not documented:
+  parameter 'x'
+Generating docs for file symbole.hh...
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:53: warning: argument 'Jako' of command @param is not found in the argument list of operator*(Symbol x, Symbol y)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:53: warning: The following parameters of operator*(Symbol x, Symbol y) are not documented:
+  parameter 'x'
+  parameter 'y'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:32: warning: argument 'Jako' of command @param is not found in the argument list of operator+(Symbol x)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:32: warning: The following parameters of operator+(Symbol x) are not documented:
+  parameter 'x'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:39: warning: argument 'Jako' of command @param is not found in the argument list of operator+(Symbol x, Symbol y)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:39: warning: The following parameters of operator+(Symbol x, Symbol y) are not documented:
+  parameter 'x'
+  parameter 'y'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:25: warning: argument 'Jako' of command @param is not found in the argument list of operator-(Symbol x)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:25: warning: The following parameters of operator-(Symbol x) are not documented:
+  parameter 'x'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:46: warning: argument 'Jako' of command @param is not found in the argument list of operator-(Symbol x, Symbol y)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:46: warning: The following parameters of operator-(Symbol x, Symbol y) are not documented:
+  parameter 'x'
+  parameter 'y'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:60: warning: argument 'Jako' of command @param is not found in the argument list of operator/(Symbol x, Symbol y)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:60: warning: The following parameters of operator/(Symbol x, Symbol y) are not documented:
+  parameter 'x'
+  parameter 'y'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:67: warning: argument 'Jako' of command @param is not found in the argument list of operator<<(ostream &wyj, Symbol x)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:67: warning: The following parameters of operator<<(ostream &wyj, Symbol x) are not documented:
+  parameter 'wyj'
+  parameter 'x'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:74: warning: argument 'Jako' of command @param is not found in the argument list of operator>>(istream &wej, Symbol &x)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:74: warning: The following parameters of operator>>(istream &wej, Symbol &x) are not documented:
+  parameter 'wej'
+  parameter 'x'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:81: warning: argument 'Jako' of command @param is not found in the argument list of Zeruj(Symbol x)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/symbole.hh:81: warning: The following parameters of Zeruj(Symbol x) are not documented:
+  parameter 'x'
+Generating docs for file typ.hh...
+Generating docs for file uklad.cpp...
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:73: warning: argument 'Jako' of command @param is not found in the argument list of Blad(Uklad u)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:73: warning: The following parameters of Blad(Uklad u) are not documented:
+  parameter 'u'
+Generating caller graph for function Blad
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:66: warning: argument 'Jako' of command @param is not found in the argument list of operator*(Macierz m, Wektor w)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:66: warning: The following parameters of operator*(Macierz m, Wektor w) are not documented:
+  parameter 'm'
+  parameter 'w'
+Generating call graph for function operator*
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:43: warning: argument 'Jako' of command @param is not found in the argument list of operator<<(ostream &wyj, Uklad &u)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:43: warning: The following parameters of operator<<(ostream &wyj, Uklad &u) are not documented:
+  parameter 'wyj'
+  parameter 'u'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:36: warning: argument 'Jako' of command @param is not found in the argument list of operator>>(istream &wej, Uklad &u)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:36: warning: The following parameters of operator>>(istream &wej, Uklad &u) are not documented:
+  parameter 'wej'
+  parameter 'u'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:59: warning: argument 'Jako' of command @param is not found in the argument list of Rozwiaz(Uklad u)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:59: warning: The following parameters of Rozwiaz(Uklad u) are not documented:
+  parameter 'u'
+Generating call graph for function Rozwiaz
+Generating caller graph for function Rozwiaz
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:50: warning: argument 'Jako' of command @param is not found in the argument list of ZamianaKolumny(Macierz m, Wektor w, int k)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:50: warning: The following parameters of ZamianaKolumny(Macierz m, Wektor w, int k) are not documented:
+  parameter 'm'
+  parameter 'w'
+  parameter 'k'
+Generating caller graph for function ZamianaKolumny
+Generating docs for file uklad.hh...
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:73: warning: argument 'Jako' of command @param is not found in the argument list of Blad(Uklad u)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:73: warning: The following parameters of Blad(Uklad u) are not documented:
+  parameter 'u'
+Generating caller graph for function Blad
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:66: warning: argument 'Jako' of command @param is not found in the argument list of operator*(Macierz m, Wektor w)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:66: warning: The following parameters of operator*(Macierz m, Wektor w) are not documented:
+  parameter 'm'
+  parameter 'w'
+Generating call graph for function operator*
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:43: warning: argument 'Jako' of command @param is not found in the argument list of operator<<(ostream &wyj, Uklad &u)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:43: warning: The following parameters of operator<<(ostream &wyj, Uklad &u) are not documented:
+  parameter 'wyj'
+  parameter 'u'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:36: warning: argument 'Jako' of command @param is not found in the argument list of operator>>(istream &wej, Uklad &u)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:36: warning: The following parameters of operator>>(istream &wej, Uklad &u) are not documented:
+  parameter 'wej'
+  parameter 'u'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:59: warning: argument 'Jako' of command @param is not found in the argument list of Rozwiaz(Uklad u)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:59: warning: The following parameters of Rozwiaz(Uklad u) are not documented:
+  parameter 'u'
+Generating call graph for function Rozwiaz
+Generating caller graph for function Rozwiaz
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:50: warning: argument 'Jako' of command @param is not found in the argument list of ZamianaKolumny(Macierz m, Wektor w, int k)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/uklad.hh:50: warning: The following parameters of ZamianaKolumny(Macierz m, Wektor w, int k) are not documented:
+  parameter 'm'
+  parameter 'w'
+  parameter 'k'
+Generating caller graph for function ZamianaKolumny
+Generating docs for file wektor.cpp...
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:51: warning: argument 'Jako' of command @param is not found in the argument list of operator*(Wektor a, Wektor b)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:51: warning: The following parameters of operator*(Wektor a, Wektor b) are not documented:
+  parameter 'a'
+  parameter 'b'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:59: warning: argument 'Jako' of command @param is not found in the argument list of operator-(Wektor a, Wektor b)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:59: warning: The following parameters of operator-(Wektor a, Wektor b) are not documented:
+  parameter 'a'
+  parameter 'b'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:44: warning: argument 'Jako' of command @param is not found in the argument list of operator<<(ostream &wyj, Wektor &w)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:44: warning: The following parameters of operator<<(ostream &wyj, Wektor &w) are not documented:
+  parameter 'wyj'
+  parameter 'w'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:37: warning: argument 'Jako' of command @param is not found in the argument list of operator>>(istream &wej, Wektor &w)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:37: warning: The following parameters of operator>>(istream &wej, Wektor &w) are not documented:
+  parameter 'wej'
+  parameter 'w'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:66: warning: argument 'Jako' of command @param is not found in the argument list of Zeruj(Wektor w)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:66: warning: The following parameters of Zeruj(Wektor w) are not documented:
+  parameter 'w'
+Generating call graph for function Zeruj
+Generating docs for file wektor.hh...
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:51: warning: argument 'Jako' of command @param is not found in the argument list of operator*(Wektor a, Wektor b)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:51: warning: The following parameters of operator*(Wektor a, Wektor b) are not documented:
+  parameter 'a'
+  parameter 'b'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:59: warning: argument 'Jako' of command @param is not found in the argument list of operator-(Wektor a, Wektor b)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:59: warning: The following parameters of operator-(Wektor a, Wektor b) are not documented:
+  parameter 'a'
+  parameter 'b'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:44: warning: argument 'Jako' of command @param is not found in the argument list of operator<<(ostream &wyj, Wektor &w)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:44: warning: The following parameters of operator<<(ostream &wyj, Wektor &w) are not documented:
+  parameter 'wyj'
+  parameter 'w'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:37: warning: argument 'Jako' of command @param is not found in the argument list of operator>>(istream &wej, Wektor &w)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:37: warning: The following parameters of operator>>(istream &wej, Wektor &w) are not documented:
+  parameter 'wej'
+  parameter 'w'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:66: warning: argument 'Jako' of command @param is not found in the argument list of Zeruj(Wektor w)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/wektor.hh:66: warning: The following parameters of Zeruj(Wektor w) are not documented:
+  parameter 'w'
+Generating call graph for function Zeruj
+Generating docs for file zespolone.cpp...
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:67: warning: argument 'Jako' of command @param is not found in the argument list of operator*(Zespolona a, Zespolona b)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:67: warning: The following parameters of operator*(Zespolona a, Zespolona b) are not documented:
+  parameter 'a'
+  parameter 'b'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:46: warning: argument 'Jako' of command @param is not found in the argument list of operator+(Zespolona a, Zespolona b)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:46: warning: The following parameters of operator+(Zespolona a, Zespolona b) are not documented:
+  parameter 'a'
+  parameter 'b'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:60: warning: argument 'Jako' of command @param is not found in the argument list of operator-(Zespolona a, Zespolona b)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:60: warning: The following parameters of operator-(Zespolona a, Zespolona b) are not documented:
+  parameter 'a'
+  parameter 'b'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:74: warning: argument 'Jako' of command @param is not found in the argument list of operator/(Zespolona a, Zespolona b)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:74: warning: The following parameters of operator/(Zespolona a, Zespolona b) are not documented:
+  parameter 'a'
+  parameter 'b'
+Generating call graph for function operator/
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:32: warning: argument 'Jako' of command @param is not found in the argument list of operator<<(ostream &wyj, Zespolona z)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:32: warning: The following parameters of operator<<(ostream &wyj, Zespolona z) are not documented:
+  parameter 'wyj'
+  parameter 'z'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:82: warning: argument 'Jako' of command @param is not found in the argument list of operator==(Zespolona a, Zespolona b)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:82: warning: The following parameters of operator==(Zespolona a, Zespolona b) are not documented:
+  parameter 'a'
+  parameter 'b'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:39: warning: argument 'Jako' of command @param is not found in the argument list of operator>>(istream &wej, Zespolona &z)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:39: warning: The following parameters of operator>>(istream &wej, Zespolona &z) are not documented:
+  parameter 'wej'
+  parameter 'z'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:53: warning: argument 'Jako' of command @param is not found in the argument list of Sprzezenie(Zespolona z)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:53: warning: The following parameters of Sprzezenie(Zespolona z) are not documented:
+  parameter 'z'
+Generating caller graph for function Sprzezenie
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:89: warning: argument 'Jako' of command @param is not found in the argument list of Zeruj(Zespolona z)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:89: warning: The following parameters of Zeruj(Zespolona z) are not documented:
+  parameter 'z'
+Generating docs for file zespolone.hh...
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:67: warning: argument 'Jako' of command @param is not found in the argument list of operator*(Zespolona a, Zespolona b)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:67: warning: The following parameters of operator*(Zespolona a, Zespolona b) are not documented:
+  parameter 'a'
+  parameter 'b'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:46: warning: argument 'Jako' of command @param is not found in the argument list of operator+(Zespolona a, Zespolona b)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:46: warning: The following parameters of operator+(Zespolona a, Zespolona b) are not documented:
+  parameter 'a'
+  parameter 'b'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:60: warning: argument 'Jako' of command @param is not found in the argument list of operator-(Zespolona a, Zespolona b)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:60: warning: The following parameters of operator-(Zespolona a, Zespolona b) are not documented:
+  parameter 'a'
+  parameter 'b'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:74: warning: argument 'Jako' of command @param is not found in the argument list of operator/(Zespolona a, Zespolona b)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:74: warning: The following parameters of operator/(Zespolona a, Zespolona b) are not documented:
+  parameter 'a'
+  parameter 'b'
+Generating call graph for function operator/
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:32: warning: argument 'Jako' of command @param is not found in the argument list of operator<<(ostream &wyj, Zespolona z)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:32: warning: The following parameters of operator<<(ostream &wyj, Zespolona z) are not documented:
+  parameter 'wyj'
+  parameter 'z'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:82: warning: argument 'Jako' of command @param is not found in the argument list of operator==(Zespolona a, Zespolona b)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:82: warning: The following parameters of operator==(Zespolona a, Zespolona b) are not documented:
+  parameter 'a'
+  parameter 'b'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:39: warning: argument 'Jako' of command @param is not found in the argument list of operator>>(istream &wej, Zespolona &z)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:39: warning: The following parameters of operator>>(istream &wej, Zespolona &z) are not documented:
+  parameter 'wej'
+  parameter 'z'
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:53: warning: argument 'Jako' of command @param is not found in the argument list of Sprzezenie(Zespolona z)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:53: warning: The following parameters of Sprzezenie(Zespolona z) are not documented:
+  parameter 'z'
+Generating caller graph for function Sprzezenie
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:89: warning: argument 'Jako' of command @param is not found in the argument list of Zeruj(Zespolona z)
+/home/dawidek/Dokumenty/obiektowe/7/prj/inc/zespolone.hh:89: warning: The following parameters of Zeruj(Zespolona z) are not documented:
+  parameter 'z'
+Generating page documentation...
+Generating group documentation...
+Generating class documentation...
+Generating docs for compound Macierz...
+Generating docs for compound Uklad...
+Generating docs for compound Wektor...
+Generating docs for compound Zespolona...
+Generating namespace index...
+Generating graph info page...
+Generating index page...
+Generating page index...
+Generating module index...
+Generating namespace index...
+Generating namespace member index...
+Generating annotated compound index...
+Generating alphabetical compound index...
+Generating hierarchical class index...
+Generating graphical class hierarchy...
+Generating member index...
+Generating file index...
+Generating file member index...
+Generating example index...
+finalizing index lists...
+Generating dot graphs using 5 parallel threads...
+sh: 1: sh: 1: dot: not found
+dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/liczba_8hh__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/liczba_8hh__incl.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/liczba_8cpp__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/liczba_8cpp__incl.png"'
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/liczba_8hh_a4cefb8d1d892869f533b4235d75af3b1_icgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/liczba_8hh_a4cefb8d1d892869f533b4235d75af3b1_icgraph.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/liczba_8hh__dep__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/liczba_8hh__dep__incl.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/liczba_8cpp_a4cefb8d1d892869f533b4235d75af3b1_icgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/liczba_8cpp_a4cefb8d1d892869f533b4235d75af3b1_icgraph.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8cpp_a7663239456df7dcbb08535e9b796660b_cgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8cpp_a7663239456df7dcbb08535e9b796660b_cgraph.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8hh__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8hh__incl.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8cpp_a7663239456df7dcbb08535e9b796660b_icgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8cpp_a7663239456df7dcbb08535e9b796660b_icgraph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8hh_a7663239456df7dcbb08535e9b796660b_cgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8hh_a7663239456df7dcbb08535e9b796660b_cgraph.png"'
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8hh_a7663239456df7dcbb08535e9b796660b_icgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8hh_a7663239456df7dcbb08535e9b796660b_icgraph.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8hh__dep__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8hh__dep__incl.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/symbole_8hh__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/symbole_8hh__incl.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/main_8cpp__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/main_8cpp__incl.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8cpp__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8cpp__incl.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/symbole_8cpp__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/symbole_8cpp__incl.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/symbole_8hh__dep__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/symbole_8hh__dep__incl.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/typ_8hh__dep__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/typ_8hh__dep__incl.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8cpp_ac95587275b93899677a579705440ec88_icgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8cpp_ac95587275b93899677a579705440ec88_icgraph.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8cpp_a8b509c588635dbabc5785e946d583470_cgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8cpp_a8b509c588635dbabc5785e946d583470_cgraph.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8cpp_a8b509c588635dbabc5785e946d583470_icgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8cpp_a8b509c588635dbabc5785e946d583470_icgraph.png"'
+sh: 1: dot: not found
+sh: 1: Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8cpp_aaa5d22326f90a8e994646038b590b3fc_cgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8cpp_aaa5d22326f90a8e994646038b590b3fc_cgraph.png"'
+dot: not found
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh__incl.png"'
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8cpp_a26d5fd8b7ebcddfdf9b42c4ce3b47d50_icgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8cpp_a26d5fd8b7ebcddfdf9b42c4ce3b47d50_icgraph.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh__dep__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh__dep__incl.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh_aaa5d22326f90a8e994646038b590b3fc_cgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh_aaa5d22326f90a8e994646038b590b3fc_cgraph.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh_ac95587275b93899677a579705440ec88_icgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh_ac95587275b93899677a579705440ec88_icgraph.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh_a26d5fd8b7ebcddfdf9b42c4ce3b47d50_icgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh_a26d5fd8b7ebcddfdf9b42c4ce3b47d50_icgraph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh_a8b509c588635dbabc5785e946d583470_cgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh_a8b509c588635dbabc5785e946d583470_cgraph.png"'
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/wektor_8cpp__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/wektor_8cpp__incl.png"'
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh_a8b509c588635dbabc5785e946d583470_icgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh_a8b509c588635dbabc5785e946d583470_icgraph.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/wektor_8hh__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/wektor_8hh__incl.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/wektor_8hh_a1e7f1ae7b17d40e28fa4fff0f27d58a1_cgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/wektor_8hh_a1e7f1ae7b17d40e28fa4fff0f27d58a1_cgraph.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/wektor_8cpp_a1e7f1ae7b17d40e28fa4fff0f27d58a1_cgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/wektor_8cpp_a1e7f1ae7b17d40e28fa4fff0f27d58a1_cgraph.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8cpp__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8cpp__incl.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8cpp__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8cpp__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8cpp_a267c6b741bd921b1210eab100649d6d0_icgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8cpp_a267c6b741bd921b1210eab100649d6d0_icgraph.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8cpp_a9f10e6a32179551a6f20ce9dabdf179a_cgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8cpp_a9f10e6a32179551a6f20ce9dabdf179a_cgraph.png"'
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8hh__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8hh__incl.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8hh__dep__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8hh__dep__incl.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/wektor_8hh__dep__incl.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/wektor_8hh__dep__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8hh_a267c6b741bd921b1210eab100649d6d0_icgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8hh_a267c6b741bd921b1210eab100649d6d0_icgraph.png"'
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8hh_a9f10e6a32179551a6f20ce9dabdf179a_cgraph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8hh_a9f10e6a32179551a6f20ce9dabdf179a_cgraph.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/class_uklad__coll__graph.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/class_uklad__coll__graph.png"'
+sh: 1: dot: not found
+Problems running dot: exit code=127, command='dot', arguments='"/home/dawidek/Dokumenty/obiektowe/7/dox/html/graph_legend.dot" -Tpng -o "/home/dawidek/Dokumenty/obiektowe/7/dox/html/graph_legend.png"'
+Running dot for graph 1/45
+Running dot for graph 2/45
+Running dot for graph 3/45
+Running dot for graph 4/45
+Running dot for graph 5/45
+Running dot for graph 6/45
+Running dot for graph 7/45
+Running dot for graph 8/45
+Running dot for graph 9/45
+Running dot for graph 10/45
+Running dot for graph 11/45
+Running dot for graph 12/45
+Running dot for graph 13/45
+Running dot for graph 14/45
+Running dot for graph 15/45
+Running dot for graph 16/45
+Running dot for graph 17/45
+Running dot for graph 18/45
+Running dot for graph 19/45
+Running dot for graph 20/45
+Running dot for graph 21/45
+Running dot for graph 22/45
+Running dot for graph 23/45
+Running dot for graph 24/45
+Running dot for graph 25/45
+Running dot for graph 26/45
+Running dot for graph 27/45
+Running dot for graph 28/45
+Running dot for graph 29/45
+Running dot for graph 30/45
+Running dot for graph 31/45
+Running dot for graph 32/45
+Running dot for graph 33/45
+Running dot for graph 34/45
+Running dot for graph 35/45
+Running dot for graph 36/45
+Running dot for graph 37/45
+Running dot for graph 38/45
+Running dot for graph 39/45
+Running dot for graph 40/45
+Running dot for graph 41/45
+Running dot for graph 42/45
+Running dot for graph 43/45
+Running dot for graph 44/45
+Running dot for graph 45/45
+Patching output file 1/15
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/liczba_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/liczba_8cpp_a4cefb8d1d892869f533b4235d75af3b1_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 2/15
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/liczba_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/liczba_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/liczba_8hh_a4cefb8d1d892869f533b4235d75af3b1_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 3/15
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8cpp_a7663239456df7dcbb08535e9b796660b_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8cpp_a7663239456df7dcbb08535e9b796660b_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 4/15
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8hh_a7663239456df7dcbb08535e9b796660b_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/macierz_8hh_a7663239456df7dcbb08535e9b796660b_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 5/15
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/main_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 6/15
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/symbole_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 7/15
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/symbole_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/symbole_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 8/15
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/typ_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 9/15
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8cpp_ac95587275b93899677a579705440ec88_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8cpp_aaa5d22326f90a8e994646038b590b3fc_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8cpp_a8b509c588635dbabc5785e946d583470_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8cpp_a8b509c588635dbabc5785e946d583470_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8cpp_a26d5fd8b7ebcddfdf9b42c4ce3b47d50_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 10/15
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh_ac95587275b93899677a579705440ec88_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh_aaa5d22326f90a8e994646038b590b3fc_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh_a8b509c588635dbabc5785e946d583470_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh_a8b509c588635dbabc5785e946d583470_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/uklad_8hh_a26d5fd8b7ebcddfdf9b42c4ce3b47d50_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 11/15
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/wektor_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/wektor_8cpp_a1e7f1ae7b17d40e28fa4fff0f27d58a1_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 12/15
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/wektor_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/wektor_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/wektor_8hh_a1e7f1ae7b17d40e28fa4fff0f27d58a1_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 13/15
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8cpp_a9f10e6a32179551a6f20ce9dabdf179a_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8cpp_a267c6b741bd921b1210eab100649d6d0_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 14/15
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8hh_a9f10e6a32179551a6f20ce9dabdf179a_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/zespolone_8hh_a267c6b741bd921b1210eab100649d6d0_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+Patching output file 15/15
+error: problems opening map file /home/dawidek/Dokumenty/obiektowe/7/dox/html/class_uklad__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+symbol cache used 90/65536 hits=7642 misses=90
+lookup cache used 128/65536 hits=1314 misses=140
+finished...
+*** Doxygen has finished

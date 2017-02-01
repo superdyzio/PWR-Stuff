@@ -1,0 +1,11 @@
+#ifndef OPCJE_H
+#define OPCJE_H
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include "stos.h"
+
+void kalkulator();
+
+#endif

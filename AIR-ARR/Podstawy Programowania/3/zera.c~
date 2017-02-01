@@ -1,0 +1,83 @@
+#include <stdio.h>
+#include <math.h>
+#define STOP 99
+#define GRUPA 10
+#define MIN -10
+#define MAX 10
+#define A 2
+#define B 3
+
+int main()
+{ int x = 0;
+  int y = 0;
+  int n = 0;
+  int p = 0;
+  printf("Podaj dane wejsciowe:\n");
+  while ( ((x<MIN) || (x>MAX) || (x==0)) && (x!=STOP) )
+    { scanf("%i", &x);
+      if ( (x>=MIN) && (x<=MAX) )
+	if (n+1>GRUPA-1)
+	  { if ( (p<A) || (p>B) )
+	      printf("Bledna czestotliwosc.\n"); printf("%i,%i",n,p);
+	    n = 0;
+	    p = 0; printf("%i,%i",n,p);
+	  }
+	else n++;
+    }
+  while ( (x!=STOP) && (y!=STOP) )
+    { while ( ((y<MIN) || (y>MAX) || (y==0)) && (y!=STOP) )
+	{ scanf("%i", &y);
+	  if ( (y>=MIN) && (y<=MAX) )
+	    if (n+1>GRUPA-1)
+	      { if ( (p<A) || (p>B) )
+		  printf("Bledna czestotliwosc.\n"); printf("%i,%i",n,p,x);
+		n = 0;
+		p = 0;
+		x = 0; printf("%i,%i,%i",n,p,x);
+	      }
+	    else n++;
+	}
+      if ( (y!=STOP) && (x*y<0) ) p++;
+      x = y;
+      y = 0;
+    } printf("%i,%i",n,p);
+  return 0;  
+}
+
+
+/* na potrzeby testow zmieniam wartosci niektorych stalych symbolicznych
+   A = 2    B = 4   GRUPA = 10
+   uzywam rowniez funkcji printf na koncu kazdej petli oraz programu, aby wyswietlic
+   wartosci poszczegolnych zmmiennych i porownac je z, wyliczonymi metoda recznej symulacji, poprawnymi wartosciami
+
+ 1. sprawdzenie czy program konczy dzialanie po wpisaniu liczby okreslonej stala symboliczna KOD (w tej chwili rownej 99)
+      a) jako pierwszej danej
+      b) jako drugiej danej
+           dane wejsciowe: 0,99
+      c) jako piatej danej (ogolnie pozniejszej) 
+           dane wejsciowe: 0,0,0,0,99
+    w kazdym wariancie oczekiwany rezultat to zakonczenie dzialania pracy programu polaczone z wyswietleniem komunikatu o blednej czestotliwosci przeciec
+    oraz wyswietleniem wartosci zmiennych n i p, gdzie p=0 w kazdym przypadku, natomiast n:
+      a) 1                 b) 2                  c) 5
+
+ 2. sprawdzenie czy program "pilnuje" licznosci grup danych (czy liczy tylko dane z zadanego przedzialu)
+      a) dane wejsciowe: 0,0,0,0,0,0,0,0,0,0,99
+      b) dane wejsciowe: 1,-1,1,-1,1,-1,1,-1,1,-1,99
+      c) dane wejsciowe: 5,10,-1,-45,6,8,1,-5,7,0,99
+      d) dane wejsciowe: 98,0,-4,-5,45,12,-11,5,2,-9,-10,10,88,9,10,1,99
+
+ 3. sprawdzenie czy program zeruje zmienne po wypelnieniu grupy (widoczne przy okazji testu nr 2)
+      a) przy wpisywaniu pierwszej zmiennej (w pierwszej, zawsze wykonywanej, petli)
+      b) przy wpisywaniu drugiej zmiennej (w drugiej petli)
+
+ 4. sprawdzenie reakcji programu na bledny format danych wejsciowych
+      a) dane wejsciowe: a
+
+ 5. sprawdzenie czy program poprawnie liczy liczbe przeciec zera
+      a) dane wejsciowe: 1,0,-1,99
+      b) dane wejsciowe: 1,0,0,-1,0,1,0,0,-1,99
+      c) dane wejsciowe: 0,1,-11,10,-9,12,-12,4,0,0,99
+      d) dane wejsciowe: 1,-1,1,-1,0,0,9,9,-7,10,1,-1,99
+      e) dane wejsciowe: 0,0,0,0,0,0,0,0,1,-1,1,99
+
+*/

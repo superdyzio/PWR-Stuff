@@ -1,0 +1,238 @@
+/*
+PRZETWARZANIE OBRAZÓW 1
+Autor: Mateusz Rado
+Nr albumu: 200503
+Automatyka i Robotyka, Laboratorium nr 3
+Ostateczna data oddania: 26.11.2012
+*/
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+#define MAX 500 /*maksymalny rozmiar wczytywanego obrazu*/
+#define DL_LINII 80 /*maksymalna dlugosc nazwy wczytywanego obrazu*/
+
+/*FUNKCJE PROGRAMU:*/
+/*WCZYTAJ (funkcja udostepniona przez wykladowce)*/
+int czytaj(FILE *p,int obraz[][MAX],int *szerokosc,int *wysokosc, int *szarosc)
+ {
+  char s[DL_LINII];
+  int znak,koniec=0,i,j;
+
+  if (p==NULL) /*sprawdzenie czy podano prawidlowy uchwyt pliku */
+   {
+    fprintf(stderr,"Blad: Nie podano uchwytu do pliku\n");
+    return(0);
+   }
+
+  if (fgets(s,DL_LINII,p)==NULL) koniec=1; /* Sprawdzenie "numeru magicznego - powinien byc P2 */
+  if ( (s[0]!='P') || (s[1]!='2') || koniec)
+   {
+    fprintf(stderr,"Blad: To nie jest plik PGM\n");
+    return(0);
+   }
+
+  do /* Pominiecie komentarzy */
+   {
+    if ((znak=fgetc(p))=='#')
+     {
+      if (fgets(s,DL_LINII,p)==NULL) koniec=1;
+     }
+      else
+       {
+        ungetc(znak,p);
+       }
+   }
+  while (! koniec && znak=='#');
+
+  if (fscanf(p,"%d %d %d",szerokosc,wysokosc,szarosc)!=3) /* Pobranie wymiarow i liczby odcieni szarosc */
+   {
+    fprintf(stderr,"Blad: Brak wymiarow obrazu lub liczby stopni szarosc\n");
+    return(0);
+   }
+
+  for (j=0;j<*wysokosc;j++)   /* Pobranie obrazu i zapisanie w tablicy obraz*/
+   {
+    for (i=0;i<*szerokosc;i++)
+     {
+      if (fscanf(p,"%d",&(obraz[i][j]))!=1)
+       {
+	    fprintf(stderr,"Blad: Niewlasciwe wymiary obrazu\n");
+	    return(0);
+       }
+     }
+   }
+  return *szerokosc**wysokosc;
+ }
+
+/*DISPLAY (funkcja udostepniona przez wykladowce)*/
+void wyswietl(char *n_pliku) /* Wyswietlenie obrazu o zadanej nazwie za pomoca programu "display"   */
+ {
+  char polecenie[1024];
+  strcpy(polecenie,"display ");
+  strcat(polecenie,n_pliku);
+  strcat(polecenie," &");
+  printf("%s\n",polecenie);
+  system(polecenie);
+}
+
+/*NEGATYW*/
+int negatyw (int obraz[][MAX],int *szerokosc,int *wysokosc, int *szarosc)
+ {
+  int i,j;
+  for (j=0;j<*wysokosc;j++)
+   {
+    for (i=0;i<*szerokosc;i++)
+     {
+      obraz[i][j]=(*szarosc-obraz[i][j]);
+     }
+   }
+  return(0);
+ }
+
+/*PROGOWANIE*/
+int progowanie (int obraz[][MAX], int *szerokosc,int *wysokosc, int *szarosc)
+ {
+  int i,j,stopien;
+  printf ("Podaj stopien progowania z zakresu od 0 do %d.\n", *szarosc);
+  scanf  ("%d", &stopien);
+  for (j=0;j<*wysokosc;j++)
+   {
+    for (i=0;i<*szerokosc;i++)
+     {
+      if (obraz[i][j]<=stopien)
+	   obraz[i][j]=0;
+      else
+	   obraz[i][j]=*szarosc;
+     }
+   }
+  return(0);
+ }
+
+/*KONTUROWANIE*/
+int konturowanie (int obraz[][MAX], int *szerokosc, int *wysokosc, int *szarosc)
+ {
+  int i,j;
+  for (j=0;j<*wysokosc;j++)
+   {
+    for (i=0;i<*szerokosc;i++)
+     {
+      obraz[i][j]=abs(obraz[i+1][j]-obraz[i][j])+abs(obraz[i][j+1]-obraz[i][j]);
+     }
+
+   }
+  return (0);
+ }
+
+/*ZAPISZ*/
+int zapisz(int obraz[][MAX],int *szerokosc,int *wysokosc, int *szarosc)
+ {
+  int i,j;
+  char nazwa [100];
+  FILE *plik;
+
+  printf ("Podaj nazwe pod jaka zapisac obraz: \n");
+  scanf ("%s", nazwa);
+  plik=fopen(nazwa, "w");
+  fprintf (plik, "P2\n%d %d \n%d ", *szerokosc, *wysokosc, *szarosc);
+
+  for (j=0;j<*wysokosc;j++)
+   {
+    for (i=0;i<*szerokosc;i++)
+     {
+      fprintf(plik,"%d ",obraz[i][j]);
+     }
+   }
+  return 0;
+ }
+
+/*FILTR*/
+void filtr(int obraz[][MAX], int *szerokosc, int *wysokosc)
+{
+  int i,j;
+  int w[9]={1,1,1,1,2,1,1,1,1};  /* tablica wspolczynnikow w formie jednowymiarowej (wiersz po wierszu) */
+  for (i=1; i<*szerokosc-1; i++)
+    for (j=1; j<*wysokosc-1; j++)
+      obraz[i][j] = (w[0]*obraz[i-1][j-1] + w[1]*obraz[i-1][j] + w[2]*obraz[i-1][j+1]
+	               + w[3]*obraz[i][j-1] + w[4]*obraz[i][j] + w[5]*obraz[i][j+1]
+			 + w[6]*obraz[i+1][j-1] + w[7]*obraz[i+1][j] + w[8]*obraz[i+1][j+1])/(w[0]+w[1]+w[2]+w[3]+w[4]+w[5]+w[6]+w[7]+w[8]);
+
+}
+
+/*FUNKCJA GLOWNA PROGRAMU*/
+int main ()
+{
+ int menu; /*wybor opcji w menu*/
+ int obraz[MAX][MAX]; /*rozmiary obrazu*/
+ FILE *plik;
+ char nazwa[80]; /*dlugosc nazwy pod ktora mozna zapisac obraz*/
+ int szerokosc; /*szerokosc wczytanego obrazu*/
+ int wysokosc; /*wysokosc wczytanego obrazu*/
+ int szarosc; /*stopien szarosci wczytanego obrazu*/
+ 
+ printf ("Program do przetwarzania obrazow formatu PGM.\n");
+ printf ("Maksymalny rozmiar obrazu: %d x %d.\n", MAX, MAX);
+ printf ("Podaj nazwe pliku wraz z rozszerzeniem:\n");
+ scanf ("%s",nazwa);
+ plik=fopen(nazwa,"r");
+ czytaj (plik,obraz,&szerokosc,&wysokosc,&szarosc); /* Funkcja wczytaj */
+
+ while (menu != 7)
+ {
+  printf ("Menu:\n");
+  printf (" 1 - Obraz oryginalny.\n");
+  printf (" 2 - Negatyw.\n");
+  printf (" 3 - Progowanie.\n");
+  printf (" 4 - Konturowanie.\n");
+  printf (" 5 - Zapisz zmiany.\n");
+  printf (" 6 - Filtr.\n");
+  printf (" 7 - Zakoncz.\n");
+
+  printf ("Twoj wybor: ");
+  scanf ("%d", &menu);
+
+  switch (menu)
+   {
+   case 1:
+    {
+     printf ("Wybrano wyswietlenie obrazu.\n"); /*Funkcja display*/
+     wyswietl(nazwa);
+     break;
+    }
+   case 2:
+    {
+     printf ("Wybrano opcje negatyw.\n");
+     negatyw (obraz,&szerokosc,&wysokosc,&szarosc); /* Funkcja negatyw */
+     break;
+    }
+   case 3:
+    {
+     printf ("Wybrano opcje progowanie.\n");
+     progowanie (obraz,&szerokosc,&wysokosc,&szarosc); /* Funkcja progowanie */
+     break;
+    }
+   case 4:
+    {
+     printf ("Wybrano opcje konturowanie.\n");
+     konturowanie (obraz,&szerokosc,&wysokosc,&szarosc); /* Funkcja konturowanie */
+     break;
+    }
+   case 5:
+    {
+     printf ("Wybrano opcje zapisz.\n");
+     zapisz(obraz,&szerokosc,&wysokosc,&szarosc); /* Funkcja zapisz */
+     break;
+    }
+   case 6:
+    {
+      printf ("Wybrano filtrowanie obrazu.\n"); /*funkcja filtrowania*/
+      filtr (obraz, &szerokosc, &wysokosc);
+     break;
+    }
+   case 7: printf ("Koniec dzialania programu.\n");
+    break;
+   default: printf ("Nie ma takiej opcji.\n");
+   }
+ }
+ return 0;
+}

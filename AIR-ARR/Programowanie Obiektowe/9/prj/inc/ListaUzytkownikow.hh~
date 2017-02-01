@@ -1,0 +1,54 @@
+#ifndef LISTAUZYTKOWNIKOW_HH
+#define LISTAUZYTKOWNIKOW_HH
+
+#include <iostream>
+#include <cstdio>
+#include <cctype>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
+#include <fstream>
+#include <iomanip>
+#include <string>
+#include <list>
+
+#include "OpcjeWywolania.hh"
+#include "DaneUzytkownika.hh"
+
+/*!
+ *\file
+ *\brief	Plik zawierający definicję klasy ListaUzytkownikow oraz potrzebnych metod. Zaimplementowane są tu również metody
+ *		zaprzyjaźnione z klasą DaneUzytkownika.
+*/
+using namespace std;
+
+/*!
+ *\brief	Definicja klasy ListaUzytkownikow. */
+class ListaUzytkownikow {
+public:
+	/*! \brief Kolekcja w której przechowywane będą elementy typu DaneUzytkownika. */
+	list<DaneUzytkownika> Lista;
+	/*! \brief Zmienan mająca zapamiętać użytkownika, który ma nie być wyświetlony wraz ze wszystkimi. */
+	DaneUzytkownika uzyt;
+	/*! \brief Konstruktor bezparametrowy, tworzący pusty obiekt. */
+	ListaUzytkownikow();
+	friend bool Idy(DaneUzytkownika x, DaneUzytkownika y);
+	friend bool Nazwiska(DaneUzytkownika x, DaneUzytkownika y);
+	friend bool Loginy (DaneUzytkownika x, DaneUzytkownika y);
+	/*! \brief	Bezparametrowa funkcja wyszukiwania, wyszukująca użytkownika o największym ID. */
+	void Znajdz();
+	/*! \brief 	Jednoparametrowa funkcja wyszukiwania, wyszukująca użytkownika o Loginie rozpoczynającym się od zadanych znaków.
+ 	 * \param[in]	Przyjmuje jako argument ciąg znaków od którego rozpoczynać ma się login znalezionego użytkownika.
+	 */
+	void Znajdz(string PoczatekLoginu);
+	/*! \brief	Jednoparametrowa funkcja wyszukiwania, wyszukująca użytkownika o zadanym ID.
+	 * \param[in]	Przyjmuje jako argument zmienną typu int - wartość szukaną wśrod identyfikatorów.
+	 */	
+	void Znajdz(int s);
+};
+
+bool Nazwiska(DaneUzytkownika x, DaneUzytkownika t);
+bool Loginy (DaneUzytkownika x, DaneUzytkownika y);
+bool Idy(DaneUzytkownika x, DaneUzytkownika y);
+
+#endif

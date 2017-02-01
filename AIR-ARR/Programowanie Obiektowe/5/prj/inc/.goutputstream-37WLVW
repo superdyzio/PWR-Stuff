@@ -1,0 +1,30 @@
+#ifndef ILOCZYN_HH
+#define ILOCZYN_HH
+
+#include <iostream>
+#include <cstdio>
+#include <cctype>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
+
+#include "zespolone.hh"
+#include "symbole.hh"
+#include "typ.hh"
+
+using namespace std;
+
+class Wektor {
+	TYP u, i, o, p;
+	public:
+	TYP & operator[] (int Ind) { return Ind == 0 ? u : Ind == 1 ? i : Ind == 2 ? o: p; }
+};
+
+class Macierz {
+	TYP tab[4][4];
+	public:
+	TYP & operator( ) (int w, int k) { return tab[w][k]; }
+	TYP operator( ) (int w, int k) const { return tab[w][k]; }
+};
+
+/*	Operator wyj

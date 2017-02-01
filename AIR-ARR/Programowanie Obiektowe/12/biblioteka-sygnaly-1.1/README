@@ -1,0 +1,20 @@
+
+  Niniejszy pakiet umozliwia zainstalowanie bilioteki Sygnaly 
+  w systemie akceptujacym pakiety instalacyjne typu GNU.
+  Wspomniana biblioteka przewidziana jest jako element
+  wykorzystywany w zadaniu nr 12 kursu "Programowanie obiektowego"
+  prowadzonym na kieruniku Automatyka i Robotyka Wydziału
+  Elektroniki Politechniki Wroclawskiej.
+
+  Intencja dostarczenia pakietu jest chec umozliwienia pracy 
+  na lokalnych komputerach osobom, ktore biora udzial we 
+  wspomnianym wczesniej kursie.
+  Jednak koncowe rozwiazanie, ktore ma byc prezentowane
+  na zajeciach laboratoryjnych, ma korzystac z biblioteki
+  zainstalowanej na panamincie lub diablo udostepnionej
+  przez osobe prowadzaca kurs.
+
+  Opis instalacji pakietu znajduje sie w pliku INSTALL.
+
+
+  Autor pakietu: Bogdan Kreczmer

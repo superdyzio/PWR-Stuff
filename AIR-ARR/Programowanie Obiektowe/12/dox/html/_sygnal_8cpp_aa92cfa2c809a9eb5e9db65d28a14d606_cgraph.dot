@@ -1,0 +1,9 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="operator\>\>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Sygnal::ZmienSyg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sygnal.html#a4dcfeea1b46c1bc7f50df064f7dc989c",tooltip="Zmienia wartość sygnału i chwili czasowej."];
+}

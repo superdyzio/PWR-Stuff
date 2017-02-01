@@ -1,0 +1,144 @@
+#include "przetwarzanie.h"
+#include "pliki.h"
+
+void negatyw(t_obraz obraz)
+{
+  int i,j;
+  int (*piksele)[obraz.wymx];
+  piksele=(int(*)[obraz.wymx]) obraz.piksele;
+  for (i=0; i<obraz.wymy; i++)
+	for (j=0; j<obraz.wymx; j++)
+		piksele[i][j]=obraz.szarosci-piksele[i][j];
+}
+
+void konturowanie(t_obraz obraz)
+{
+  int i,j,wynik;
+  int (*piksele)[obraz.wymx];
+  piksele=(int(*)[obraz.wymx]) obraz.piksele;
+  for (i=0; i<obraz.wymy-1; i++)
+    for (j=0; j<obraz.wymx-1; j++)
+    {  /* jesli piksel mocno rozni sie od dwoch sasiednich to zmienna pomocnicza wynik przyjmie wartosc wieksza od liczby odcienie szarosci */
+	wynik=abs(piksele[i+1][j]-piksele[i][j])+abs(piksele[i][j+1]-piksele[i][j]);
+	if (wynik>obraz.szarosci)       /* w opisanym wyzej przypadku przyjmujemy dla danego piksela wartosc maksymalna, czyli kolor bialy */
+	  piksele[i][j]=obraz.szarosci;
+	else piksele[i][j]=wynik;   /* w przeciwnym razem przypisujemy mu wartosc zmiennej wynik  */
+    }
+  for (i=0; i<obraz.wymy; i++)
+    piksele[i][obraz.wymx-1]=0;/* porownania pikseli odbywaja sie z pikselem po prawej i pikselem nizej, trzeba zatem skrajny dolny wiersz */
+  for (j=0; j<obraz.wymx; j++) /* oraz skrajna prawa kolumne wypelnic na czarno                                                            */
+    piksele[obraz.wymy-1][j]=0;  
+}
+
+void progowanie(t_obraz obraz, int prog)
+{
+  int i,j;
+  int (*piksele)[obraz.wymx];
+  piksele=(int(*)[obraz.wymx]) obraz.piksele;
+	printf("%d\n",prog);
+  while ((prog<0) || (prog>obraz.szarosci))
+  {
+	printf("Podaj próg z przedziału 0-%d: ",obraz.szarosci);
+	scanf("%d",&prog);
+  }
+  for (i=0; i<obraz.wymy; i++)
+    for (j=0; j<obraz.wymx; j++)
+	if (piksele[i][j]>prog)
+		piksele[i][j]=obraz.szarosci;
+	else piksele[i][j]=0;
+}
+
+void rozmywanie(t_obraz obraz)
+{
+  int i,j;
+  int m[9]={1,1,1,1,1,1,1,1,1};
+  int (*piksele)[obraz.wymx];
+  int suma=m[0]+m[1]+m[2]+m[3]+m[4]+m[5]+m[6]+m[7]+m[8];
+  piksele=(int(*)[obraz.wymx]) obraz.piksele;
+  for (i=1; i<obraz.wymy-1; i++)
+    for (j=1; j<obraz.wymx-1; j++)
+	piksele[i][j] = (m[0]*piksele[i-1][j-1] + m[1]*piksele[i-1][j] + m[2]*piksele[i-1][j+1] + m[3]*piksele[i][j-1] + m[4]*piksele[i][j]
+ 			+ m[5]*piksele[i][j+1] + m[6]*piksele[i+1][j-1] + m[7]*piksele[i+1][j] + m[8]*piksele[i+1][j+1])
+		       / suma;	 
+}
+
+void wyostrzanie(t_obraz obraz)
+{
+  int m[9]={-1,-1,-1,-1,9,-1,-1,-1,-1};
+  int i,j, P[2][MAX]; /* pomocnicza tablica przechowująca aktualny i poprzedni wiersz, aby uniknąć problemów przy filtrowaniu */
+  int (*piksele)[obraz.wymx]; 
+  piksele=(int(*)[obraz.wymx]) obraz.piksele;
+  int max,min;
+  for (j=0; j<obraz.wymx; j++)
+	P[1][j]=piksele[0][j];
+  max=P[1][0];
+  min=max;
+  for (i=1; i<obraz.wymy-1; i++)
+  {
+    for (j=0; j<obraz.wymx; j++)
+    {
+	P[0][j]=P[1][j];
+	P[1][j]=piksele[i][j];
+    }
+    for (j=1; j<obraz.wymx-1; j++)
+	{
+		piksele[i][j]=((m[0]*P[0][j-1])+(m[1]*P[0][j])+(m[2]*P[0][j+1])+(m[3]*P[1][j-1])+(m[4]*P[1][j])+(m[5]*P[1][j+1])+
+		(m[6]*piksele[i+1][j-1])+(m[7]*piksele[i+1][j])+(m[8]*piksele[i+1][j+1]));
+		if (piksele[i][j]>max) max=piksele[i][j];
+		if (piksele[i][j]<min) min=piksele[i][j];
+	}
+  }
+  for (i=0; i<obraz.wymy; i++)
+	for (j=0; j<obraz.wymx; j++)
+		piksele[i][j]=(piksele[i][j]-min)*obraz.szarosci/(max-min);
+}
+
+void obracanie(t_obraz *obraz)
+{
+  int i,j;
+  int (*piksele)[obraz->wymx]; 
+  piksele=(int(*)[obraz->wymx]) obraz->piksele;
+  void *pomoc;
+  pomoc=malloc(obraz->wymx*obraz->wymy*sizeof(int));
+  int (*obrazek)[obraz->wymy];
+  obrazek=(int(*)[obraz->wymy]) pomoc;
+  for (i=0; i<obraz->wymy; i++)
+	for (j=0; j<obraz->wymx; j++)
+		obrazek[j][obraz->wymy-1-i]=piksele[i][j];
+  obraz->piksele=pomoc;
+  int pom=obraz->wymx;
+  obraz->wymx=obraz->wymy;
+  obraz->wymy=pom;
+  free(pomoc);
+}
+
+void splot(t_obraz obraz, w_opcje opcje)
+{
+  int i,j, P[2][MAX]; /* pomocnicza tablica przechowująca aktualny i poprzedni wiersz, aby uniknąć problemów przy filtrowaniu */
+  int (*piksele)[obraz.wymx]; 
+  piksele=(int(*)[obraz.wymx]) obraz.piksele;
+  int max,min;
+  for (j=0; j<obraz.wymx; j++)
+	P[1][j]=piksele[0][j];
+  max=P[1][0];
+  min=max;
+  for (i=1; i<obraz.wymy-1; i++)
+  {
+    for (j=0; j<obraz.wymx; j++)
+    {
+	P[0][j]=P[1][j];
+	P[1][j]=piksele[i][j];
+    }
+    for (j=1; j<obraz.wymx-1; j++)
+	{
+		piksele[i][j]=((opcje.filtr[0]*P[0][j-1])+(opcje.filtr[1]*P[0][j])+(opcje.filtr[2]*P[0][j+1])+(opcje.filtr[3]*P[1][j-1])+
+		(opcje.filtr[4]*P[1][j])+(opcje.filtr[5]*P[1][j+1])+(opcje.filtr[6]*piksele[i+1][j-1])+(opcje.filtr[7]*piksele[i+1][j])+
+		(opcje.filtr[8]*piksele[i+1][j+1]));
+		if (piksele[i][j]>max) max=piksele[i][j];
+		if (piksele[i][j]<min) min=piksele[i][j];
+	}
+  }
+  for (i=0; i<obraz.wymy; i++)
+	for (j=0; j<obraz.wymx; j++)
+		piksele[i][j]=(piksele[i][j]-min)*obraz.szarosci/(max-min);
+}

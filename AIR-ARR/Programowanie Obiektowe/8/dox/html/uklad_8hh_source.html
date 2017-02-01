@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Dawidek: Plik źródłowy uklad.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Dawidek
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">uklad.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="uklad_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef UKLAD_HH</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define UKLAD_HH</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;cstdio&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;cctype&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;cstring&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;ctime&gt;</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="zespolone_8hh.html" title="Moduł zawierający definicję klasy Zespolona, służącej do przechowywania liczb zespolonych oraz przeci...">zespolone.hh</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="symbole_8hh.html" title="Modul zawierający definicję typu wyliczeniowego &#39;Symbol&#39; {e , a , b , c , d}, odpowiadające kolejno w...">symbole.hh</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="liczba_8hh.html" title="Plik nagłówkowy zawierający zapowiedź metody zerowania zmiennej typu double.">liczba.hh</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="typ_8hh.html">typ.hh</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="macierz_8hh.html" title="Moduł zawiera definicję klasy Macierz wraz z przeciążeniami wybranych operatorów. Klasa &#39;Macierz&#39; prz...">macierz.hh</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="wektor_8hh.html" title="Moduł zawierający definicję klasy Wektor oraz przeciążenia wybranych operatorów. Klasa wektor przyjmu...">wektor.hh</a>&quot;</span>
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="keyword">using namespace </span>std;
+<a name="l00019"></a>00019 
+<a name="l00030"></a>00030 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
+<a name="l00031"></a><a class="code" href="class_uklad.html">00031</a> <span class="keyword">class </span><a class="code" href="class_uklad.html" title="Definicja szablonu klasy Uklad. Może przyjmować typy: double, Symbol oraz Zespolona.">Uklad</a> {
+<a name="l00032"></a>00032 <span class="keyword">public</span>:
+<a name="l00034"></a><a class="code" href="class_uklad.html#a4ab12b2d83596921a3253251f60f6411">00034</a>         <a class="code" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz&lt;T&gt;</a> <a class="code" href="class_uklad.html#a4ab12b2d83596921a3253251f60f6411" title="Macierz współczynników układu równań.">A</a>;
+<a name="l00036"></a><a class="code" href="class_uklad.html#a5e5440c4b2ec4be5b0544ef6fdf4980e">00036</a>         <a class="code" href="class_wektor.html" title="Definicja szablonu klasy Wektor. Może przyjmować typy: double, Symbol, Zespolona.">Wektor&lt;T&gt;</a> <a class="code" href="class_uklad.html#a5e5440c4b2ec4be5b0544ef6fdf4980e" title="Rozwiązanie układu równań.">x</a>;
+<a name="l00038"></a><a class="code" href="class_uklad.html#aba67a5e1edc6e48df14dc932a7b91564">00038</a>         <a class="code" href="class_wektor.html" title="Definicja szablonu klasy Wektor. Może przyjmować typy: double, Symbol, Zespolona.">Wektor&lt;T&gt;</a> <a class="code" href="class_uklad.html#aba67a5e1edc6e48df14dc932a7b91564" title="Wektor wyrazów wolnych.">b</a>;
+<a name="l00040"></a><a class="code" href="class_uklad.html#a7974783c0c82d1de746e51564da2b613">00040</a>         <a class="code" href="class_uklad.html" title="Definicja szablonu klasy Uklad. Może przyjmować typy: double, Symbol oraz Zespolona.">Uklad&lt;T&gt;</a>(<a class="code" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz&lt;T&gt;</a> <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa91fb0824da12f8bb3b74dd78fb13b63">a</a>, <a class="code" href="class_wektor.html" title="Definicja szablonu klasy Wektor. Może przyjmować typy: double, Symbol, Zespolona.">Wektor&lt;T&gt;</a> <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54a776304400122408ea717dde9234fdd2a">c</a>) { A = <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa91fb0824da12f8bb3b74dd78fb13b63">a</a>; <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa06b03e4cd5c7c464c513a95a7fcf9bf">b</a> = <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54a776304400122408ea717dde9234fdd2a">c</a>; };
+<a name="l00041"></a><a class="code" href="class_uklad.html#af071a5530a8825b06ba8a1059fb55c6e">00041</a>         <a class="code" href="class_uklad.html" title="Definicja szablonu klasy Uklad. Może przyjmować typy: double, Symbol oraz Zespolona.">Uklad&lt;T&gt;</a>() {}
+<a name="l00048"></a>00048         <a class="code" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz&lt;T&gt;</a> ZamianaKolumny(<span class="keywordtype">int</span> k);
+<a name="l00054"></a>00054         <span class="keywordtype">void</span> Rozwiaz();
+<a name="l00055"></a>00055 };
+<a name="l00056"></a>00056 
+<a name="l00062"></a>00062 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
+<a name="l00063"></a><a class="code" href="uklad_8hh.html#a4135d5baf384ba41c67f5c4138be62e9">00063</a> istream &amp; <a class="code" href="macierz_8hh.html#a294fd4185cd28d379eefdb275349c054" title="Przeciążenie operatora wczytywania dla klasy Macierz.">operator &gt;&gt; </a>(istream &amp; wej, <a class="code" href="class_uklad.html" title="Definicja szablonu klasy Uklad. Może przyjmować typy: double, Symbol oraz Zespolona.">Uklad&lt;T&gt;</a> &amp; u) {
+<a name="l00064"></a>00064         wej &gt;&gt; u.<a class="code" href="class_uklad.html#a4ab12b2d83596921a3253251f60f6411" title="Macierz współczynników układu równań.">A</a>;
+<a name="l00065"></a>00065         <span class="keywordflow">if</span> (wej.fail()) <span class="keywordflow">return</span> wej; 
+<a name="l00066"></a>00066         <span class="keywordflow">else</span> {
+<a name="l00067"></a>00067                 wej &gt;&gt; u.<a class="code" href="class_uklad.html#aba67a5e1edc6e48df14dc932a7b91564" title="Wektor wyrazów wolnych.">b</a>;
+<a name="l00068"></a>00068                 <span class="keywordflow">if</span> (wej.fail()) <span class="keywordflow">return</span> wej;
+<a name="l00069"></a>00069                 <span class="keywordflow">else</span> <span class="keywordflow">return</span> wej;
+<a name="l00070"></a>00070         }
+<a name="l00071"></a>00071 }
+<a name="l00072"></a>00072 
+<a name="l00078"></a>00078 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
+<a name="l00079"></a><a class="code" href="uklad_8hh.html#ad5446c20fa64a76d7104cc810d6024d6">00079</a> ostream &amp; operator &lt;&lt; (ostream &amp; wyj, Uklad&lt;T&gt; u) {
+<a name="l00080"></a>00080         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {
+<a name="l00081"></a>00081                 wyj &lt;&lt; <span class="stringliteral">&quot;| &quot;</span>;
+<a name="l00082"></a>00082                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 3; j++) {
+<a name="l00083"></a>00083                         wyj.width(5);
+<a name="l00084"></a>00084                         wyj &lt;&lt; u.A(i,j);
+<a name="l00085"></a>00085                 }
+<a name="l00086"></a>00086                 wyj &lt;&lt; <span class="stringliteral">&quot;|  | X_&quot;</span> &lt;&lt; i+1 &lt;&lt; <span class="stringliteral">&quot;|&quot;</span>;
+<a name="l00087"></a>00087                 <span class="keywordflow">if</span> (i == 1) cout &lt;&lt; <span class="stringliteral">&quot; = | &quot;</span>;
+<a name="l00088"></a>00088                 <span class="keywordflow">else</span> wyj &lt;&lt; <span class="stringliteral">&quot;   | &quot;</span>;
+<a name="l00089"></a>00089                 wyj &lt;&lt; u.b[i] &lt;&lt; <span class="stringliteral">&quot; |&quot;</span> &lt;&lt; endl;
+<a name="l00090"></a>00090         }
+<a name="l00091"></a>00091         <span class="keywordflow">return</span> wyj;
+<a name="l00092"></a>00092 }       
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
+<a name="l00095"></a><a class="code" href="class_uklad.html#ad06ec49888ce6431c1f29a57251e550b">00095</a> <a class="code" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz&lt;T&gt;</a> <a class="code" href="class_uklad.html" title="Definicja szablonu klasy Uklad. Może przyjmować typy: double, Symbol oraz Zespolona.">Uklad&lt;T&gt;::ZamianaKolumny</a>(<span class="keywordtype">int</span> k) {
+<a name="l00096"></a>00096         <a class="code" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz&lt;T&gt;</a> pom = A;
+<a name="l00097"></a>00097         <span class="keywordflow">if</span> ( (k &gt; 2) || (k &lt; 0) ) {
+<a name="l00098"></a>00098                 cerr &lt;&lt; <span class="stringliteral">&quot;Nieprawidłowy numer kolumny. Przyjęta zostanie reszta z dzielenia podanej wartości przez 3.&quot;</span> &lt;&lt; endl;
+<a name="l00099"></a>00099                 k = k % 3;
+<a name="l00100"></a>00100         }
+<a name="l00101"></a>00101         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) pom(i, k) = <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa06b03e4cd5c7c464c513a95a7fcf9bf">b</a>[i];
+<a name="l00102"></a>00102         <span class="keywordflow">return</span> pom;
+<a name="l00103"></a>00103 }
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
+<a name="l00106"></a><a class="code" href="class_uklad.html#a020737e587ee13154b1d0c9aca2fa3d2">00106</a> <span class="keywordtype">void</span> <a class="code" href="class_uklad.html" title="Definicja szablonu klasy Uklad. Może przyjmować typy: double, Symbol oraz Zespolona.">Uklad&lt;T&gt;::Rozwiaz</a>() {
+<a name="l00107"></a>00107         T detA;
+<a name="l00108"></a>00108         <a class="code" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz&lt;T&gt;</a> pom;
+<a name="l00109"></a>00109         detA = A.<a class="code" href="class_macierz.html#ad549218e7760f652fae7880f3a795bf9" title="Funkcja wyliczająca wyznacznik macierzy.">det</a>();
+<a name="l00110"></a>00110         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {
+<a name="l00111"></a>00111                 pom = ZamianaKolumny(i);
+<a name="l00112"></a>00112                 this-&gt;x[i] = pom.<a class="code" href="class_macierz.html#ad549218e7760f652fae7880f3a795bf9" title="Funkcja wyliczająca wyznacznik macierzy.">det</a>() / detA;
+<a name="l00113"></a>00113         }
+<a name="l00114"></a>00114 }
+<a name="l00115"></a>00115 
+<a name="l00121"></a>00121 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;           
+<a name="l00122"></a><a class="code" href="uklad_8hh.html#afca98edd1b16a6e9eee2663b6b8b5ac0">00122</a> <a class="code" href="class_wektor.html" title="Definicja szablonu klasy Wektor. Może przyjmować typy: double, Symbol, Zespolona.">Wektor&lt;T&gt;</a> <a class="code" href="symbole_8hh.html#ae59416860a4e092f654dea87eae1edcc" title="Operator dwuargumentowy &#39;*&#39;.">operator * </a>(<a class="code" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz&lt;T&gt;</a> m, <a class="code" href="class_wektor.html" title="Definicja szablonu klasy Wektor. Może przyjmować typy: double, Symbol, Zespolona.">Wektor&lt;T&gt;</a> w) {
+<a name="l00123"></a>00123         <a class="code" href="class_wektor.html" title="Definicja szablonu klasy Wektor. Może przyjmować typy: double, Symbol, Zespolona.">Wektor&lt;T&gt;</a> wynik;
+<a name="l00124"></a>00124         wynik.<a class="code" href="class_wektor.html#a6d72cdc59eeb2247297a063f04f987ce">Zero</a>();
+<a name="l00125"></a>00125         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) 
+<a name="l00126"></a>00126                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 3; j++)
+<a name="l00127"></a>00127                         wynik[i] = wynik[i] + ( m(i,j) * w[j] );
+<a name="l00128"></a>00128         <span class="keywordflow">return</span> wynik;
+<a name="l00129"></a>00129 }
+<a name="l00130"></a>00130 
+<a name="l00136"></a>00136 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
+<a name="l00137"></a><a class="code" href="uklad_8hh.html#a41a08f1dbd1b273c947d66fb982d7c78">00137</a> <a class="code" href="class_wektor.html" title="Definicja szablonu klasy Wektor. Może przyjmować typy: double, Symbol, Zespolona.">Wektor&lt;T&gt;</a> <a class="code" href="uklad_8hh.html#a41a08f1dbd1b273c947d66fb982d7c78" title="Funkcja wyliczająca błąd wyliczenia rozwiązania układu równań.">Blad</a>(<a class="code" href="class_uklad.html" title="Definicja szablonu klasy Uklad. Może przyjmować typy: double, Symbol oraz Zespolona.">Uklad&lt;T&gt;</a> u) {
+<a name="l00138"></a>00138         <span class="keywordflow">return</span> u.<a class="code" href="class_uklad.html#a4ab12b2d83596921a3253251f60f6411" title="Macierz współczynników układu równań.">A</a> * u.<a class="code" href="class_uklad.html#a5e5440c4b2ec4be5b0544ef6fdf4980e" title="Rozwiązanie układu równań.">x</a> - u.<a class="code" href="class_uklad.html#aba67a5e1edc6e48df14dc932a7b91564" title="Wektor wyrazów wolnych.">b</a>;
+<a name="l00139"></a>00139 }
+<a name="l00140"></a>00140 
+<a name="l00141"></a>00141 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Mon Apr 29 2013 19:07:17 dla Dawidek programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

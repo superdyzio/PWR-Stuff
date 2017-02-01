@@ -1,0 +1,110 @@
+#ifndef BLOKGENERATORA_HH
+#define BLOKGENERATORA_HH
+
+#ifdef __GNUG__
+# pragma interface
+# pragma implementation
+#endif
+
+/*!
+ *\file
+ *\brief	Plik zawierający definicję klasy BlokSygnalowy, po której dziedziczą wszystkie typy bloków.
+*/
+
+#include <string>
+#include <fstream>
+#include "BlokSygnalowy.hh"
+
+/*!
+ * \brief Modeluje generator sygnału
+ *
+ * Modeluje blok generatora sygnału. Wartości
+ * sygnału są pobierane z odpowiedniego pliku
+ * skojarzonego z obiektem tej klasy.
+ */
+class BlokGeneratora: public BlokSygnalowy {
+  public:
+   /*!
+    * \brief Inicjalizuje pustym napisem pole nazwy pliku
+    *
+    *  Inicjalizuje pustym napisem pole nazwy pliku, z którego
+    *  mają być pobierane kolejne wartości sygnału.
+    */
+  BlokGeneratora(): _Pauza_ms(0) {}
+   /*!
+    * \brief Inicjalizuje nazwę pliku
+    *
+    * Inicjalizuje nazwę pliku, z którego
+    * mają być pobierane kolejne wartości sygnału.
+    * \param[in] sNazwaPliku - nazwa pliku,  z którego
+    *           mają być pobierane kolejne wartości sygnału.
+    */
+  BlokGeneratora(const char* sNazwaPliku): _Pauza_ms(0), _NazwaPliku(sNazwaPliku) {}
+  BlokGeneratora(const std::string sNazwaPliku): _Pauza_ms(0), _NazwaPliku(sNazwaPliku) {}
+   /*!
+    * \brief Udostępnia nazwę typu bloku
+    *
+    *  Udostępnia nazwę typu bloku. Jest to napis 
+    *  "Blok Rejestratora".
+    */
+    virtual const char* NazwaBloku() const { return "Blok Generator"; }
+   /*!
+    * \brief Inicjalizuje pracę bloku
+    */
+    virtual bool RozpocznijPrace();
+   /*!
+    * \brief Sprawdza czy osiągnięty został kres pliku sygnału
+    */
+    virtual bool CzyZakonczycPrace() const;
+   /*!
+    * \brief Zamyka plik z wartościami sygnału
+    */
+   virtual void ZakonczPrace();
+  /*!
+   * \brief Czyta kolejną wartość sygnału z pliku
+   *
+   *  Czyta kolejną wartość sygnału z pliku i zapamiętują ją
+   *  jako wartość wyjściową bloku.
+   *
+   *  \param[in] SygWe - wartość tego parametru w ogóle nie jest 
+   *                     brana pod uwagę.
+   *  \param[out] SygObliczony - do tego parametru wpisywana jest
+   *                     wczytana wartość sygnału.
+   */
+  virtual bool WyliczSygnalWej( const Sygnal& SygWe, 
+                                      Sygnal& SygObliczony
+			      );
+
+  /*!
+   * \brief Zmienia długość pauzy
+   *
+   *  Zmienia długość pauzy, która towarzyszy każdemu
+   *  wygenerowaniu nowej wartości sygnału.
+   * \param[in]  Pauza_ms - nowa wartość pauzy. Jest ona podana
+   *                       w mikrosekundach.
+   */ 
+  void UstawPauze_ms( unsigned int Pauza_ms ) { _Pauza_ms = Pauza_ms; }
+  private:
+   /*!
+    * \brief Przechowuje długość pauzy
+    *
+    * Przechowuje długość pauzy, która towarzyszy każdej wygenerowanej
+    * nowej wartości sygnału. Pauza wyrażona jest w mikrosekundach.
+    */
+   unsigned int  _Pauza_ms;
+   /*!
+    * \brief Przechowuje nazwę pliku 
+    *
+    * W polu przechowuje się nazwę pliku, w którym zapisane
+    * są kolejne wartości sygnału.
+    */
+    std::string  _NazwaPliku;
+   /*!
+    * \brief Strumień danych sygnału
+    *
+    *  Strumień danych sygnału.
+    */
+    std::ifstream  _StrmGeneratora;
+};
+
+#endif

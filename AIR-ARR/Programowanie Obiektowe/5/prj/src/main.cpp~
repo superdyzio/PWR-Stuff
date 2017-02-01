@@ -1,0 +1,124 @@
+#include "iloczyn.hh"
+#include "zespolone.hh"
+#include "symbole.hh"
+#include "typ.hh"
+
+
+using namespace std;
+
+int main(){
+	Macierz M1, M2, WynikM;
+	Wektor W1, W2, WynikW;
+	TYP WynikX;
+	int x=0, y=0, z=0;
+	char znak;
+    
+    cout.setf(ios::fixed);
+	cout.precision(2);
+	
+	while(!cin.eof() || x<5) {
+		/*wczytywanie pierwszego argumentu*/
+		cin>>znak;
+		
+		if (cin.fail() && x!=10){
+				cin.clear();
+				cin.ignore(1000,'\n');
+				cout<<endl<<"Koniec danych."<<endl;
+				x=10;
+		}
+		else{
+		
+			if (znak == '|'){
+				cin.unget();
+				cin>>M1;
+				if (cin.fail() && x!=10){
+					cin.clear();
+					cin.ignore(1000,'\n');
+					cout<<znak;
+					cout<<endl<<"Wykryto niepoprawny argument. Program zakonczy dzialanie."<<endl;
+					x=10;
+				}else x=1;
+	      	}
+ 		   	else {
+				cin.unget();/*dodac sprawdzenie czy wektor*/
+	      		cin>>W1;
+	      		if (cin.fail() && x!=10){
+					cin.clear();
+					cin.ignore(1000,'\n');
+					cout<<endl<<"Wykryto niepoprawny argument. Program zakonczy dzialanie."<<endl;
+					x=10;
+				}else x=2;
+	      	}
+	      	/*wczytywanie 2 argumentu*/
+			cin>>znak;
+			if (znak == '|'){
+				cin.unget();
+				cin>>M2;
+				if (cin.fail() && x!=10){
+					cin.clear();
+					cin.ignore(1000,'\n');
+					cout<<endl<<"Wykryto niepoprawny argument. Program zakonczy dzialanie."<<endl;
+					x=10;
+				} else y=1;
+	      	}
+	    	else {
+				cin.unget();
+	      		cin>>W2;
+	      		if (cin.fail() && x!=10){
+					cin.clear();
+					cin.ignore(1000,'\n');
+	      			cout<<"Wykryto niepoprawny argument. Program zakonczy dzialanie."<<endl;
+					x=10;
+				}else y=2;
+	      	}
+			/*wykonanie odpowiedniej operacji w zaleznosci od wczytanych argumentow*/
+			if (x==2){ 
+				if (y==1) cout<<endl<<"WEKTOR x MACIERZ jest niedozwolona operacja!\nProgram nie jest przystosowany do tego typu operacji.\n";
+				else{
+					WynikX=(W1*W2);
+					z=1;
+				}
+			}
+			else{
+				if (x==1){
+					if (y==1){
+						WynikM=(M1*M2);
+						z=2;
+						}
+					else{
+						WynikW=(M1*W2);
+						z=3;
+					}
+				}
+			}
+	
+			if(x!=10 && z!=0){
+				cout<<endl<<"---- Operacja dwuargumentowa ----------\n\nArgument 1:"<<endl;
+				if (x==1) cout<<M1;
+				else cout<<W1;
+				cout<<"\nArgument 2:\n";
+				if (y==1) cout<<M2;
+				else cout<<W2;
+				cout<<"\nWynik:\n";
+				switch (z){
+					case 1:
+						cout<<WynikX<<endl;
+					break;
+					case 2:
+						cout<<WynikM<<endl;
+					break;
+					case 3:
+						cout<<WynikW<<endl;
+					break;
+				}	
+				x=0;y=0;z=0;
+			}
+		}	
+	}/*koniec while()*/
+
+ cout << endl
+       << "Program zostal skompliwany dla typu: " 
+       << NAZWA_TYPU
+       << endl
+       << endl;
+}

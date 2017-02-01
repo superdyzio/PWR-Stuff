@@ -1,0 +1,18 @@
+#ifndef TABLICA_H
+#define TABLICA_H
+
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+#define ROZMIAR 100    // stała używana do zainicjowanie statycznej tablicy
+
+/* PRE: Funkcja nie przyjmuje żadnych argumentów, jak i nic nie zwraca. W jej wnętrzu dzieją się wszystkie operacje kalkulatora, analogicznie
+	jak w module 'opcje', z tą róznicą, że tam odbywa się to na stosie (i możliwe jest zapamiętywanie wybranych liczb na drugim stosie), 
+	a tu jest tylko jedna tablica, co nie zapewnia takiej możliwości. */
+
+void tablice();
+
+/* POST: Zakończenie działania funkcji jest równoznaczne z zakończeniem działania programu. */
+
+
+#endif

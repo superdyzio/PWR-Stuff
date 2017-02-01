@@ -1,0 +1,199 @@
+#ifdef __GNUG__
+# pragma implementation
+#endif
+
+#include "UkladSygnalowy.hh"
+
+/*!
+ *\file
+ *\brief	Plik zawierający implementacje wybranych metod klasy UkladSygnalowy. 
+*/
+
+/*!
+ * Dodaje blok generatora sygnału. Kolejne wartości sygnału
+ * czytane są z pliku skojarzone z danym obiektem.
+ * Blok dodawany jest na koniec listy.
+ *
+ * \param[in] T_min - lewostronne ograniczenie zakresu czasowego,
+ *                    w którym ma być wizualizowany sygnał.
+ * \param[in] T_max - prawostronne ograniczenie zakresu czasowego,
+ *                    w którym ma być wizualizowany sygnał.
+ * \param[in] Syg_min - lewostronne ograniczenie zakresu czasowego,
+ *                    w którym ma być wizualizowany sygnał.
+ * \param[in] Syg_max - prawostronne ograniczenie zakresu czasowego,
+ *                    w którym ma być wizualizowany sygnał.
+ * \param[in] sNazwaPlikuZapisuSygnalu - nazwa pliku, w którym zapisane
+ *                  są kolejne wartości sygnału obserwowanego
+ *                  sygnału. Na podstawie zawartości tego pliku
+ *                  rysowany jest odpowiedni wykres.
+ * \return Zwraca wskaźnik na utworzony i dodany blok
+ *         oscyloskopu.
+ */
+BlokOscyloskopu* UkladSygnalowy::DodajOscyloskop(
+                                      double      T_min,
+                                      double      T_max,
+                                      double      Syg_min,
+				      double      Syg_max,
+                                      const char* NazwaPliku
+                                    )
+{
+  BlokOscyloskopu  *wBlok;
+  DodajBlokSygnalowy( wBlok = new BlokOscyloskopu( T_min,T_max,
+                                           Syg_min,Syg_max,
+                                           NazwaPliku
+					   ));
+  return wBlok;
+}
+
+
+
+/*!
+ * Dodaje blok generatora sygnału. Kolejne wartości sygnału
+ * czytane są z pliku skojarzone z danym obiektem.
+ * Blok dodawany jest na koniec listy.
+ * \param[in] sNazwaPlikuSygnalu - nazwa pliku, w którym zapisane
+ *                  są kolejne wartości sygnału.
+ * \return Zwraca wskaźnik na utworzony i dodany blok
+ *         generatora.
+ */
+BlokGeneratora* UkladSygnalowy::DodajGenerator( const char* sNazwaPlikuSygnalu )
+{
+  BlokGeneratora *pBlok;
+
+  DodajBlokSygnalowy( pBlok = new BlokGeneratora(sNazwaPlikuSygnalu) );
+  return pBlok;
+}
+
+
+/*!
+ * Dodaje blok rejestratora sygnału. Zapisuje on do pliku
+ * skojarzonego z dany obiektem, kolejne wartości sygnału.
+ * Blok dodawany jest na koniec listy.
+ * \param[in] sNazwaPlikuRejestratora - nazwa pliku, w którym
+ *                  zapisywane
+ *                  są kolejne wartości sygnału.
+ * \return Zwraca wskaźnik na utworzony i dodany blok
+ *         rejestratora.
+ */
+BlokRejestratora* UkladSygnalowy::DodajRejestrator(
+                                      const char* sNazwaPlikuRejestratora
+                                    )
+{
+  BlokRejestratora* pBlok;
+  DodajBlokSygnalowy( pBlok = new BlokRejestratora(sNazwaPlikuRejestratora) );
+  return pBlok;
+}
+
+/*!
+ * Dodaje blok potegujacy sygnał.
+ *
+ * \return Zwraca wskaźnik na utworzony i dodany blok
+ *         potegujacy.
+ */
+BlokPotegujacy* UkladSygnalowy::DodajBlokPotegujacy(){
+  BlokPotegujacy* pBlok;
+  DodajBlokSygnalowy( pBlok = new BlokPotegujacy );
+  return pBlok;
+}
+
+/*!
+ * Dodaje blok prostujacy sygnał.
+ *
+ * \return Zwraca wskaźnik na utworzony i dodany blok
+ *         prostujacy.
+ */
+BlokProstujacy* UkladSygnalowy::DodajBlokProstujacy(){
+  BlokProstujacy* pBlok;
+  DodajBlokSygnalowy( pBlok = new BlokProstujacy );
+  return pBlok;
+}
+
+/*!
+ * Dodaje blok przesuwajacy sygnał.
+ *
+ * \param[in] Przesuniecie - wartosc o jaka ma zostac przesuniety sygnal.
+ *
+ * \return Zwraca wskaźnik na utworzony i dodany blok
+ *         przesuwajacy.
+ */
+BlokPrzesuwajacy* UkladSygnalowy::DodajBlokPrzesuwajacy(const char* Przesuniecie){
+  BlokPrzesuwajacy* pBlok;
+  DodajBlokSygnalowy( pBlok = new BlokPrzesuwajacy(Przesuniecie) );
+  return pBlok;
+}
+
+/*!
+ * Dodaje blok przesuwajacy sygnał.
+ *
+ * \param[in] Przesuniecie - wartosc o jaka ma zostac przesuniety sygnal.
+ *
+ * \return Zwraca wskaźnik na utworzony i dodany blok
+ *         przesuwajacy.
+ */
+BlokPrzesuwajacy* UkladSygnalowy::DodajBlokPrzesuwajacy(const double Przesuniecie){
+  BlokPrzesuwajacy* pBlok;
+  DodajBlokSygnalowy( pBlok = new BlokPrzesuwajacy(Przesuniecie) );
+  return pBlok;
+}
+
+/*!
+ * Dodaje blok wzmacniajacy sygnał.
+ *
+ * \param[in] Wzmocnienie - wartosc razy jaka ma zostac wzmocniony sygnal.
+ *
+ * \return Zwraca wskaźnik na utworzony i dodany blok
+ *         wzmacniajacy.
+ */
+BlokWzmacniajacy* UkladSygnalowy::DodajBlokWzmacniajacy(const char* Wzmocnienie){
+  BlokWzmacniajacy* pBlok;
+  DodajBlokSygnalowy( pBlok = new BlokWzmacniajacy(Wzmocnienie) );
+  return pBlok;
+}
+
+/*!
+ * Dodaje blok wzmacniajacy sygnał.
+ *
+ * \param[in] Wzmocnienie - wartosc razy jaka ma zostac wzmocniony sygnal.
+ *
+ * \return Zwraca wskaźnik na utworzony i dodany blok
+ *         wzmacniajacy.
+ */
+BlokWzmacniajacy* UkladSygnalowy::DodajBlokWzmacniajacy(const double Wzmocnienie){
+  BlokWzmacniajacy* pBlok;
+  DodajBlokSygnalowy( pBlok = new BlokWzmacniajacy(Wzmocnienie) );
+  return pBlok;
+}
+
+/*!
+ * Dodaje blok dyskryminujacy sygnał.
+ *
+ * \param[in] Granica - wartosc progu dyskryminacji sygnalu.
+ *
+ * \return Zwraca wskaźnik na utworzony i dodany blok
+ *         dyskryminacji.
+ */
+BlokDyskryminujacy* UkladSygnalowy::DodajBlokDyskryminujacy(const char* Prog){
+  BlokDyskryminujacy* pBlok;
+  DodajBlokSygnalowy( pBlok = new BlokDyskryminujacy(Prog) );
+  return pBlok;
+}
+
+/*!
+ * Dodaje blok dyskryminujacy sygnał.
+ *
+ * \param[in] Granica - wartosc progu dyskryminacji sygnalu.
+ *
+ * \return Zwraca wskaźnik na utworzony i dodany blok
+ *         dyskryminacji.
+ */
+BlokDyskryminujacy* UkladSygnalowy::DodajBlokDyskryminujacy(const double Prog){
+  BlokDyskryminujacy* pBlok;
+  DodajBlokSygnalowy( pBlok = new BlokDyskryminujacy(Prog) );
+  return pBlok;
+}
+
+BlokCalkujacy* UkladSygnalowy::DodajBlokCalkujacy(){
+  BlokCalkujacy* pBlok;
+  DodajBlokSygnalowy( pBlok = new BlokCalkujacy );
+  return pBlok;
+}

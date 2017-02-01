@@ -1,0 +1,23 @@
+CPPFLAGS=-pedantic -Wall -Iinc -I/home/dawidek/Dokumenty/obiektowe/9/prj/inc
+LDFLAGS=-Wall -L/home/dawidek/Dokumenty/Obiektowe/9/zasoby/lib/`uname -n`
+
+__start__: obj uzytkownicy
+	./uzytkownicy
+
+obj:
+	mkdir obj
+
+uzytkownicy: obj/modul.o obj/DaneUzytkownika.o obj/ListaUzytkownikow.o
+	g++ ${LDFLAGS} -o uzytkownicy obj/modul.o obj/DaneUzytkownika.o obj/ListaUzytkownikow.o -lmain
+
+obj/modul.o: src/modul.cpp inc/modul.hh inc/DaneUzytkownika.hh inc/ListaUzytkownikow.hh
+	g++ -c ${CPPFLAGS} -o obj/modul.o  src/modul.cpp
+
+obj/ListaUzytkownikow.o: src/ListaUzytkownikow.cpp inc/DaneUzytkownika.hh inc/ListaUzytkownikow.hh
+	g++ -c ${CPPFLAGS} -o obj/ListaUzytkownikow.o  src/ListaUzytkownikow.cpp
+	
+obj/DaneUzytkownika.o: src/DaneUzytkownika.cpp inc/DaneUzytkownika.hh inc/ListaUzytkownikow.hh
+	g++ -c ${CPPFLAGS} -o obj/DaneUzytkownika.o  src/DaneUzytkownika.cpp
+	
+clean:
+	rm -f uzytkownicy core obj/*

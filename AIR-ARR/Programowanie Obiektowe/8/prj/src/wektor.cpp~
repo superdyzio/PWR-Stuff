@@ -1,0 +1,31 @@
+#include "wektor.hh"
+
+/*!
+ *\file
+ *\brief	Plik zawiera implementacje metod z nagłówka 'wektor.hh'.
+*/
+template <typename T>
+istream & operator >> (istream & wej, Wektor<T> & w) {
+	char znak;
+	wej >> znak;
+	if (znak != '(') {
+		wej.setstate(ios::failbit); 
+		return wej;
+	}
+	else {
+		for(int i = 0; i < 3; i++) {
+			wej >> w[i] >> znak;
+			if ( (znak != ',') && (znak != ')') ) {
+					wej.setstate(ios::failbit); 
+					return wej;
+			}
+		}
+	}
+	return wej;
+}
+
+template <typename T>
+ostream & operator << (ostream & wyj, Wektor<T> w) {
+	wyj << "( " << w[0] << ", " << w[1] << ", " << w[2] << " )" << endl;
+	return wyj;
+}

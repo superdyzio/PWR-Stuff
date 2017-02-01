@@ -1,0 +1,69 @@
+#ifndef SYMBOLE_HH
+#define SYMBOLE_HH
+
+#include <iostream>
+#include <cstdio>
+#include <cctype>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
+
+using namespace std;
+
+/*! 
+ * /file
+ * /brief Deklaracja typu Symbol.
+*/
+enum Symbol { e, a, b, c, d }; 
+
+/*!
+ * /brief Operator jednoargumentowy '-'.
+ * /param[in] Za argument przyjmuje zmienną typu Symbol.
+ * /return Zwraca Symbol będący odwrotnoscią argumentu.
+ */
+Symbol operator - (Symbol x);
+ 
+/*!
+ * /brief Operator jednoargumentowy '+'.
+ * /param[in] Za argument przyjmuje zmienną typu Symbol.
+ * /return Zwraca Symbol bez znaku.
+ */
+Symbol operator + (Symbol x);
+ 
+/*!
+ * /brief Operator dwuargumentowy '+'.
+ * /param[in] Za argumenty przyjmuje 2 zmienne typu Symbol.
+ * /return Zwraca Symbol będący ich sumą (zgodnie z tabelką dodawania).
+ */
+Symbol operator + ( Symbol x, Symbol y );
+
+/*!
+ * /brief Operator dwuargumentowy '*'.
+ * /param[in] Za argumenty przyjmuje 2 zmienne typu Symbol.
+ * /return Zwraca Symbol będący ich iloczynem (zgodnie z tabelką mnożenia).
+ */
+Symbol operator * (Symbol x, Symbol y );
+
+/*!
+ * /brief Operator wyjścia dla typu Symbol.
+ * /param[in] Jako argumenty przyjmuje strumień wyjściowy oraz zmienną typu Symbol, która ma zostać na nim wypisana.
+ * /return Zwraca podany jako argument strumień wyjściowy.
+*/
+ostream & operator << (ostream & wy, Symbol x );
+
+/*!
+ * /brief Operator wejścia dla typu Symbol.
+ * /param[in] Jako argumenty przyjmuje strumień wejściowy oraz zmienną typu Symbol, w której (w przypadku poprawnego wczytania) zapisany 
+ *	zostanie wczytany Symbol.
+ * /return Zwraca podany jako argument strumień wejściowy (w przypadku niepoprawnego wczytania ze stanem ustawionym na 'fail'.
+*/
+istream & operator >> ( istream & we, Symbol & x );
+
+/*!
+ * /brief Funkcja zerująca Symbol.
+ * /param[in] Jako argument przyjmuje zmienną typu Symbol.
+ * /return Zwraca te zmienną ustawioną na 'e'.
+*/
+Symbol Zeruj(Symbol x);
+
+#endif

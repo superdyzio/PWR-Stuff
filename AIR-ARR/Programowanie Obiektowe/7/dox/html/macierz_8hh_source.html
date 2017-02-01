@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>ja: Plik źródłowy macierz.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ja
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('macierz_8hh.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">macierz.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="macierz_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef MACIERZ_HH</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define MACIERZ_HH</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;cstdio&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;cctype&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;cstring&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;ctime&gt;</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="zespolone_8hh.html" title="Moduł zawierający definicję klasy Zespolona, służącej do przechowywania liczb zespolonych oraz przeci...">zespolone.hh</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="symbole_8hh.html" title="Modul zawierający definicję typu wyliczeniowego &#39;Symbol&#39; {e , a , b , c , d}, odpowiadające kolejno w...">symbole.hh</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="liczba_8hh.html" title="Plik nagłówkowy zawierający zapowiedź metody zerowania zmiennej typu double.">liczba.hh</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="typ_8hh.html">typ.hh</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="wektor_8hh.html" title="Moduł zawierający definicję klasy Wektor oraz przeciążenia wybranych operatorów. Klasa wektor przyjmu...">wektor.hh</a>&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 <span class="keyword">using namespace </span>std;
+<a name="l00018"></a>00018 
+<a name="l00035"></a><a class="code" href="class_macierz.html">00035</a> <span class="keyword">class </span><a class="code" href="class_macierz.html" title="Definicja klasy &#39;Macierz&#39;.">Macierz</a> {
+<a name="l00036"></a>00036         <span class="keyword">public</span>:
+<a name="l00038"></a><a class="code" href="class_macierz.html#a469f68a6d789b0249f5d70fabb2770bb">00038</a>                 <a class="code" href="typ_8hh.html#a6bd1e6fed9c87b2e6af0cd3eac4cf12f">TYP</a> tab[3][3]; 
+<a name="l00040"></a><a class="code" href="class_macierz.html#a908b687487100dac917a590132ae1339">00040</a>                 <a class="code" href="typ_8hh.html#a6bd1e6fed9c87b2e6af0cd3eac4cf12f">TYP</a> &amp;<span class="keyword">operator</span>( ) (<span class="keywordtype">int</span> Wiersz, <span class="keywordtype">int</span> Kolumna) {<span class="keywordflow">return</span> tab[Wiersz][Kolumna]; }
+<a name="l00042"></a><a class="code" href="class_macierz.html#ae6072cb6840e291acf0770ac66760b4a">00042</a>                 <a class="code" href="typ_8hh.html#a6bd1e6fed9c87b2e6af0cd3eac4cf12f">TYP</a> <span class="keyword">operator</span>( ) (<span class="keywordtype">int</span> Wiersz, <span class="keywordtype">int</span> Kolumna)<span class="keyword"> const </span>{<span class="keywordflow">return</span> tab[Wiersz][Kolumna]; } 
+<a name="l00043"></a>00043 };
+<a name="l00044"></a>00044 
+<a name="l00050"></a>00050 ostream &amp; <a class="code" href="macierz_8hh.html#a52adcde18c69db2486e571fa68e923c6" title="Przeciążenie operatora wypisywania dla klasy Macierz.">operator &lt;&lt; </a>(ostream &amp; wyj, <a class="code" href="class_macierz.html" title="Definicja klasy &#39;Macierz&#39;.">Macierz</a> &amp; m);
+<a name="l00051"></a>00051                 
+<a name="l00057"></a>00057 istream &amp; <a class="code" href="macierz_8hh.html#a4eda755fc28cd34805427bf0b566ff65" title="Przeciążenie operatora wczytywania dla klasy Macierz.">operator &gt;&gt; </a>(istream &amp; wej,  <a class="code" href="class_macierz.html" title="Definicja klasy &#39;Macierz&#39;.">Macierz</a> &amp; m);
+<a name="l00058"></a>00058 
+<a name="l00064"></a>00064 <a class="code" href="class_macierz.html" title="Definicja klasy &#39;Macierz&#39;.">Macierz</a> <a class="code" href="macierz_8hh.html#a5285480e7ba439d1d6050da5892d1462" title="Przeciążenie operatora mnożenia &#39;*&#39; dla działania Macierz X Macierz.">operator * </a>(<a class="code" href="class_macierz.html" title="Definicja klasy &#39;Macierz&#39;.">Macierz</a> <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa91fb0824da12f8bb3b74dd78fb13b63">a</a>, <a class="code" href="class_macierz.html" title="Definicja klasy &#39;Macierz&#39;.">Macierz</a> <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa06b03e4cd5c7c464c513a95a7fcf9bf">b</a>);
+<a name="l00065"></a>00065 
+<a name="l00071"></a>00071 <a class="code" href="typ_8hh.html#a6bd1e6fed9c87b2e6af0cd3eac4cf12f">TYP</a> <a class="code" href="macierz_8hh.html#a7663239456df7dcbb08535e9b796660b" title="Funkcja wyliczająca wyznacznik macierzy.">det</a>(<a class="code" href="class_macierz.html" title="Definicja klasy &#39;Macierz&#39;.">Macierz</a> m);
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="macierz_8hh.html">macierz.hh</a>      </li>
+
+    <li class="footer">Wygenerowano Sun Apr 28 2013 19:16:11 dla ja programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

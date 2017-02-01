@@ -1,0 +1,47 @@
+#ifndef BLOKCALKUJACY_HH
+#define BLOKCALKUJACY_HH
+
+#ifdef __GNUG__
+# pragma interface
+# pragma implementation
+#endif
+
+/*!
+ *\file
+ *\brief	Plik zawierający definicję klasy BlokCalkujacy.
+*/
+
+#include <cstdlib>
+#include <cctype>
+#include <cstring>
+#include <string>
+#include <unistd.h>
+#include "BlokSygnalowy.hh"
+#include "Sygnal.hh"
+
+using namespace std;
+
+/*!
+ *\brief	Definicja klasy BlokCalkujacy, dziedziczącej po klasie BlokSygnalowy.
+*/
+class BlokCalkujacy : public BlokSygnalowy {
+/*! \brief Pole przechowujące ostatni czas, przydatne przy całkowaniu. */
+	double ostCzas;
+/*! \brief Pole przechowujące sumę pola pod wykresem. */
+	double pole;
+public:	
+/*! \brief Konstruktor. */
+	BlokCalkujacy() { ostCzas = pole = 0; }
+/*! \brief Przeciążenie metody dającej opis bloku. \return Zwraca krótki opis konkretnego bloku. */
+	virtual string OpisBloku() { return "Blok mający za zadanie scałkowanie sygnału."; }
+/*! \brief Przeciążenie metody wyliczającej sygnał wyjściowy. \param[in] Przyjmuje sygnał wejściowy. \return Zwraca true. */
+	virtual bool WyliczSygnalWyj(const Sygnal& Syg);
+/*! \brief Przeciążenie metody dającej identyfikator typu bloków. \return Zwraca liczbę 1, odpowiadającą blokom całkującym. */
+	virtual int Identyfikator() const { return 1; } 
+/*! \brief Przeciążenie metody dającej nazwę typu bloków. \return Zwraca napis "Blok całkujący.". */
+	virtual const char* NazwaBloku() const { return "Blok całkujący."; }
+/*! \brief Przeciążenie metody przygotowującej blok do pracy. */
+	virtual inline bool RozpocznijPrace() { ostCzas = pole = 0; return true; }
+};
+
+#endif

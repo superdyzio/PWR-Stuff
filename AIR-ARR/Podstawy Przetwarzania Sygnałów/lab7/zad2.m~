@@ -1,0 +1,38 @@
+% obliczanie estymatora widmowej gestosci mocy
+% transformata Fouriera funkcji autokorelacji procesu ergodycznego
+% metoda Blackamana-Tukeya (okienkowanie autokorelacji)
+
+clear all; clf; subplot(1,1,1);
+N = 1000;	% liczba probek sygnalu
+fs = 1000;	% czestotliwosc probkowania
+n = 0:(N-1);	% indeksy [rpbel
+dt = 1/fs;	% okres probkowania
+t = n*dt;	% wektor chwil probkowania
+df = fs/N;	% rozdzielczosc widma (czestotliwosc analizy)
+
+f1 = 30*df;	f2 = 67*df;
+x1 = 2+3*sin(2*pi*f1*t);
+x2 = 2*sin(2*pi*f2*t);
+szum1 = 3*randn(1,N);	% szum gaussowski
+szum2 = 3*rand(1,N);	% szum o rozkladzie rownomiernym
+syg = szum1+x1;
+subplot(2,2,1);
+plot(t,syg); grid on; xlabel('t[s]'); title('sygnal syg(t)');
+
+% estymator nieobciazony
+Rxx = xcorr(syg,'unbiased');
+M = length(Rxx);	% liczba probek autokorelacji
+w = hamming(M);		% wybor funkcji okna
+Rxxw = Rxx.*w';		% okienkowanie funkcji autokorelacji
+S = abs(fft(Rxxw));	% WGM
+subplot(2,2,2);
+plot(Rxx); ylabel('Rxx'); title('Autokorelacji');
+df = fs/M;		% rozdzielczosc WGM
+f = 0:df:(M-1)*df;	% wektor czestotliwosci WGM
+k = 1:(M/2)+1;		% indeksy czestotliwosci dla polowy WGM
+subplot(2,2,3);
+stem(f(k),S(k),'.xb'); grid on;
+xlabel('f[Hz]'); ylabel('WGM'); title('Widmowa gestosc mocy');
+
+subplot(2,2,4);
+plot(Rxx(800:1200)); ylabel('Rxx'); title('Autokorelacja');

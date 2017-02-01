@@ -1,0 +1,21 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Stos::rozmiar",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Kalkulator::duplikuj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_kalkulator.html#ad65641df574ac3685cbdb1bf6b66a4f5",tooltip="Funkcja duplikująca wierzchni element stosu."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Kalkulator::uruchom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_kalkulator.html#a5c93ab5cad906db148a1670a013e8690",tooltip="Funkcja interakcji z użytkownikiem."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Kalkulator::wypiszStos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_kalkulator.html#ae58329d006be8230c008b65580ed3cdc",tooltip="Funkcja wypisująca całą zawartość stosu w odpowiednim formacie."];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Kalkulator::usunDana",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_kalkulator.html#a525bb21840977c5dd7727f8f02908f6e",tooltip="Funkcja usuwająca wierzch stosu. Usuwa też z mapy."];
+  Node6 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Stos::drukuj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#a680e919c4c80b0626716bd86fbd2471e",tooltip="Funkcja wyświetlająca całą zawartość stosu."];
+}

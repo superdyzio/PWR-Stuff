@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>SUPERPROGRAM: Plik źródłowy zespolona.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">SUPERPROGRAM
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">zespolona.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="zespolona_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef ZESPOLONA_HH</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define ZESPOLONA_HH</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;cstdio&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;cstring&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;cmath&gt;</span>
+<a name="l00009"></a>00009 
+<a name="l00019"></a><a class="code" href="zespolona_8hh.html#a598a3330b3c21701223ee0ca14316eca">00019</a> <span class="preprocessor">#define PI 3.14</span>
+<a name="l00020"></a>00020 <span class="preprocessor"></span>
+<a name="l00021"></a>00021 <span class="keyword">using namespace </span>std;
+<a name="l00022"></a>00022 
+<a name="l00026"></a><a class="code" href="class_zespolona.html">00026</a> <span class="keyword">class </span><a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a> {
+<a name="l00027"></a>00027 <span class="keyword">public</span>:
+<a name="l00029"></a><a class="code" href="class_zespolona.html#abdab4e35500d137ddc79dee628b05939">00029</a>         <span class="keywordtype">float</span> <a class="code" href="class_zespolona.html#abdab4e35500d137ddc79dee628b05939" title="Zmienna reprezentująca część rzeczywistą liczby zespolonej.">Re</a>;
+<a name="l00031"></a><a class="code" href="class_zespolona.html#a37f7c36b331b8c7a05ac7d847f2146ec">00031</a>         <span class="keywordtype">float</span> <a class="code" href="class_zespolona.html#a37f7c36b331b8c7a05ac7d847f2146ec" title="Zmienna reprezentująca część urojoną liczby zespolonje.">Im</a>;
+<a name="l00033"></a><a class="code" href="class_zespolona.html#a1f3d72d0050bb5fe78ae9f466a60ceea">00033</a>         <span class="keywordtype">float</span> <a class="code" href="class_zespolona.html#a1f3d72d0050bb5fe78ae9f466a60ceea" title="Zmienna reprezentująca moduł liczby zespolonej.">modul</a>;
+<a name="l00035"></a><a class="code" href="class_zespolona.html#a12e6d3e25dc225cc5d9edad2128a122d">00035</a>         <span class="keywordtype">float</span> <a class="code" href="class_zespolona.html#a12e6d3e25dc225cc5d9edad2128a122d" title="Zmienna reprezentująca argument główny liczby zespolonej.">alfa</a>;
+<a name="l00038"></a><a class="code" href="class_zespolona.html#a476c3e310edca2caccf098b716e56138">00038</a>         <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_zespolona.html#a476c3e310edca2caccf098b716e56138" title="Statyczna zmienna przechowująca informację o notacji w jakiej wczytywane mają być kolejne liczby zesp...">NotacjaWykWej</a>;
+<a name="l00041"></a><a class="code" href="class_zespolona.html#a2f1207edbaa93b450700fba5d21dc5de">00041</a>         <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_zespolona.html#a2f1207edbaa93b450700fba5d21dc5de" title="Statyczna zmienna przechowująca informację o notacji w jakiej wyświetlane mają być liczby zespolone...">NotacjaWykWyj</a>;
+<a name="l00043"></a><a class="code" href="class_zespolona.html#a25a251162706c2ac29dfd156ae091893">00043</a>         <a class="code" href="class_zespolona.html#a25a251162706c2ac29dfd156ae091893" title="Konstruktor bezparametrowy, tworzy wyzerowaną liczbę zespoloną.">Zespolona</a>() { Re = Im = 0; wykladnicza(0,0); }
+<a name="l00046"></a><a class="code" href="class_zespolona.html#a6afef0355948f36bc9339904d154ed71">00046</a>         <a class="code" href="class_zespolona.html#a6afef0355948f36bc9339904d154ed71" title="Konstruktor dwuparametrowy.">Zespolona</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y) { Re = x; Im = y; wykladnicza(x,y); }
+<a name="l00049"></a><a class="code" href="class_zespolona.html#aeace08db22795faa86a86dd2ee472596">00049</a>         <a class="code" href="class_zespolona.html#aeace08db22795faa86a86dd2ee472596" title="Konstruktor kopiujący, kopiuje do nowej zmiennej zawartość obiektu podanego jako argument.">Zespolona</a>(<span class="keyword">const</span> <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a>&amp; x) { Re = x.<a class="code" href="class_zespolona.html#abdab4e35500d137ddc79dee628b05939" title="Zmienna reprezentująca część rzeczywistą liczby zespolonej.">Re</a>; Im = x.<a class="code" href="class_zespolona.html#a37f7c36b331b8c7a05ac7d847f2146ec" title="Zmienna reprezentująca część urojoną liczby zespolonje.">Im</a>; modul = x.<a class="code" href="class_zespolona.html#a1f3d72d0050bb5fe78ae9f466a60ceea" title="Zmienna reprezentująca moduł liczby zespolonej.">modul</a>; alfa = x.<a class="code" href="class_zespolona.html#a12e6d3e25dc225cc5d9edad2128a122d" title="Zmienna reprezentująca argument główny liczby zespolonej.">alfa</a>; }
+<a name="l00051"></a><a class="code" href="class_zespolona.html#af30f4704b369dda08d3352852de1c12d">00051</a>         <a class="code" href="class_zespolona.html#af30f4704b369dda08d3352852de1c12d" title="Bezparametrowy destruktor dla typu Zespolona.">~Zespolona</a>() {}
+<a name="l00055"></a><a class="code" href="class_zespolona.html#a8bcf965d12e68cc70b8893eefaeebb62">00055</a>         <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a>&amp; x)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ((Re == x.<a class="code" href="class_zespolona.html#abdab4e35500d137ddc79dee628b05939" title="Zmienna reprezentująca część rzeczywistą liczby zespolonej.">Re</a>) &amp;&amp; (Im == x.<a class="code" href="class_zespolona.html#a37f7c36b331b8c7a05ac7d847f2146ec" title="Zmienna reprezentująca część urojoną liczby zespolonje.">Im</a>)); }
+<a name="l00057"></a><a class="code" href="class_zespolona.html#a7d727ceffd4fc5f42044138cc9497036">00057</a>         <span class="keywordtype">void</span> <a class="code" href="class_zespolona.html#a7d727ceffd4fc5f42044138cc9497036" title="Bezparametrowa metoda wyliczająca sprzężenie liczby zespolonej.">sprzezenie</a>() { Im *= -1; }
+<a name="l00061"></a><a class="code" href="class_zespolona.html#aaf4df0cd44ca24cdb1cf362915e3a6c0">00061</a>         <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a> operator + (<span class="keyword">const</span> <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a>&amp; a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a>(Re+a.<a class="code" href="class_zespolona.html#abdab4e35500d137ddc79dee628b05939" title="Zmienna reprezentująca część rzeczywistą liczby zespolonej.">Re</a>,Im+a.<a class="code" href="class_zespolona.html#a37f7c36b331b8c7a05ac7d847f2146ec" title="Zmienna reprezentująca część urojoną liczby zespolonje.">Im</a>); }
+<a name="l00065"></a><a class="code" href="class_zespolona.html#aa2f2366552b5609297248ea58a66ed02">00065</a>         <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a> operator - (<span class="keyword">const</span> <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a>&amp; a)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a>(Re-a.<a class="code" href="class_zespolona.html#abdab4e35500d137ddc79dee628b05939" title="Zmienna reprezentująca część rzeczywistą liczby zespolonej.">Re</a>,Im-a.<a class="code" href="class_zespolona.html#a37f7c36b331b8c7a05ac7d847f2146ec" title="Zmienna reprezentująca część urojoną liczby zespolonje.">Im</a>); }
+<a name="l00068"></a>00068         <span class="keywordtype">void</span> wykladnicza(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y);
+<a name="l00072"></a>00072         <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a> operator * (<span class="keyword">const</span> <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a>&amp; a) <span class="keyword">const</span>;
+<a name="l00076"></a>00076         <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a> operator / (<a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a>&amp; a) <span class="keyword">const</span>;
+<a name="l00077"></a>00077 };
+<a name="l00078"></a>00078 
+<a name="l00085"></a>00085 ostream &amp; <a class="code" href="zespolona_8hh.html#a1a9f7e56412bbaf04986d97340c68cdf" title="Przeciążenie operatora wyjścia dla typu Zespolona.">operator &lt;&lt; </a>(ostream&amp; wyj, <span class="keyword">const</span> <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a>&amp; x);
+<a name="l00086"></a>00086 
+<a name="l00093"></a>00093 istream &amp; <a class="code" href="zespolona_8hh.html#acf7ab6d9bd8b8df48404fb777b16cc52" title="Przeciążenie operatora wejścia dla typu Zespolona.">operator &gt;&gt; </a>(istream&amp; wej, <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a>&amp; x);
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Wed May 22 2013 21:18:58 dla SUPERPROGRAM programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

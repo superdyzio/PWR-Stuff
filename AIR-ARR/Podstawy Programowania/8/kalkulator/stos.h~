@@ -1,0 +1,23 @@
+#ifndef STOS_H
+#define STOS_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct element {
+	int liczba;
+	struct element *ponizej;
+} Stos;
+
+Stos* push(int liczba, Stos *stos);
+
+Stos* pop(Stos **stos);
+
+void print(Stos *s);
+
+void czysc(Stos **s);
+
+int ilosc(Stos *s);
+
+#endif

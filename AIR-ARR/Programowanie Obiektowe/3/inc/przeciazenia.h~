@@ -1,0 +1,15 @@
+#ifndef PRZECIAZENIA_H
+#define PRZECIAZENIA_H
+
+enum Symbol {e, a, b, c, d};  // deklaracja typu wyliczeniowego
+
+Symbol operator + (Symbol x, Symbol y);
+Symbol operator - (Symbol x, Symbol y);
+Symbol operator * (Symbol x, Symbol y);
+Symbol operator / (Symbol x, Symbol y);
+Symbol operator - (Symbol x);
+
+ostream& operator << (ostream& str, Symbol x);
+istream& operator >> (istream& str, Symbol &x);
+
+

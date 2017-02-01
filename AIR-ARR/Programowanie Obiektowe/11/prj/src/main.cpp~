@@ -1,0 +1,14 @@
+#include "zespolona.hh"
+#include "stos.hh"
+#include "kalkulator.hh"
+#include "mapa.hh"
+#include "dana.hh"
+
+bool Zespolona::NotacjaWykWej = false;
+bool Zespolona::NotacjaWykWyj = false;
+
+int main() {
+	Kalkulator rpn;
+	rpn.uruchom();
+	return 0;
+}

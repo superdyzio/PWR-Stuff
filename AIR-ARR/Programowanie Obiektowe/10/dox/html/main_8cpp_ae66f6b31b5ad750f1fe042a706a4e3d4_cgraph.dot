@@ -1,0 +1,45 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Stos::wyswietl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#ae7c97f9de6f3512d629382ce49fd1efe",tooltip="Bezargumentowa funkcja wyświetlająca zawartość całego stosu. Nie ingeruje w jego strukturę."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Stos::duplikuj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#ab18ea71ccc9c76278f8ea3aff43852e0",tooltip="Bezargumentowa funkcja duplikująca wartość z wierzchołka stosu."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Stos::zamien",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#a4515efee9eb5f52636247a2f9f08c953",tooltip="Bezargumentowa funkcja zamiany miejscami dwóch wartości z wierzchu stosu."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Stos::dodaj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#a54dcfe620d15fb7ca60794a55db4defe",tooltip="Bezargumentowa funkcja dodająca do siebie dwa wierzchnie elementy i zapisująca na stos wynik operacji..."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Zespolona::getIlosc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_zespolona.html#ad2d3b168c5c6dec98f45196de2878b85",tooltip="Getter dla statycznego pola IloscObiektow."];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Zespolona::getIloscA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_zespolona.html#a975a6da0ce68c2e6dcc2080096bfad72",tooltip="Getter dla statycznego pola IloscObiektowAktualnych."];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Stos::odejmij",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#a49e311375d9745accf5e0e84d6a85d14",tooltip="Bezargumentowa funkcja odejmująca od wierzchni element od kolejnego i zapisująca na stos wynik operac..."];
+  Node8 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Stos::mnoz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#a598155585f692950096c5fd7d8125b9c",tooltip="Bezargumentowa funkcja mnożąca dwa wierzchnie elementy i zapisująca na stos wynik operacji..."];
+  Node9 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Stos::dziel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#a78534a6df51bb374f96473cd0b0e5c0d",tooltip="Bezargumentowa funkcja dzieląca drugi element przez wierzchni i zapisująca na stos wynik operacji..."];
+  Node10 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Stos::usun",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#a1155a53b512ed3badc6c2fda97d7928a",tooltip="Bezargumentowa funkcja usuwająca element z wierzchołka stosu."];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Stos::wyjNotWyk",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#a8d1ee4fd01825371ef14b8a7c43506f4",tooltip="Bezargumentowa funkcja ustawiająca notację wykładniczą na wyjście programu."];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Stos::wyjNotTrad",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#a3d570a1c023a09ba99a8c93e5c9bebc0",tooltip="Bezargumentowa funkcja ustawiająca notację tradycyjną na wyjście programu."];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="Stos::wejNotWyk",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#a4bd2869b5afdad3abb20f4a5f7998966",tooltip="Bezargumentowa funkcja ustawiająca notację wykładniczą na wejście programu."];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="Stos::wejNotTrad",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#a294e0476c17db301073c87016e186fcb",tooltip="Bezargumentowa funkcja ustawiająca notację tradycyjną na wejśćie programu."];
+  Node1 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="Stos::czysc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#afd2d62615f8d809e1ce836f7cf75d7e7",tooltip="Bezargumentowa funkcja czyszcząca stos."];
+  Node16 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

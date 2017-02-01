@@ -1,0 +1,54 @@
+#include "zespolone.hh"
+
+ostream & operator << (ostream & StrmWy, Zespolona Lz){
+	return StrmWy <<'('<<Lz.Re<<showpos<<Lz.Im<<noshowpos<<'i'<<')';
+}
+
+istream & operator >> (istream & StrmWe, Zespolona & Lz){
+	if (StrmWe.peek() == ' ' || StrmWe.peek() == '\n') StrmWe.ignore();
+	if (StrmWe.peek() == '('){
+		StrmWe.ignore();
+		StrmWe >> Lz.Re >> Lz.Im;
+		if (StrmWe.fail()) return StrmWe;
+		if (StrmWe.peek() != 'i') {
+			StrmWe.setstate(ios::failbit); 
+			return StrmWe;
+		}
+		StrmWe.ignore();
+		if (StrmWe.peek() != ')') {
+			StrmWe.setstate(ios::failbit); 
+			return StrmWe;
+		}
+		StrmWe.ignore();
+		Lz.CzyOK = true;
+		return StrmWe;
+	}
+	else {
+		StrmWe.setstate(ios::failbit);
+		return StrmWe;
+	}
+}
+
+Zespolona operator + (Zespolona x, Zespolona y) {
+	y.Re = (x.Re) + (y.Re);
+	y.Im = (x.Im) + (y.Im);
+	return y;
+}
+
+Zespolona operator * (Zespolona x, Zespolona y) {
+	Zespolona pom = y;
+	y.Re = (((x.Re)*(y.Re)) - ((y.Im)*(x.Im)));
+	y.Im = (((x.Re)*(pom.Im)) + ((pom.Re)*(x.Im)));
+	return y;
+}
+
+bool operator == (Zespolona x, Zespolona y) {
+	if ( (x.Re == y.Re) && (x.Im == y.Im) ) return true;
+	else return false;
+}
+
+Zespolona Zeruj(Zespolona x) {
+	x.Re=0;
+	x.Im=0;
+	return x;
+}

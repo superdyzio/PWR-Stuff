@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Dawidek: Plik źródłowy symbole.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Dawidek
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">symbole.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="symbole_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef SYMBOLE_HH</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define SYMBOLE_HH</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;cstdio&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;cctype&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;cstring&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;ctime&gt;</span>
+<a name="l00010"></a>00010 
+<a name="l00018"></a>00018 <span class="keyword">using namespace </span>std;
+<a name="l00019"></a>00019 
+<a name="l00023"></a><a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54">00023</a> <span class="keyword">enum</span> <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> { <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54a5be8d0f77f0d0b6c3724e5c446737d1f">e</a>, <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa91fb0824da12f8bb3b74dd78fb13b63">a</a>, <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa06b03e4cd5c7c464c513a95a7fcf9bf">b</a>, <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54a776304400122408ea717dde9234fdd2a">c</a>, <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54ae8f0ad1953249e38043d318b8f4400d0">d</a> };
+<a name="l00024"></a>00024 
+<a name="l00030"></a>00030 <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> <a class="code" href="symbole_8hh.html#a8c125a9910b68482b7a95233f34d494e" title="Operator jednoargumentowy &#39;-&#39;.">operator - </a>(<a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> x);
+<a name="l00031"></a>00031  
+<a name="l00037"></a>00037 <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> <a class="code" href="symbole_8hh.html#a5bf618776d10e41103a7f411da3a37e2" title="Operator jednoargumentowy &#39;/+&#39;.">operator + </a>(<a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> x);
+<a name="l00038"></a>00038  
+<a name="l00044"></a>00044 <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> <a class="code" href="symbole_8hh.html#a5bf618776d10e41103a7f411da3a37e2" title="Operator jednoargumentowy &#39;/+&#39;.">operator + </a>(<a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> x, <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> y);
+<a name="l00045"></a>00045 
+<a name="l00051"></a>00051 <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> <a class="code" href="symbole_8hh.html#a8c125a9910b68482b7a95233f34d494e" title="Operator jednoargumentowy &#39;-&#39;.">operator - </a>(<a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> x, <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> y);
+<a name="l00052"></a>00052 
+<a name="l00058"></a>00058 <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> <a class="code" href="symbole_8hh.html#ae59416860a4e092f654dea87eae1edcc" title="Operator dwuargumentowy &#39;*&#39;.">operator * </a>(<a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> x, <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> y);
+<a name="l00059"></a>00059 
+<a name="l00065"></a>00065 <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> <a class="code" href="symbole_8hh.html#add91838c8cb059b0e677588656d840c8" title="Operator dwuargumentowy &#39;/&#39;.">operator / </a>(<a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> x, <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> y);
+<a name="l00066"></a>00066 
+<a name="l00072"></a>00072 ostream &amp; <a class="code" href="macierz_8hh.html#a6e35430a44ffb4c11b32d82c2038dd70" title="Przeciążenie operatora wypisywania dla klasy Macierz.">operator &lt;&lt; </a>(ostream &amp; wyj, <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> x);
+<a name="l00073"></a>00073 
+<a name="l00079"></a>00079 istream &amp; <a class="code" href="macierz_8hh.html#a294fd4185cd28d379eefdb275349c054" title="Przeciążenie operatora wczytywania dla klasy Macierz.">operator &gt;&gt; </a>(istream &amp; wej, <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> &amp; x);
+<a name="l00080"></a>00080 
+<a name="l00086"></a>00086 <span class="keywordtype">void</span> <a class="code" href="liczba_8hh.html#a91f8f95affe7aa92e783aef5db29a1c3" title="Metoda zerująca zmienną typu double.">Zeruj</a>(<a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54" title="Deklaracja typu wyliczenowego.">Symbol</a> &amp;x);
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Mon Apr 29 2013 19:07:17 dla Dawidek programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

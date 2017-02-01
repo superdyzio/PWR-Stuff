@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Superprogram: Plik źródłowy lacze_do_gnuplota.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Superprogram
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">lacze_do_gnuplota.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="lacze__do__gnuplota_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef LACZE_DO_GNUPLOTA_HH</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define LACZE_DO_GNUPLOTA_HH</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span><span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;list&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 <span class="preprocessor">#ifdef __GNUG__</span>
+<a name="l00008"></a>00008 <span class="preprocessor"></span><span class="preprocessor">#pragma interface</span>
+<a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00010"></a>00010 <span class="preprocessor"></span>
+<a name="l00025"></a><a class="code" href="namespace_pz_g.html">00025</a> <span class="keyword">namespace </span>PzG {
+<a name="l00026"></a>00026 
+<a name="l00042"></a><a class="code" href="namespace_pz_g.html#aeedae1ef10c66d720f9e89de408ca4ca">00042</a>   <span class="keyword">enum</span> <a class="code" href="namespace_pz_g.html#aeedae1ef10c66d720f9e89de408ca4ca" title="Określa tryb rysowania realizowanego przez program gnuplot.">TrybRysowania</a> { <a class="code" href="namespace_pz_g.html#aeedae1ef10c66d720f9e89de408ca4caa5eb0cf8b3405e136f092efdb489d60c4">TR_2D</a>,  <a class="code" href="namespace_pz_g.html#aeedae1ef10c66d720f9e89de408ca4caa856e6b0fa6b8a9dc184c60cf27dcc5d2">TR_3D</a> };
+<a name="l00048"></a><a class="code" href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6aa01097ee8266d6402b752ef6f9a4690c">00048</a>   <span class="keyword">enum</span> <a class="code" href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6" title="Sposób rysowania linii.">RodzajRysowania</a> { <a class="code" href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6a927eaa159aa4bd3198f0a330b967746d">RR_Ciagly</a>, <a class="code" href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6aa01097ee8266d6402b752ef6f9a4690c">RR_Punktowy</a> }; 
+<a name="l00049"></a>00049 
+<a name="l00056"></a><a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html">00056</a>   <span class="keyword">class </span><a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html" title="Zestaw informacji dotyczący pliku i sposobu rysowania.">InfoPlikuDoRysowania</a> {
+<a name="l00057"></a>00057     <span class="keyword">public</span>:
+<a name="l00066"></a><a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#ad9101770163921d8a04199a451624114">00066</a>       <a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#ad9101770163921d8a04199a451624114" title="Inicjalizuje obiekt podstawowymi parametrami.">InfoPlikuDoRysowania</a>(     <span class="keyword">const</span> <span class="keywordtype">char</span>* sNazwaPliku,
+<a name="l00067"></a>00067                            <a class="code" href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6" title="Sposób rysowania linii.">RodzajRysowania</a>  RodzRys, 
+<a name="l00068"></a>00068                                        <span class="keywordtype">int</span>  Szerokosc)
+<a name="l00069"></a>00069       {
+<a name="l00070"></a>00070         <a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#a07ab06c56b9c3179e566a4123ab2a037" title="Nazwa pliku z danymi do rysowania.">_NazwaPliku</a> = sNazwaPliku;
+<a name="l00071"></a>00071         <a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#ac2512f2073c66164beb2e88db31344a4" title="Sposób rysowania danej linii.">_RodzRys</a> = RodzRys;
+<a name="l00072"></a>00072         <a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#a56a03dde7a7a414dbf3c230812a8d741" title="Szerokość użytego piórka.">_Szerokosc</a> = Szerokosc;
+<a name="l00073"></a>00073       }
+<a name="l00079"></a><a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#a09cd4e5cc04b456b482eba2efa51f8ea">00079</a>       <span class="keyword">const</span> std::string <a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#a09cd4e5cc04b456b482eba2efa51f8ea" title="Udostępnia nazwę pliku do rysowania.">WezNazwePliku</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#a07ab06c56b9c3179e566a4123ab2a037" title="Nazwa pliku z danymi do rysowania.">_NazwaPliku</a>; }
+<a name="l00085"></a><a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#ae734c69f5cecf9c0584e3a7f433340ea">00085</a>       <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#ae734c69f5cecf9c0584e3a7f433340ea" title="Zmienia nazwę pliku do rysowania.">ZmienNazwePliku</a>(<span class="keyword">const</span> std::string&amp; NazwaPliku) { <a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#a07ab06c56b9c3179e566a4123ab2a037" title="Nazwa pliku z danymi do rysowania.">_NazwaPliku</a> = NazwaPliku; }
+<a name="l00091"></a><a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#a390f291cdaea71c5919c24c6c27a40c9">00091</a>       <a class="code" href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6" title="Sposób rysowania linii.">RodzajRysowania</a> <a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#a390f291cdaea71c5919c24c6c27a40c9" title="Udostępnia sposób rysowanej linii.">WezRodzRys</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#ac2512f2073c66164beb2e88db31344a4" title="Sposób rysowania danej linii.">_RodzRys</a>; }
+<a name="l00097"></a><a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#aa9af97b6c1fff023902b5b3bc4642a7e">00097</a>       <span class="keywordtype">int</span> <a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#aa9af97b6c1fff023902b5b3bc4642a7e" title="Udostępnia informację o szerokości linii.">WezSzerokosc</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#a56a03dde7a7a414dbf3c230812a8d741" title="Szerokość użytego piórka.">_Szerokosc</a>; }
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099     <span class="keyword">private</span>:
+<a name="l00105"></a><a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#a07ab06c56b9c3179e566a4123ab2a037">00105</a>       std::string  <a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#a07ab06c56b9c3179e566a4123ab2a037" title="Nazwa pliku z danymi do rysowania.">_NazwaPliku</a>;
+<a name="l00112"></a><a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#a56a03dde7a7a414dbf3c230812a8d741">00112</a>       <span class="keywordtype">int</span>  <a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#a56a03dde7a7a414dbf3c230812a8d741" title="Szerokość użytego piórka.">_Szerokosc</a>;
+<a name="l00118"></a><a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#ac2512f2073c66164beb2e88db31344a4">00118</a>       <a class="code" href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6" title="Sposób rysowania linii.">RodzajRysowania</a>  <a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html#ac2512f2073c66164beb2e88db31344a4" title="Sposób rysowania danej linii.">_RodzRys</a>;
+<a name="l00119"></a>00119   };
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121 
+<a name="l00130"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">00130</a> <span class="keyword">class </span><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html" title="Klasa realizuje interfejs do programu GNUPlot.">LaczeDoGNUPlota</a> {
+<a name="l00131"></a>00131  <span class="keyword">protected</span>:
+<a name="l00140"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a1916c5a6fecfb3554e9d5204b2f2086c">00140</a>   <span class="keyword">static</span> std::list&lt;InfoPlikuDoRysowania&gt;  <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a1916c5a6fecfb3554e9d5204b2f2086c" title="Lista nazw plików z danymi dla gnuplota.">_InfoPlikow</a>;
+<a name="l00141"></a>00141 
+<a name="l00148"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#adc3a2250216c2473a61da379da70b2d7">00148</a>   <span class="keywordtype">int</span>           <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#adc3a2250216c2473a61da379da70b2d7" title="Deskryptor wejścia standardowego programu gnuplot.">_Wejscie_GNUPlota</a>;
+<a name="l00155"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a7d05a4767a35ee494d59724bb740dbc2">00155</a>   <span class="keywordtype">int</span>           <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a7d05a4767a35ee494d59724bb740dbc2" title="Deskryptor wyjścia standardowego programu gnuplot.">_Wyjscie_GNUPlota</a>;
+<a name="l00165"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a2f2800f14ebfe1caef0b4d30c410a7fe">00165</a>   <span class="keywordtype">bool</span>          <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a2f2800f14ebfe1caef0b4d30c410a7fe" title="Decyduje czy mają być wyświetlane komunikaty o błędach, czy też nie.">_WyswietlajKomunikatyOBledach</a>;
+<a name="l00166"></a>00166 
+<a name="l00176"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a00e3a51bb47d3fb26eee875dc48215db">00176</a>   <a class="code" href="namespace_pz_g.html#aeedae1ef10c66d720f9e89de408ca4ca" title="Określa tryb rysowania realizowanego przez program gnuplot.">TrybRysowania</a>  <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a00e3a51bb47d3fb26eee875dc48215db" title="Określa aktualny tryb rysowania.">_TrybRys</a>;
+<a name="l00182"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a69d530edfe769e38448972e897456deb">00182</a>   <span class="keywordtype">float</span>  <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a69d530edfe769e38448972e897456deb" title="Dolny zakres wyświetlanej skali skali dla osi OX.">_Xmin</a>;
+<a name="l00188"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a847e00678a413ab076ccbcb7eba3ae58">00188</a>   <span class="keywordtype">float</span>  <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a847e00678a413ab076ccbcb7eba3ae58" title="Górny zakres wyświetlanej skali skali dla osi OX.">_Xmax</a>;
+<a name="l00194"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#abc555fd6b82b0d5c9efb4802b58dc317">00194</a>   <span class="keywordtype">float</span>  <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#abc555fd6b82b0d5c9efb4802b58dc317" title="Dolny zakres wyświetlanej skali skali dla osi OY.">_Ymin</a>;
+<a name="l00200"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#ad7dfd3fad82ea0720ec89eacc18410bf">00200</a>   <span class="keywordtype">float</span>  <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#ad7dfd3fad82ea0720ec89eacc18410bf" title="Górny zakres wyświetlanej skali skali dla osi OY.">_Ymax</a>;
+<a name="l00206"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a8f9797e881df35f4206cb7d8030e5edc">00206</a>   <span class="keywordtype">float</span>  <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a8f9797e881df35f4206cb7d8030e5edc" title="Dolny zakres wyświetlanej skali skali dla osi OZ.">_Zmin</a>;
+<a name="l00212"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a26949eedd421832f0f206ce3c8f90694">00212</a>   <span class="keywordtype">float</span>  <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a26949eedd421832f0f206ce3c8f90694" title="Górny zakres wyświetlanej skali skali dla osi OZ.">_Zmax</a>;
+<a name="l00219"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a2c9303c4dbb4c9f0ddc4f1fe02eb3f70">00219</a>   <span class="keywordtype">float</span>  <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a2c9303c4dbb4c9f0ddc4f1fe02eb3f70" title="Skalowanie rysunku wzdłuż osi OX.">_Xskala</a>;
+<a name="l00226"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a85446d06b2d714b2f852ef43c47c73c1">00226</a>   <span class="keywordtype">float</span>  <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a85446d06b2d714b2f852ef43c47c73c1" title="Skalowanie rysunku wzdłuż osi OZ.">_Zskala</a>;
+<a name="l00233"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a21e77f0a2bfb7fed989b6dc2d64b5a7e">00233</a>   <span class="keywordtype">float</span>  <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a21e77f0a2bfb7fed989b6dc2d64b5a7e" title="Kąt rotacji względem osi OX.">_Xrotacja</a>;
+<a name="l00240"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#aa65781b1ff96dfb31a780e98ee28d6ed">00240</a>   <span class="keywordtype">float</span>  <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#aa65781b1ff96dfb31a780e98ee28d6ed" title="Kąt rotacji względem osi OZ.">_Zrotacja</a>;
+<a name="l00241"></a>00241 
+<a name="l00248"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a833aa8994b9913786f920ec8c259731f">00248</a>   <span class="keywordtype">bool</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a833aa8994b9913786f920ec8c259731f" title="Czy oś OX ma być widoczna.">_PokazOs_OX</a>;
+<a name="l00249"></a>00249 
+<a name="l00256"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#ae8d9b4dac5eae6ce86b7043c45b70ed8">00256</a>   <span class="keywordtype">bool</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#ae8d9b4dac5eae6ce86b7043c45b70ed8" title="Czy oś OY ma być widoczna.">_PokazOs_OY</a>;
+<a name="l00257"></a>00257 
+<a name="l00258"></a>00258 
+<a name="l00259"></a>00259 
+<a name="l00274"></a>00274   <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a25585ec3f1bd3b6bf42f374c38b8d237" title="Tworzy listę parametrów umożliwiających rysowanie dodatkowych elementów.">DopiszPlikiDoPoleceniaRysowania</a>( std::string &amp;Polecenie, <span class="keywordtype">char</span> <span class="keyword">const</span> **Sep );
+<a name="l00275"></a>00275 
+<a name="l00287"></a>00287   std::string <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a3fc0ab02fcbaee3f0af9840cd8001cfa" title="Tworzy polecenie ustawiające zakres dla danej współrzędnej.">ZapiszUstawienieZakresu</a>(<span class="keywordtype">char</span> Os) <span class="keyword">const</span>;
+<a name="l00294"></a>00294   std::string <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a1ff05325e6dfa77ed1e081aea3df6d28" title="Tworzy polecenie ustawiające punkt obserwacji.">ZapiszUstawienieRotacjiISkali</a>() <span class="keyword">const</span>;
+<a name="l00307"></a>00307   <span class="keywordtype">bool</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a5063854b7232a7951d120a21df63f2b7" title="Przesyła bezpośrednio do gnuplota zadany napis.">PrzeslijDoGNUPlota</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *Polecenie);
+<a name="l00317"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a909debc641def86dcdfa841d7c843917">00317</a>   <span class="keywordtype">bool</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a909debc641def86dcdfa841d7c843917" title="Udostępnia informację czy mają być wyświetlane informacje o błędach.">CzyWyswietlacKomunikaty</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a2f2800f14ebfe1caef0b4d30c410a7fe" title="Decyduje czy mają być wyświetlane komunikaty o błędach, czy też nie.">_WyswietlajKomunikatyOBledach</a>;}
+<a name="l00321"></a>00321   <span class="keywordtype">bool</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a1c7b9acc40de8d8bbb40fb0722512933" title="Uruchamia program gnuplot jako proces potomny.">UtworzProcesPotomny</a>();
+<a name="l00331"></a>00331   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a61fd7057776e7cdc0be16b8b80e582f2" title="Wyświetla komunikat błędu.">KomunikatBledu</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *Komunikat) <span class="keyword">const</span>;
+<a name="l00332"></a>00332 
+<a name="l00340"></a>00340   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a27d33c79a7ca6e87ab7c473015b15c7e" title="Tworzy preambułę poprzedzającą polecenie rysowania.">BudujPreambulePoleceniaRysowania</a>(std::string &amp;Preambula) <span class="keyword">const</span>;
+<a name="l00341"></a>00341 
+<a name="l00349"></a>00349   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a0dc1e1bd87faf86731689d578790cbee" title="Tworzy preambułę poprzedzającą polecenie rysowania w trybie 2D.">BudujPreambule_2D</a>(std::string &amp;Preambula) <span class="keyword">const</span>;
+<a name="l00350"></a>00350 
+<a name="l00351"></a>00351 
+<a name="l00359"></a>00359   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a48ddd1ea8a7170b76d749fded99eadb9" title="Tworzy preambułę poprzedzającą polecenie rysowania w trybie 3D.">BudujPreambule_3D</a>(std::string &amp;Preambula) <span class="keyword">const</span>;
+<a name="l00360"></a>00360 
+<a name="l00361"></a>00361 
+<a name="l00362"></a>00362  <span class="keyword">public</span>:
+<a name="l00366"></a>00366   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a27aa7d263a2a292b2d7f8a9a8e562edd" title="Ustawia tytuł okienka z rysowanym wykresem.">UstawTytulOkna</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* Tytul);
+<a name="l00374"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a11421d7c67deab6b7524cc492407e897">00374</a>   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a11421d7c67deab6b7524cc492407e897" title="Umożliwia lub zabrania rysowania osi OX.">PokazOs_OX</a>(<span class="keywordtype">bool</span> Pokaz) { <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a833aa8994b9913786f920ec8c259731f" title="Czy oś OX ma być widoczna.">_PokazOs_OX</a> = Pokaz; }
+<a name="l00375"></a>00375 
+<a name="l00384"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a14cafd721032bd57c312759898871ed4">00384</a>   <span class="keywordtype">bool</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a14cafd721032bd57c312759898871ed4" title="Czy oś OX ma być rysowana.">PokazOs_OX</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a833aa8994b9913786f920ec8c259731f" title="Czy oś OX ma być widoczna.">_PokazOs_OX</a>; }
+<a name="l00385"></a>00385 
+<a name="l00386"></a>00386 
+<a name="l00394"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a7c3db909b266fc30808e86406c04b516">00394</a>   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a7c3db909b266fc30808e86406c04b516" title="Umożliwia lub zabrania rysowania osi OY.">PokazOs_OY</a>(<span class="keywordtype">bool</span> Pokaz) { <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#ae8d9b4dac5eae6ce86b7043c45b70ed8" title="Czy oś OY ma być widoczna.">_PokazOs_OY</a> = Pokaz; }
+<a name="l00395"></a>00395 
+<a name="l00404"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a62937224f01b1dacba3c3ed5f516d208">00404</a>   <span class="keywordtype">bool</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a62937224f01b1dacba3c3ed5f516d208" title="Czy oś OY ma być rysowana.">PokazOs_OY</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#ae8d9b4dac5eae6ce86b7043c45b70ed8" title="Czy oś OY ma być widoczna.">_PokazOs_OY</a>; }
+<a name="l00405"></a>00405 
+<a name="l00406"></a>00406 
+<a name="l00412"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a9ed40b6da931387f74de9a16470515dd">00412</a>   <span class="keywordtype">float</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a9ed40b6da931387f74de9a16470515dd" title="Udostępnia dolny zakres skali osi OX.">Xmin</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a69d530edfe769e38448972e897456deb" title="Dolny zakres wyświetlanej skali skali dla osi OX.">_Xmin</a>; }
+<a name="l00418"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a71944bf0e24114edae41e76c5edf0758">00418</a>   <span class="keywordtype">float</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a71944bf0e24114edae41e76c5edf0758" title="Udostępnia górny zakres skali osi OX.">Xmax</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a847e00678a413ab076ccbcb7eba3ae58" title="Górny zakres wyświetlanej skali skali dla osi OX.">_Xmax</a>; }
+<a name="l00424"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a72aade1f962add104eba0a34073c5dd2">00424</a>   <span class="keywordtype">float</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a72aade1f962add104eba0a34073c5dd2" title="Udostępnia dolny zakres skali osi OY.">Ymin</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#abc555fd6b82b0d5c9efb4802b58dc317" title="Dolny zakres wyświetlanej skali skali dla osi OY.">_Ymin</a>; }
+<a name="l00430"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#afb7d43adcfee4aa8150cb9474a6d8c86">00430</a>   <span class="keywordtype">float</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#afb7d43adcfee4aa8150cb9474a6d8c86" title="Udostępnia górny zakres skali osi OY.">Ymax</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#ad7dfd3fad82ea0720ec89eacc18410bf" title="Górny zakres wyświetlanej skali skali dla osi OY.">_Ymax</a>; }
+<a name="l00436"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#ae291789be6ef8f7bfc4ee660fca57861">00436</a>   <span class="keywordtype">float</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#ae291789be6ef8f7bfc4ee660fca57861" title="Udostępnia dolny zakres skali osi OZ.">Zmin</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a8f9797e881df35f4206cb7d8030e5edc" title="Dolny zakres wyświetlanej skali skali dla osi OZ.">_Zmin</a>; }
+<a name="l00442"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a65e3ac2d56a464ce6f9519eaa89d9f62">00442</a>   <span class="keywordtype">float</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a65e3ac2d56a464ce6f9519eaa89d9f62" title="Udostępnia górny zakres skali osi OZ.">Zmax</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a26949eedd421832f0f206ce3c8f90694" title="Górny zakres wyświetlanej skali skali dla osi OZ.">_Zmax</a>; }
+<a name="l00443"></a>00443 
+<a name="l00451"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a10950349b348fd3a3d4143e95337527c">00451</a>   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a10950349b348fd3a3d4143e95337527c" title="Zmienia tryb rysowania.">ZmienTrybRys</a>(<a class="code" href="namespace_pz_g.html#aeedae1ef10c66d720f9e89de408ca4ca" title="Określa tryb rysowania realizowanego przez program gnuplot.">TrybRysowania</a>  Tryb) { <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a00e3a51bb47d3fb26eee875dc48215db" title="Określa aktualny tryb rysowania.">_TrybRys</a> = Tryb; }
+<a name="l00452"></a>00452 
+<a name="l00458"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a114cd58a1b8cf00cd72aac204d7743b8">00458</a>   <a class="code" href="namespace_pz_g.html#aeedae1ef10c66d720f9e89de408ca4ca" title="Określa tryb rysowania realizowanego przez program gnuplot.">TrybRysowania</a> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a114cd58a1b8cf00cd72aac204d7743b8" title="Udostępnia aktualny tryb rysowania.">WezTrybRys</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a00e3a51bb47d3fb26eee875dc48215db" title="Określa aktualny tryb rysowania.">_TrybRys</a>; }
+<a name="l00459"></a>00459 
+<a name="l00468"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a9c91987dfc869d6fcea96205c581daef">00468</a>   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a9c91987dfc869d6fcea96205c581daef" title="Ustawia zakres osi OX.">UstawZakresX</a>(<span class="keywordtype">float</span> Xo, <span class="keywordtype">float</span> Xn) { <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a69d530edfe769e38448972e897456deb" title="Dolny zakres wyświetlanej skali skali dla osi OX.">_Xmin</a> = Xo;  <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a847e00678a413ab076ccbcb7eba3ae58" title="Górny zakres wyświetlanej skali skali dla osi OX.">_Xmax</a> = Xn; }
+<a name="l00477"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a54c6e9cf9ab2eae479451fd953c2717c">00477</a>   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a54c6e9cf9ab2eae479451fd953c2717c" title="Ustawia zakres osi OY.">UstawZakresY</a>(<span class="keywordtype">float</span> Yo, <span class="keywordtype">float</span> Yn) { <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#abc555fd6b82b0d5c9efb4802b58dc317" title="Dolny zakres wyświetlanej skali skali dla osi OY.">_Ymin</a> = Yo;  <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#ad7dfd3fad82ea0720ec89eacc18410bf" title="Górny zakres wyświetlanej skali skali dla osi OY.">_Ymax</a> = Yn; }
+<a name="l00486"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a1dbbb2b86fb13b8632e6bad9df2a82e3">00486</a>   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a1dbbb2b86fb13b8632e6bad9df2a82e3" title="Ustawia zakres osi OZ.">UstawZakresZ</a>(<span class="keywordtype">float</span> Zo, <span class="keywordtype">float</span> Zn) { <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a8f9797e881df35f4206cb7d8030e5edc" title="Dolny zakres wyświetlanej skali skali dla osi OZ.">_Zmin</a> = Zo;  <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a26949eedd421832f0f206ce3c8f90694" title="Górny zakres wyświetlanej skali skali dla osi OZ.">_Zmax</a> = Zn; }
+<a name="l00487"></a>00487 
+<a name="l00488"></a>00488 
+<a name="l00494"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a76f367ee032ec1aaa610ee6f6dc49b67">00494</a>   <span class="keywordtype">float</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a76f367ee032ec1aaa610ee6f6dc49b67" title="Udostępnia skalę dla osi OX.">SkalaX</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a2c9303c4dbb4c9f0ddc4f1fe02eb3f70" title="Skalowanie rysunku wzdłuż osi OX.">_Xskala</a>; }
+<a name="l00500"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a2b34c26dc7193546666cf15e74d29209">00500</a>   <span class="keywordtype">float</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a2b34c26dc7193546666cf15e74d29209" title="Udostępnia skalę dla osi OZ.">SkalaZ</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a85446d06b2d714b2f852ef43c47c73c1" title="Skalowanie rysunku wzdłuż osi OZ.">_Zskala</a>; }
+<a name="l00507"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a855b8338bfe3e5d294d719f24b11090e">00507</a>   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a855b8338bfe3e5d294d719f24b11090e" title="Zadaje skalę wzdłuż osi OZ.">UstawSkaleX</a>( <span class="keywordtype">float</span> skala_x ) { <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a2c9303c4dbb4c9f0ddc4f1fe02eb3f70" title="Skalowanie rysunku wzdłuż osi OX.">_Xskala</a> = skala_x; }
+<a name="l00514"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#ab0486db3166d8db6580a221079af241f">00514</a>   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#ab0486db3166d8db6580a221079af241f" title="Zadaje skalę wzdłuż osi OZ.">UstawSkaleZ</a>( <span class="keywordtype">float</span> skala_z ) { <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a85446d06b2d714b2f852ef43c47c73c1" title="Skalowanie rysunku wzdłuż osi OZ.">_Zskala</a> = skala_z; }
+<a name="l00522"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a4308151b54e105d302803146a3238699">00522</a>   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a4308151b54e105d302803146a3238699" title="Zadaje skalę wzdłuż osi OX i OZ.">UstawSkaleXZ</a>( <span class="keywordtype">float</span> skala_x, <span class="keywordtype">float</span> skala_z ) 
+<a name="l00523"></a>00523           { <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a855b8338bfe3e5d294d719f24b11090e" title="Zadaje skalę wzdłuż osi OZ.">UstawSkaleX</a>(skala_x);  <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#ab0486db3166d8db6580a221079af241f" title="Zadaje skalę wzdłuż osi OZ.">UstawSkaleZ</a>(skala_z); }
+<a name="l00524"></a>00524 
+<a name="l00531"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#af6fc8ea5b068e5fa099f13f40821fe36">00531</a>   <span class="keywordtype">float</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#af6fc8ea5b068e5fa099f13f40821fe36" title="Udostępnia wartość kąta rotacji wokół osi OX.">RotacjaX</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a21e77f0a2bfb7fed989b6dc2d64b5a7e" title="Kąt rotacji względem osi OX.">_Xrotacja</a>; }
+<a name="l00538"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a6b89a8300be0c17a6f9f9bf8bc8934cb">00538</a>   <span class="keywordtype">float</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a6b89a8300be0c17a6f9f9bf8bc8934cb" title="Udostępnia wartość kąta rotacji wokół osi OZ.">RotacjaZ</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#aa65781b1ff96dfb31a780e98ee28d6ed" title="Kąt rotacji względem osi OZ.">_Zrotacja</a>; }
+<a name="l00547"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a88324c53a70846fb6bc9d918ce21fd56">00547</a>   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a88324c53a70846fb6bc9d918ce21fd56" title="Ustawia rotację wokół osi OX.">UstawRotacjeX</a>( <span class="keywordtype">float</span> kat_x ) { <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a21e77f0a2bfb7fed989b6dc2d64b5a7e" title="Kąt rotacji względem osi OX.">_Xrotacja</a> = kat_x; }
+<a name="l00556"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a458399aa2a8f4b3f00ccd5b272857ea1">00556</a>   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a458399aa2a8f4b3f00ccd5b272857ea1" title="Ustawia rotację wokół osi OZ.">UstawRotacjeZ</a>( <span class="keywordtype">float</span> kat_z ) { <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#aa65781b1ff96dfb31a780e98ee28d6ed" title="Kąt rotacji względem osi OZ.">_Zrotacja</a> = kat_z; }
+<a name="l00570"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a94d8527fd78048ed6cb32ffb29e5f903">00570</a>   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a94d8527fd78048ed6cb32ffb29e5f903" title="Ustawia rotację wokół osi OX i OZ.">UstawRotacjeXZ</a>( <span class="keywordtype">float</span> kat_x, <span class="keywordtype">float</span> kat_z ) 
+<a name="l00571"></a>00571     { <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a88324c53a70846fb6bc9d918ce21fd56" title="Ustawia rotację wokół osi OX.">UstawRotacjeX</a>(kat_x);  <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a458399aa2a8f4b3f00ccd5b272857ea1" title="Ustawia rotację wokół osi OZ.">UstawRotacjeZ</a>(kat_z); }  
+<a name="l00572"></a>00572 
+<a name="l00585"></a>00585   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a4531e6d166faf2e2c8bb4a54a9c9e1f8" title="Zezwala lub zabrania wyświetlania komunikatów.">WyswietlajKomunikatyBledow</a>( <span class="keywordtype">bool</span> Tryb = <span class="keyword">true</span> );
+<a name="l00606"></a>00606    <span class="keywordtype">bool</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a34bd48f57c0fd69c12bf4127a1cacd8f" title="Dodaje nazwę pliku.">DodajNazwePliku</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>       * NazwaPliku, 
+<a name="l00607"></a>00607                          <a class="code" href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6" title="Sposób rysowania linii.">RodzajRysowania</a>    RodzRys = <a class="code" href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6a927eaa159aa4bd3198f0a330b967746d">RR_Ciagly</a>, 
+<a name="l00608"></a>00608                          <span class="keywordtype">int</span>                Szerokosc = 1
+<a name="l00609"></a>00609                        );
+<a name="l00610"></a>00610 
+<a name="l00614"></a>00614     <span class="keywordtype">bool</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#ad3d7607946b82aa941d786dcd086d27e" title="Tworzy listę parametrów umożliwiających rysowanie brył z plików.">DopiszRysowanieZPlikow</a>( std::string &amp;Polecenie, <span class="keywordtype">char</span> <span class="keyword">const</span> **Sep );
+<a name="l00615"></a>00615 
+<a name="l00623"></a>00623     <span class="keywordtype">bool</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#ab5045a46f45c989f92209b543e484085" title="Informuje, czy połączenie z gnuplot&#39;em jest zainicjalizowane.">CzyPolaczenieJestZainicjowane</a>() <span class="keyword">const</span>;
+<a name="l00624"></a>00624 
+<a name="l00644"></a>00644   <span class="keywordtype">bool</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a065f5b8402737cc62b0ad4f66d028335" title="Wymusza wygenerowanie rysunku.">Rysuj</a>();
+<a name="l00670"></a>00670   <span class="keywordtype">bool</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#addae9ac156ae2fb227f792faff3aa148" title="Wymusza wygenerowanie rysunku.">RysujDoPliku</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *NazwaPliku);
+<a name="l00685"></a>00685   <span class="keywordtype">bool</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a200ce6bdb980c314a9eafe49e8f2dd5e" title="Inicjalizuje połączenie z programem gnuplot.">Inicjalizuj</a>();
+<a name="l00691"></a>00691   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a75f599f17413ea8602c6dbba09f36407" title="Usuwa ostatnią nazwę pliku.">UsunOstatniaNazwe</a>();
+<a name="l00697"></a>00697   <span class="keywordtype">void</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a89a1d90d017d264cd26398464d074073" title="Kasuje zawartość listy nazw plików.">UsunWszystkieNazwyPlikow</a>();
+<a name="l00701"></a>00701   <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a5845189b5ab8c3634acf57024e5deeaf" title="Wstępnie inicjalizuje obiekt.">LaczeDoGNUPlota</a>();
+<a name="l00710"></a>00710   <span class="keyword">virtual</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#afc10ec7f193032ecae714f6d832dcbf0" title="Nie wykonuje żadnych dodatkowych akcji.">~LaczeDoGNUPlota</a>();
+<a name="l00711"></a>00711 };
+<a name="l00712"></a>00712 
+<a name="l00713"></a>00713   <span class="keyword">inline</span>
+<a name="l00714"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a25585ec3f1bd3b6bf42f374c38b8d237">00714</a>   <span class="keywordtype">bool</span> <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a25585ec3f1bd3b6bf42f374c38b8d237" title="Tworzy listę parametrów umożliwiających rysowanie dodatkowych elementów.">LaczeDoGNUPlota::DopiszPlikiDoPoleceniaRysowania</a>( std::string &amp;,
+<a name="l00715"></a>00715                                                          <span class="keywordtype">char</span> <span class="keyword">const</span>  **
+<a name="l00716"></a>00716                                                        )
+<a name="l00717"></a>00717   { <span class="keywordflow">return</span> <span class="keyword">true</span>; }
+<a name="l00718"></a>00718 
+<a name="l00719"></a>00719 
+<a name="l00720"></a>00720 
+<a name="l00721"></a>00721 }
+<a name="l00722"></a>00722 
+<a name="l00723"></a>00723 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Mon Jun 3 2013 18:52:06 dla Superprogram programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

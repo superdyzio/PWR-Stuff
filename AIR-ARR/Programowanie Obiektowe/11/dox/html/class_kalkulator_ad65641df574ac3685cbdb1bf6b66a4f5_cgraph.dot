@@ -1,0 +1,19 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Kalkulator::duplikuj",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Stos::rozmiar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#a66e658929cc85d93e66ea49d627402b2",tooltip="Obudowa funkcji size()."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Stos::szczyt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#adefd481d405f9b0f9355f32f57d525af",tooltip="Obudowa funkcji top()."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Mapa::stworzNazwe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_mapa.html#a535534b7aad2bab8aa50dfe0b2434d58",tooltip="Funkcja tworząca nową nazwę stałej."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Mapa::dodajDana",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_mapa.html#aae13819e03f6e85e29e2df75e43a1d80",tooltip="Funkcja dodająca element o zadanym kluczu do mapy."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Mapa::przypiszWartosc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_mapa.html#a771fd3d997953b2c7845a64ac51a7094",tooltip="Funkcja przypisująca wartość elementowi."];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Stos::doloz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#ab3090525b8a392f922679600f6821e72",tooltip="Obudowa funkcji push(string)."];
+}

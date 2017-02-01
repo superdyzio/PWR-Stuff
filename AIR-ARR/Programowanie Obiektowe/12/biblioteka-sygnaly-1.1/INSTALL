@@ -1,0 +1,69 @@
+1. Instalacja pakietu ========================================================
+
+ Na poczatku nalezy skonfigurowac pakiet i wskazac miejsce, 
+ gdzie maja byc zainstalowane poszczegolne komponenty.
+ Operacje te wykonywujemy wywolujac skrypt configure w kartotece
+ rozpakowanego pakietu.
+ Zalozmy, ze chcemy zainstalowac pakiet w swoim katalogu domowym 
+ w podkatalogu  ~/zasoby-zad12
+ Zalozmy dalej, ze naszym katalogiem domowym jest:  /home/jkowalsk
+ Tak wiec jawnie wypisana pelna sciezka katalogow ma postac:
+         /home/jkowalsk/zasoby-zad12
+
+ Nalezy wowczas wywolac skrypt configure w nastepujacy sposob:
+
+    ./configure --prefix=/home/jkowalsk/zasoby-zad12
+
+ Wskazane katalogi nie musza istniec. Wymagane jest jedynie prawo do
+ utworzenia tych podkatalogow we wskazanym katalogu  /home/jkowalsk
+ (w tym konkretnym przypadku uzytkownik ma prawo utworzenia katalogow,
+ gdyz jest to jego katalog domowy).
+
+ Jesli po wykonaniu skryptu configure nie pojawily sie zadane informacje 
+ o bledach, to mozemy przystapic do nastepnego etapu i skompilowac oraz
+ skonsolidowac biblioteke. W tym celu wywolujemy polecenie:
+
+    make
+
+ Kolejnym etapem jest instalacja. Aby to zrobic NIE nalezy przelaczac sie
+ w tryb administratora. Wystarczy wykonac polecenie:
+
+    make install
+
+ Powinno ono doprowadzic do utworzenia katalogow i przekopiowania odpowiednich
+ plikow, a mianowicie:
+
+  Zostanie utworzony katalog:
+      
+   1.  /home/jkowalsk/zasoby-zad12/include
+        
+          W tym katalogu znajda sie pliki naglowkowe: Sygnal.hh, 
+              BlokSygnalowy.hh, ListaBlokow.hh
+
+   2.  /home/jkowalsk/zasoby-zad12/lib
+
+          Tutaj zostaje przekopiowana biblioteka libSygnaly.a
+
+
+2. Wykorzystanie biblioteki ==================================================
+
+  Zakladajac, ze wykorzystujemy zalazek-nowy, nalezy w pliku prog.Makefile
+  zakomentowac linie
+
+CPPFLAGS=-Wall -pedantic -Iinc -I/home/bk/edu/kpo/zad/z12/zasoby/inc -c
+LDFLAGS=-Wall -L/home/bk/edu/kpo/zad/z12/zasoby/lib/${HOST}
+
+  Operacje te wykonujemy stawiajac znak '#' na poczatku linii. Nastepnie nalezy
+  wstawic wlasny wpis z nowymi sciezkami. W tym przypadku bedzie to mialo
+  nastepujaca postac:
+
+# CPPFLAGS=-Wall -pedantic -Iinc -I/home/bk/edu/kpo/zad/z12/zasoby/inc -c
+# LDFLAGS=-Wall -L/home/bk/edu/kpo/zad/z12/zasoby/lib/${HOST}
+
+CPPFLAGS=-Wall -pedantic -Iinc -I/home/jkowalsk/zasoby-zad12/include -c
+LDFLAGS=-Wall -L/home/jkowalsk/zasoby-zad12/lib
+
+
+  Nie warto usuwac zakomentowanych linii, gdyz beda one potrzebne po 
+  przekopiowaniu zrodel na panamint.
+

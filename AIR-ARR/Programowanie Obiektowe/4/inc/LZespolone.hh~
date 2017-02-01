@@ -1,0 +1,48 @@
+#ifndef LZESPOLONE_HH
+#define LZESPOLONE_HH
+
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <fstream>
+#include "testy.hh"
+#include "LZespolone.hh"
+
+using namespace std;
+
+/* Klasa definiująca strukturę Liczby Zespolonej, w której skład wchodzą trzy opisane niżej pola. Liczby te muszą być zapisywanie w postaci
+   (x+y*i), gdzie niezbędne są nawiasy! */
+class LZespolona {
+	public:
+	float x, y;						// x to część rzeczywista, y część urojona liczby zespolonej
+	bool ok;						// zmienna mowiaca czy dzielenie przez dana licze moglo byc wykonane
+};
+
+/* Przeciążenie operatora + dla liczb zespolonych. Jako argumenty przyjmuje dwie liczby zespolone, a zwraca ich sumę. */
+LZespolona operator + (LZespolona a, LZespolona b);
+
+/* Przeciążenie operatora - dla liczb zespolonych. Jako argumenty przyjmuje dwie liczby zespolone, a zwraca ich różnicę. */
+LZespolona operator - (LZespolona a, LZespolona b);
+
+/* Przeciążenie operatora mnożenia dla liczb zespolonych. Jako argumenty przyjmuje dwie liczby zespolone, a zwraca ich iloczyn. */
+LZespolona operator * (LZespolona a, LZespolona b);
+
+/* Przeciążenie operatora dzielenia dla liczb zespolonych. Jako argumenty przyjmuje dwie liczby zespolone, a zwraca ich iloraz. Druga z liczb
+   podawanych jako argumenty nie może być zerem! W takiej sytuacji zwrócony zostanie dzielnik ze zmienną ok ustawioną na false - należy to
+   sprawdzić po wykonaniu działania. */
+LZespolona operator / (LZespolona a, LZespolona b);
+
+/* Funkcja mająca za zadanie wyliczenie sprzeżenia liczby zespolonej. Przyjmuje jeden argument w postaci liczby zespolonej i zwraca jej
+   sprzężenie. */
+LZespolona sprzezenie (LZespolona x);
+
+/* Przeciążenie operatora porównania dla liczb zespolonych. Zwraca true, gdy liczby są identyczne, a false w przeciwnym przypadku. */
+bool operator == (LZespolona a, LZespolona b);
+
+/* Przeciążenie operatora wypisania na standardowe wyjście liczby zespolonej. */
+ostream & operator << (ostream & wyj, const LZespolona l);
+
+/* Przeciążenie wczytanie ze standardowego wejścia liczby zespolonej. */
+istream & operator >> (istream & wej, LZespolona & l);
+
+#endif

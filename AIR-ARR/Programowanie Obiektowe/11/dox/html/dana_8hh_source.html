@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>SUPERPROGRAM: Plik źródłowy dana.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">SUPERPROGRAM
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">dana.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="dana_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef DANA_HH</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define DANA_HH</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;cstdio&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;cctype&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;cstring&gt;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="zespolona_8hh.html" title="Plik nagłówkowy zawierający definicję klasy Zespolona, umożliwiającej przechowywanie liczb zespolonyc...">zespolona.hh</a>&quot;</span>
+<a name="l00011"></a>00011 
+<a name="l00017"></a>00017 <span class="keyword">using namespace </span>std;
+<a name="l00018"></a>00018 
+<a name="l00023"></a><a class="code" href="class_dana.html">00023</a> <span class="keyword">class </span><a class="code" href="class_dana.html" title="Definicja klasy Dana. Zawiera potrzebne metody oraz prywatne pola dotyczące licznika i wartości...">Dana</a> {
+<a name="l00025"></a><a class="code" href="class_dana.html#a3c118ad4f737b442f6ea15bf3d927a90">00025</a>         <span class="keywordtype">int</span> <a class="code" href="class_dana.html#a3c118ad4f737b442f6ea15bf3d927a90" title="Zmienna przechowująca ilość wystąpień danego obiektu w mapie.">licznik</a>;
+<a name="l00027"></a><a class="code" href="class_dana.html#ac8c3aac23210a5e090e5e1ffd2cf5042">00027</a>         <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a> <a class="code" href="class_dana.html#ac8c3aac23210a5e090e5e1ffd2cf5042" title="Zmienna przechowująca wartość danego obiektu.">wartosc</a>;
+<a name="l00029"></a><a class="code" href="class_dana.html#aa00d6ab1301cc4293dba486bbe8e6f9b">00029</a>         <span class="keywordtype">bool</span> <a class="code" href="class_dana.html#aa00d6ab1301cc4293dba486bbe8e6f9b" title="Zmienna mówiąca o tym czy dany obiekt ma zdefiniowaną wartość czy też nie.">czyMaWart</a>;
+<a name="l00030"></a>00030 <span class="keyword">public</span>:
+<a name="l00032"></a><a class="code" href="class_dana.html#a98041d76a38b97c184d20219d9f375bd">00032</a>         <a class="code" href="class_dana.html#a98041d76a38b97c184d20219d9f375bd" title="Konstruktor bezparametrowy, ustawia licznik na 0 oraz flagę wartości na false.">Dana</a>() { licznik = 0; czyMaWart = <span class="keyword">false</span>; }
+<a name="l00034"></a><a class="code" href="class_dana.html#ad13c5341fe191d9b113a5ca6f8be6582">00034</a>         <a class="code" href="class_dana.html#ad13c5341fe191d9b113a5ca6f8be6582" title="Konstruktor jednoargumentowy.">Dana</a>(<span class="keyword">const</span> <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a>&amp; x) { wartosc = x; czyMaWart = <span class="keyword">true</span>; licznik = 0; }
+<a name="l00036"></a><a class="code" href="class_dana.html#ab99e57d7ecbf8c56f0645fc677dd7fee">00036</a>         <a class="code" href="class_dana.html#ab99e57d7ecbf8c56f0645fc677dd7fee" title="Destruktor dla typu Dana.">~Dana</a>() {}
+<a name="l00038"></a><a class="code" href="class_dana.html#a546dc145dc6dae2d6bb12e2b5696be0a">00038</a>         <span class="keywordtype">int</span> <a class="code" href="class_dana.html#a546dc145dc6dae2d6bb12e2b5696be0a" title="Getter dla licznika wystąpień.">getLicznik</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> licznik; }
+<a name="l00040"></a><a class="code" href="class_dana.html#a719e784eab3091787054636e223ad0be">00040</a>         <span class="keywordtype">void</span> <a class="code" href="class_dana.html#a719e784eab3091787054636e223ad0be" title="Bezargumentowa funkcja zwiększająca ilość wystąpień danego obiektu na stosie.">incLicznik</a>() { licznik++; }
+<a name="l00042"></a><a class="code" href="class_dana.html#a45c447cf8bd63d3013f787d0f1361b73">00042</a>         <span class="keywordtype">void</span> <a class="code" href="class_dana.html#a45c447cf8bd63d3013f787d0f1361b73" title="Bezargumentowa funkcja zmniejszająca ilość wystąpień danego obiektu na stosie.">decLicznik</a>() { licznik--; }
+<a name="l00044"></a><a class="code" href="class_dana.html#a78e0295522f56e6532c40498cd74b89f">00044</a>         <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a> <a class="code" href="class_dana.html#a78e0295522f56e6532c40498cd74b89f" title="Getter dla wartości typu Zespolona.">getWart</a>() { <span class="keywordflow">return</span> wartosc; }
+<a name="l00046"></a><a class="code" href="class_dana.html#a6cdde631d124a70be5ea6f635e2fcac4">00046</a>         <span class="keywordtype">bool</span> <a class="code" href="class_dana.html#a6cdde631d124a70be5ea6f635e2fcac4" title="Getter dla flagi wartości.">getCzyMaWart</a>() { <span class="keywordflow">return</span> czyMaWart; }
+<a name="l00048"></a><a class="code" href="class_dana.html#abc979b6791d9d33c0e31784d762fdb55">00048</a>         <span class="keywordtype">void</span> <a class="code" href="class_dana.html#abc979b6791d9d33c0e31784d762fdb55" title="Setter dla wartości. Przypisuje wartość danemu obiektowi.">setWartosc</a>(<span class="keyword">const</span> <a class="code" href="class_zespolona.html" title="Definicja klasy Zespolona.">Zespolona</a>&amp; x) { wartosc = x; czyMaWart = <span class="keyword">true</span>; }
+<a name="l00049"></a>00049 };
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Wed May 22 2013 21:18:58 dla SUPERPROGRAM programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+#include "zespolona.hh"
+
+/*!
+ *\file
+ *\brief	Plik zawierający implementację wybranych metod klasy Zespolona oraz przeciążenia operatorów wejścia/wyjścia dla tejże klasy.
+*/
+
+void Zespolona::wykladnicza(float x, float y) {
+	modul = sqrt(pow(x,2) + pow(y,2));
+	if (modul == 0) alfa = 361;
+	else alfa = atan2(Im,Re) * 180 / PI;
+}
+
+Zespolona Zespolona::operator * (const Zespolona& a) const {
+	return Zespolona( ((Re * a.Re) - (Im * a.Im)),((Re * a.Im) + (a.Re * Im)) );
+}
+
+Zespolona Zespolona::operator / (Zespolona& a) const {
+	if (a.modul != 0)
+		return Zespolona( (((Re * a.Re) + (Im * a.Im)) / a.modul),(((Im * a.Re) - (Re * a.Im)) / a.modul) );
+	else {
+		cerr << "Dzielenie niepoprawne!" << endl;
+		return a;
+	}
+}
+
+ostream & operator << (ostream & wyj, const Zespolona& x) {
+	if (Zespolona::NotacjaWykWyj) if (x.alfa != 361) return wyj << '(' << x.modul << "e^i" << x.alfa << ")";
+					else { cerr << "Argument nie zdefiniowany!"; return wyj; }
+	else return wyj << '(' << x.Re << showpos << x.Im << noshowpos << 'i' << ')';
+}
+
+istream & operator >> (istream & wej, Zespolona & x) {
+	if (Zespolona::NotacjaWykWej) {
+		string linia;
+		wej >> linia;
+		if (wej.fail()) return wej;
+		if (linia[0] == '(') {
+			linia = linia.substr(1);
+			x.modul = atof(linia.c_str());
+		}
+		else {
+			wej.setstate(ios::failbit);
+			return wej;
+		}
+		linia = linia.substr(linia.find('e'));
+		if (linia[0] == 'e' && linia[1] == '^' && linia[2] == 'i') {
+			linia = linia.substr(3);
+			x.alfa = atof(linia.c_str());
+			if (linia.find(')') == string::npos) {
+				wej.setstate(ios::failbit);
+				return wej;
+			}
+			else {
+				x.Re = x.modul * cos(x.alfa);
+				x.Im = x.modul * sin(x.alfa);
+			}
+		}
+		else {
+			wej.setstate(ios::failbit);
+			return wej;
+		}
+	}
+	else {
+		if ( (wej.peek() == ' ') || (wej.peek() == '\n') ) wej.ignore();
+		if (wej.peek() == '(') {
+			wej.ignore();
+			wej >> x.Re >> x.Im;
+			if (wej.fail()) return wej;
+			if (wej.peek() != 'i') {
+				wej.setstate(ios::failbit); 
+				return wej;
+			}
+			wej.ignore();
+			if (wej.peek() != ')') {
+				wej.setstate(ios::failbit); 
+				return wej;
+			}
+			wej.ignore();
+			x.wykladnicza(x.Re,x.Im);
+			return wej;
+		}
+		else {
+			wej.setstate(ios::failbit);
+			return wej;
+		}
+	}
+	return wej;
+}

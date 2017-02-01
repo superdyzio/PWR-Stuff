@@ -1,0 +1,38 @@
+#ifndef MAPA_HH
+#define MAPA_HH
+
+#include <cstdio>
+#include <cstdlib>
+#include <cctype>
+#include <string>
+#include <cstring>
+#include <iostream>
+#include <sstream>
+#include <map>
+#include <cmath>
+#include <iomanip>
+#include "dana.hh"
+#include "zespolona.hh"
+
+using namespace std;
+
+class Mapa : private map<string, Dana> {
+	int iloscStalych;
+public:
+	Mapa() { iloscStalych = 0; }
+	~Mapa() {}
+	Dana operator () (const string & n) { return (*this)[n]; }
+	bool czyJest(const string & n) { return (*this)[n].getLicznik() > 0; }
+	int getIlStalych() const { return iloscStalych; }
+	string stworzNazwe() {  iloscStalych++; string w; ostringstream s; s << iloscStalych; w = "::"; w += s.str(); return w; }
+	void czysc() { clear(); }
+	void dodajDana(const string& n) { ((*this)[n]).incLicznik(); }
+	void usunDana(const string & n) { ((*this)[n]).decLicznik(); if (((*this)[n]).getLicznik() <= 0) erase(n); }
+	Zespolona getWartosc(const string& n);
+	void przypiszWartosc(const string& n, const Zespolona& x);
+	void wypisz();
+	void wypiszZm();
+	void wypiszSt();
+};
+
+#endif

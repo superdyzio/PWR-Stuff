@@ -1,0 +1,22 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="OpcjeWywolania.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="DaneUzytkownika.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_dane_uzytkownika_8hh.html",tooltip="Plik zawierający definicję klasy DaneUzytkownika oraz zapowiedzi potrzebnych metod."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ListaUzytkownikow.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_lista_uzytkownikow_8hh.html",tooltip="Plik zawierający definicję klasy ListaUzytkownikow oraz potrzebnych metod. Zaimplementowane są tu rów..."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="modul.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$modul_8hh.html",tooltip="Plik zawiera zapowiedź metody służącej do obsługi pliku &#39;passwd&#39;."];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="modul.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$modul_8cpp.html",tooltip="Plik zawiera implementację metody z modułu &#39;modul.hh&#39;, czyli metody służącej do sortowania i wyświetl..."];
+  Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="ListaUzytkownikow.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_lista_uzytkownikow_8cpp.html",tooltip="Plik zawierający implementację wszystkich metod klasy ListaUzytkownikow."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="DaneUzytkownika.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_dane_uzytkownika_8cpp.html",tooltip="Plik zawierający implementacje wszystkich metod klasy DaneUzytkownika oraz przeciążeń operatorów wejś..."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

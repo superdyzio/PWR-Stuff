@@ -1,0 +1,68 @@
+#ifndef SYMBOLE_HH
+#define SYMBOLE_HH
+
+#include <iostream>
+#include <cstdio>
+#include <cctype>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
+
+using namespace std;
+
+enum Symbol { e, a, b, c, d }; // deklaracja typu Symbol
+
+struct Pytanie {		// struktura do przechowywania pytania złożona z operatora oraz poprawnego wyniku
+  char    OperatorDzialania;	
+  Symbol  WynikDzialania;		
+};
+
+
+/* 	Operator jednoargumentowy '-'.
+ *	Za argument przyjmuje zmienną typu Symbol.
+ *	Zwraca Symbol bedacy odwrotnoscią argumentu.
+ */
+Symbol operator - (Symbol x);
+ 
+/* 	Operator jednoargumentowy '+'.
+ * 	Za argument przyjmuje zmienną typu Symbol.
+ *  	Zwraca Symbol bez znaku.
+ */
+Symbol operator + (Symbol x);
+ 
+/* 	Operator dwuargumentowy '+'.
+ * 	Za argumenty przyjmuje 2 zmienne typu Symbol.
+ *  	Zwraca Symbol będący ich sumą (zgodnie z tabelką dodawania).
+ */
+Symbol operator + ( Symbol x, Symbol y );
+
+/* 	Operator dwuargumentowy '-'.
+ * 	Za argumenty przyjmuje 2 zmienne typu Symbol.
+ *  	Zwraca Symbol będący ich roznicą (suma x i odwrotnosci y)
+ */
+Symbol operator - ( Symbol x, Symbol y );
+
+/* 	Operator dwuargumentowy '*'.
+ * 	Za argumenty przyjmuje 2 zmienne typu Symbol.
+ *  	Zwraca Symbol będący ich iloczynem (zgodnie z tabelką mnożenia).
+ */
+Symbol operator * (Symbol x, Symbol y );
+
+/* 	Operator dwuargumentowy '/'.
+ * 	Za argumenty przyjmuje 2 zmienne typu Symbol.
+ *	Problem dzielenia przez 'e' nie jest tutaj rozwiązany.
+ *	Zabezpieczenie przed takim działaniem umiejscowione jest w innej części programu.
+ *  	Zwraca Symbol będący ilorazem argumentów (iloczyn x i odwrotnosci y)
+ */
+Symbol operator / (Symbol x, Symbol y );
+
+// Operator wyjścia dla typu Symbol.
+ostream & operator << (ostream & StrmWy, Symbol x );
+
+// Operator wejścia dla typu Symbol.
+istream & operator >> ( istream & StrmWe, Symbol & WczytSym );
+
+// Funkcja zerująca Symbol. Ustawia argument na wartość 'e'.
+Symbol Zeruj(Symbol x);
+
+#endif

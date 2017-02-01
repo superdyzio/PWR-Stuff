@@ -1,0 +1,6 @@
+#include "testy.hh"
+#include "LZespolone.hh"
+
+int main() {
+	return 0;
+}

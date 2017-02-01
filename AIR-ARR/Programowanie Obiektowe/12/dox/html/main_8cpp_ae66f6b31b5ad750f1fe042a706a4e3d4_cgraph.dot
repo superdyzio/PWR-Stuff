@@ -1,0 +1,29 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UkladSygnalowy::DodajGenerator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_uklad_sygnalowy.html#a22d43e5ebd0f8a96b828647ee872f8cf",tooltip="Dodaje blok generatora sygnału."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ListaBlokow::DodajBlokSygnalowy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lista_blokow.html#ab77e5d62f4959fc61d2461a454bd7a68",tooltip="Dodaje nowy blok sygnałowy."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="BlokGeneratora::UstawPauze_ms",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_blok_generatora.html#ae4c8377140774ba353903d3448d993ee",tooltip="Zmienia długość pauzy."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UkladSygnalowy::DodajOscyloskop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_uklad_sygnalowy.html#aaaa1b49ed5a9f4ce6b02530e2694f10c",tooltip="Dodaje blok rejestratora sygnału."];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="BlokOscyloskopu::ZmienTytulOkienka",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_blok_oscyloskopu.html#abd05e30ec0a9d1ea771bdd15540b426a",tooltip="Umożliwia zmianę tytuły okienka."];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UkladSygnalowy::DodajRejestrator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_uklad_sygnalowy.html#a1f37477cccc05141d42d7d9aacf55879",tooltip="Dodaje blok rejestratora sygnału."];
+  Node7 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="ListaBlokow::WyswietlTypBlokowWLiscie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lista_blokow.html#aa606644a18b58d2d9b06713c04dd440d",tooltip="Wyświetla typy bloków."];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="ListaBlokow::RozpocznijPrace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lista_blokow.html#a9603851764702e2e2767b1f0de94ade1",tooltip="Metoda ta inicjalizuje wszystkie bloki sygnałowe z listy."];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="ListaBlokow::WyliczSygnal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lista_blokow.html#acc94cb1f57abd2ea11c9bc88b59b8b3e",tooltip="Realizuje przeliczenie sygnału dla całej listy bloków."];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="ListaBlokow::ZakonczPrace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lista_blokow.html#ad35fa127514dc93ba034e29eee5d0081",tooltip="Kończy pracę wszystkich bloków."];
+}

@@ -1,0 +1,89 @@
+#ifndef BLOKREJESTRATORA_HH
+#define BLOKREJESTRATORA_HH
+
+#ifdef __GNUG__
+# pragma interface
+# pragma implementation
+#endif
+
+/*!
+ *\file
+ *\brief	Plik zawierający definicję klasy BlokRejestratora.
+*/
+
+#include <fstream>
+#include <string>
+#include "BlokSygnalowy.hh"
+
+/*!
+ * \brief Modeluje rejestrator sygnału
+ *
+ * Klasa modeluje rejestrator sygnału. Obiekty
+ * tej klasy zapisują zarejestrowany sygnał do
+ * wybranego pliku.
+ */
+class BlokRejestratora: public BlokSygnalowy {
+  public:
+   /*!
+    * \brief Inicjalizuje pustym napisem pole nazwy pliku
+    *
+    *  Inicjalizuje pustym napisem pole nazwy pliku, do którego
+    *  mają być zapisane kolejne wartości sygnału.
+    */
+   BlokRejestratora() {}
+   /*!
+    * \brief Inicjalizuje nazwę pliku
+    *
+    * Inicjalizuje nazwę pliku, do którego
+    *  mają być zapisane kolejne wartości sygnału.
+    * \param[in] sNazwaPliku - nazwa pliku, do którego
+    *           mają być zapisane kolejne wartości sygnału.
+    */
+   BlokRejestratora(const char* sNazwaPliku): _NazwaPliku(sNazwaPliku) {}
+   /*!
+    * \brief Udostępnia nazwę typu bloku
+    *
+    *  Udostępnia nazwę typu bloku. Jest to napis 
+    *  "Blok Rejestratora".
+    */
+    virtual const char* NazwaBloku() const { return "Blok Rejestratora"; }
+   /*!
+    * \brief Inicjalizuje pracę bloku
+    */
+    virtual bool RozpocznijPrace();
+   /*!
+    * \brief Sprawdza czy stan strumienia jest poprawny
+    */
+    virtual bool CzyZakonczycPrace() const;
+   /*!
+    * \brief Zamyka plik z wartościami sygnału
+    */
+   virtual void ZakonczPrace();
+  /*!
+   * \brief Zapisuje koleją wartość do pliku
+   *
+   *  Zapisuje kolejną wartość sygnału do pliku i zapamiętują ją
+   *  jako wartość wyjściową bloku.
+   *
+   *  \param[in] Syg - wartość tego parametru w ogóle nie jest 
+   *                   brana pod uwagę.
+   */
+  virtual bool WyliczSygnalWyj(const Sygnal& Syg);
+
+ private:
+   /*!
+    * \brief Przechowuje nazwę pliku 
+    *
+    * W polu przechowuje się nazwę pliku, w którym mają być
+    * zapisane kolejne wartości sygnału.
+    */
+    std::string  _NazwaPliku;
+   /*!
+    * \brief Strumień zapisywanego sygnału
+    *
+    *  Strumień, w którym zapisywane są kolejne wartości sygnału
+    */
+    std::ofstream  _StrmRejestratora;
+};
+
+#endif

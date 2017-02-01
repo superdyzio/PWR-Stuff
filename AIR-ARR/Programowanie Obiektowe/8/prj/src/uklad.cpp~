@@ -1,0 +1,68 @@
+#include "uklad.hh"
+
+/*!
+ *\file
+ *\brief	Plik zawiera implementacje metod z nagłówka 'uklad.hh'.
+*/
+template <typename T>
+istream & operator >> (istream & wej, Uklad<T> & u) {
+  	cin >> u.A;
+  	if (wej.fail()) return wej; 
+	else {
+		cin >> u.b;
+		if (wej.fail()) return wej;
+		else return wej;
+	}
+}
+template <typename T>
+ostream & operator << (ostream & wyj, Uklad<T> u) {
+	for (int i = 0; i < 3; i++) {
+		wyj << "| ";
+		for (int j = 0; j < 3; j++) {
+			wyj.width(5);
+			wyj << u.A(i,j);
+		}
+		wyj << "|  | X_" << i+1 << "|";
+		if (i == 1) cout << " = | ";
+		else wyj << "   | ";
+		wyj << u.b[i] << " |" << endl;
+	}
+	return wyj;
+}	
+
+template <typename T>
+Macierz<T> Uklad<T>::ZamianaKolumny(int k) {
+	Macierz<T> pom = A;
+	if ( (k > 2) || (k < 0) ) {
+		cerr << "Nieprawidłowy numer kolumny. Przyjęta zostanie reszta z dzielenia podanej wartości przez 3." << endl;
+		k = k % 3;
+	}
+	for (int i = 0; i < 3; i++) pom(i, k) = b[i];
+	return pom;
+}
+
+template <typename T>
+void Uklad<T>::Rozwiaz() {
+	T detA;
+	Macierz<T> pom;
+	detA = A.det();
+	for (int i = 0; i < 3; i++) {
+		pom = ZamianaKolumny(i);
+		this->x[i] = pom.det() / detA;
+	}
+}
+
+template <typename T>		
+Wektor<T> operator * (Macierz<T> m, Wektor<T> w) {
+	Wektor<T> wynik;
+	wynik.Zero();
+	for (int i = 0; i < 3; i++) 
+		for (int j = 0; j < 3; j++)
+			wynik[i] = wynik[i] + ( m(i,j) * w[j] );
+  	return wynik;
+}
+
+template <typename T>
+Wektor<T> Blad(Uklad<T> u) {
+	return u.A * u.x - u.b;
+}

@@ -1,0 +1,49 @@
+#ifndef DANA_HH
+#define DANA_HH
+
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <cctype>
+#include <string>
+#include <cstring>
+#include "zespolona.hh"
+
+/*!
+ *\file
+ *\brief	Plik zawierający definicję klasy Dana, służącej do przechowywania elementu mapy.
+*/
+
+using namespace std;
+
+/*!
+ *\brief	Definicja klasy Dana. Zawiera potrzebne metody oraz prywatne pola dotyczące licznika i wartości, wszystkie odpowiednio
+ *		obudowane.
+*/
+class Dana : public Zespolona {
+/*! \brief Zmienna przechowująca ilość wystąpień danego obiektu w mapie. */
+	int licznik;
+/*! \brief Zmienna mówiąca o tym czy dany obiekt ma zdefiniowaną wartość czy też nie. */
+	bool czyMaWart;
+public:
+/*! \brief Konstruktor bezparametrowy, ustawia licznik na 0 oraz flagę wartości na false. */
+	Dana() { licznik = 0; czyMaWart = false; }
+/*! \brief Konstruktor jednoargumentowy. \param[in] Przyjmuje zmienną typu Zespolona. */
+	Dana(const Dana& d) { *this = d; }
+/*! \brief Destruktor dla typu Dana. */
+	~Dana() { licznik--; }
+/*! \brief Getter dla licznika wystąpień. \return Zwraca liczbę wystąpień danego obiektu na stosie. */
+	int getLicznik() const { return licznik; }
+/*! \brief Bezargumentowa funkcja zwiększająca ilość wystąpień danego obiektu na stosie. */
+	void incLicznik() { licznik++; }
+/*! \brief Bezargumentowa funkcja zmniejszająca ilość wystąpień danego obiektu na stosie. */
+	void decLicznik() { licznik--; }
+/*! \brief Getter dla wartości typu Zespolona. \return Zwraca wartość danego obiektu. */
+	Zespolona getWart() const { return (*this); }
+/*! \brief Getter dla flagi wartości. \return Zwraca true jeśli dany obiekt ma przypisaną wartość, a false w przypadku przeciwnym. */
+	bool getCzyMaWart() { return czyMaWart; }
+/*! \brief Setter dla wartości. Przypisuje wartość danemu obiektowi. \param[in] Jako argument przyjmuje zmienną typu Zespolona. */
+	void setWartosc(const Zespolona& x) { czyMaWart = true; }
+};
+
+#endif

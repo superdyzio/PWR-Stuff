@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Dawidek: Plik źródłowy wektor.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Dawidek
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">wektor.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="wektor_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef WEKTOR_HH</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define WEKTOR_HH</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;cstdio&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;cctype&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;cstring&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;ctime&gt;</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="zespolone_8hh.html" title="Moduł zawierający definicję klasy Zespolona, służącej do przechowywania liczb zespolonych oraz przeci...">zespolone.hh</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="symbole_8hh.html" title="Modul zawierający definicję typu wyliczeniowego &#39;Symbol&#39; {e , a , b , c , d}, odpowiadające kolejno w...">symbole.hh</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="liczba_8hh.html" title="Plik nagłówkowy zawierający zapowiedź metody zerowania zmiennej typu double.">liczba.hh</a>&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="typ_8hh.html">typ.hh</a>&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="macierz_8hh.html" title="Moduł zawiera definicję klasy Macierz wraz z przeciążeniami wybranych operatorów. Klasa &#39;Macierz&#39; prz...">macierz.hh</a>&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 <span class="keyword">using namespace </span>std;
+<a name="l00018"></a>00018 
+<a name="l00031"></a>00031 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
+<a name="l00032"></a><a class="code" href="class_wektor.html">00032</a> <span class="keyword">class </span><a class="code" href="class_wektor.html" title="Definicja szablonu klasy Wektor. Może przyjmować typy: double, Symbol, Zespolona.">Wektor</a> {
+<a name="l00033"></a>00033 <span class="keyword">private</span>:
+<a name="l00035"></a>00035         T x;
+<a name="l00037"></a>00037         T y;
+<a name="l00039"></a>00039         T z;    
+<a name="l00040"></a>00040 <span class="keyword">public</span>:
+<a name="l00042"></a><a class="code" href="class_wektor.html#a7b4a28e8d4e8de72cf148e5c5479e212">00042</a>         <a class="code" href="class_wektor.html" title="Definicja szablonu klasy Wektor. Może przyjmować typy: double, Symbol, Zespolona.">Wektor&lt;T&gt;</a>() { <a class="code" href="liczba_8hh.html#a91f8f95affe7aa92e783aef5db29a1c3" title="Metoda zerująca zmienną typu double.">Zeruj</a>(x); <a class="code" href="liczba_8hh.html#a91f8f95affe7aa92e783aef5db29a1c3" title="Metoda zerująca zmienną typu double.">Zeruj</a>(y); <a class="code" href="liczba_8hh.html#a91f8f95affe7aa92e783aef5db29a1c3" title="Metoda zerująca zmienną typu double.">Zeruj</a>(z); }
+<a name="l00044"></a><a class="code" href="class_wektor.html#aea54f336f21590287b3f10457cb3f386">00044</a>         <a class="code" href="class_wektor.html" title="Definicja szablonu klasy Wektor. Może przyjmować typy: double, Symbol, Zespolona.">Wektor&lt;T&gt;</a>(T <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa91fb0824da12f8bb3b74dd78fb13b63">a</a>, T <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa06b03e4cd5c7c464c513a95a7fcf9bf">b</a>, T <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54a776304400122408ea717dde9234fdd2a">c</a>) { x = <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa91fb0824da12f8bb3b74dd78fb13b63">a</a>; y = <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa06b03e4cd5c7c464c513a95a7fcf9bf">b</a>; z = <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54a776304400122408ea717dde9234fdd2a">c</a>; }
+<a name="l00046"></a><a class="code" href="class_wektor.html#ad80eaeeb881a23658b62eb4672e772d2">00046</a>         T&amp; operator[] (<span class="keywordtype">int</span> Index) {<span class="keywordflow">return</span> Index == 0 ? x : Index == 1 ? y : z;}
+<a name="l00053"></a><a class="code" href="class_wektor.html#ab6ab3903a5c668b5b8eaa4597a991de3">00053</a>         T <a class="code" href="symbole_8hh.html#ae59416860a4e092f654dea87eae1edcc" title="Operator dwuargumentowy &#39;*&#39;.">operator * </a>(<a class="code" href="class_wektor.html" title="Definicja szablonu klasy Wektor. Może przyjmować typy: double, Symbol, Zespolona.">Wektor&lt;T&gt;</a> <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa91fb0824da12f8bb3b74dd78fb13b63">a</a>) { <span class="keywordflow">return</span> (x*a[0]) + (y*a[1]) + (z*a[2]); }
+<a name="l00059"></a><a class="code" href="class_wektor.html#ae781a772e28af7023a52202fa1bf23b2">00059</a>         <a class="code" href="class_wektor.html" title="Definicja szablonu klasy Wektor. Może przyjmować typy: double, Symbol, Zespolona.">Wektor&lt;T&gt;</a> <a class="code" href="symbole_8hh.html#a8c125a9910b68482b7a95233f34d494e" title="Operator jednoargumentowy &#39;-&#39;.">operator - </a>(<a class="code" href="class_wektor.html" title="Definicja szablonu klasy Wektor. Może przyjmować typy: double, Symbol, Zespolona.">Wektor&lt;T&gt;</a> <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa91fb0824da12f8bb3b74dd78fb13b63">a</a>) { <span class="keywordflow">return</span> <a class="code" href="class_wektor.html" title="Definicja szablonu klasy Wektor. Może przyjmować typy: double, Symbol, Zespolona.">Wektor&lt;T&gt;</a>(x-a[0],y-a[1],z-a[2]); }
+<a name="l00060"></a><a class="code" href="class_wektor.html#a6d72cdc59eeb2247297a063f04f987ce">00060</a>         <span class="keywordtype">void</span> <a class="code" href="class_wektor.html#a6d72cdc59eeb2247297a063f04f987ce">Zero</a>() { <a class="code" href="liczba_8hh.html#a91f8f95affe7aa92e783aef5db29a1c3" title="Metoda zerująca zmienną typu double.">Zeruj</a>(x); <a class="code" href="liczba_8hh.html#a91f8f95affe7aa92e783aef5db29a1c3" title="Metoda zerująca zmienną typu double.">Zeruj</a>(y); <a class="code" href="liczba_8hh.html#a91f8f95affe7aa92e783aef5db29a1c3" title="Metoda zerująca zmienną typu double.">Zeruj</a>(z); }
+<a name="l00061"></a>00061 };
+<a name="l00062"></a>00062 
+<a name="l00068"></a>00068 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
+<a name="l00069"></a><a class="code" href="wektor_8hh.html#a6cf63f77d28fc91669459383b6121cca">00069</a> istream &amp; <a class="code" href="macierz_8hh.html#a294fd4185cd28d379eefdb275349c054" title="Przeciążenie operatora wczytywania dla klasy Macierz.">operator &gt;&gt; </a>(istream &amp; wej, <a class="code" href="class_wektor.html" title="Definicja szablonu klasy Wektor. Może przyjmować typy: double, Symbol, Zespolona.">Wektor&lt;T&gt;</a> &amp; w) {
+<a name="l00070"></a>00070         <span class="keywordtype">char</span> znak;
+<a name="l00071"></a>00071         wej &gt;&gt; znak;
+<a name="l00072"></a>00072         <span class="keywordflow">if</span> (znak != <span class="charliteral">&#39;(&#39;</span>) {
+<a name="l00073"></a>00073                 wej.setstate(ios::failbit); 
+<a name="l00074"></a>00074                 <span class="keywordflow">return</span> wej;
+<a name="l00075"></a>00075         }
+<a name="l00076"></a>00076         <span class="keywordflow">else</span> {
+<a name="l00077"></a>00077                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {
+<a name="l00078"></a>00078                         wej &gt;&gt; w[i] &gt;&gt; znak;
+<a name="l00079"></a>00079                         <span class="keywordflow">if</span> ( (znak != <span class="charliteral">&#39;,&#39;</span>) &amp;&amp; (znak != <span class="charliteral">&#39;)&#39;</span>) ) {
+<a name="l00080"></a>00080                                         wej.setstate(ios::failbit); 
+<a name="l00081"></a>00081                                         <span class="keywordflow">return</span> wej;
+<a name="l00082"></a>00082                         }
+<a name="l00083"></a>00083                 }
+<a name="l00084"></a>00084         }
+<a name="l00085"></a>00085         <span class="keywordflow">return</span> wej;
+<a name="l00086"></a>00086 }
+<a name="l00087"></a>00087 
+<a name="l00093"></a>00093 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
+<a name="l00094"></a><a class="code" href="wektor_8hh.html#aee4adf81d1c2bf7dd6cce3670a96816c">00094</a> ostream &amp; operator &lt;&lt; (ostream &amp; wyj, Wektor&lt;T&gt; w) {
+<a name="l00095"></a>00095         wyj &lt;&lt; <span class="stringliteral">&quot;( &quot;</span> &lt;&lt; w[0] &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; w[1] &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; w[2] &lt;&lt; <span class="stringliteral">&quot; )&quot;</span> &lt;&lt; endl;
+<a name="l00096"></a>00096         <span class="keywordflow">return</span> wyj;
+<a name="l00097"></a>00097 }
+<a name="l00098"></a>00098         
+<a name="l00099"></a>00099 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Mon Apr 29 2013 19:07:17 dla Dawidek programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

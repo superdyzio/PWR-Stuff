@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct element {
+	int liczba;
+	struct element *ponizej;
+} Stos;
+
+Stos* push(int liczba, Stos *stos){
+	Stos *nowy;
+	nowy = (Stos *) malloc(sizeof(Stos));
+	nowy->ponizej = stos;
+	nowy->liczba = liczba;
+	return nowy;
+}
+
+Stos* pop(Stos **stos){
+	Stos *s;
+	s = *stos;
+	if (s==NULL) return NULL;
+	*stos = s->ponizej;
+	s->ponizej = NULL;
+	return s;
+}
+
+void print(Stos *s){
+	Stos *i;
+	i = s;
+	while (i != NULL){
+		printf("%i -> ",i->liczba);
+		i = i->ponizej;
+	}
+	printf("NULL\n");
+}
+
+void czysc(Stos **s){
+	Stos *i;
+	i = *s;
+	while (i != NULL){
+		*s = i->ponizej;
+		free(i);
+		i = *s;
+	}
+	*s = i;
+}
+
+int main(){
+	char wybor='1';
+	int i;
+	Stos *x=NULL;
+	while (wybor!='0'){
+		scanf("%s",&wybor);
+		int i=atoi(&wybor);;
+		if (i!=0) x=push(i,x);
+	}
+	print(x);
+	pop(&x);
+	print(x);
+	czysc(&x);
+	print(x);
+	return 0;
+}

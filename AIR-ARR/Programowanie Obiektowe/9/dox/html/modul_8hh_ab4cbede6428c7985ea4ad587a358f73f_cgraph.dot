@@ -1,0 +1,27 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="PrzetworzListe_Uzytkownikow_i_Grupy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="OpcjeWywolania::JakSortowac",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_opcje_wywolania.html#af3db8839dce97d9ce38bb8b18c294302",tooltip="Zwraca identyfikator rodzaju sortowania."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Nazwiska",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_lista_uzytkownikow_8hh.html#a7facb23279e44dbe0bb0201f67004a02",tooltip="Funkcja porównująca dwóch użytkowników wg nazwisk. W przypadku równości porównywani się jeszcze wg im..."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Loginy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_lista_uzytkownikow_8hh.html#a5de81322f6fd14f2f37e78fca25b3f0d",tooltip="Funkcja porównująca dwóch użytkowników wg loginów."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Idy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_lista_uzytkownikow_8hh.html#ab4a791697c7baba4a20b64d560f5c644",tooltip="Funkcja porówująca użytkowników wg ID."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="OpcjeWywolania::JakSzukac",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_opcje_wywolania.html#a952a0eece643b488580ff136eef42dcf",tooltip="Zwraca identyfikator rodzaju szukania."];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="ListaUzytkownikow::Znajdz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lista_uzytkownikow.html#ae0f6033fd0f2c86dfe76b254bc7aad9e",tooltip="Bezparametrowa funkcja wyszukiwania, wyszukująca użytkownika o największym ID."];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="OpcjeWywolania::WezLogin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_opcje_wywolania.html#a3a17d83961dec1a145c4b3b0ad17cbe0",tooltip="Umożliwia dostęp do pola _Login. Nie przyjmuje parametrów."];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="OpcjeWywolania::WezIdUzytkownika",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_opcje_wywolania.html#a2a10959b7e6353c708d69517093ad2e4",tooltip="Umożliwia dostęp do pola _IdUzytkownika. Nie przyjmuje parametrów."];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="DaneUzytkownika::getID",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_dane_uzytkownika.html#a22db9ef448356a0c65ab71290e021805",tooltip="Funkcja zapewniająca dostęp do pola ID."];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="DaneUzytkownika::getLogin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_dane_uzytkownika.html#a59a000f7ed622d8e59b7e4a56150d200",tooltip="Funkcja zapewniająca dostęp do pola Login."];
+}

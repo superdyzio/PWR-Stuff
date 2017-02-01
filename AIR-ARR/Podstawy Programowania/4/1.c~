@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+
+void utworz(int x, int y)
+{ for (i=0; i<x; i++)
+    for (j=0; j<y; j++)
+      tablica[i][j]=i*j;
+}
+
+void wyswietl(int x, int y)
+{ for (i=0; i<x; i++)
+    { for (j=0; j<y; j++)
+	printf("%i ",tablica[i][j]);
+      printf("");
+    }
+}
+
+int main()
+{ int tablica[][];
+  int i,j;
+  printf("Podaj wymiar tablicy:\n");
+  scanf("%i,%i",i,j);
+  utworz(i,j);
+  wyswietl(i,j);
+  return 0;
+}

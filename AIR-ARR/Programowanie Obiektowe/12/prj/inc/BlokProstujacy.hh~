@@ -1,0 +1,45 @@
+#ifndef BLOKPROSTUJACY_HH
+#define BLOKPROSTUJACY_HH
+
+#ifdef __GNUG__
+# pragma interface
+# pragma implementation
+#endif
+
+/*!
+ *\file
+ *\brief	Plik zawierający definicję klasy BlokProstujacy.
+*/
+
+#include <cmath>
+#include <cctype>
+#include <cstdlib>
+#include <cstring>
+#include <string>
+#include <unistd.h>
+#include "BlokSygnalowy.hh"
+#include "Sygnal.hh"
+
+using namespace std;
+
+/*!
+ *\brief	Definicja klasy BlokProstujacy, dziedziczącej po klasie BlokSygnalowy.
+*/
+class BlokProstujacy : public BlokSygnalowy {
+public:	
+/*! \brief Konstruktor. */
+	BlokProstujacy() {}
+/*! \brief Przeciążenie metody dającej opis bloku. \return Zwraca krótki opis konkretnego bloku. */
+	virtual string OpisBloku() { return "Blok prostuje sygnał."; }
+/*! \brief Przeciążenie metody wyliczającej sygnał wyjściowy. \param[in] Przyjmuje sygnał wejściowy. \return Zwraca true. */
+	virtual bool WyliczSygnalWyj(const Sygnal& Syg);
+/*! \brief Przeciążenie metody dającej identyfikator typu bloków. \return Zwraca liczbę 4, odpowiadającą blokom prostującym. */
+	virtual int Identyfikator() const { return 4; } 
+/*! \brief Przeciążenie metody dającej nazwę typu bloków. \return Zwraca napis "Blok dyskryminujący.". */
+	virtual const char* NazwaBloku() const { return "Blok prostujący."; }
+  virtual bool WyliczSygnalWej(const Sygnal& SygWe, 
+                                     Sygnal& SygObliczony
+			       ) { SygObliczony = SygWe;  return true; }
+};
+
+#endif

@@ -1,0 +1,125 @@
+#include "dzialania.hh"
+
+using namespace std;
+
+// struktura do przechowywania pojedynczych pytań
+struct Pytanie {
+  char    OperatorDzialania;
+  Symbol  WynikDzialania;
+};
+
+#define ILOSC_PYTAN   10
+
+// zbiór 10 możliwych pytań
+Pytanie  ZbiorPytan[ILOSC_PYTAN] = {
+             { '+', a }, { '-', c }, { '+', e }, { '-', d }, { '+', b },
+             { '-', a }, { '+', c }, { '-', e }, { '+', d }, { '-', b }
+          };
+
+
+/* PRE: Funkcja przyjmuje jako argument jedno z pytań ze zbioru i ma na celu wypisanie go na standardowe wyjście w formie zrozumiałej dla
+	użytkownika.
+  POST: Funkcja nic nie zwraca i w wyniku jej działania w terminalu pojawia się pytanie do użytkownika. */
+
+void Zapytaj(Pytanie pyt){
+	cout<<":? Podaj operacje ";
+	if (pyt.OperatorDzialania=='+') cout<<"dodawania";
+	else cout<<"odejmowania";
+	cout<<",ktorej wynikiem jest: ";
+	switch (pyt.WynikDzialania){
+		case e:
+			cout<<"e"<<endl;
+		break;
+		case a:
+			cout<<"a"<<endl;
+		break;
+		case b:
+			cout<<"b"<<endl;
+		break;
+		case c:
+			cout<<"c"<<endl;
+		break;
+		case d:
+			cout<<"d"<<endl;
+		break;
+	}
+}
+
+
+/* PRE: Funkcja przyjmuje jako parametr aktualnie zadane pytanie i jej zadaniem jest pobranie odpowiedzi użytkownika i przeanalizowanie jej
+	pod kątem poprawności.
+  POST: Funkcja zwraca liczbę całkowitą 1 lub 0, gdzie 0 oznacza, że odpowiedź użytkownika była błędna, a 1, że była ona poprawna. */
+
+int Odpowiedz(Pytanie pyt){
+	cout<<"Twoja odpowiedz: ";
+	char x, znak, y;
+	Symbol z, zz, wynik;
+	int ok=0;
+	do{
+	cin>>x>>znak>>y;
+	if ((x>='a') && (x<='e')){
+		if ((y>='a') && (y<='e')){
+			if (znak=='+' || znak=='-') ok=1;
+			else cout<<"Wprowadzony zostal bledny symbol '"<<znak<<"'."<<endl;
+		}
+		else cout<<"Wprowadzony zostal bledny symbol '"<<y<<"'."<<endl;
+	}
+	else cout<<"Wprowadzony zostal bledny symbol '"<<x<<"'."<<endl;
+	} while (ok==0);
+	x=(x-96)%5;
+	y=(y-96)%5;
+	switch (x){
+		case 0: z=e; break;
+		case 1: z=a; break;
+		case 2: z=b; break;
+		case 3: z=c; break;
+		case 4: z=d; break;
+	}     
+	switch (y){
+		case 0: zz=e; break;
+		case 1: zz=a; break;
+		case 2: zz=b; break;
+		case 3: zz=c; break;
+		case 4: zz=d; break;
+	}
+	if (znak=='+') wynik=dodaj(z, zz);
+	else wynik=Odejmij(z, zz);
+	if(pyt.WynikDzialania==wynik){
+		cout<<":) Odpowiedz poprawna"<<endl<<endl;
+		return 1;
+	}
+	else{
+		switch (wynik){
+			case 0: znak='e'; break;
+			case 1: znak='a'; break;
+			case 2: znak='b'; break;
+			case 3: znak='c'; break;
+			case 4: znak='d'; break;
+		}
+		cout<<":( Blad. Wynikiem tej operacji jest: "<<znak<<endl<<endl;
+		return 0;
+	}
+}
+
+
+/* PRE: Jest to funkcja bezparametrowa mająca na celu zadanie wszystkich możliwych 10 pytań użytkownikowi w losowej kolejności oraz zliczenie
+	ilości dobrych i złych odpowiedzi, a na koniec procentowe przedstawienie poprawnych rozwiązań.
+  POST: Funkcja nic nie zwraca, a w wyniku jej działania wyświetlony zostaje rezultat testu jakiemu poddany był użytkownik. */
+
+void Konkurs() {
+	int ok=0, zle=0;
+	int i, x;
+	float p;
+	
+	for (i=0; i<ILOSC_PYTAN; i++){
+		x=rand()%10;
+		Zapytaj(ZbiorPytan[x]);
+		if (Odpowiadanie(ZbiorPytan[x])==1) ok++;
+		else zle++;
+	}
+	p=ok*10;;
+	cout<<"Koniec testu."<<endl<<endl;
+	cout<<"Ilosc dobrych odpowiedzi: "<<dobry<<endl;
+	cout<<"Ilosc blednych odpowiedzi: "<<zly<<endl;
+	cout<<"Wynik procentowy poprawnych odpowiedzi: "<<procent<<" %"<<endl;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Superprogram: Plik źródłowy BlokGeneratora.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Superprogram
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">BlokGeneratora.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_blok_generatora_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef BLOKGENERATORA_HH</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define BLOKGENERATORA_HH</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#ifdef __GNUG__</span>
+<a name="l00005"></a>00005 <span class="preprocessor"></span><span class="preprocessor"># pragma interface</span>
+<a name="l00006"></a>00006 <span class="preprocessor"></span><span class="preprocessor"># pragma implementation</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00008"></a>00008 <span class="preprocessor"></span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="_blok_sygnalowy_8hh.html" title="Zawiera definicję klas BlokSygnalowy.">BlokSygnalowy.hh</a>&quot;</span>
+<a name="l00017"></a>00017 
+<a name="l00025"></a><a class="code" href="class_blok_generatora.html">00025</a> <span class="keyword">class </span><a class="code" href="class_blok_generatora.html" title="Modeluje generator sygnału.">BlokGeneratora</a>: <span class="keyword">public</span> <a class="code" href="class_blok_sygnalowy.html" title="Modeluje najważniejsze elementy bloku sygnałowego.">BlokSygnalowy</a> {
+<a name="l00026"></a>00026   <span class="keyword">public</span>:
+<a name="l00033"></a><a class="code" href="class_blok_generatora.html#a984825ded619d78b744da62076ee7bfa">00033</a>   <a class="code" href="class_blok_generatora.html#a984825ded619d78b744da62076ee7bfa" title="Inicjalizuje pustym napisem pole nazwy pliku.">BlokGeneratora</a>(): <a class="code" href="class_blok_generatora.html#a6007c1d418d215c80ea835d187d6d5b4" title="Przechowuje długość pauzy.">_Pauza_ms</a>(0) {}
+<a name="l00042"></a><a class="code" href="class_blok_generatora.html#ab052b166c6d03f4653ac679ee56dd0a6">00042</a>   <a class="code" href="class_blok_generatora.html#ab052b166c6d03f4653ac679ee56dd0a6" title="Inicjalizuje nazwę pliku.">BlokGeneratora</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* sNazwaPliku): <a class="code" href="class_blok_generatora.html#a6007c1d418d215c80ea835d187d6d5b4" title="Przechowuje długość pauzy.">_Pauza_ms</a>(0), <a class="code" href="class_blok_generatora.html#a83ff6f7c009ad99ac6e01b4d1e8933a9" title="Przechowuje nazwę pliku.">_NazwaPliku</a>(sNazwaPliku) {}
+<a name="l00049"></a><a class="code" href="class_blok_generatora.html#abbdc044655cd3378e49256932d3543a9">00049</a>     <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_blok_generatora.html#abbdc044655cd3378e49256932d3543a9" title="Udostępnia nazwę typu bloku.">NazwaBloku</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Blok Generator&quot;</span>; }
+<a name="l00053"></a>00053     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_blok_generatora.html#afbf879fe306410443a73f54c92e92efa" title="Inicjalizuje pracę bloku.">RozpocznijPrace</a>();
+<a name="l00057"></a>00057     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_blok_generatora.html#a88165d67552830ce0b174b353cc14219" title="Sprawdza czy osiągnięty został kres pliku sygnału.">CzyZakonczycPrace</a>() <span class="keyword">const</span>;
+<a name="l00061"></a>00061    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_blok_generatora.html#a08102bb6d2658ec42a17555e3e1645b4" title="Zamyka plik z wartościami sygnału.">ZakonczPrace</a>();
+<a name="l00073"></a>00073   <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_blok_generatora.html#a461944c02626376765b87f3749b34209" title="Czyta kolejną wartość sygnału z pliku.">WyliczSygnalWej</a>( <span class="keyword">const</span> <a class="code" href="class_sygnal.html" title="Modeluje wartość sygnału w powiązaniu z czasem.">Sygnal</a>&amp; SygWe, 
+<a name="l00074"></a>00074                                       <a class="code" href="class_sygnal.html" title="Modeluje wartość sygnału w powiązaniu z czasem.">Sygnal</a>&amp; SygObliczony
+<a name="l00075"></a>00075                               );
+<a name="l00076"></a>00076 
+<a name="l00085"></a><a class="code" href="class_blok_generatora.html#ae4c8377140774ba353903d3448d993ee">00085</a>   <span class="keywordtype">void</span> <a class="code" href="class_blok_generatora.html#ae4c8377140774ba353903d3448d993ee" title="Zmienia długość pauzy.">UstawPauze_ms</a>( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Pauza_ms ) { <a class="code" href="class_blok_generatora.html#a6007c1d418d215c80ea835d187d6d5b4" title="Przechowuje długość pauzy.">_Pauza_ms</a> = Pauza_ms; }
+<a name="l00086"></a>00086   <span class="keyword">private</span>:
+<a name="l00093"></a><a class="code" href="class_blok_generatora.html#a6007c1d418d215c80ea835d187d6d5b4">00093</a>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>  <a class="code" href="class_blok_generatora.html#a6007c1d418d215c80ea835d187d6d5b4" title="Przechowuje długość pauzy.">_Pauza_ms</a>;
+<a name="l00100"></a><a class="code" href="class_blok_generatora.html#a83ff6f7c009ad99ac6e01b4d1e8933a9">00100</a>     std::string  <a class="code" href="class_blok_generatora.html#a83ff6f7c009ad99ac6e01b4d1e8933a9" title="Przechowuje nazwę pliku.">_NazwaPliku</a>;
+<a name="l00106"></a><a class="code" href="class_blok_generatora.html#ad726578de3c41e6d94c343e1cb765caf">00106</a>     std::ifstream  <a class="code" href="class_blok_generatora.html#ad726578de3c41e6d94c343e1cb765caf">_StrmGeneratora</a>;
+<a name="l00107"></a>00107 };
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Mon Jun 3 2013 18:52:06 dla Superprogram programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

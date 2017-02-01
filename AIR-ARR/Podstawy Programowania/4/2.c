@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <math.h>
+int tablica[25][25];
+
+void utworz(int x, int y)
+{ int i,j;
+  for (i=0; i<x; i++)
+    for (j=0; j<y; j++)
+      tablica[i][j]=i*j;
+}
+
+void wyswietl(int x, int y)
+{ int i,j;
+  for (i=0; i<x; i++)
+    { for (j=0; j<y; j++)
+	printf("%i ",tablica[i][j]);
+      printf("\n");
+    }
+}
+
+void zmianaznaku(int x, int y)
+{ int i,j;
+  for (i=0; i<x; i++)
+    for (j=0; j<y; j++)
+      tablica[i][j]*=(-1);
+}
+
+int main()
+{ char wybor='0';
+  int w=0, k=0;
+  while (wybor!='4')
+    { printf("----------PROSTE MENU----------\n");
+      printf("1 - utworz tablice\n");
+      printf("2 - wyswietl tablice\n");
+      printf("3 - zmien znaki w tablicy\n");
+      printf("4 - zakoncz dzialanie programu\n");
+      scanf("%c",&wybor);
+      switch (wybor)
+	{ case '1':  
+	    printf("wybrano wariant pierwszy\n");
+	    printf("podaj wymiar tablicy:\n");
+	    scanf("%i",&w);
+	    scanf("%i",&k);
+	    utworz(w,k);
+	    break;
+        case '2': 
+	  printf("wybrano wariant drugi\n");
+	  wyswietl(w,k);
+	  break; 
+	case '3': 
+	  printf("wybrano wariant trzeci\n");
+	  zmianaznaku(w,k);
+	  break; 
+	case '4': printf("PAPA ! \n");
+      }
+    }
+  return 0;
+}

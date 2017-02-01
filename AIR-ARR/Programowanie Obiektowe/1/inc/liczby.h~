@@ -1,0 +1,74 @@
+#ifndef LICZBY_H
+#define LICZBY_H
+
+
+/*
+ *  Prowadzi dialog z użytkownikiem, aby uzyskać od niego informację
+ *  o ilości liczb, które zamierza wprowadzić z klawiatury.
+ *  Kontroluje też, aby użytkownik wprowadził liczbę z przedziału 
+ *  od 1 do 50.
+ *  Po uzyskaniu odpowiedzi przydziela pamięć na tablicę liczb
+ *  o rozmiarze zgodnym, z tym, który został podany przez użytkownika.
+ *
+ *   rozmiar - [wy] wskaźnik na zmiennę, w której zostanie zapisana
+ *                 ilość liczb, którą poda użytkownik.
+ *   liczb   - [wy] wskaźnik na obszar pamięci, który jest przydzielany
+ *                 w wyniku działania niniejszej funkcji. Przydzielony
+ *                 obszar pamięci traktowany jest jako tablica jednowymarowa,
+ *                 w której mają być wpisane liczby wprowadzane przez
+ *                 użytkownika.
+ *
+ *   Warunki wstępne:1
+ *    Parametr rozmiar będący zmienną wskaźnikową musi zawierać 
+ *    wskaźnik na istniejącą zmiennę typu int. Parametr liczb musi
+ *    zawierać wskaźnik na istniejącą zmiennę wskaźnikową typu int*.
+ *
+ *   Warunki końcowe:
+ *    Do *rozmiar wpisana zostaje ilość liczb, którą chce wprowadzić
+ *    użytkownik. Do *liczb zostaje wpisany adres na utworzoną w sposób
+ *    dynamiczny tablicę jednowymiarową. Jej rozmiar odpowiada ilości liczb,
+ *    które chce wprowadzić użytkownik.
+ *
+ *  Zwracana wartość:
+ *     0 - gdy operacja przydzielenia pamięci zakończyła sie powodzeniem,
+ *    -1 - w przypadku przeciwnym. Parametr *liczb zawiera wartość NULL.
+ */
+
+int utworzTab(int *rozmiar, int **liczby);
+
+/* 
+ *  Funkcja prowadzi dialog z użytkownikiem w celu pobrania zadanej ilości
+ *  liczb i zapisania ich w uprzednio utworzonej dynamicznej tablicy.
+ *
+ *  rozmiar - wskaźnik na zmienną przechowującą oczekiwaną ilość liczb
+ *  liczby - wskaźnik na dynamiczną tablicę przechowującą liczby
+ *
+ *  Warunki wstępne: 1
+ *  Wskaźnik liczby musi być zaalokowany.
+ *
+ *  Warunki końcowe:
+ *  W tablicy spod wskaźnika liczby zapisane zostają dane.
+*/ 
+
+void pobieranie(int *rozmiar, int **liczby);
+
+/*
+ *  Funkcja ma za zadanie posortować tablicę z pobranymi uprzednio liczbami.
+ *
+ *  rozmiar - wskaźnik na zmienną przechowującą oczekiwaną ilość liczb
+ *  liczby - wskaźnik na dynamiczną tablicę przechowującą liczby
+ *
+ *  Warunki wstępne: 1
+ *  Wskaźnik liczby musi być zaalokowany.
+ *
+ *  Warunki końcowe:
+ *  W tablicy spod wskaźnika liczby zapisane zostają posortowane liczby.
+*/
+
+void sortowanie(int *rozmiar, int **liczby);
+
+
+void wyswietl(int *rozmiar, int **liczby);
+
+
+#endif

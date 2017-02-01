@@ -1,0 +1,12 @@
+#ifndef LICZBY_H
+#define LICZBY_H
+
+int utworzTab(int *rozmiar, int **liczb);
+
+void pobieranie(int *rozmiar, int **liczb);
+
+void sortowanie(int *rozmiar, int **liczb);
+
+void wyswietl(int *rozmiar, int **liczb);
+
+#endif

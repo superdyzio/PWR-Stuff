@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Superprogram: Plik źródłowy BlokDyskryminujacy.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Superprogram
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">BlokDyskryminujacy.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_blok_dyskryminujacy_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef BLOKDYSKRYMINUJACY_HH</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define BLOKDYSKRYMINUJACY_HH</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#ifdef __GNUG__</span>
+<a name="l00005"></a>00005 <span class="preprocessor"></span><span class="preprocessor"># pragma interface</span>
+<a name="l00006"></a>00006 <span class="preprocessor"></span><span class="preprocessor"># pragma implementation</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00008"></a>00008 <span class="preprocessor"></span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;cctype&gt;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;cstring&gt;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;unistd.h&gt;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="_blok_sygnalowy_8hh.html" title="Zawiera definicję klas BlokSygnalowy.">BlokSygnalowy.hh</a>&quot;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="_sygnal_8hh.html" title="Zawiera definicję klasy Sygnal.">Sygnal.hh</a>&quot;</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 <span class="keyword">using namespace </span>std;
+<a name="l00023"></a>00023 
+<a name="l00027"></a><a class="code" href="class_blok_dyskryminujacy.html">00027</a> <span class="keyword">class </span><a class="code" href="class_blok_dyskryminujacy.html" title="Definicja klasy BlokDyskrymiujacy, dziedziczącej po klasie BlokSygnalowy.">BlokDyskryminujacy</a> : <span class="keyword">public</span> <a class="code" href="class_blok_sygnalowy.html" title="Modeluje najważniejsze elementy bloku sygnałowego.">BlokSygnalowy</a> {
+<a name="l00029"></a><a class="code" href="class_blok_dyskryminujacy.html#acc886ec329b03a4dcfbecfbd44686dd6">00029</a>         <span class="keywordtype">double</span> <a class="code" href="class_blok_dyskryminujacy.html#acc886ec329b03a4dcfbecfbd44686dd6" title="Pole przechowujące wartość progu, według którego dyskryminowany będzie sygnał.">prog</a>;
+<a name="l00030"></a>00030 <span class="keyword">public</span>: 
+<a name="l00032"></a><a class="code" href="class_blok_dyskryminujacy.html#ab27404083be02a0f87c8562706e96373">00032</a>         <a class="code" href="class_blok_dyskryminujacy.html#ab27404083be02a0f87c8562706e96373" title="Konstruktor.">BlokDyskryminujacy</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> p) { prog = p; }
+<a name="l00034"></a><a class="code" href="class_blok_dyskryminujacy.html#a9739975acf554eab1c8cea3837cd5216">00034</a>         <a class="code" href="class_blok_dyskryminujacy.html#a9739975acf554eab1c8cea3837cd5216" title="Konstruktor.">BlokDyskryminujacy</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* p) { prog = atof(p); }
+<a name="l00036"></a><a class="code" href="class_blok_dyskryminujacy.html#a8b0252918942d4f611d6f93747a65f14">00036</a>         <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="class_blok_dyskryminujacy.html#a8b0252918942d4f611d6f93747a65f14" title="Przeciążenie metody dającej opis bloku.">OpisBloku</a>() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;Blok dyskryminuje sygnał według zadanej wartości.&quot;</span>; }
+<a name="l00038"></a>00038         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> WyliczSygnalWyj(<span class="keyword">const</span> <a class="code" href="class_sygnal.html" title="Modeluje wartość sygnału w powiązaniu z czasem.">Sygnal</a>&amp; Syg);
+<a name="l00040"></a><a class="code" href="class_blok_dyskryminujacy.html#a4562d15382a6da0d14bba3147389590c">00040</a>         <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_blok_dyskryminujacy.html#a4562d15382a6da0d14bba3147389590c" title="Przeciążenie metody dającej identyfikator typu bloków.">Identyfikator</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 2; } 
+<a name="l00042"></a><a class="code" href="class_blok_dyskryminujacy.html#a031f133b1edbe7d7a5cd07d6d2c52ff0">00042</a>         <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_blok_dyskryminujacy.html#a031f133b1edbe7d7a5cd07d6d2c52ff0" title="Przeciążenie metody dającej nazwę typu bloków.">NazwaBloku</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Blok dyskryminujący.&quot;</span>; }
+<a name="l00043"></a>00043 };
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Mon Jun 3 2013 18:52:06 dla Superprogram programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

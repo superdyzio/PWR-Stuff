@@ -1,0 +1,68 @@
+#ifndef PRZETWARZANIE_H
+#define PRZETWARZANIE_H
+
+#include <math.h>
+#include <stdlib.h>
+#include "opcje.h"
+
+/* struktura do przechowywania obrazu */
+typedef struct {
+	int wymx,wymy,szarosci;
+	void *piksele;        /* wskaznik na void, który będzie przemianowywany na wskaźnik na tablicę z obrazem w każdej funkcji */
+} t_obraz;
+
+
+/* PRE: Funkcja przyjmuje jako argument strukturę w której przechowywany jest obraz i ma za zadanie zrobić jego negatyw. */
+
+void negatyw(t_obraz obraz);
+
+/* POST: W przekazanej strukturze zapisany zostaje negatyw obrazu przechowywanego w niej przed wywołaniem funkcji. */
+
+
+/* PRE: Funkcja przyjmuje jako argument strukturę w której przechowywany jest obraz i ma za zadanie wykonać jego konturowanie. */
+
+void konturowanie(t_obraz obraz);
+
+/* POST: W przekazanej strukturze zapisany zostaje obraz wynikowy po konturowaniu obrazu przechowywanego w niej przed wywołaniem funkcji. */
+
+
+/* PRE: Funkcja przyjmuje jako argumenty strukturę w której przechowywany jest obraz oraz, pobraną z argumentów wywołania programu, wartość 
+	progu według którego proces ma być przeprowadzony. */
+
+void progowanie(t_obraz obraz, int prog);
+
+/* POST: W przekazanej strukturze zapisany zostaje obraz wynikowy progowania według zadanego progu. */
+
+
+/* PRE: Funkcja przyjmuje jako argument strukturę przechowującą nasz obraz, a wynikiem jej działania jest obraz poddany działaniu filtru 
+	uśredniającego. */
+
+void rozmywanie(t_obraz obraz);
+
+/* POST: W wyniku działania funkcji w strukturze zapisany zostaje rozmyty obraz. */
+
+
+/* PRE: Funkcja przyjmuje jako argument strukturę przechowującą obraz i wyostrza go przy użyciu filtru górnoprzepustowego. */
+
+void wyostrzanie(t_obraz obraz);
+
+/* POST: W wyniku działania funkcji w strukturze zostaje zapisny wyostrzony obraz. */
+
+
+/* PRE: Funkcja przyjmuje jako argument wskaźnik na strukturę przechowującą obraz i ma za zadanie obrócić go o 90 stopni i zapisać w podanej
+	strukturze. */
+
+void obracanie(t_obraz *obraz);
+
+/* POST: W wyniku działania funkcji otrzymujemy obrócony o 90 stopni w prawo obraz zapisany w strukturze. */
+
+
+/* PRE: Funkcja przyjmue jako argumenty strukturę w której przechowywany jest obraz oraz strukturę w której zapamiętane są opcje wywołania 
+	programu. Korzystając z, zapisanej w drugiej strukturze, macierzy do filtrowania (3x3 - podanej jako ciąg liczb całkowitych 
+	oddzielonych przecinkami) wykonywany jest proces filtrowania obrazu. */
+
+void splot(t_obraz obraz, w_opcje opcje);
+
+/* POST: W wyniku działania funkcji struktura opcje pozostaje bez zmian, a w strukturze obraz zostaje zapisany przefiltrowany obraz. */
+
+#endif

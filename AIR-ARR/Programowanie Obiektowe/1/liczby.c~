@@ -1,0 +1,81 @@
+#include <malloc.h>
+#include <stdio.h>
+#include "liczby.h"
+
+
+const int max = 50;
+
+/*
+ *  Prowadzi dialog z użytkownikiem, aby uzyskać od niego informację
+ *  o ilości liczb, które zamierza wprowadzić z klawiatury.
+ *  Kontroluje też, aby użytkownik wprowadził liczbę z przedziału 
+ *  od 1 do 50.
+ *  Po uzyskaniu odpowiedzi przydziela pamięć na tablicę liczb
+ *  o rozmiarze zgodnym, z tym, który został podany przez użytkownika.
+ *
+ *   rozmiar - [wy] wskaźnik na zmiennę, w której zostanie zapisana
+ *                 ilość liczb, którą poda użytkownik.
+ *   liczb   - [wy] wskaźnik na obszar pamięci, który jest przydzielany
+ *                 w wyniku działania niniejszej funkcji. Przydzielony
+ *                 obszar pamięci traktowany jest jako tablica jednowymarowa,
+ *                 w której mają być wpisane liczby wprowadzane przez
+ *                 użytkownika.
+ *
+ *   Warunki wstępne:1
+ *    Parametr rozmiar będący zmienną wskaźnikową musi zawierać 
+ *    wskaźnik na istniejącą zmiennę typu int. Parametr liczb musi
+ *    zawierać wskaźnik na istniejącą zmiennę wskaźnikową typu int*.
+ *
+ *   Warunki końcowe:
+ *    Do *rozmiar wpisana zostaje ilość liczb, którą chce wprowadzić
+ *    użytkownik. Do *liczb zostaje wpisany adres na utworzoną w sposób
+ *    dynamiczny tablicę jednowymiarową. Jej rozmiar odpowiada ilości liczb,
+ *    które chce wprowadzić użytkownik.
+ *
+ *  Zwracana wartość:
+ *     0 - gdy operacja przydzielenia pamięci zakończyła sie powodzeniem,
+ *    -1 - w przypadku przeciwnym. Parametr *liczb zawiera wartość NULL.
+ */
+
+
+int UtworzTabliceWgWskazanUzytkownika( int *rozmiar,  int **liczby ){
+  printf("\nWprowadz ilosc liczb calkowitych, ktore nalezy wczytac:\n");
+  scanf("%d",rozmiar);
+
+  while (*rozmiar <= 0 || *rozmiar > maks) {
+    printf("\nWprowadziles niepoprawna wartosc.\n");     
+    printf("Ilosc liczb musi byc wieksza od 0 i mniejsza od 51.\n\n");
+    printf("Wprowadz ilosc liczb calkowitych, ktore nalezy wczytac:\n");
+    scanf("%d",rozmiar);
+  }
+  *liczby = (int*) malloc(*rozmiar * sizeof(int));
+
+  return liczby ? 0 : -1;
+}
+
+void pobieranie(int *rozmiar, int **liczby){
+  int i;
+	for(i = 0; i < (*rozmiar); i++){
+		printf("Podaj %d liczbe:\n", i+1);
+		scanf("%d", (**liczby+i));				
+	}
+}
+
+void sortowanie(int *rozmiar, int **liczby ){
+	int i, j, temp;
+  for (i = 0; i < (*rozmiar); i++)
+    for (j = 0; j < (*rozmiar)-1-i; j++)
+      if ( *(*liczby+j) > *(*liczby+(j+1)) ){
+        temp = *(*liczby+(j+1));
+        *(*liczby+(j+1)) = *(*liczby+j);
+        *(*liczby+j) = temp;
+      }
+}
+
+void wyswietl(int *rozmiar, int **liczby){
+  int i;
+	printf("Liczby posortowane:\n");
+	for(i=0; i<(*rozmiar); i++)
+		printf("%d\n", *(*liczby+i));
+}
+

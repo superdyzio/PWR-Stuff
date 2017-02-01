@@ -1,0 +1,262 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<span><p>
+<HEAD>
+<TITLE>PProg_lab_06</TITLE>
+<META NAME="description" CONTENT="PProg_lab_06">
+<META NAME="keywords" CONTENT="PProg_lab_06">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="PProg_lab_06.css">
+
+</HEAD>
+
+<table><tr><td ><p>
+
+<P>
+
+<H1><A NAME="SECTION00010000000000000000">
+Laboratorium 6 - Kalkulator RPN</A>
+</H1>
+
+<P>
+
+<H2><A NAME="SECTION00011000000000000000">
+Zakres materia&#322;u</A>
+</H2>
+
+<P>
+Zmienne dynamiczne, wska&#378;niki, dynamiczne struktury danych. Listy
+liniowe: budowa, operacje na listach. Stos: implementacja na li&#347;cie.
+
+<P>
+
+<H2><A NAME="SECTION00012000000000000000">
+Przygotowanie do zaj&#281;&#263;</A>
+</H2>
+
+<P>
+Przed przyst&#261;pieniem do zaj&#281;&#263;:
+
+<P>
+
+<UL>
+<LI>Przygotuj funkcje <code>push(stos, element)</code>, <code>pop(stos, element)</code>, 
+ kt&#243;re odpowiednio pozwalaj&#261; na umieszczenie na stosie 
+  <code>stos</code> i&nbsp;zdj&#281;cie z&nbsp;niego elementu <code>element</code> w&nbsp;postaci
+  liczby ca&#322;kowitej, oraz funkcje <code>empty(stos)</code>,
+  <code>print(stos)</code>, kt&#243;re pozwalaj&#261; na uzyskanie informacji, czy
+  stos jest pusty oraz wy&#347;wietlenie na standardowym wyj&#347;ciu element&#243;w
+  znajduj&#261;cych si&#281; na nim. 
+
+<P>
+Stos powinien zosta&#263; zrealizowany z&nbsp;wykorzystaniem dynamicznej listy
+  jednokierunkowej. Wszystkie funkcje z&nbsp;wyj&#261;tkiem funkcji
+  <code>print</code>, kt&#243;ra ma charakter pomocniczy, maj&#261; dost&#281;p jedynie do
+  pocz&#261;tku listy. W&nbsp;zast&#281;pstwie funkcji <code>empty</code> mo&#380;na dostarczy&#263;
+  funkcj&#281; <code>pop</code>, kt&#243;rej zwracana warto&#347;&#263; b&#281;dzie informowa&#322;a o&nbsp;tym,
+  czy stos jest pusty czy nie.
+
+<P>
+</LI>
+<LI>Zaproponuj spos&#243;b obs&#322;ugi interfejsu u&#380;ytkownika nast&#281;puj&#261;cego
+  programu:
+<BR>
+<BR>
+Zadaniem programu jest realizacja funkcji czterodzia&#322;aniowego
+  kalkulatora operuj&#261;cego w tzw. odwrotnej notacji polskiej RPN
+  (ang. <I>reverse polish notation</I>). W systemie tym pracuj&#261;
+  niekt&#243;re kalkulatory podr&#281;czne, np. kalkulatory firmy
+  Hewlett-Packard.
+
+<P>
+Program ma dzia&#322;a&#263; na liczbach ca&#322;kowitych, czytaj&#261;c dane wej&#347;ciowe
+  ze standardowego wej&#347;cia. W strumieniu wej&#347;ciowym b&#281;d&#261; mog&#322;y pojawi&#263;
+  si&#281; liczby oraz symbole operacji w postaci znak&#243;w: <code>+</code>,
+  <code>-</code>, <code>*</code>, i <code>/</code> (dzielenie ca&#322;kowitoliczbowe). Za
+  ka&#380;dym razem, gdy na wej&#347;ciu pojawi si&#281; liczba, zostaje ona
+  umieszczona na pocz&#261;tku listy argument&#243;w. Gdy pojawi si&#281; symbol
+  operacji, zostaje wykonane odpowiednie dzia&#322;anie na dw&#243;ch liczbach
+  pobranych z pocz&#261;tku listy, z&nbsp;sygnalizacj&#261; b&#322;&#281;du, gdyby na li&#347;cie
+  by&#322;y mniej ni&#380; dwie liczby. Wynik dzia&#322;ania zostaje umieszczony na
+  pocz&#261;tku listy argument&#243;w.  Tak u&#380;ywane listy nazywane s&#261; stosami
+  albo strukturami LIFO (ang. <I>last-in-first-out</I>, czyli
+  &#8222;ostatni wchodzi, pierwszy wychodzi''.  M&#243;wimy o umieszczaniu
+  danych na stosie (szczycie stosu) i zdejmowaniu ze stosu.
+
+<P>
+Jakkolwiek powy&#380;szy schemat daje pe&#322;ny kalkulator czterodzia&#322;aniowy,
+  w omawianym programie powinno znale&#378;&#263; si&#281; jeszcze kilka operacji dla
+  u&#322;atwienia pos&#322;ugiwania si&#281; kalkulatorem. Wprowad&#378;my dodatkowy
+  symbol operacji <code>#</code>, kt&#243;ry b&#281;dzie s&#322;u&#380;y&#322; usuni&#281;ciu ostatnio
+  wprowadzonej liczby i&nbsp;odpowiada&#322; operacji <code>pop</code>, to znaczy
+  usuwania argumentu ze szczytu stosu. (Operator taki mo&#380;e by&#263;
+  przydatny dla korekcji b&#322;&#281;d&#243;w pope&#322;nionych przy wpisywaniu danych).
+  Drugim dodatkowym operatorem b&#281;dzie <code>$</code> i powinien on
+  spowodowa&#263; zamian&#281; miejscami dw&#243;ch argument&#243;w na szczycie stosu.
+  Dalej, podanie znaku <code>&amp;</code> ma spowodowa&#263; zduplikowanie argumentu
+  znajduj&#261;cego si&#281;  na szczycie stosu. Kolejnym u&#380;ytym symbolem b&#281;dzie <code>?</code> i je&#347;li
+  pojawi si&#281; w strumieniu wej&#347;ciowym, powinien spowodowa&#263; wydrukowanie
+  zawarto&#347;ci ca&#322;ego stosu argument&#243;w. Ostatni symbol, znak <code>q</code>
+  b&#281;dzie s&#322;u&#380;y&#322; zako&#324;czeniu pracy programu.
+
+<P>
+</LI>
+<LI>Przy konstruowaniu interfejsu zastan&#243;w si&#281; nad sposobem
+  rozr&#243;&#380;nienia znaczenia znaku minus (<code>-</code>) wyst&#281;puj&#261;cego w&nbsp;roli operatora
+  odejmowania, a&nbsp;tak&#380;e roli znaku liczby.
+</LI>
+</UL>
+
+<P>
+
+<H2><A NAME="SECTION00013000000000000000">
+Zadania do wykonania</A>
+</H2>
+
+<P>
+
+<UL>
+<LI>Napisa&#263; program pozwalaj&#261;cy na rozwi&#261;zanie postawionego powy&#380;ej
+  zadania z&nbsp;zastosowaniem odpowiedniego podzia&#322;u na modu&#322;y. Nie
+  zapomnie&#263; o wprowadzaniu do pliku komentarzy r&#243;wnocze&#347;nie z
+  wprowadzaniem do niego kodu programu.
+</LI>
+<LI>Uruchomi&#263; i&nbsp;przetestowa&#263; program dla r&#243;&#380;nych warto&#347;ci danych wej&#347;ciowych.
+</LI>
+<LI>Wyposa&#380;y&#263; plik z kodem &#378;r&#243;d&#322;owym w dokumentacj&#281;, kt&#243;ra opr&#243;cz
+  wprowadzanych wcze&#347;niej komentarzy powinna zawiera&#263; dane o autorze,
+  dacie utworzenia programu, jego wersji, modyfikacjach itp., kr&#243;tk&#261;
+  charakterystyk&#281; programu, specyfikacj&#281; danych wej&#347;ciowych i
+  wyj&#347;ciowych, opis sposobu korzystania z programu.
+ 
+</LI>
+</UL>
+
+<P>
+
+<H3><A NAME="SECTION00013100000000000000">
+Zadania dodatkowe (dla ch&#281;tnych)</A>
+</H3>
+
+<P>
+
+<UL>
+<LI>Skonstruowa&#263; funkcje do obs&#322;ugi stosu na bazie tablicy
+  jednowymiarowej, zast&#261;pi&#263; nimi wcze&#347;niej opracowane funkcje (zamiana
+  nie powinna poci&#261;ga&#263; za sob&#261; konieczno&#347;ci dokonania jakichkolwiek
+  zmian w&nbsp;pozosta&#322;ej cz&#281;&#347;ci programu, poza ewentualn&#261; wymian&#261; pliku
+  nag&#322;&#243;wkowego). 
+</LI>
+<LI>Wyposa&#380;y&#263; kalkulator w&nbsp;dodatkowe funkcje matematyczne.
+</LI>
+<LI>Wyposa&#380;y&#263; kalkulator w&nbsp;pami&#281;&#263; w&nbsp;postaci drugiego stosu, na
+  kt&#243;rym na &#380;&#261;danie b&#281;d&#261; zapami&#281;tywane wskazane wyniki.
+</LI>
+</UL>
+
+<P>
+
+<H2><A NAME="SECTION00014000000000000000">
+Sprawozdanie</A>
+</H2>
+Sprawozdanie powinno zawiera&#263;:
+
+<UL>
+<LI>Imi&#281; i&nbsp;nazwisko autora, temat &#263;wiczenia, dat&#281; wykonania;
+</LI>
+<LI>Kod &#378;r&#243;d&#322;owy programu;
+</LI>
+<LI>Testy programu (opis przebiegu z wynikami) w tym kolejno:
+  
+<UL>
+<LI>Co dany test ma na celu;
+</LI>
+<LI>Metoda testowania - dane wej&#347;ciowe;
+</LI>
+<LI>Dane wyj&#347;ciowe zwr&#243;cone w te&#347;cie przez program;
+</LI>
+<LI>Rezultat testu - ocena plus ewentualny komentarz;
+  
+</LI>
+</UL>
+</LI>
+<LI>Wnioski ko&#324;cowe.
+</LI>
+</UL>
+
+<P>
+
+<H2><A NAME="SECTION00015000000000000000">
+Pytania kontrolne</A>
+</H2>
+
+<P>
+
+<OL>
+<LI>Jakie s&#261; zalety odwrotnej notacji polskiej w&nbsp;stosunku do tradycyjnego
+  zapisu dzia&#322;a&#324; arytmetycznych.
+</LI>
+<LI>Zapisz w postaci RPN nast&#281;puj&#261;ce dzia&#322;anie: <!-- MATH
+ $(2+4\text{*} 5)/(1+7)$
+ -->
+<IMG
+ WIDTH="45" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ (2+4$">*<IMG
+ WIDTH="74" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$ 5)/(1+7)$">.
+</LI>
+<LI>Jakie operacje i w jakiej kolejno&#347;ci nale&#380;y wykona&#263;, by od&#322;o&#380;y&#263; element
+  na stos, a jakie by go usun&#261;&#263;?
+</LI>
+<LI>W jaki spos&#243;b mo&#380;na zaimplementowa&#263; stos?
+</LI>
+<LI>Wska&#380; r&#243;&#380;nice w&nbsp;implementacji stosu na bazie listy i&nbsp;na bazie tablicy.
+</LI>
+<LI>Opisz wykonanie operacji dodania dw&#243;ch liczb w&nbsp;kontek&#347;cie operowania na
+  stosie s&#322;u&#380;&#261;cym do przechowywania argument&#243;w.
+</LI>
+<LI>Jakie b&#322;&#281;dy mog&#261; wyst&#261;pi&#263; w czasie dzia&#322;ania programu?
+</LI>
+</OL>
+
+<P>
+
+<H1><A NAME="SECTION00020000000000000000">
+About this document ...</A>
+</H1>
+ <P>
+This document was generated using the
+<A HREF="http://www.latex2html.org/"><STRONG>LaTeX</STRONG>2<tt>HTML</tt></A> translator Version 2008 (1.71)
+<P>
+Copyright &#169; 1993, 1994, 1995, 1996,
+Nikos Drakos, 
+Computer Based Learning Unit, University of Leeds.
+<BR>
+Copyright &#169; 1997, 1998, 1999,
+<A HREF="http://www.maths.mq.edu.au/~ross/">Ross Moore</A>, 
+Mathematics Department, Macquarie University, Sydney.
+<P>
+The command line arguments were: <BR>
+ <STRONG>latex2html</STRONG> <TT>-html_version 3.2,latin2,unicode -split 0 -no_navigation PProg_lab_06.tex</TT>
+<P>
+The translation was initiated by Robert Muszynski on 2012-12-12
+<BR><HR>
+<ADDRESS>
+Robert Muszynski
+2012-12-12
+</ADDRESS>
+</td></tr></table>
+</span>

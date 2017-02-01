@@ -1,0 +1,45 @@
+#ifndef TESTY_HH
+#define TESTY_HH
+
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <fstream>
+#include "testy.hh"
+#include "LZespolone.hh"
+
+using namespace std;
+
+/* Funkcja ma na celu zadanie odpowiednio sformułowanego pytania o wynik podanego wyrażenia. Przyjmuje trzy argumenty - dwie liczby
+   zespolone oraz operator je łączący. Funkcja nic nie zwraca, a w wyniku jej działania na standardowym wyjściu wyświetlone zostaje pytanie. */
+void ZadajWyrazenie(LZespolona a, LZespolona b, char znak);
+
+/* Funkcja ma za zadanie pobranie i sprawdzenie odpowiedzi użytkownika na pytanie o wynik działania na liczbach zespolonych. Jako argumenty
+   przyjmuje te dwie liczby zespolone oraz łączący je operator. Zadaniem użytkownika jest podanie rozwiązania zadanego wyrażenia. Funkcja 
+   zwraca 1 w przypadku poprawnej odpowiedz, natomiast 0 w przeciwnym. */
+int OdpowiedzWyrazenie(LZespolona a, LZespolona b, char znak);
+
+/* Zadaniem tej, nic nie zwracającej, funkcji jest przeprowadzenie testu na znajomość działań na liczbach zespolonych. Funkcja nie przyjmuje
+   argumentów, jednak w wyniku jej działania otwierany jest strumień plikowy (plik powinien być w folderze programu), z którego pobierane
+   są dane do zadania pytania, po czym uruchamiany jest mechanizm odpowiadania. Zliczane są dobre i złe odpowiedzi, a test trwa do momentu
+   wyczerpania danych w pliku. */
+void TestWyrazenia();
+
+/* Funkcja ma na celu zadanie odpowiednio sformułowanego pytania o działanie dające podany wynik. Przyjmuje jeden argument - tenże wynik, 
+   w postaci liczby zespolonej. Funkcja nic nie zwraca, a w wyniku jej działania na standardowym wyjściu wyświetlone zostaje pytanie. */ 
+void ZadajLiczbe(LZespolona a);
+
+/* Funkcja ma za zadanie pobranie i sprawdzenie odpowiedzi użytkownika na pytanie o działanie na liczbach zespolonych dajace zadany wynik. 
+   Jako argument przyjmuje tenże wynik w postaci liczby zespolonej. Zadaniem użytkownika jest udzielenie poprawnej w odpowiedzi, w takim 
+   przypadku funkcja zwraca 1. Jeśli mu się nie uda funkcja zwróci wartość 0. */
+int OdpowiedzLiczba(LZespolona a);
+
+/* Zadaniem tej, nic nie zwracającej, funkcji jest przeprowadzenie testu na znajomość działań na liczbach zespolonych. Funkcja nie przyjmuje 
+   argumentów, jednak w wyniku jej działania otwierany jest strumień plikowy (plik powinien być w folderze programu), z którego pobierane są
+   dane do zadania pytania, po czym uruchamiany jest mechanizm odpowiadania. Zliczane są dobre i złe odpowiedzi, a test trwa do momentu
+   wyczerpania danych w pliku. */
+void TestLiczby();
+
+
+#endif

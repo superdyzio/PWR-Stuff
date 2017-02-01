@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Superprogram: Plik źródłowy Sygnal.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Superprogram
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">Sygnal.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_sygnal_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef SYGNAL_HH</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define SYGNAL_HH</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span><span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00004"></a>00004 
+<a name="l00005"></a>00005 <span class="keyword">using namespace </span>std;
+<a name="l00006"></a>00006 
+<a name="l00024"></a><a class="code" href="class_sygnal.html">00024</a> <span class="keyword">class </span><a class="code" href="class_sygnal.html" title="Modeluje wartość sygnału w powiązaniu z czasem.">Sygnal</a> {
+<a name="l00030"></a><a class="code" href="class_sygnal.html#a3207e02823e499594eeea87e2f3dd073">00030</a>    <span class="keywordtype">double</span>  <a class="code" href="class_sygnal.html#a3207e02823e499594eeea87e2f3dd073" title="Przechowuje wartość sygnału.">_WartoscSyg</a>;
+<a name="l00038"></a><a class="code" href="class_sygnal.html#a80002a15c20a7a800619dab6b1acace4">00038</a>    <span class="keywordtype">double</span> <a class="code" href="class_sygnal.html#a80002a15c20a7a800619dab6b1acace4" title="Przechowuje czas skojarzony z wartością sygnału.">_Czas</a>;
+<a name="l00039"></a>00039   <span class="keyword">public</span>:
+<a name="l00046"></a><a class="code" href="class_sygnal.html#acec8f654b436254b1b3d87a55f8d7d37">00046</a>    <a class="code" href="class_sygnal.html#acec8f654b436254b1b3d87a55f8d7d37" title="Inicjalizuje wartościami zerowymi.">Sygnal</a>(): _WartoscSyg(0), _Czas(0) {}
+<a name="l00052"></a><a class="code" href="class_sygnal.html#a0d650c658f3e0f482b2dd350460d2484">00052</a>    <span class="keywordtype">double</span> <a class="code" href="class_sygnal.html#a0d650c658f3e0f482b2dd350460d2484" title="Udostępnia czas.">WezCzas</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _Czas; }
+<a name="l00059"></a><a class="code" href="class_sygnal.html#afd7c427955bbbe1451e04c7ac24516d2">00059</a>    <span class="keywordtype">double</span> <a class="code" href="class_sygnal.html#afd7c427955bbbe1451e04c7ac24516d2" title="Udostępnia wartość">WezWartoscSyg</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _WartoscSyg; }
+<a name="l00068"></a><a class="code" href="class_sygnal.html#a07af57653c172f623dc5dba5dcd4c868">00068</a>    <span class="keywordtype">void</span> <a class="code" href="class_sygnal.html#a07af57653c172f623dc5dba5dcd4c868" title="Zmienia wartość czasu.">ZmienCzas</a>(<span class="keywordtype">double</span> Czas)  { _Czas = Czas; }
+<a name="l00078"></a><a class="code" href="class_sygnal.html#acf5cbff48e1810b643c247eb2648d3a6">00078</a>    <span class="keywordtype">void</span> <a class="code" href="class_sygnal.html#acf5cbff48e1810b643c247eb2648d3a6" title="Zmienia wartość sygnału.">ZmienWartoscSyg</a>(<span class="keywordtype">double</span> WartoscSyg) { _WartoscSyg = WartoscSyg; }
+<a name="l00090"></a><a class="code" href="class_sygnal.html#a4dcfeea1b46c1bc7f50df064f7dc989c">00090</a>    <span class="keywordtype">void</span> ZmienSyg(<span class="keywordtype">double</span> Czas, <span class="keywordtype">double</span> WartoscSyg)
+<a name="l00091"></a>00091           {  ZmienCzas(Czas);  ZmienWartoscSyg(WartoscSyg); }
+<a name="l00092"></a>00092 };
+<a name="l00093"></a>00093 
+<a name="l00107"></a>00107 std::istream&amp; <a class="code" href="_sygnal_8hh.html#aa92cfa2c809a9eb5e9db65d28a14d606" title="Umożliwia wczytanie czasu i wartości sygnału.">operator &gt;&gt; </a>(std::istream &amp;StrmWe, <a class="code" href="class_sygnal.html" title="Modeluje wartość sygnału w powiązaniu z czasem.">Sygnal</a> &amp;Syg);
+<a name="l00122"></a>00122 std::ostream&amp; <a class="code" href="_sygnal_8hh.html#a841f0bd1c998439e875896a2da55ee6d" title="Umożliwia zapis czasu i wartości sygnału.">operator &lt;&lt; </a>(std::ostream &amp;StrmWy, <span class="keyword">const</span> <a class="code" href="class_sygnal.html" title="Modeluje wartość sygnału w powiązaniu z czasem.">Sygnal</a> &amp;Syg);
+<a name="l00123"></a>00123 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Mon Jun 3 2013 18:52:06 dla Superprogram programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

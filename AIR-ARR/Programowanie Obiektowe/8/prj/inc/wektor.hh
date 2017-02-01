@@ -1,0 +1,99 @@
+#ifndef WEKTOR_HH
+#define WEKTOR_HH
+
+#include <iostream>
+#include <cstdio>
+#include <cctype>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
+
+#include "zespolone.hh"
+#include "symbole.hh"
+#include "liczba.hh"
+#include "typ.hh"
+#include "macierz.hh"
+
+using namespace std;
+
+/*!
+ *\file
+ *\brief	Moduł zawierający definicję klasy Wektor oraz przeciążenia wybranych operatorów.
+ *		Klasa wektor przyjmuje nastepujacy format: 
+ *			(TYP x, TYP y, TYP z)
+ *		Przeciążone zostały między innymi operatore wejścia/wyjścia oraz operator indeksujący.
+ *		Zaimplementowana jest również możliwość wyliczenia iloczynu skalarnego wektorów.
+*/
+
+/*!
+ *\brief	Definicja szablonu klasy Wektor. Może przyjmować typy: double, Symbol, Zespolona.
+ */
+template <typename T>
+class Wektor {
+private:
+	/*! \brief Składowa wektora. */
+	T x;
+	/*! \brief Składowa wektora. */
+	T y;
+	/*! \brief Składowa wektora. */
+	T z;	
+public:
+	/*! \brief Konstruktor bezparametrowy. Tworzy wyzerowany obiekt. */
+	Wektor<T>() { Zeruj(x); Zeruj(y); Zeruj(z); }
+	/*! \brief Konstruktor /param[in] przyjmuje trzy parametry, ustawiane jako kolejne składowe wektora. */
+	Wektor<T>(T a, T b, T c) { x = a; y = b; z = c; }
+	/*! \brief Przeciążenie operatora indeksującego. */
+	T& operator[] (int Index) {return Index == 0 ? x : Index == 1 ? y : z;}
+	/*!
+	 *\brief	Operator dwuargumentowy '*'.
+	 *		Tutaj jako funkcja wyliczająca iloczyn skalarny wektorów.
+	 *\param[in]	Jako parametry przyjmuje zmienną typu Wektor, o składowych typu TYP.
+	 *\return	Zwraca iloczyn skalarny dwóch wektorów w postaci wyniku typu TYP.
+	*/
+	T operator * (Wektor<T> a) { return (x*a[0]) + (y*a[1]) + (z*a[2]); }
+	/*!
+	 *\brief	Operator dwuargumentowy '-'.
+	 *\param[in]	Jako argumenty przyjmuje zmienną typu Wektor.
+	 *\return	Zwraca różnicę wyliczoną zgodnie z zasadami działań na wektorach oraz ich składowych.
+	*/
+	Wektor<T> operator - (Wektor<T> a) { return Wektor<T>(x-a[0],y-a[1],z-a[2]); }
+	void Zero() { Zeruj(x); Zeruj(y); Zeruj(z); }
+};
+
+/*!
+ *\brief	Operator wejścia dla klasy Wektor.
+ *\param[in]	Jako argumenty przyjmuje strumień wejściowy oraz zmienną, do której ma zostać zapisana wczytana wartość.
+ *\return	Zwraca podany jako argument strumień wejściowy.
+*/
+template <typename T>
+istream & operator >> (istream & wej, Wektor<T> & w) {
+	char znak;
+	wej >> znak;
+	if (znak != '(') {
+		wej.setstate(ios::failbit); 
+		return wej;
+	}
+	else {
+		for(int i = 0; i < 3; i++) {
+			wej >> w[i] >> znak;
+			if ( (znak != ',') && (znak != ')') ) {
+					wej.setstate(ios::failbit); 
+					return wej;
+			}
+		}
+	}
+	return wej;
+}
+
+/*!
+ *\brief	Operator wyjścia dla klasy Wektor.
+ *\param[in]	Jako argumenty przyjmuje strumień wyjściowy oraz zmienną, której zawartość ma zostać wypisana.
+ *\return	Zwraca podany jako argument strumień wyjściowy.
+*/
+template <typename T>
+ostream & operator << (ostream & wyj, Wektor<T> w) {
+	wyj << "( " << w[0] << ", " << w[1] << ", " << w[2] << " )" << endl;
+	return wyj;
+}
+	
+#endif

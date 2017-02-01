@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Dawidek: Dokumentacja pliku macierz.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Dawidek
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Komponenty</a> &#124;
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku macierz.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Moduł zawiera definicję klasy <a class="el" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz</a> wraz z przeciążeniami wybranych operatorów. Klasa '<a class="el" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz</a>' przyjmuje nastepujący format:<br/>
+ | TYP M(0,0) TYP M(0,1) TYP M(0,2) TYP M(0,3)|<br/>
+ | TYP M(1,0) TYP M(1,1) TYP M(1,2) TYP M(1,3)|<br/>
+ | TYP M(2,0) TYP M(2,1) TYP M(2,2) TYP M(2,3)|<br/>
+ | TYP M(3,0) TYP M(3,1) TYP M(3,2) TYP M(3,3)|<br/>
+ Przeciążany zostal operator funkcyjny (int Wiersz, int Kolumna), co umożliwia wygodne odwoływanie się do poszczególnych elementów. Przeciążony został operator '*' dla mnożenia <a class="el" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz</a> X <a class="el" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz</a>.  
+<a href="#details">Więcej...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;cstdio&gt;</code><br/>
+<code>#include &lt;cctype&gt;</code><br/>
+<code>#include &lt;cstdlib&gt;</code><br/>
+<code>#include &lt;cstring&gt;</code><br/>
+<code>#include &lt;ctime&gt;</code><br/>
+<code>#include &quot;<a class="el" href="zespolone_8hh_source.html">zespolone.hh</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="symbole_8hh_source.html">symbole.hh</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="liczba_8hh_source.html">liczba.hh</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="typ_8hh_source.html">typ.hh</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="wektor_8hh_source.html">wektor.hh</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla macierz.hh:</div>
+<div class="dyncontent">
+<div class="center"><img src="macierz_8hh__incl.png" border="0" usemap="#macierz_8hh" alt=""/></div>
+<map name="macierz_8hh" id="macierz_8hh">
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik:</div>
+<div class="dyncontent">
+<div class="center"><img src="macierz_8hh__dep__incl.png" border="0" usemap="#macierz_8hhdep" alt=""/></div>
+<map name="macierz_8hhdep" id="macierz_8hhdep">
+</map>
+</div>
+</div>
+<p><a href="macierz_8hh_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Komponenty</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_macierz.html">Macierz&lt; T &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicja szablonu klasy <a class="el" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz</a>. Typy jakie może ona przyjmować to: double, Symbol, <a class="el" href="class_zespolona.html" title="Definicja klasy Zespolona, która służy do przechowywania liczb zespolonych. Składa się ona z dwóch pó...">Zespolona</a>.  <a href="class_macierz.html#details">Więcej...</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="macierz_8hh.html#a6e35430a44ffb4c11b32d82c2038dd70">operator&lt;&lt;</a> (ostream &amp;wyj, <a class="el" href="class_macierz.html">Macierz</a>&lt; T &gt; x)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Przeciążenie operatora wypisywania dla klasy <a class="el" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz</a>.  <a href="#a6e35430a44ffb4c11b32d82c2038dd70"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">istream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="macierz_8hh.html#a294fd4185cd28d379eefdb275349c054">operator&gt;&gt;</a> (istream &amp;wej, <a class="el" href="class_macierz.html">Macierz</a>&lt; T &gt; &amp;x)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Przeciążenie operatora wczytywania dla klasy <a class="el" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz</a>.  <a href="#a294fd4185cd28d379eefdb275349c054"></a><br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Opis szczegółowy</h2>
+<div class="textblock"><p>Moduł zawiera definicję klasy <a class="el" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz</a> wraz z przeciążeniami wybranych operatorów. Klasa '<a class="el" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz</a>' przyjmuje nastepujący format:<br/>
+ | TYP M(0,0) TYP M(0,1) TYP M(0,2) TYP M(0,3)|<br/>
+ | TYP M(1,0) TYP M(1,1) TYP M(1,2) TYP M(1,3)|<br/>
+ | TYP M(2,0) TYP M(2,1) TYP M(2,2) TYP M(2,3)|<br/>
+ | TYP M(3,0) TYP M(3,1) TYP M(3,2) TYP M(3,3)|<br/>
+ Przeciążany zostal operator funkcyjny (int Wiersz, int Kolumna), co umożliwia wygodne odwoływanie się do poszczególnych elementów. Przeciążony został operator '*' dla mnożenia <a class="el" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz</a> X <a class="el" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz</a>. </p>
+</div><hr/><h2>Dokumentacja funkcji</h2>
+<a class="anchor" id="a6e35430a44ffb4c11b32d82c2038dd70"></a><!-- doxytag: member="macierz.hh::operator&lt;&lt;" ref="a6e35430a44ffb4c11b32d82c2038dd70" args="(ostream &amp;wyj, Macierz&lt; T &gt; x)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>wyj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_macierz.html">Macierz</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Przeciążenie operatora wypisywania dla klasy <a class="el" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz</a>. </p>
+<dl class="params"><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Jako</td><td>argument przyjmuje strumień wyjściowy oraz zmienną, która ma zostać wypisana. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Zwraca:</b></dt><dd>Zwraca podany jako argument strumień wyjściowy. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a294fd4185cd28d379eefdb275349c054"></a><!-- doxytag: member="macierz.hh::operator&gt;&gt;" ref="a294fd4185cd28d379eefdb275349c054" args="(istream &amp;wej, Macierz&lt; T &gt; &amp;x)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">istream&amp; operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>wej</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_macierz.html">Macierz</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Przeciążenie operatora wczytywania dla klasy <a class="el" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz</a>. </p>
+<dl class="params"><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Jako</td><td>argument przyjmuje strumień wejściowy oraz zmienną, do której ma zostać zapisana wczytana wartość· </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Zwraca:</b></dt><dd>Zwraca podany jako argument strumień wejściowy. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Mon Apr 29 2013 19:07:17 dla Dawidek programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

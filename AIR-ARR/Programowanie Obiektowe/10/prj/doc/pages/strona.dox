@@ -1,0 +1,10 @@
+/*!
+\mainpage	Super program.
+\author		Dawid Perdek
+\date		29.04.2013
+\version	1.1
+
+\brief		Fajny program, robi wszystko. Ale niektóre rzeczy źle. W sumie to źle zlicza ilość obiektów i nie wiadomo czemu nieustannie
+		podstawia jedną konkretną wartość pod postać wykładniczą liczby zespolonej (w sytuacji, gdy podawana była tradycyjnie).
+
+*/

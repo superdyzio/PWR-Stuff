@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>My Project: Plik źródłowy /home/dawidek/Dokumenty/obiektowe/5/prj/inc/iloczyn.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">/home/dawidek/Dokumenty/obiektowe/5/prj/inc/iloczyn.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="iloczyn_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef ILOCZYN_HH</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define ILOCZYN_HH</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;cstdio&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;cctype&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;cstring&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;ctime&gt;</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="zespolone_8hh.html" title="Klasa publiczna zawierająca definicję struktury Liczba Zespolona. Jej elementami są pola typu float p...">zespolone.hh</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="symbole_8hh.html" title="Deklaracja typu Symbol.">symbole.hh</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="typ_8hh.html">typ.hh</a>&quot;</span>
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015 <span class="keyword">using namespace </span>std;
+<a name="l00016"></a>00016 
+<a name="l00021"></a><a class="code" href="class_wektor.html">00021</a> <span class="keyword">class </span><a class="code" href="class_wektor.html">Wektor</a> {
+<a name="l00022"></a>00022         <a class="code" href="typ_8hh.html#a6bd1e6fed9c87b2e6af0cd3eac4cf12f">TYP</a> u, i, o, p;
+<a name="l00023"></a>00023         <span class="keyword">public</span>:
+<a name="l00024"></a><a class="code" href="class_wektor.html#a44ed8c4d7f6363dff3367e0336938187">00024</a>         <a class="code" href="typ_8hh.html#a6bd1e6fed9c87b2e6af0cd3eac4cf12f">TYP</a> &amp; operator[] (<span class="keywordtype">int</span> Ind) { <span class="keywordflow">return</span> Ind == 0 ? u : Ind == 1 ? i : Ind == 2 ? o: p; }
+<a name="l00025"></a>00025 };
+<a name="l00026"></a>00026 
+<a name="l00030"></a><a class="code" href="class_macierz.html">00030</a> <span class="keyword">class </span><a class="code" href="class_macierz.html" title="Klasa zawierająca tablicę 4x4 służąca do przechowywania macierzy danego typu. Zawiera przeciążenie op...">Macierz</a> {
+<a name="l00031"></a>00031         <a class="code" href="typ_8hh.html#a6bd1e6fed9c87b2e6af0cd3eac4cf12f">TYP</a> tab[4][4];
+<a name="l00032"></a>00032         <span class="keyword">public</span>:
+<a name="l00033"></a><a class="code" href="class_macierz.html#a0ac3390c02bef9251f3456783927dd38">00033</a>         <a class="code" href="typ_8hh.html#a6bd1e6fed9c87b2e6af0cd3eac4cf12f">TYP</a> &amp; <span class="keyword">operator</span>( ) (<span class="keywordtype">int</span> w, <span class="keywordtype">int</span> k) { <span class="keywordflow">return</span> tab[w][k]; }
+<a name="l00034"></a><a class="code" href="class_macierz.html#a8765ddc3dbb47919a621a3ba36fdfebc">00034</a>         <a class="code" href="typ_8hh.html#a6bd1e6fed9c87b2e6af0cd3eac4cf12f">TYP</a> <span class="keyword">operator</span>( ) (<span class="keywordtype">int</span> w, <span class="keywordtype">int</span> k)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> tab[w][k]; }
+<a name="l00035"></a>00035 };
+<a name="l00036"></a>00036 
+<a name="l00042"></a>00042 ostream &amp; <a class="code" href="iloczyn_8hh.html#ae1244add7e49f53880621e72f50ce116" title="Operator wyjścia dla wektora.">operator &lt;&lt; </a>(ostream &amp; wy, <a class="code" href="class_wektor.html">Wektor</a> &amp; w);
+<a name="l00043"></a>00043 
+<a name="l00050"></a>00050 istream &amp; <a class="code" href="iloczyn_8hh.html#a0b51a6cb01434390a07ddd2f2da4a794" title="Operator wejścia dla wektora.">operator &gt;&gt; </a>(istream &amp; we, <a class="code" href="class_wektor.html">Wektor</a> &amp; w);
+<a name="l00051"></a>00051 
+<a name="l00057"></a>00057 ostream &amp; <a class="code" href="iloczyn_8hh.html#ae1244add7e49f53880621e72f50ce116" title="Operator wyjścia dla wektora.">operator &lt;&lt; </a>(ostream &amp; wy, <a class="code" href="class_macierz.html" title="Klasa zawierająca tablicę 4x4 służąca do przechowywania macierzy danego typu. Zawiera przeciążenie op...">Macierz</a> &amp; m);
+<a name="l00058"></a>00058 
+<a name="l00065"></a>00065 istream &amp; <a class="code" href="iloczyn_8hh.html#a0b51a6cb01434390a07ddd2f2da4a794" title="Operator wejścia dla wektora.">operator &gt;&gt; </a>(istream &amp; we,  <a class="code" href="class_macierz.html" title="Klasa zawierająca tablicę 4x4 służąca do przechowywania macierzy danego typu. Zawiera przeciążenie op...">Macierz</a> &amp; m);
+<a name="l00066"></a>00066 
+<a name="l00072"></a>00072 <a class="code" href="class_macierz.html" title="Klasa zawierająca tablicę 4x4 służąca do przechowywania macierzy danego typu. Zawiera przeciążenie op...">Macierz</a> <a class="code" href="iloczyn_8hh.html#a5285480e7ba439d1d6050da5892d1462" title="Operator dwuargumentowy &#39;*&#39;.">operator * </a>(<a class="code" href="class_macierz.html" title="Klasa zawierająca tablicę 4x4 służąca do przechowywania macierzy danego typu. Zawiera przeciążenie op...">Macierz</a> <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa91fb0824da12f8bb3b74dd78fb13b63">a</a>, <a class="code" href="class_macierz.html" title="Klasa zawierająca tablicę 4x4 służąca do przechowywania macierzy danego typu. Zawiera przeciążenie op...">Macierz</a> <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa06b03e4cd5c7c464c513a95a7fcf9bf">b</a>);
+<a name="l00073"></a>00073 
+<a name="l00079"></a>00079 <a class="code" href="class_wektor.html">Wektor</a> <a class="code" href="iloczyn_8hh.html#a5285480e7ba439d1d6050da5892d1462" title="Operator dwuargumentowy &#39;*&#39;.">operator * </a>(<a class="code" href="class_macierz.html" title="Klasa zawierająca tablicę 4x4 służąca do przechowywania macierzy danego typu. Zawiera przeciążenie op...">Macierz</a> m, <a class="code" href="class_wektor.html">Wektor</a> w);
+<a name="l00080"></a>00080 
+<a name="l00086"></a>00086 <a class="code" href="typ_8hh.html#a6bd1e6fed9c87b2e6af0cd3eac4cf12f">TYP</a> <a class="code" href="iloczyn_8hh.html#a5285480e7ba439d1d6050da5892d1462" title="Operator dwuargumentowy &#39;*&#39;.">operator * </a>(<a class="code" href="class_wektor.html">Wektor</a> <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa91fb0824da12f8bb3b74dd78fb13b63">a</a>, <a class="code" href="class_wektor.html">Wektor</a> <a class="code" href="symbole_8hh.html#a7feef761cd73fac6e25b8bb80d2c4e54aa06b03e4cd5c7c464c513a95a7fcf9bf">b</a>);
+<a name="l00087"></a>00087 
+<a name="l00093"></a>00093 <span class="keywordtype">double</span> <a class="code" href="iloczyn_8hh.html#a9f00901b0352e2e70919b56533206d30" title="Funkcja zerująca zmienną typu double.">Zeruj</a>(<span class="keywordtype">double</span> x);
+<a name="l00094"></a>00094 
+<a name="l00100"></a>00100 <a class="code" href="class_wektor.html">Wektor</a> <a class="code" href="iloczyn_8hh.html#a9f00901b0352e2e70919b56533206d30" title="Funkcja zerująca zmienną typu double.">Zeruj</a>(<a class="code" href="class_wektor.html">Wektor</a> w);
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Mon Apr 15 2013 19:25:13 dla My Project programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

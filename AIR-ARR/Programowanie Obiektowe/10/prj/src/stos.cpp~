@@ -1,0 +1,109 @@
+#include "stos.hh"
+
+/*!
+ *\file
+ *\brief	Plik zawiera implementację wybranych metod klasy Stos.
+*/
+
+void Stos::zamien() {
+	if (size() > 1) {
+		Zespolona pom = top();
+		pop();
+		Zespolona pom2 = top();
+		pop();
+		push(pom);
+		push(pom2);
+	}
+	else cout << "Na stosie jest za mało elementów." << endl;
+}
+
+void Stos::duplikuj() {
+	if (size() > 0)
+		push(top());
+	else cout << "Na stosie jest za mało elementów." << endl;
+}
+
+void Stos::wyswietl() {
+	cout << endl << "Stos:" << endl;
+	if (size() > 0) {
+		Zespolona a;
+		Stos pom = (*this);
+		while (pom.size() > 0) {
+			a = pom.top();
+			pom.pop();
+			cout << a << endl;
+		}
+	}
+	else cout << "Stos jest pusty." << endl;
+}
+
+void Stos::dodaj() {
+	if (size() > 1) {
+		Zespolona a, b;
+		a = top();
+		pop();
+		b = top();
+		pop();
+		push(a+b);
+		cout << "Wykonano dodawanie.";
+	}
+	else cout << "Na stosie jest mało elementów." << endl;
+	cout << endl << "Liczba obiektów ogólnie: " << Zespolona::getIlosc();
+	cout << endl << "Liczba obiektów na stosie: " << Zespolona::getIloscA()-2 << endl;
+}
+
+void Stos::odejmij() {
+	if (size() > 1) {
+		Zespolona a, b;
+		a = top();
+		pop();
+		b = top();
+		pop();
+		push(b-a);
+		cout << "Wykonano odejmowanie.";
+	}
+	else cout << "Na stosie jest za mało elementów." << endl;
+	cout << endl << "Liczba obiektów ogólnie: " << Zespolona::getIlosc();
+	cout << endl << "Liczba obiektów na stosie: " << Zespolona::getIloscA()-2 << endl;
+}
+
+void Stos::mnoz() {
+	if (size() > 1) {
+		Zespolona a, b;
+		a = top();
+		pop();
+		b = top();
+		pop();
+		push(a*b);
+		cout << "Wykonano mnożenie.";
+	}
+	else cout << "Na stosie jest za mało elementów." << endl;
+	cout << endl << "Liczba obiektów ogólnie: " << Zespolona::getIlosc();
+	cout << endl << "Liczba obiektów na stosie: " << Zespolona::getIloscA()-2 << endl;
+}
+
+void Stos::dziel() {
+	if (size() > 1) {
+		Zespolona a, b;
+		a = top();
+		pop();
+		b = top();
+		pop();
+		push(b/a);
+		cout << "Wykonano dzielenie.";
+	}
+	else cout << "Na stosie jest za mało elementów." << endl;
+	cout << endl << "Liczba obiektów ogólnie: " << Zespolona::getIlosc();
+	cout << endl << "Liczba obiektów na stosie: " << Zespolona::getIloscA()-2 << endl;
+}
+
+void Stos::usun() {
+	if (size() > 0) pop();
+	else cout << "Stos jest pusty." << endl;
+}
+
+void Stos::czysc() {
+	while (size() > 0) pop();
+	cout << endl << "Liczba obiektów ogólnie: " << Zespolona::getIlosc();
+	cout << endl << "Liczba obiektów na stosie: " << Zespolona::getIloscA()-2 << endl;
+}

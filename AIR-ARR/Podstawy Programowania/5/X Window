@@ -1,0 +1,76 @@
+Dawid Perdek          TP PON 18.55 - 20.35          X Window
+
+
+ZADANIE 0
+
+Otworzyłem trzy terminale wirtualne i na każdym się zalogowałem. W drugim terminalu chciałem otworzyć przeglądarkę lynx, jednak dostałem komunikat, że ta jest 
+niezainstalowana. Wpisałem podane w treści komunikatu polecenie, ściągnął się jakiś plik i przeglądarka błyskawicznie się zainstalowała. Po jej uruchomieniu przez 
+dłuższą chwilę miałem problemy z poruszaniem się i nie mogłem znaleźć miejsca do wpisania adresu. W końcu jednak się połapałem i już korzystam z treści zadań otwartych
+w przeglądarce lynx. Z emacscem miałem zdecydowanie mniej problemów, choć chwilkę zajęło mi zlokalizowanie możliwości otwarcie jakiegoś pliku. Ale znalazłem, wpisałem
+ścieżkę do pliku z tym sprawozdaniem i już mogę stwierdzić, że misja numer 0 wykonana!
+
+ZADANIE 1
+
+Otworzyłem czwarty terminal wirtualny, wpisałem w nim polecenie "xterm -display :1" i otworzył mi się terminal graficzny "pod adresem" CTRL+ALT+F8. Po wciśnięciu CTRL+C
+w czwartym terminalu, stało się nie wiem co i albo komputer się zawiesił albo po prostu nie wiedziałem jak powrócić do któregokolwiek terminala. Po wpisaniu w terminalu
+graficznym polecenia xkill mogłem zamknąć terminal poprzez kliknięcie na jego okienko. W późniejszych próbach odkryłem, że jednak mogę zamknąć okno dowlnego klienta 
+wciskając CTRL+C, kiedy jest on aktywny.
+
+ZADANIE 2
+
+Po wpisaniu polecenia "echo $DISPLAY" mogłem odczytać wartość zmiennej środowiskowej DISPLAY, która to była równa ":1". Następnie uruchomiłem w tle klienty xclock, 
+xcalc oraz xeyes. Wszystkie otwierały się "jeden na drugim" w lewym górnym rogu ekranu. Zabiłem więc kolejno je wszystkie i uruchomiłem ponownie dopisując opcje 
+wywołania. Wpisywałem kolejno "xclock -geometry 50x50+300+400 -fg blue", "xeyes -geometry 100x100+500+500 -fg green" oraz "xclock -geometry 200x200+700+500 -bg white"
+w wyniku czego otrzymałem niezbyt wygodny w obsłudze kalkulator, duży zegarek z białą tarczą i małe, zielone oczy w środkowej dolnej części ekranu. Wszystkie klienty,
+wliczając terminal w lewym górnym rogu, były rozłożone tak, by na siebie nie nachodziły. Zamknąłem więc kalkulator i uruchomiłem go ponownie ze zmienioną geometrią
+"xlock -geometry 200x200+0+500 -fg blue". Potem wywołałem polecenie "ps -fu $dawidek" i korzystając z numerów procesów zamknąłem poleceniem "kill nr_procesu" wszystkie
+otwarte klienty.
+
+ZADANIE 3
+
+Zarządcę okien twm również musiałem zainstalować, a proces ten przebiegł bezproblemowo. Minimalizacja, zmiana rozmiaru oraz położenia okien jest prosta i intuicyjna.
+Przy uruchamianiu klienta bez parametru -geometry okienko zostaje "przyklejone" do kursora i użytkownik musi umiejscowić klienta o domyślnym rozmiarze (lub maksymalnej 
+wysokości w przypadku kliknięcia prawym przyciskiem myszy) albo ustalonym przez użytkownika rozmiarze w przypadku kliknięcia środkowego przycisku myszy (obu naraz).
+Można uruchomić tylko jednego menadżera okien w jednym wirtualnym terminalu. Wywołane z menu polecenie "restart" po prostu restartuje zarządcę okien jednocześnie nie
+zamykając i nie zmieniając żadnego z aktualnie otwartych klientów. Natomiast opcja "exit" zamyka menadżera okien pozostawiając użytkownika ze wszystkimi aktualnie
+otwartymi klientami w rozmieszczeniu z momentu zamykania twm. 
+
+ZADANIE 4
+
+Na ogół zarządcy okien pozwalają na bezpośrednie przełączanie się między trybami "focus-follow-mouse" i "click-to-focus", tylko w twm należy uruchomić funkcję f.focus.
+Konfiguracja menu menadżera okien nie jest trudna - np. można dodawać opcje do menu twm poprzez dopisanie w pliku konfiguracyjnym linijek postaci:
+"wyświetlania_nazwa"   !"wywoływane_polecenie &". Na zajęciach korzystaliśmy jeszcze z zarządców okien takich jak blackbox i fluxbox i właśnie ten ostatni wydaje mi się
+najlepszym kandydatem na wystartowanie prostej i niezawodnej sesji.
+
+ZADANIE 5 
+
+Na zajęciach tworzyliśmy plik .xinitrc w którym to zapisywaliśmy trzy-cztery klienty z różnymi ustawieniami i uruchamialiśmy X Window. Wypisane w pliku wywołania
+klientów i zarządców okien zostały wykonane. 
+
+ZADANIE 9
+
+Te zadanie również wykonaliśmy na zajęciach - po zmianie wybranych zasobów, zapisaniu ustawień i ponownym uruchomieniu serwera widoczne były nasze, zmienione ustawienia.
+
+ZADANIE DODATKOWE 1
+
+Lewym przyciskiem myszy można zaznaczyć dowolny blok tekstu i potem trzymając prawy przycisk można dowolnie rozciągać lub zmniejszać obszar zaznaczenia. Bardzo 
+praktyczne jest to, że po podwójnym wciśnięciu lewego przycisku zaznaczenie zostaje wyrównane do całych linijek (można wtedy pojedynczymi kliknięciami prawym
+przyciskiem wydłużać lub skracać obszar zaznaczenia o parę wierszy), a po ponownym podwójnym kliknięciu zaznaczenie wraca do poprzedniego, niewyrównanego, stanu. 
+Kliknięcie środkowym przyciskiem myszy pozwala na wklejenie całego bloku tekstu do np. emacsa, a w przypadku terminala wklejenie poszczególnych linijek pojedynczo jako
+samodzielne polecenia i wywołanie ich. Potrójne kliknięcie lewego przycisku myszy pozwala na zaznaczenie całego wiersza. Natomiast poczwórne odznacza wszystko.
+Ogólnie zaznaczanie i kopiowanie tekstu jest bardzo wygodne.
+
+ZADANIE DODATKOWE 2
+
+Poleceniem "xset q" wyświetliłem wszystkie aktualne parametry serwera, odczytałem z nich, że czas potrzebny do wygaszenia ekranu to 600 sekund. Zmieniłem go na 10 i po
+10 sekund bezczynności ekran faktycznie zgasł. Poruszenie myszką wyłączyło wygaszacz. Ustawienia dzwonka zmienia się komendą "b bell_percent bell_pitch bell_duration",
+ja wpisałem "b 60 600 50" i wartości zmieniły się zgodnie z oczekiwaniami.
+
+ZADANIE DODATKOWE 3
+
+
+
+Ponadto udało nam się, wraz z Patrykiem Prorokiem, uruchomić grę w statki pomiędzy naszymi komputerami. Metodą prób i błędów doszliśmy jak tego dokonać. Ja zostałem 
+hostem i założyłem grę, a Patryk wybrał opcję "join game", wybrał mnie z rozwijanej listy hostów (na której był tylko mój login, bo tylko ja byłem aktualnie hostem), 
+nasze komputery wszystko powolutku przemyślały (mieliśmy wrażenie, że się zawiesiły), ale w końcu już po chwili mogliśmy się zmierzyć! Niestety poległem, wygrywając 
+tylko 4 z 11 partii.

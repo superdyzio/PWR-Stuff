@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Dawidek: Dokumentacja pliku uklad.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Dawidek
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Komponenty</a> &#124;
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku uklad.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Moduł zawierający definicję klasy <a class="el" href="class_uklad.html" title="Definicja szablonu klasy Uklad. Może przyjmować typy: double, Symbol oraz Zespolona.">Uklad</a> wraz z przeciążeniami wybranych operatorów, np. operatory wejścia/wyjścia operator mnożenia macierzy przez wektor. W module tym zaimplementowany jest również algorytm rozwiązywania układu równań metodą Cramera.  
+<a href="#details">Więcej...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;cstdio&gt;</code><br/>
+<code>#include &lt;cctype&gt;</code><br/>
+<code>#include &lt;cstdlib&gt;</code><br/>
+<code>#include &lt;cstring&gt;</code><br/>
+<code>#include &lt;ctime&gt;</code><br/>
+<code>#include &quot;<a class="el" href="zespolone_8hh_source.html">zespolone.hh</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="symbole_8hh_source.html">symbole.hh</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="liczba_8hh_source.html">liczba.hh</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="typ_8hh_source.html">typ.hh</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="macierz_8hh_source.html">macierz.hh</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="wektor_8hh_source.html">wektor.hh</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla uklad.hh:</div>
+<div class="dyncontent">
+<div class="center"><img src="uklad_8hh__incl.png" border="0" usemap="#uklad_8hh" alt=""/></div>
+<map name="uklad_8hh" id="uklad_8hh">
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik:</div>
+<div class="dyncontent">
+<div class="center"><img src="uklad_8hh__dep__incl.png" border="0" usemap="#uklad_8hhdep" alt=""/></div>
+<map name="uklad_8hhdep" id="uklad_8hhdep">
+</map>
+</div>
+</div>
+<p><a href="uklad_8hh_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Komponenty</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uklad.html">Uklad&lt; T &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicja szablonu klasy <a class="el" href="class_uklad.html" title="Definicja szablonu klasy Uklad. Może przyjmować typy: double, Symbol oraz Zespolona.">Uklad</a>. Może przyjmować typy: double, Symbol oraz <a class="el" href="class_zespolona.html" title="Definicja klasy Zespolona, która służy do przechowywania liczb zespolonych. Składa się ona z dwóch pó...">Zespolona</a>.  <a href="class_uklad.html#details">Więcej...</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">istream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="uklad_8hh.html#a4135d5baf384ba41c67f5c4138be62e9">operator&gt;&gt;</a> (istream &amp;wej, <a class="el" href="class_uklad.html">Uklad</a>&lt; T &gt; &amp;u)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator wejścia dla klasy <a class="el" href="class_uklad.html" title="Definicja szablonu klasy Uklad. Może przyjmować typy: double, Symbol oraz Zespolona.">Uklad</a>.  <a href="#a4135d5baf384ba41c67f5c4138be62e9"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="uklad_8hh.html#ad5446c20fa64a76d7104cc810d6024d6">operator&lt;&lt;</a> (ostream &amp;wyj, <a class="el" href="class_uklad.html">Uklad</a>&lt; T &gt; u)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator wyjścia dla klasy <a class="el" href="class_uklad.html" title="Definicja szablonu klasy Uklad. Może przyjmować typy: double, Symbol oraz Zespolona.">Uklad</a>.  <a href="#ad5446c20fa64a76d7104cc810d6024d6"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_wektor.html">Wektor</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="uklad_8hh.html#afca98edd1b16a6e9eee2663b6b8b5ac0">operator*</a> (<a class="el" href="class_macierz.html">Macierz</a>&lt; T &gt; m, <a class="el" href="class_wektor.html">Wektor</a>&lt; T &gt; w)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator dwuargumentowy '*', w tym miejscu służący do mnożenia macierzy przez wektor.  <a href="#afca98edd1b16a6e9eee2663b6b8b5ac0"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_wektor.html">Wektor</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="uklad_8hh.html#a41a08f1dbd1b273c947d66fb982d7c78">Blad</a> (<a class="el" href="class_uklad.html">Uklad</a>&lt; T &gt; u)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja wyliczająca błąd wyliczenia rozwiązania układu równań.  <a href="#a41a08f1dbd1b273c947d66fb982d7c78"></a><br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Opis szczegółowy</h2>
+<div class="textblock"><p>Moduł zawierający definicję klasy <a class="el" href="class_uklad.html" title="Definicja szablonu klasy Uklad. Może przyjmować typy: double, Symbol oraz Zespolona.">Uklad</a> wraz z przeciążeniami wybranych operatorów, np. operatory wejścia/wyjścia operator mnożenia macierzy przez wektor. W module tym zaimplementowany jest również algorytm rozwiązywania układu równań metodą Cramera. </p>
+</div><hr/><h2>Dokumentacja funkcji</h2>
+<a class="anchor" id="a41a08f1dbd1b273c947d66fb982d7c78"></a><!-- doxytag: member="uklad.hh::Blad" ref="a41a08f1dbd1b273c947d66fb982d7c78" args="(Uklad&lt; T &gt; u)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wektor.html">Wektor</a>&lt;T&gt; <a class="el" href="uklad_8hh.html#a41a08f1dbd1b273c947d66fb982d7c78">Blad</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_uklad.html">Uklad</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>u</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Funkcja wyliczająca błąd wyliczenia rozwiązania układu równań. </p>
+<dl class="params"><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Jako</td><td>argument przyjmuje zmienną przechowującą układ równań. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Zwraca:</b></dt><dd>Zwraca wektor wskazujący wartość błędu wyliczenia rozwiązania dla każdego z elementów rozwiązania. </dd></dl>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="uklad_8hh_a41a08f1dbd1b273c947d66fb982d7c78_icgraph.png" border="0" usemap="#uklad_8hh_a41a08f1dbd1b273c947d66fb982d7c78_icgraph" alt=""/></div>
+<map name="uklad_8hh_a41a08f1dbd1b273c947d66fb982d7c78_icgraph" id="uklad_8hh_a41a08f1dbd1b273c947d66fb982d7c78_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="afca98edd1b16a6e9eee2663b6b8b5ac0"></a><!-- doxytag: member="uklad.hh::operator*" ref="afca98edd1b16a6e9eee2663b6b8b5ac0" args="(Macierz&lt; T &gt; m, Wektor&lt; T &gt; w)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wektor.html">Wektor</a>&lt;T&gt; operator* </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_macierz.html">Macierz</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_wektor.html">Wektor</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operator dwuargumentowy '*', w tym miejscu służący do mnożenia macierzy przez wektor. </p>
+<dl class="params"><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Jako</td><td>argumenty przyjmuje zmienną typu <a class="el" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz</a> oraz drugą typu <a class="el" href="class_wektor.html" title="Definicja szablonu klasy Wektor. Może przyjmować typy: double, Symbol, Zespolona.">Wektor</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Zwraca:</b></dt><dd>Zwraca wynik mnożenia <a class="el" href="class_macierz.html" title="Definicja szablonu klasy Macierz. Typy jakie może ona przyjmować to: double, Symbol, Zespolona.">Macierz</a> X <a class="el" href="class_wektor.html" title="Definicja szablonu klasy Wektor. Może przyjmować typy: double, Symbol, Zespolona.">Wektor</a>. </dd></dl>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="uklad_8hh_afca98edd1b16a6e9eee2663b6b8b5ac0_cgraph.png" border="0" usemap="#uklad_8hh_afca98edd1b16a6e9eee2663b6b8b5ac0_cgraph" alt=""/></div>
+<map name="uklad_8hh_afca98edd1b16a6e9eee2663b6b8b5ac0_cgraph" id="uklad_8hh_afca98edd1b16a6e9eee2663b6b8b5ac0_cgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad5446c20fa64a76d7104cc810d6024d6"></a><!-- doxytag: member="uklad.hh::operator&lt;&lt;" ref="ad5446c20fa64a76d7104cc810d6024d6" args="(ostream &amp;wyj, Uklad&lt; T &gt; u)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>wyj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_uklad.html">Uklad</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>u</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operator wyjścia dla klasy <a class="el" href="class_uklad.html" title="Definicja szablonu klasy Uklad. Może przyjmować typy: double, Symbol oraz Zespolona.">Uklad</a>. </p>
+<dl class="params"><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Jako</td><td>argument przyjmuje strumień wyjściowy oraz zmienną, której zawartość ma zostać wypisana. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Zwraca:</b></dt><dd>Zwraca podany jako argument strumień wyjściowy. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4135d5baf384ba41c67f5c4138be62e9"></a><!-- doxytag: member="uklad.hh::operator&gt;&gt;" ref="a4135d5baf384ba41c67f5c4138be62e9" args="(istream &amp;wej, Uklad&lt; T &gt; &amp;u)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">istream&amp; operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>wej</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_uklad.html">Uklad</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>u</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operator wejścia dla klasy <a class="el" href="class_uklad.html" title="Definicja szablonu klasy Uklad. Może przyjmować typy: double, Symbol oraz Zespolona.">Uklad</a>. </p>
+<dl class="params"><dt><b>Parametry:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Jako</td><td>argument przyjmuje strumień wejściowy oraz zmienną do której ma zostać zapisana wczytana wartość. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Zwraca:</b></dt><dd>Zwraca podany jako argument strumień wejściowy. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Mon Apr 29 2013 19:07:17 dla Dawidek programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

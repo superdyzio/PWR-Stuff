@@ -1,0 +1,15 @@
+#ifdef __GNUG__
+# pragma implementation
+#endif
+
+#include "BlokProstujacy.hh"
+
+/*!
+ *\file
+ *\brief	Plik zawierający definicję wybranych metod z klasy BlokProstujacy.
+*/
+
+bool BlokProstujacy::WyliczSygnalWyj(const Sygnal& Syg) {
+	ZmienSygnalWyj(Syg.WezCzas(),abs(Syg.WezWartoscSyg()));
+	return true;
+}

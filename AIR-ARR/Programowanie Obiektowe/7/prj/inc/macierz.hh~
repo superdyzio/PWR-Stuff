@@ -1,0 +1,70 @@
+#ifndef MACIERZ_HH
+#define MACIERZ_HH
+
+#include <iostream>
+#include <cstdio>
+#include <cctype>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
+
+#include "zespolone.hh"
+#include "symbole.hh"
+#include "liczba.hh"
+#include "typ.hh"
+#include "wektor.hh"
+
+using namespace std;
+
+/*!
+ *\file
+ *\brief	Moduł zawiera definicję klasy Macierz wraz z przeciążeniami wybranych operatorów.
+ *		Klasa 'Macierz' przyjmuje nastepujący format:\n
+ *			| TYP M(0,0) TYP M(0,1) TYP M(0,2) TYP M(0,3)|\n
+ *			| TYP M(1,0) TYP M(1,1) TYP M(1,2) TYP M(1,3)|\n
+ *			| TYP M(2,0) TYP M(2,1) TYP M(2,2) TYP M(2,3)|\n
+ *			| TYP M(3,0) TYP M(3,1) TYP M(3,2) TYP M(3,3)|\n
+ *		Przeciążany zostal operator funkcyjny (int Wiersz, int Kolumna), co umożliwia wygodne odwoływanie się do
+ *		poszczególnych elementów.
+ *		Przeciążony został operator '*' dla mnożenia Macierz X Macierz.
+ */
+ 
+ /*!
+ *\brief	Definicja klasy 'Macierz'.
+ */
+class Macierz {
+	public:
+		TYP tab[3][3]; /*! \brief Zmienna do przechowywania macierzy. */
+		TYP &operator( ) (int Wiersz, int Kolumna) {return tab[Wiersz][Kolumna]; } /*! \brief Przeciążenie operatora indeksującego. */
+		TYP operator( ) (int Wiersz, int Kolumna) const {return tab[Wiersz][Kolumna]; } /*! \brief Przeciążenia operatora. */
+};
+
+/*!
+ *\brief	Przeciążenie operatora wypisywania dla klasy Macierz.
+ *\param[in]	Jako argumenty przyjmuje strumień wyjściowy oraz zmienną typu Macierz, która ma zostać wypisana.
+ *\return	Zwraca podany jako argument strumień wyjściowy.
+*/		
+ostream & operator << (ostream & wyj, Macierz & m);
+		
+/*!
+ *\brief	Przeciążenie operatora wczytywania dla klasy Macierz.
+ *\param[in]	Jako argumenty przyjmuje strumień wejściowy oraz zmienna typu Macierz, w której zapamiętana będzie wczytana macierz.
+ *\return	Zwraca podany jako argument strumień wejściowy.
+*/
+istream & operator >> (istream & wej,  Macierz & m);
+
+/*!
+ *\brief	Przeciążenie operatora mnożenia '*' dla działania Macierz X Macierz.
+ *\param[in]	Dwa argumenty typu Macierz.
+ *\return	Iloczyn dwóch argumentów.
+*/	
+Macierz operator * (Macierz a, Macierz b);
+
+/*!
+ *\brief	Funkcja wyliczająca wyznacznik macierzy.
+ *\param[in]	Argument typu Macierz - macierz, której wyznacznik ma zostać wyliczony.
+ *\return	Wyznacznik macierzy podanej jako argument.
+*/
+TYP det(Macierz m);
+
+#endif

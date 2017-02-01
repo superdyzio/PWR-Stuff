@@ -1,0 +1,79 @@
+#ifndef WEKTOR_HH
+#define WEKTOR_HH
+
+#include <iostream>
+#include <cstdio>
+#include <cctype>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
+
+#include "zespolone.hh"
+#include "symbole.hh"
+#include "liczba.hh"
+#include "typ.hh"
+#include "macierz.hh"
+
+using namespace std;
+
+/*!
+ *\file
+ *\brief	Moduł zawierający definicję klasy Wektor oraz przeciążenia wybranych operatorów.
+ *		Klasa wektor przyjmuje nastepujacy format: 
+ *			(TYP x, TYP y, TYP z)
+ *		Przeciążone zostały między innymi operatore wejścia/wyjścia oraz operator indeksujący.
+ *		Zaimplementowana jest również możliwość wyliczenia iloczynu skalarnego wektorów.
+*/
+
+/*!
+ *\brief	Definicja klasy 'Wektor':
+ */
+class Wektor {
+	public:
+	/*! \brief Składowa wektora. */
+	TYP x;
+	/*! \brief Składowa wektora. */
+	TYP y;
+	/*! \brief Składowa wektora. */
+	TYP z;	
+	/*! \brief Przeciążenie operatora indeksującego. */
+	TYP& operator[] (int Index) {return Index == 0 ? x : Index == 1 ? y : z;}
+};
+
+/*!
+ *\brief	Operator wejścia dla klasy Wektor.
+ *\param[in]	Jako argumenty przyjmuje strumień wejściowy oraz zmienną typu Wektor, w której zapamiętany zostanie wczytany wektor.
+ *\return	Zwraca podany jako argument strumień wejściowy.
+*/
+istream & operator >> (istream & wej, Wektor & w);
+
+/*!
+ *\brief	Operator wyjścia dla klasy Wektor.
+ *\param[in]	Jako argumenty przyjmuje strumień wyjściowy oraz zmienną typu Wektor, która ma zostać wypisana.
+ *\return	Zwraca podany jako argument strumień wyjściowy.
+*/
+ostream & operator << (ostream & wyj, Wektor & w);
+	
+/*!
+ *\brief	Operator dwuargumentowy '*'.
+ *		Tutaj jako funkcja wyliczająca iloczyn skalarny wektorów.
+ *\param[in]	Jako parametry przyjmuje dwie zmienne typu Wektor, o składowych typu TYP.
+ *\return	Zwraca iloczyn skalarny dwóch wektorów w postaci wyniku typu TYP.
+*/
+TYP operator * (Wektor a, Wektor b);
+		
+/*!
+ *\brief	Operator dwuargumentowy '-'.
+ *\param[in]	Jako argumenty przyjuje dwie zmienne typu Wektor.
+ *\return	Zwraca ich różnicę wyliczoną zgodnie z zasadami działań na wektorach oraz ich składowych.
+*/
+Wektor operator - (Wektor a, Wektor b);
+		
+/*!
+ *\brief	Funkcja mająca za zadanie wyzerować wektor.
+ *\param[in]	Jako argument przyjmuje zmienną przechowującą wektor do wyzerowania.
+ *\return	Zwraca tenże wektor, z wyzerowaną każdą ze składowych.
+*/
+Wektor Zeruj(Wektor w);
+		
+#endif

@@ -1,0 +1,22 @@
+clear all;
+Awe = 0.5;
+Awy = 0.75;
+A1 = 2;
+A2 = 4;
+g = 10;
+u0max = 3;
+tabu0 = [0 0.5*u0max 0.9*u0max];
+du = 0.1*u0max;
+czas_skoku = 2;
+
+for i = 1:3;
+    figure;
+    u0 = tabu0(i);
+    h10 = u0*u0 / (Awy*Awy*2*g);
+    h20 = u0*u0 / (Awe*Awe*2*g);
+    sim('dawidek');
+    plot(time,wyj1);
+    hold all on;
+    plot(time,wyj2);
+    grid on;
+end;

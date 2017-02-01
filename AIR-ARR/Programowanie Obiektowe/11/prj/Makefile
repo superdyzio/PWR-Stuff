@@ -1,0 +1,31 @@
+CPPFLAGS=-pedantic -Wall -Iinc -I/home/Dokumenty/obiektowe/10/prj/inc
+
+__start__: obj kalkulator
+	./kalkulator
+
+obj:
+	mkdir obj
+
+kalkulator: obj/zespolona.o obj/stos.o obj/main.o obj/kalkulator.o obj/mapa.o obj/dana.o
+	g++ -Wall -o kalkulator obj/zespolona.o obj/stos.o obj/main.o obj/kalkulator.o obj/mapa.o obj/dana.o
+
+obj/zespolona.o: src/zespolona.cpp inc/zespolona.hh
+	g++ -c ${CPPFLAGS} -o obj/zespolona.o  src/zespolona.cpp
+
+obj/stos.o: src/stos.cpp inc/stos.hh inc/zespolona.hh
+	g++ -c ${CPPFLAGS} -o obj/stos.o  src/stos.cpp
+	
+obj/main.o: src/main.cpp inc/zespolona.hh inc/stos.hh inc/mapa.hh inc/kalkulator.hh
+	g++ -c ${CPPFLAGS} -o obj/main.o  src/main.cpp
+
+obj/kalkulator.o: src/kalkulator.cpp inc/kalkulator.hh inc/stos.hh
+	g++ -c ${CPPFLAGS} -o obj/kalkulator.o src/kalkulator.cpp
+
+obj/mapa.o: src/mapa.cpp inc/mapa.hh inc/dana.hh
+	g++ -c ${CPPFLAGS} -o obj/mapa.o src/mapa.cpp
+
+obj/dana.o: src/dana.cpp inc/dana.hh inc/zespolona.hh
+	g++ -c ${CPPFLAGS} -o obj/dana.o src/dana.cpp
+	
+clean:
+	rm -f kalkulator core obj/*

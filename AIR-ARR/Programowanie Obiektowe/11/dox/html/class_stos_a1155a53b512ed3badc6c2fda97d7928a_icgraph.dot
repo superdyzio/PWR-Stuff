@@ -1,0 +1,36 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Stos::usun",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Kalkulator::zamien",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_kalkulator.html#ad47977cdf8791bc2f4508ecb1b5bba15",tooltip="Funkcja zamieniająca miejscami dwa wierzchnie elementy stosu."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Kalkulator::uruchom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_kalkulator.html#a5c93ab5cad906db148a1670a013e8690",tooltip="Funkcja interakcji z użytkownikiem."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Kalkulator::dodaj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_kalkulator.html#aefdcdaa5b5f494a408947a6e1573c0e0",tooltip="Funkcja arytmetyczna dodawania. Dodaje dwa wierzchnie elementy. Wynik odkłada na stos."];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Kalkulator::odejmij",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_kalkulator.html#a825290e83ebc42eeb77ce367b6c80d5f",tooltip="Funkcja arytmetyczna odejmowania. Odejmuje drugi od góry element od wierzchniego. Wynik odkłada na st..."];
+  Node6 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Kalkulator::mnoz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_kalkulator.html#a2b6bf727e0f4ebf4adb676a474800fcb",tooltip="Funkcja arytmetyczna mnożenia. Mnoży przez siebie dwa wierzchnie elementy. Wynik odkłada na stos..."];
+  Node7 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Kalkulator::dziel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_kalkulator.html#aaade8784e3a1fb55d12c8ddd20f98a41",tooltip="Funkcja arytmetyczna dzielenia. Dzieli wierzchni element przez drugi od góry. Wynik odkłada na stos..."];
+  Node8 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Kalkulator::wypiszStos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_kalkulator.html#ae58329d006be8230c008b65580ed3cdc",tooltip="Funkcja wypisująca całą zawartość stosu w odpowiednim formacie."];
+  Node9 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Kalkulator::nadajWartosc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_kalkulator.html#ad8e90670dcb323fdf702bb85ff440f25",tooltip="Funkcja przypisująca wartość z wierzchu stosu zmiennej pod nią."];
+  Node10 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Kalkulator::usunDana",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_kalkulator.html#a525bb21840977c5dd7727f8f02908f6e",tooltip="Funkcja usuwająca wierzch stosu. Usuwa też z mapy."];
+  Node11 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Stos::drukuj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_stos.html#a680e919c4c80b0626716bd86fbd2471e",tooltip="Funkcja wyświetlająca całą zawartość stosu."];
+}

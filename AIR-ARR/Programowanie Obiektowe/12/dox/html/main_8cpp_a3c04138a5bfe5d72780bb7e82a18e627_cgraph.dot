@@ -1,0 +1,38 @@
+digraph G
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UkladSygnalowy::DodajGenerator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_uklad_sygnalowy.html#a22d43e5ebd0f8a96b828647ee872f8cf",tooltip="Dodaje blok generatora sygnału."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ListaBlokow::DodajBlokSygnalowy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lista_blokow.html#ab77e5d62f4959fc61d2461a454bd7a68",tooltip="Dodaje nowy blok sygnałowy."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UkladSygnalowy::DodajBlokWzmacniajacy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_uklad_sygnalowy.html#a6a11e372573f9874fc88bff8d4ae57c8",tooltip="Dodaje blok wzmacniający sygnał k-krotnie. Wartość wzmocnienia jest podawana jako c-string (char*)..."];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UkladSygnalowy::DodajBlokPotegujacy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_uklad_sygnalowy.html#a1506df9732dc3c76c21027aa5ac5e93a",tooltip="Dodaje blok potęgujący sygnał."];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UkladSygnalowy::DodajBlokPrzesuwajacy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_uklad_sygnalowy.html#a7aba42d042287f38c36a616af6a6182d",tooltip="Dodaje blok przesuwający sygnał o zadaną wartość. Wartość przesunięcia jest podawana jako c-string (c..."];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="UkladSygnalowy::DodajBlokProstujacy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_uklad_sygnalowy.html#ab8b322abe9229fb280e6607b619653ed",tooltip="Dodaje blok prostujący sygnał."];
+  Node7 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="UkladSygnalowy::DodajBlokCalkujacy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_uklad_sygnalowy.html#adb3e2b75f63a2fbeb864489b4d46f36c",tooltip="Dodaje blok całkujący sygnał."];
+  Node8 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="UkladSygnalowy::DodajBlokDyskryminujacy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_uklad_sygnalowy.html#ace1f2a18c247247026c105acb2a9baa8",tooltip="Dodaje blok dyskryminujący sygnał. Wartość progu dyskryminacji jest podawana jako c-string (char*)..."];
+  Node9 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="UkladSygnalowy::DodajRejestrator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_uklad_sygnalowy.html#a1f37477cccc05141d42d7d9aacf55879",tooltip="Dodaje blok rejestratora sygnału."];
+  Node10 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="ListaBlokow::RozpocznijPrace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lista_blokow.html#aa04d076c3824fc7034998d7829f25395",tooltip="Metoda ta inicjalizuje wszystkie bloki sygnałowe z listy."];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="ListaBlokow::WyliczSygnal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lista_blokow.html#acc94cb1f57abd2ea11c9bc88b59b8b3e",tooltip="Realizuje przeliczenie sygnału dla całej listy bloków."];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="ListaBlokow::ZakonczPrace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_lista_blokow.html#ad35fa127514dc93ba034e29eee5d0081",tooltip="Kończy pracę wszystkich bloków."];
+}
