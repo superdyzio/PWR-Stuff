@@ -1,0 +1,9 @@
+#!/bin/bash
+
+trap 'echo "komunikat"' SIGINT
+trap '' SIGILL
+
+while : ; do
+	echo "witam"
+	sleep 3
+done

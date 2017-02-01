@@ -1,0 +1,12 @@
+#!/bin/bash
+# wymuszenie lokalizacji kanonicznej
+LC_ALL=C
+# zapamietujemy w zmiennej aktualny dzien tygodnia
+dzien=`date +%A`
+# sprawdzamy czy obecny dzien jest dniem weekendu
+if [ "$dzien" = "sobota" ] || [ "$dzien" = "niedziela" ]
+then
+	echo "Witam serdecznie w ten piekny weekendowy dzien!"
+else
+	echo "Dzien dobry, prosze brac sie do roboty!"
+fi

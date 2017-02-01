@@ -1,0 +1,530 @@
+/*
+ * main.c
+ *
+ *  Created on: 14-12-2014
+ *      Author: jacek
+ */
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <signal.h>
+#include <unistd.h>
+
+#include <pthread.h>
+
+#include <openssl/md5.h>
+
+#define ILOSC_HASEL 150
+#define ILOSC_SLOWNIK 350000
+
+
+/*
+Struktura przeznaczona do komunikacji między wątkami,
+a także przechowująca zwerifykowane klucze
+mutex - mutex
+wyniki - tablica zweryfikowanych kluczy
+nput - zmienna informujaca o ilosci znalezionych kluczy
+*/
+struct {
+	pthread_mutex_t	mutex;
+	char	wyniki[ILOSC_HASEL][33], wyn[ILOSC_HASEL][33];
+	int	nput;
+} shared = { PTHREAD_MUTEX_INITIALIZER };
+
+char tablica[ILOSC_SLOWNIK+1][33];	// Tablica słownika
+//char *tablica[33];
+char tablicaMD5[ILOSC_HASEL][33];	// Tablica kluczów do sprawdzenia
+
+
+
+void *Producent1(void *), *Producent2(void *), 
+     *Producent3(void *), *Producent4(void *),
+     *Producent5(void *), *Producent6(void *),
+     *Konsument(void *);	// Deklaracja wątków producenta i konsumenta
+
+
+// Wątek główny/nadzorujący main
+int main(){
+
+//   tablica = (char*) malloc(ILOSC_SLOWNIK * sizeof(*tablica));
+
+   FILE *plik_MD5;		// otwierany plik haseł
+
+   FILE *plik;			// otwierany plik słownika
+   char w_slownika[30];		// wyraz w słowniku
+
+   int i = 0;
+
+   char nazwa_pliku[20];	// nazwa pobieranego pliku haseł
+   char mdString[33];	// zmienna przechowująca jeden klucz
+
+   pthread_t produce[6], consume;	// deklaracja wątków
+
+   printf("Podaj nazwe pliku z haslami: ");
+   scanf("%s", nazwa_pliku);
+
+   plik_MD5 = fopen(nazwa_pliku,"r");	// otwieranie pliku z hasłami
+   if (plik_MD5 == NULL) 
+   {
+      printf("Blad otwarcia pliku\n");
+      return 1;
+   }
+
+   while(!feof(plik_MD5))	// czytaj dopóki nie ma końca pliku
+   {
+      fscanf(plik_MD5, "%s", mdString);
+      strcpy(tablicaMD5[i], mdString);		// kopiuj string do tablicy globalnej
+
+      i++;
+
+   }
+
+   fclose(plik_MD5);	// zamknięcie pliku z hasłami
+
+   i = 0;
+
+   plik = fopen("dictionary.txt","r");	// otwarcie pliku słownika
+	if (plik == NULL)
+	   {
+	      printf("Blad otwarcia pliku\n");
+	      return 2;
+	   }
+
+	while(!feof(plik))	// dopóki plik się nie kończy czytaj
+	   {
+	      fscanf(plik, "%s", w_slownika);
+	      strcpy(tablica[i], w_slownika);
+              
+	      i++;
+              if(i == ILOSC_SLOWNIK) break;
+	   }
+
+   fclose(plik);	// zamknięcie pliku słownika
+
+   pthread_create(&consume, NULL, Konsument, NULL);	// rozpoczęcie wątku konsumenta
+
+   pthread_create(&produce[0], NULL, Producent1, NULL);	// rozpoczęcie wątku producenta1
+   pthread_create(&produce[1], NULL, Producent2, NULL);	// rozpoczęcie wątku producenta2
+   pthread_create(&produce[2], NULL, Producent3, NULL);	// rozpoczęcie wątku producenta3
+   pthread_create(&produce[3], NULL, Producent4, NULL);	// rozpoczęcie wątku producenta4
+   pthread_create(&produce[4], NULL, Producent5, NULL);	// rozpoczęcie wątku producenta5
+   pthread_create(&produce[5], NULL, Producent6, NULL);	// rozpoczęcie wątku producenta6
+
+
+   pthread_join(produce[0], NULL);		// oczekiwanie na zakończenie wątku producentów
+   pthread_join(produce[1], NULL);
+   pthread_join(produce[2], NULL);
+   pthread_join(produce[3], NULL);
+   pthread_join(produce[4], NULL);
+   pthread_join(produce[5], NULL);
+
+   pthread_join(consume, NULL);			// oczekiwanie na zakończenie wątku konsumenta
+
+   
+   
+   return 0;
+ 
+
+
+}
+
+
+
+
+
+
+
+
+/*
+Wątki producenta
+*/
+
+
+/*
+Producent 4 - hasło+liczba
+*/
+void *Producent4(void *arg){
+
+	   int i = 0, j, k, liczba;
+	   char liczba_str[33];	// liczba w stringu
+
+	   char tablica_i[33];
+	   char polaczany[66];	// połączone hasło
+
+	   unsigned char digest[16];	// zmienne do transformacji stringa na klucz MD5
+	   char mdString[33], pom[33];
+
+	   while(1){	// nieskończona pętla
+
+	   	   for(i = 0; i < ILOSC_SLOWNIK; i++){	// dla każdego hasła w słowniku
+
+	   		   strcpy(tablica_i, tablica[i]);
+
+	   		   for(j = 0; j < strlen(tablica_i); j++)	// zamień wszystkie litery na małe
+	   			   tablica_i[j] = tolower(tablica_i[j]);
+	   		   
+
+	   		   strcpy(polaczany, tablica_i);
+	   		   sprintf(liczba_str, "%i", liczba);	// dodaj do hasła liczbę
+	   		   strcat(polaczany, liczba_str);	
+
+
+	   	   	   MD5_CTX ctx;	// zmienna MD5
+	   		   MD5_Init(&ctx);	// inicjalizacja generowania MD5
+	   		   MD5_Update(&ctx, polaczany, strlen(polaczany));
+	   		   MD5_Final(digest, &ctx);	// wygenerowanie MD5
+
+	   		   for(k = 0; k < 16; k++){
+	   		        sprintf(&mdString[k*2], "%02x", (unsigned int)digest[k]);	// zamiana wygenerowanej funkcji na ciąg znaków
+	   		   }
+				strcpy(pom,polaczany);
+	   		   strcpy(polaczany, mdString);
+
+	   		   for(k = 0; k < ILOSC_HASEL; k++){
+
+	   		    	if(strcmp(polaczany, tablicaMD5[k]) == 0){
+
+	   		    	printf("Znaleziono takie same klucze dla pozycji %i!\n", k);
+	   		    	strcpy(shared.wyniki[shared.nput], tablicaMD5[k]);	// skopiowanie otrzymanego wyniku do tablicy
+				strcpy(shared.wyn[shared.nput], pom);
+	   		    	shared.nput++;	// zwiększenie ilości znalezionych wyników
+	   	//	    	return(NULL);	// zamknięcie działania producenta
+	   		    	   		}
+	   		    	   }
+	   		   
+                      }
+			liczba++;
+	   	   }
+}
+
+/*
+Producent 5 - Hasło+liczba
+*/
+void *Producent5(void *arg){
+
+	   int i = 0, j, k, liczba;
+	   char liczba_str[33];
+
+	   char tablica_i[33];
+	   char polaczany[66];
+
+	   unsigned char digest[16];
+	   char mdString[33];
+
+	   while(1){
+
+	   	   for(i = 0; i < ILOSC_SLOWNIK; i++){
+
+	   		   strcpy(tablica_i, tablica[i]);
+
+			   tablica_i[0] = toupper(tablica_i[0]);
+
+	   		   for(j = 1; j < strlen(tablica_i); j++)
+	   			   tablica_i[j] = tolower(tablica_i[j]);
+	   		   
+	   		   strcpy(polaczany, tablica_i);
+	   		   sprintf(liczba_str, "%i", liczba);
+	   		   strcat(polaczany, liczba_str);		   
+
+	   	   	   MD5_CTX ctx;	// zmienna MD5
+	   		   MD5_Init(&ctx);	// inicjalizacja generowania MD5
+	   		   MD5_Update(&ctx, polaczany, strlen(polaczany));
+	   		   MD5_Final(digest, &ctx);	// wygenerowanie MD5
+
+	   		   for(k = 0; k < 16; k++){
+	   		        sprintf(&mdString[k*2], "%02x", (unsigned int)digest[k]);	// zamiana wygenerowanej funkcji na ciąg znaków
+	   		   }
+	   		   strcpy(polaczany, mdString);
+
+	   		   for(k = 0; k < ILOSC_HASEL; k++){
+
+	   		    	if(strcmp(polaczany, tablicaMD5[k]) == 0){
+
+	   		    	printf("Znaleziono takie same klucze dla pozycji %i!\n", k);
+	   		    	strcpy(shared.wyniki[shared.nput], tablicaMD5[k]);	// skopiowanie otrzymanego wyniku do tablicy
+	   		    	shared.nput++;	// zwiększenie ilości znalezionych wyników
+	   	//	    	return(NULL);	// zamknięcie działania producenta
+	   		    	   		}
+	   		    	   }
+			}
+	   		   liczba++;
+	   	   }
+}
+
+/*
+Producent 6 - HASŁO+liczba
+*/
+void *Producent6(void *arg){
+
+	   int i = 0, j, k, liczba;
+	   char liczba_str[33];
+
+	   char tablica_i[33];
+	   char polaczany[66];
+
+	   unsigned char digest[16];
+	   char mdString[33];
+
+	   while(1){
+
+	   	   for(i = 0; i < ILOSC_SLOWNIK; i++){
+
+	   		   strcpy(tablica_i, tablica[i]);
+
+	   		   for(j = 0; j < strlen(tablica_i); j++)
+	   			   tablica_i[j] = toupper(tablica_i[j]);
+	   		   
+
+			   strcpy(polaczany, tablica_i);
+	   		   sprintf(liczba_str, "%i", liczba);
+	   		   strcat(polaczany, liczba_str);
+
+	   	   	   MD5_CTX ctx;	// zmienna MD5
+	   		   MD5_Init(&ctx);	// inicjalizacja generowania MD5
+	   		   MD5_Update(&ctx, polaczany, strlen(polaczany));
+	   		   MD5_Final(digest, &ctx);	// wygenerowanie MD5
+
+	   		   for(k = 0; k < 16; k++){
+	   		        sprintf(&mdString[k*2], "%02x", (unsigned int)digest[k]);	// zamiana wygenerowanej funkcji na ciąg znaków
+	   		   }
+	   		   strcpy(polaczany, mdString);
+
+	   		   for(k = 0; k < ILOSC_HASEL; k++){
+
+	   		    	if(strcmp(polaczany, tablicaMD5[k]) == 0){
+
+	   		    	printf("Znaleziono takie same klucze dla pozycji %i!\n", k);
+	   		    	strcpy(shared.wyniki[shared.nput], tablicaMD5[k]);	// skopiowanie otrzymanego wyniku do tablicy
+	   		    	shared.nput++;	// zwiększenie ilości znalezionych wyników
+	   	//	    	return(NULL);	// zamknięcie działania producenta
+	   		    	   		}
+	   		    	   }
+			}
+	   		   liczba++;
+	   	   }
+}
+
+/*
+Producent 1 - Hasło1Hasło
+*/
+void *Producent1(void *arg){
+
+	   int i = 0, j, k;
+
+	   char tablica_i[33];
+	   char tablica_j[33];
+	   char polaczany[66];	// połączone hasło
+
+	   unsigned char digest[16];	// zmienne do transformacji stringa na klucz MD5
+	   char mdString[33];
+
+	   for(i = 0; i < ILOSC_SLOWNIK; i++){
+
+		   strcpy(tablica_i, tablica[i]);
+
+		   for(j = 0; j < ILOSC_SLOWNIK; j++){
+
+			   strcpy(tablica_j, tablica[j]);
+
+			   tablica_i[0] = toupper(tablica_i[0]);
+			   tablica_j[0] = toupper(tablica_j[0]);
+
+			   strcpy(polaczany, tablica_i);
+			   strcat(polaczany, "1");
+			   strcat(polaczany, tablica_j);
+
+	           MD5_CTX ctx;	// zmienna MD5
+	           MD5_Init(&ctx);	// inicjalizacja generowania MD5
+	           MD5_Update(&ctx, polaczany, strlen(polaczany));
+	           MD5_Final(digest, &ctx);	// wygenerowanie MD5
+
+	           for(k = 0; k < 16; k++){
+	        	   sprintf(&mdString[k*2], "%02x", (unsigned int)digest[k]);	// zamiana wygenerowanej funkcji na ciąg znaków
+	           }
+	           strcpy(polaczany, mdString);
+
+	    	   for(k = 0; k < ILOSC_HASEL; k++){
+
+	    	   		if(strcmp(polaczany, tablicaMD5[k]) == 0){
+
+	    	   	printf("Znaleziono takie same klucze dla pozycji %i!\n", k);
+	    	   	strcpy(shared.wyniki[shared.nput], tablicaMD5[k]);	// skopiowanie otrzymanego wyniku do tablicy
+	    	   	shared.nput++;	// zwiększenie ilości znalezionych wyników
+//	    	   	return(NULL);	// zamknięcie działania producenta
+	    	   		}
+	    	   }
+	   	 }
+	 }
+}
+
+
+
+/*
+Producent 2 - hasło#hasło
+*/
+void *Producent2(void *arg){
+
+	   int i = 0, j, k;
+
+	   char tablica_i[33];
+	   char tablica_j[33];
+	   char polaczany[66];
+
+	   unsigned char digest[16];
+	   char mdString[33];
+
+	   for(i = 0; i < ILOSC_SLOWNIK; i++){
+
+		   strcpy(tablica_i, tablica[i]);
+
+		   for(j = 0; j < ILOSC_SLOWNIK; j++){
+
+			   strcpy(tablica_j, tablica[j]);
+
+			   tablica_i[0] = tolower(tablica_i[0]);
+			   tablica_j[0] = tolower(tablica_j[0]);
+
+			   strcpy(polaczany, tablica_i);
+			   strcat(polaczany, "#");
+			   strcat(polaczany, tablica_j);
+
+	           MD5_CTX ctx;	// zmienna MD5
+	           MD5_Init(&ctx);	// inicjalizacja generowania MD5
+	           MD5_Update(&ctx, polaczany, strlen(polaczany));
+	           MD5_Final(digest, &ctx);	// wygenerowanie MD5
+
+	           for(k = 0; k < 16; k++){
+	        	   sprintf(&mdString[k*2], "%02x", (unsigned int)digest[k]);	// zamiana wygenerowanej funkcji na ciąg znaków
+	           }
+	           strcpy(polaczany, mdString);
+
+	    	   for(k = 0; k < ILOSC_HASEL; k++){
+
+	    	   		if(strcmp(polaczany, tablicaMD5[k]) == 0){
+
+	    	   	printf("Znaleziono takie same klucze dla pozycji %i!\n", k);
+	    	   	strcpy(shared.wyniki[shared.nput], tablicaMD5[k]);	// skopiowanie otrzymanego wyniku do tablicy
+	    	   	shared.nput++;	// zwiększenie ilości znalezionych wyników
+//	    	   	return(NULL);	// zamknięcie działania producenta
+	    	   		}
+	    	   }
+	   	 }
+	 }
+}
+
+/*
+Producent 3 - HasłoHasło
+*/
+void *Producent3(void *arg){
+
+	   int i = 0, j, k;
+
+	   char tablica_i[33];
+	   char tablica_j[33];
+	   char polaczany[66];
+
+	   unsigned char digest[16];
+	   char mdString[33];
+
+	   for(i = 0; i < ILOSC_SLOWNIK; i++){
+
+		   strcpy(tablica_i, tablica[i]);
+
+		   for(j = 0; j < ILOSC_SLOWNIK; j++){
+
+			   strcpy(tablica_j, tablica[j]);
+
+			   tablica_i[0] = toupper(tablica_i[0]);
+			   tablica_j[0] = toupper(tablica_j[0]);
+
+			   strcpy(polaczany, tablica_i);
+			   strcat(polaczany, tablica_j);
+
+	           MD5_CTX ctx;	// zmienna MD5
+	           MD5_Init(&ctx);	// inicjalizacja generowania MD5
+	           MD5_Update(&ctx, polaczany, strlen(polaczany));
+	           MD5_Final(digest, &ctx);	// wygenerowanie MD5
+
+	           for(k = 0; k < 16; k++){
+	        	   sprintf(&mdString[k*2], "%02x", (unsigned int)digest[k]);	// zamiana wygenerowanej funkcji na ciąg znaków
+	           }
+	           strcpy(polaczany, mdString);
+
+	    	   for(k = 0; k < ILOSC_HASEL; k++){
+
+	    	   		if(strcmp(polaczany, tablicaMD5[k]) == 0){
+
+	    	   	printf("Znaleziono takie same klucze dla pozycji %i!\n", k);
+	    	   	strcpy(shared.wyniki[shared.nput], tablicaMD5[k]);	// skopiowanie otrzymanego wyniku do tablicy
+	    	   	shared.nput++;	// zwiększenie ilości znalezionych wyników
+//	    	   	return(NULL);	// zamknięcie działania producenta
+	    	   		}
+	    	   }
+	   	 }
+	 }
+}
+
+
+
+
+
+
+
+
+/*
+Funkcja mutexowa używana do czekania na pozytywny wynik
+*/
+void consume_wait(int i){
+	for ( ; ; ) {
+		pthread_mutex_lock(&shared.mutex);
+		if (i < shared.nput) {
+		pthread_mutex_unlock(&shared.mutex);
+		return;
+		}
+	  pthread_mutex_unlock(&shared.mutex);
+    	}
+}
+
+/*
+Funkcja sygnału SIGHUP używana do wyświetlenia wyników
+*/
+void sygnal(int sig)
+{
+  int i;
+  printf("\n\nUzyskane wyniki:\n"); 
+
+  for (i = 0; i < shared.nput; i++)
+      printf("%i: %s\n", i, shared.wyniki[i]);
+
+  printf("\n\n");
+    
+}
+
+/*
+Funkcja konsumenta
+*/
+void *Konsument(void *arg){
+
+  struct sigaction syg;		// deklaracja sygnału
+ 
+  syg.sa_handler = sygnal;
+  sigemptyset(&syg.sa_mask);
+  syg.sa_flags = 0;
+  sigaction(SIGHUP, &syg, NULL);  //	funkcja odpowiedzi na sygnał
+
+	int i;
+
+	for (i = 0; i < ILOSC_HASEL; i++) {
+
+		consume_wait(i);	// poczekaj na pozytywny wynik
+		if (shared.wyniki[i] != "") {
+			printf("Wyniki[%i] = %s\n", i, shared.wyniki[i]);	// wyświetl wynik
+			printf("Oryginalne haslo[%i] = %s\n", i, shared.wyn[i]);
+		}}
+
+
+	return(NULL);
+
+}
+

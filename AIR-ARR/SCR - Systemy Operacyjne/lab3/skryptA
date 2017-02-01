@@ -1,0 +1,4 @@
+#!/bin/bash
+bash ./skryptB &
+sleep 5s
+exit

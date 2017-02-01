@@ -1,0 +1,9 @@
+#!/bin/bash
+# sprawdzenie ilosci argumentow wywolania skryptu
+if [ $# -eq 3 ]
+then
+	find $1 -mtime $2 > lista
+	tar -cvf $3 -T lista
+else
+	echo "Niewlasciwa ilosc argumentow wywolania skryptu!"
+fi

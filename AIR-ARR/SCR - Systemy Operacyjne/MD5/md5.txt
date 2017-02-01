@@ -1,0 +1,38 @@
+Script started on Tue 20 Jan 2015 07:16:36 AM PST
+]0;dyzio@ubuntu: ~/Desktop/MD5dyzio@ubuntu:~/Desktop/MD5$ ./md5.out
+Podaj nazwe pliku z haslami: hasla.txt
+Znaleziono takie same klucze dla pozycji 149!
+Wyniki[0] = 8c54a70cdfe3b1b0bdcf363abaddd18e
+Oryginalne haslo[0] = abama1
+Znaleziono takie same klucze dla pozycji 89!
+Wyniki[1] = b400eaff92eee194cf2e894febf36b14
+Oryginalne haslo[1] = blackburn1
+Znaleziono takie same klucze dla pozycji 30!
+Wyniki[2] = a19e1eeb71e35d213a3d585dae457cec
+Oryginalne haslo[2] = bradford1
+Znaleziono takie same klucze dla pozycji 52!
+Wyniki[3] = 6a1c6dbb044fbcd4f7f496af7532ce0e
+Oryginalne haslo[3] = matthew2
+Znaleziono takie same klucze dla pozycji 56!
+Wyniki[4] = ed1bf065b3fe8db19a65fca44d33d797
+Oryginalne haslo[4] = beckham7
+Znaleziono takie same klucze dla pozycji 80!
+Wyniki[5] = 45e4d33b0ba286628ff41feccb2db68e
+Oryginalne haslo[5] = maximus9
+Znaleziono takie same klucze dla pozycji 47!
+Wyniki[6] = 82245b7331594b09d28df1b476463b72
+Oryginalne haslo[6] = joshua11
+Znaleziono takie same klucze dla pozycji 141!
+Wyniki[7] = 0c5a22a812bdaf0423b6f794d51e005b
+Oryginalne haslo[7] = milo13
+Znaleziono takie same klucze dla pozycji 3!
+Wyniki[8] = 5d1597dd0790e336bea5402e99cdc421
+Oryginalne haslo[8] = Victoria14
+Znaleziono takie same klucze dla pozycji 106!
+Wyniki[9] = fc51c4804fabeeb1ad8739c297d8f88a
+Oryginalne haslo[9] = snark16
+^C
+]0;dyzio@ubuntu: ~/Desktop/MD5dyzio@ubuntu:~/Desktop/MD5$ exit
+exit
+
+Script done on Tue 20 Jan 2015 07:22:13 AM PST

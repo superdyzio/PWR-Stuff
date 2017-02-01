@@ -1,0 +1,6 @@
+#!/bin/bash
+for (( i=0 ; $i < 15 ; i++))
+do
+	echo "Skrypt 1"
+	sleep 2s
+done
