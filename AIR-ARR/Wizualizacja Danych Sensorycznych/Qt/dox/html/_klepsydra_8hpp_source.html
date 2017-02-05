@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Klepsydra: Plik źródłowy /home/perdziu/Pulpit/Qt/prj/inc/Klepsydra.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Klepsydra
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">WDS2015</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_klepsydra_8hpp_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">Klepsydra.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_klepsydra_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef KLEPSYDRA_HH</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define KLEPSYDRA_HH</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QComboBox&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QDial&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QFrame&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QLabel&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QPushButton&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QTabWidget&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QWidget&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;QPainter&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;QPixmap&gt;</span> </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;QImage&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;QApplication&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;QSlider&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;QProgressBar&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;QBrush&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;QPalette&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;QGraphicsColorizeEffect&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_klepsydra.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_klepsydra.html">Klepsydra</a> : <span class="keyword">public</span> QWidget { </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_klepsydra.html#a6a5d39e02684c06d22fdfce23325e8de">   43</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_klepsydra.html#a6a5d39e02684c06d22fdfce23325e8de">_stanStrumienia</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_klepsydra.html#a8e3e000483f354ec336ec89e13fb9519">   47</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_klepsydra.html#a8e3e000483f354ec336ec89e13fb9519">_predkoscPrzeplywu</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_klepsydra.html#a678d31afef00b6065e45f3de40fcd83a">   51</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_klepsydra.html#a678d31afef00b6065e45f3de40fcd83a">_wypelnienieGory</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_klepsydra.html#a32d6cbbbda0ea7ee92ff3097f223de50">   55</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_klepsydra.html#a32d6cbbbda0ea7ee92ff3097f223de50">_wypelnienieDolu</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_klepsydra.html#af23cba6362a3e0af9d1f7999ddd307c1">   59</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_klepsydra.html#af23cba6362a3e0af9d1f7999ddd307c1">_wypelnienieGoryProcent</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_klepsydra.html#a0796e9057423a4806f25e45d89119ac5">   63</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_klepsydra.html#a0796e9057423a4806f25e45d89119ac5">_wypelnienieDoluProcent</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_klepsydra.html#a643879656c6db3627c10b71b2c412d9b">   67</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_klepsydra.html#a643879656c6db3627c10b71b2c412d9b">_przesuniecieDolu</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_klepsydra.html#ae1238a67d5d4dd831078fdcaecaabc23">   71</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_klepsydra.html#ae1238a67d5d4dd831078fdcaecaabc23">_skala</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="class_klepsydra.html#a87cc289e8909a098c1963bd7178cacf9">Klepsydra</a>(QWidget* wRodzic = 0L);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_klepsydra.html#ad327b3b74326cbbe687e3cc02042216c">paintEvent</a>(QPaintEvent* event);</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_klepsydra.html#a30f0a9b9018ad6c45acb978b4f811ce2">   86</a></span>&#160;        QImage <a class="code" href="class_klepsydra.html#a30f0a9b9018ad6c45acb978b4f811ce2">_obraz</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_klepsydra.html#ad6c0bec4f2f795b0d905e6d41c9584e4">   90</a></span>&#160;        QSize <a class="code" href="class_klepsydra.html#ad6c0bec4f2f795b0d905e6d41c9584e4">_rozmiar</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_klepsydra.html#a60ebdc1f7e136224675a0e56fa349705">   94</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_klepsydra.html#a60ebdc1f7e136224675a0e56fa349705">_kat</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_klepsydra.html#a1f963fedde1335936d0cb95bc05f9e0b">ustawWartosc</a>(<span class="keywordtype">int</span> wartosc);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_klepsydra.html#a8598b2b88debe6a8e7613620b53bcc7e">liczWartosci</a>();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;};</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif </span></div>
+<div class="ttc" id="class_klepsydra_html_a6a5d39e02684c06d22fdfce23325e8de"><div class="ttname"><a href="class_klepsydra.html#a6a5d39e02684c06d22fdfce23325e8de">Klepsydra::_stanStrumienia</a></div><div class="ttdeci">int _stanStrumienia</div><div class="ttdoc">Pole typu int przechowujące informację o kierunku przepływu strumienia (1 / 0 / -1). </div><div class="ttdef"><b>Definition:</b> <a href="_klepsydra_8hpp_source.html#l00043">Klepsydra.hpp:43</a></div></div>
+<div class="ttc" id="class_klepsydra_html_a30f0a9b9018ad6c45acb978b4f811ce2"><div class="ttname"><a href="class_klepsydra.html#a30f0a9b9018ad6c45acb978b4f811ce2">Klepsydra::_obraz</a></div><div class="ttdeci">QImage _obraz</div><div class="ttdoc">Pole typu QImage przechowujące obraz klepsydry. </div><div class="ttdef"><b>Definition:</b> <a href="_klepsydra_8hpp_source.html#l00086">Klepsydra.hpp:86</a></div></div>
+<div class="ttc" id="class_klepsydra_html_a678d31afef00b6065e45f3de40fcd83a"><div class="ttname"><a href="class_klepsydra.html#a678d31afef00b6065e45f3de40fcd83a">Klepsydra::_wypelnienieGory</a></div><div class="ttdeci">int _wypelnienieGory</div><div class="ttdoc">Pole typu int przechowujące informację o procencie wypełnienia górnej połowy klepsydry. </div><div class="ttdef"><b>Definition:</b> <a href="_klepsydra_8hpp_source.html#l00051">Klepsydra.hpp:51</a></div></div>
+<div class="ttc" id="class_klepsydra_html_a1f963fedde1335936d0cb95bc05f9e0b"><div class="ttname"><a href="class_klepsydra.html#a1f963fedde1335936d0cb95bc05f9e0b">Klepsydra::ustawWartosc</a></div><div class="ttdeci">void ustawWartosc(int wartosc)</div><div class="ttdoc">Slot odbierający sygnał z zewnątrz. </div><div class="ttdef"><b>Definition:</b> <a href="_klepsydra_8cpp_source.html#l00018">Klepsydra.cpp:18</a></div></div>
+<div class="ttc" id="class_klepsydra_html"><div class="ttname"><a href="class_klepsydra.html">Klepsydra</a></div><div class="ttdoc">Klasa odpowiedzialna za widok klepsydry. </div><div class="ttdef"><b>Definition:</b> <a href="_klepsydra_8hpp_source.html#l00037">Klepsydra.hpp:37</a></div></div>
+<div class="ttc" id="class_klepsydra_html_a8e3e000483f354ec336ec89e13fb9519"><div class="ttname"><a href="class_klepsydra.html#a8e3e000483f354ec336ec89e13fb9519">Klepsydra::_predkoscPrzeplywu</a></div><div class="ttdeci">int _predkoscPrzeplywu</div><div class="ttdoc">Pole typu int przechowujące informację o poziomie prędkości przepływu (zależne od kąta wychylenia)...</div><div class="ttdef"><b>Definition:</b> <a href="_klepsydra_8hpp_source.html#l00047">Klepsydra.hpp:47</a></div></div>
+<div class="ttc" id="class_klepsydra_html_a60ebdc1f7e136224675a0e56fa349705"><div class="ttname"><a href="class_klepsydra.html#a60ebdc1f7e136224675a0e56fa349705">Klepsydra::_kat</a></div><div class="ttdeci">int _kat</div><div class="ttdoc">Pole typu int przechowujące wartość (w stopniach) odchylenia klepsydry od pionu. </div><div class="ttdef"><b>Definition:</b> <a href="_klepsydra_8hpp_source.html#l00094">Klepsydra.hpp:94</a></div></div>
+<div class="ttc" id="class_klepsydra_html_ae1238a67d5d4dd831078fdcaecaabc23"><div class="ttname"><a href="class_klepsydra.html#ae1238a67d5d4dd831078fdcaecaabc23">Klepsydra::_skala</a></div><div class="ttdeci">int _skala</div><div class="ttdoc">Pole typu int służące do skalowania rysowanych obiektów. </div><div class="ttdef"><b>Definition:</b> <a href="_klepsydra_8hpp_source.html#l00071">Klepsydra.hpp:71</a></div></div>
+<div class="ttc" id="class_klepsydra_html_ad6c0bec4f2f795b0d905e6d41c9584e4"><div class="ttname"><a href="class_klepsydra.html#ad6c0bec4f2f795b0d905e6d41c9584e4">Klepsydra::_rozmiar</a></div><div class="ttdeci">QSize _rozmiar</div><div class="ttdoc">Pole typu QSize przechowujące rozmiar klepsydry. </div><div class="ttdef"><b>Definition:</b> <a href="_klepsydra_8hpp_source.html#l00090">Klepsydra.hpp:90</a></div></div>
+<div class="ttc" id="class_klepsydra_html_a87cc289e8909a098c1963bd7178cacf9"><div class="ttname"><a href="class_klepsydra.html#a87cc289e8909a098c1963bd7178cacf9">Klepsydra::Klepsydra</a></div><div class="ttdeci">Klepsydra(QWidget *wRodzic=0L)</div><div class="ttdoc">Konstruktor klasy Klepsydra. </div><div class="ttdef"><b>Definition:</b> <a href="_klepsydra_8cpp_source.html#l00008">Klepsydra.cpp:8</a></div></div>
+<div class="ttc" id="class_klepsydra_html_a8598b2b88debe6a8e7613620b53bcc7e"><div class="ttname"><a href="class_klepsydra.html#a8598b2b88debe6a8e7613620b53bcc7e">Klepsydra::liczWartosci</a></div><div class="ttdeci">void liczWartosci()</div><div class="ttdoc">Slot odbierający sygnał z zewnątrz. </div><div class="ttdef"><b>Definition:</b> <a href="_klepsydra_8cpp_source.html#l00067">Klepsydra.cpp:67</a></div></div>
+<div class="ttc" id="class_klepsydra_html_af23cba6362a3e0af9d1f7999ddd307c1"><div class="ttname"><a href="class_klepsydra.html#af23cba6362a3e0af9d1f7999ddd307c1">Klepsydra::_wypelnienieGoryProcent</a></div><div class="ttdeci">int _wypelnienieGoryProcent</div><div class="ttdoc">Pole typu int przechowujące procentowe wypełnienie górnej połowy klepsydry. </div><div class="ttdef"><b>Definition:</b> <a href="_klepsydra_8hpp_source.html#l00059">Klepsydra.hpp:59</a></div></div>
+<div class="ttc" id="class_klepsydra_html_ad327b3b74326cbbe687e3cc02042216c"><div class="ttname"><a href="class_klepsydra.html#ad327b3b74326cbbe687e3cc02042216c">Klepsydra::paintEvent</a></div><div class="ttdeci">virtual void paintEvent(QPaintEvent *event)</div><div class="ttdoc">Przeciążenie odziedziczonej metody wirtualnej pozwalającej na rysowanie. </div><div class="ttdef"><b>Definition:</b> <a href="_klepsydra_8cpp_source.html#l00023">Klepsydra.cpp:23</a></div></div>
+<div class="ttc" id="class_klepsydra_html_a0796e9057423a4806f25e45d89119ac5"><div class="ttname"><a href="class_klepsydra.html#a0796e9057423a4806f25e45d89119ac5">Klepsydra::_wypelnienieDoluProcent</a></div><div class="ttdeci">int _wypelnienieDoluProcent</div><div class="ttdoc">Pole typu int przechowujące procentowe wypłenienie dolnej połowy klepsydry. </div><div class="ttdef"><b>Definition:</b> <a href="_klepsydra_8hpp_source.html#l00063">Klepsydra.hpp:63</a></div></div>
+<div class="ttc" id="class_klepsydra_html_a32d6cbbbda0ea7ee92ff3097f223de50"><div class="ttname"><a href="class_klepsydra.html#a32d6cbbbda0ea7ee92ff3097f223de50">Klepsydra::_wypelnienieDolu</a></div><div class="ttdeci">int _wypelnienieDolu</div><div class="ttdoc">Pole typu int przechowujące informację o procencie wypełnienia dolnej połowy klepsydry. </div><div class="ttdef"><b>Definition:</b> <a href="_klepsydra_8hpp_source.html#l00055">Klepsydra.hpp:55</a></div></div>
+<div class="ttc" id="class_klepsydra_html_a643879656c6db3627c10b71b2c412d9b"><div class="ttname"><a href="class_klepsydra.html#a643879656c6db3627c10b71b2c412d9b">Klepsydra::_przesuniecieDolu</a></div><div class="ttdeci">int _przesuniecieDolu</div><div class="ttdoc">Pole typu int przechowujące pomocniczą wartość do rysowania wypełnienia klepsydry. </div><div class="ttdef"><b>Definition:</b> <a href="_klepsydra_8hpp_source.html#l00067">Klepsydra.hpp:67</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_4aa64b0872d36146e049722e293482e3.html">prj</a></li><li class="navelem"><a class="el" href="dir_72345776cd6700fb0dedb8f1faaa0c00.html">inc</a></li><li class="navelem"><a class="el" href="_klepsydra_8hpp.html">Klepsydra.hpp</a></li>
+    <li class="footer">Wygenerowano Pn, 15 cze 2015 17:53:13 dla Klepsydra programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<map id="OknoGlowne" name="OknoGlowne">
+<area shape="rect" id="node3" href="$class_dane_symulacji.html" title="Klasa odpowiedzialna za kontrolę trybu symulacji. " alt="" coords="137,83,247,109"/>
+<area shape="rect" id="node4" href="$class_wykres.html" title="Klasa odpowiedzialna za widok wykresu. " alt="" coords="272,83,339,109"/>
+<area shape="rect" id="node6" href="$class_klepsydra.html" title="Klasa odpowiedzialna za widok klepsydry. " alt="" coords="363,83,441,109"/>
+<area shape="rect" id="node10" href="$class_poziomica.html" title="Klasa odpowiedzialna za widok poziomicy. " alt="" coords="467,83,548,109"/>
+<area shape="rect" id="node8" href="$class_okienko.html" title="Klasa odpowiedzialna za wyskakujące okienko z opcjami. " alt="" coords="574,83,644,109"/>
+</map>

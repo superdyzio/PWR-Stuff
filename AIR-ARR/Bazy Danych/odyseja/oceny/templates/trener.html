@@ -1,0 +1,32 @@
+﻿{% extends "base.html"%}
+
+{% block title %} - TRENER{% endblock %}
+
+{% block content %}
+<center>
+    {% for u in uzytkownicy %} 
+        {% if u.login == user.username %}
+	    {% with trener=u %}
+		{% for d in druzyny %} 
+        	    {% if d.Nazwa == trener.Team and d.Konkurencja == null %}
+			<a href="/trener/dodaj_konkurencje/"><button style="height:20px; width:300px;">Wybierz konkurencję dla swojej drużyny</button></a></br></br>
+		    {% endif %}
+		    {% if d.Nazwa == trener.Team and d.Kategoria == null %}
+			<a href="/trener/dodaj_kategorie/"><button style="height:20px; width:300px;">Wybierz kategorię dla swojej drużyny</button></a></br></br>
+		    {% endif %}
+		{% endfor %}
+		<a href="/trener/dodaj_uczestnika/"><button style="height:20px; width:300px;">Dodaj uczestnika do swojej drużyny</button></a></br></br>
+		<a href="/trener/usun_uczestnika/"><button style="height:20px; width:300px;">Usuń uczestnika ze swojej drużyny</button></a></br></br>
+		<a href="/trener/wyswietl_uczestnikow/"><button style="height:20px; width:300px;">Wyświetl członków drużyny</button></a></br></br>
+		<a href="/trener/wyswietl_oceny/"><button style="height:20px; width:300px;">Zobacz oceny swojej drużyny</button></a>
+	    {% endwith %}
+	{% endif %} 
+    {% endfor %}
+</center>
+{% endblock %}
+
+{% block footer %}
+  <div style="text-align:center;">
+    </br></br></br><a href="/"><button>Powrót do strony głównej</button></a>
+  </div>
+{% endblock %}

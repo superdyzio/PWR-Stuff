@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?>
+
+<cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.freescale.arm.cdt.toolchain.config.arm.release.926912754">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.freescale.arm.cdt.toolchain.config.arm.release.926912754" moduleId="org.eclipse.cdt.core.settings" name="RAM">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.managedbuilder.core.ManagedBuildManager" point="org.eclipse.cdt.core.ScannerInfoProvider"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.LltErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.AsmErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.IcodeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.CobjErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.MwErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.MPWErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.MwfeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.LnkErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="afx" artifactName="Malaga" buildProperties="" cleanCommand="&quot;${system:ECLIPSE_HOME}/../gnu/bin/rm&quot; -f" description="" errorParsers="org.eclipse.cdt.core.GmakeErrorParser;com.freescale.core.ide.cdt.errorParsers.LnkErrorParser;com.freescale.core.ide.cdt.errorParsers.AsmErrorParser;com.freescale.core.ide.cdt.errorParsers.CobjErrorParser;com.freescale.core.ide.cdt.errorParsers.IcodeErrorParser;com.freescale.core.ide.cdt.errorParsers.LltErrorParser;com.freescale.core.ide.cdt.errorParsers.MwfeErrorParser;com.freescale.core.ide.cdt.errorParsers.MwErrorParser;com.freescale.core.ide.cdt.errorParsers.MPWErrorParser;" id="com.freescale.arm.cdt.toolchain.config.arm.release.926912754" isPrebuildInvalidatingBuild="false" name="RAM" parent="com.freescale.arm.cdt.toolchain.config.arm.release">
+					<folderInfo id="com.freescale.arm.cdt.toolchain.config.arm.release.926912754." name="/" resourcePath="">
+						<toolChain errorParsers="" id="com.freescale.arm.cdt.toolchain.arm.release.1643385298" name="ARM Toolchain" superClass="com.freescale.arm.cdt.toolchain.arm.release">
+							<targetPlatform id="com.freescale.arm.cdt.toolchain.targetplatform.950791010" isAbstract="false" name="ARM Target Platform" superClass="com.freescale.arm.cdt.toolchain.targetplatform"/>
+							<builder buildPath="${ProjDirPath}/RAM" errorParsers="org.eclipse.cdt.core.GmakeErrorParser;com.freescale.core.ide.cdt.errorParsers.LltErrorParser;com.freescale.core.ide.cdt.errorParsers.AsmErrorParser;com.freescale.core.ide.cdt.errorParsers.IcodeErrorParser;com.freescale.core.ide.cdt.errorParsers.CobjErrorParser;com.freescale.core.ide.cdt.errorParsers.MwErrorParser;com.freescale.core.ide.cdt.errorParsers.MPWErrorParser;com.freescale.core.ide.cdt.errorParsers.MwfeErrorParser;com.freescale.core.ide.cdt.errorParsers.LnkErrorParser" id="com.freescale.arm.cdt.toolchain.builder.1753476406" keepEnvironmentInBuildfile="false" name="GNU Make Builder" parallelBuildOn="true" parallelBuildWorkspaceOn="true" parallelizationNumber="optimal" superClass="com.freescale.arm.cdt.toolchain.builder"/>
+							<tool errorParsers="" id="com.freescale.arm.cdt.toolchain.linker.1948038376" name="ARM Linker" superClass="com.freescale.arm.cdt.toolchain.linker">
+								<option id="com.freescale.arm.cdt.toolchain.linker.libraries.libSearch.17378178" name="Library Search Paths" superClass="com.freescale.arm.cdt.toolchain.linker.libraries.libSearch" valueType="stringList">
+									<listOptionValue builtIn="false" value="&quot;${MCUToolsBaseDir}/ARM_EABI_Support/ewl/lib&quot;"/>
+								</option>
+								<option id="com.freescale.arm.cdt.toolchain.linker.commandFile.327476591" name="Linker Command File" superClass="com.freescale.arm.cdt.toolchain.linker.commandFile" value="${ProjDirPath}/Project_Settings/Linker_Files/ProcessorExpert.lcf" valueType="string"/>
+								<inputType id="com.freescale.arm.cdt.toolchain.linker.input.943798768" name="ARM Linker Input" superClass="com.freescale.arm.cdt.toolchain.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+									<additionalInput kind="additionaldependency" paths="$(LCF_SRCS)"/>
+								</inputType>
+							</tool>
+							<tool errorParsers="" id="com.freescale.arm.cdt.toolchain.compiler.1284825598" name="ARM Compiler" superClass="com.freescale.arm.cdt.toolchain.compiler">
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.input.userIncludes.1755375265" name="Include User Search Paths (-i)" superClass="com.freescale.arm.cdt.toolchain.armCpp.input.userIncludes" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Project_Headers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MCUToolsBaseDir}/ARM_EABI_Support/ewl/EWL_C/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Generated_Code&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Sources&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProcessorExpertPath}/lib/Kinetis/pdd/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProcessorExpertPath}/lib/Kinetis/iofiles&quot;"/>
+								</option>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.exceptions.2100782336" name="Enable Exceptions" superClass="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.exceptions" value="false" valueType="boolean"/>
+								<inputType id="com.freescale.arm.cdt.toolchain.armCpp.cSource.431543962" name="ARM C/C++ Compiler" superClass="com.freescale.arm.cdt.toolchain.armCpp.cSource"/>
+							</tool>
+							<tool errorParsers="" id="com.freescale.arm.cdt.toolchain.assembler.722057545" name="ARM Assembler" superClass="com.freescale.arm.cdt.toolchain.assembler">
+								<option id="com.freescale.arm.cdt.toolchain.armAsm.include.152010362" name="Include User Search Paths (-i)" superClass="com.freescale.arm.cdt.toolchain.armAsm.include" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Generated_Code&quot;"/>
+								</option>
+								<inputType id="com.freescale.arm.cdt.toolchain.armAsm.input.1820512596" name="ARM Assembler Input" superClass="com.freescale.arm.cdt.toolchain.armAsm.input"/>
+							</tool>
+							<tool errorParsers="" id="com.freescale.arm.cdt.toolchain.preproc.1218837121" name="ARM Preprocessor" superClass="com.freescale.arm.cdt.toolchain.preproc"/>
+							<tool errorParsers="" id="com.freescale.arm.cdt.toolchain.disassembler.1206760077" name="ARM Disassembler" superClass="com.freescale.arm.cdt.toolchain.disassembler"/>
+						</toolChain>
+					</folderInfo>
+					<fileInfo id="com.freescale.arm.cdt.toolchain.config.arm.release.926912754..settings/com.freescale.processorexpert.core.prefs" name="com.freescale.processorexpert.core.prefs" rcbsApplicability="disable" resourcePath=".settings/com.freescale.processorexpert.core.prefs" toolsToInvoke=""/>
+					<sourceEntries>
+						<entry excluding=".settings/com.freescale.processorexpert.core.prefs" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="com.freescale.arm.cdt.toolchain.config.arm.release.1068955707">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.freescale.arm.cdt.toolchain.config.arm.release.1068955707" moduleId="org.eclipse.cdt.core.settings" name="FLASH">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.managedbuilder.core.ManagedBuildManager" point="org.eclipse.cdt.core.ScannerInfoProvider"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.LltErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.AsmErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.IcodeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.CobjErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.MwErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.MPWErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.MwfeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.core.ide.cdt.errorParsers.LnkErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="afx" artifactName="Malaga" buildProperties="" cleanCommand="&quot;${system:ECLIPSE_HOME}/../gnu/bin/rm&quot; -f" description="" errorParsers="org.eclipse.cdt.core.GmakeErrorParser;com.freescale.core.ide.cdt.errorParsers.LnkErrorParser;com.freescale.core.ide.cdt.errorParsers.AsmErrorParser;com.freescale.core.ide.cdt.errorParsers.CobjErrorParser;com.freescale.core.ide.cdt.errorParsers.IcodeErrorParser;com.freescale.core.ide.cdt.errorParsers.LltErrorParser;com.freescale.core.ide.cdt.errorParsers.MwfeErrorParser;com.freescale.core.ide.cdt.errorParsers.MwErrorParser;com.freescale.core.ide.cdt.errorParsers.MPWErrorParser;" id="com.freescale.arm.cdt.toolchain.config.arm.release.1068955707" isPrebuildInvalidatingBuild="false" name="FLASH" parent="com.freescale.arm.cdt.toolchain.config.arm.release">
+					<folderInfo id="com.freescale.arm.cdt.toolchain.config.arm.release.1068955707." name="/" resourcePath="">
+						<toolChain errorParsers="" id="com.freescale.arm.cdt.toolchain.arm.release.203381613" name="ARM Toolchain" superClass="com.freescale.arm.cdt.toolchain.arm.release">
+							<targetPlatform id="com.freescale.arm.cdt.toolchain.targetplatform.357885914" isAbstract="false" name="ARM Target Platform" superClass="com.freescale.arm.cdt.toolchain.targetplatform"/>
+							<builder buildPath="${ProjDirPath}/FLASH" errorParsers="org.eclipse.cdt.core.GmakeErrorParser;com.freescale.core.ide.cdt.errorParsers.LltErrorParser;com.freescale.core.ide.cdt.errorParsers.AsmErrorParser;com.freescale.core.ide.cdt.errorParsers.IcodeErrorParser;com.freescale.core.ide.cdt.errorParsers.CobjErrorParser;com.freescale.core.ide.cdt.errorParsers.MwErrorParser;com.freescale.core.ide.cdt.errorParsers.MPWErrorParser;com.freescale.core.ide.cdt.errorParsers.MwfeErrorParser;com.freescale.core.ide.cdt.errorParsers.LnkErrorParser" id="com.freescale.arm.cdt.toolchain.builder.899186947" keepEnvironmentInBuildfile="false" name="GNU Make Builder" parallelBuildOn="true" parallelBuildWorkspaceOn="true" parallelizationNumber="optimal" superClass="com.freescale.arm.cdt.toolchain.builder"/>
+							<tool errorParsers="" id="com.freescale.arm.cdt.toolchain.linker.1875156983" name="ARM Linker" superClass="com.freescale.arm.cdt.toolchain.linker">
+								<option id="com.freescale.arm.cdt.toolchain.linker.libraries.libSearch.749280002" name="Library Search Paths" superClass="com.freescale.arm.cdt.toolchain.linker.libraries.libSearch" valueType="stringList">
+									<listOptionValue builtIn="false" value="&quot;${MCUToolsBaseDir}/ARM_EABI_Support/ewl/lib&quot;"/>
+								</option>
+								<option id="com.freescale.arm.cdt.toolchain.linker.commandFile.741738811" name="Linker Command File" superClass="com.freescale.arm.cdt.toolchain.linker.commandFile" value="${ProjDirPath}/Project_Settings/Linker_Files/ProcessorExpert.lcf" valueType="string"/>
+								<inputType id="com.freescale.arm.cdt.toolchain.linker.input.862909731" name="ARM Linker Input" superClass="com.freescale.arm.cdt.toolchain.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+									<additionalInput kind="additionaldependency" paths="$(LCF_SRCS)"/>
+								</inputType>
+							</tool>
+							<tool errorParsers="" id="com.freescale.arm.cdt.toolchain.compiler.1008641617" name="ARM Compiler" superClass="com.freescale.arm.cdt.toolchain.compiler">
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.input.userIncludes.339813580" name="Include User Search Paths (-i)" superClass="com.freescale.arm.cdt.toolchain.armCpp.input.userIncludes" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Project_Headers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${MCUToolsBaseDir}/ARM_EABI_Support/ewl/EWL_C/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Generated_Code&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Sources&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProcessorExpertPath}/lib/Kinetis/pdd/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProcessorExpertPath}/lib/Kinetis/iofiles&quot;"/>
+								</option>
+								<option id="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.exceptions.641071979" name="Enable Exceptions" superClass="com.freescale.arm.cdt.toolchain.armCpp.language.cpp.exceptions" value="false" valueType="boolean"/>
+								<inputType id="com.freescale.arm.cdt.toolchain.armCpp.cSource.292562721" name="ARM C/C++ Compiler" superClass="com.freescale.arm.cdt.toolchain.armCpp.cSource"/>
+							</tool>
+							<tool errorParsers="" id="com.freescale.arm.cdt.toolchain.assembler.1305394956" name="ARM Assembler" superClass="com.freescale.arm.cdt.toolchain.assembler">
+								<option id="com.freescale.arm.cdt.toolchain.armAsm.include.616429169" name="Include User Search Paths (-i)" superClass="com.freescale.arm.cdt.toolchain.armAsm.include" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Generated_Code&quot;"/>
+								</option>
+								<inputType id="com.freescale.arm.cdt.toolchain.armAsm.input.353130773" name="ARM Assembler Input" superClass="com.freescale.arm.cdt.toolchain.armAsm.input"/>
+							</tool>
+							<tool errorParsers="" id="com.freescale.arm.cdt.toolchain.preproc.1015930706" name="ARM Preprocessor" superClass="com.freescale.arm.cdt.toolchain.preproc"/>
+							<tool errorParsers="" id="com.freescale.arm.cdt.toolchain.disassembler.297849222" name="ARM Disassembler" superClass="com.freescale.arm.cdt.toolchain.disassembler"/>
+						</toolChain>
+					</folderInfo>
+					<fileInfo id="com.freescale.arm.cdt.toolchain.config.arm.release.1068955707..settings/com.freescale.processorexpert.core.prefs" name="com.freescale.processorexpert.core.prefs" rcbsApplicability="disable" resourcePath=".settings/com.freescale.processorexpert.core.prefs" toolsToInvoke=""/>
+					<sourceEntries>
+						<entry excluding=".settings/com.freescale.processorexpert.core.prefs" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="Malaga.com.freescale.arm.cdt.toolchain.project.arm.1433565990" name="ARM Project" projectType="com.freescale.arm.cdt.toolchain.project.arm"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="com.freescale.arm.cdt.toolchain.config.arm.release.1068955707;com.freescale.arm.cdt.toolchain.config.arm.release.1068955707.;com.freescale.arm.cdt.toolchain.compiler.1008641617;com.freescale.arm.cdt.toolchain.armCpp.cSource.292562721">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.freescale.arm.cdt.toolchain.c.symbols.discoveryProfile"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.freescale.arm.cdt.toolchain.config.arm.release.926912754;com.freescale.arm.cdt.toolchain.config.arm.release.926912754.;com.freescale.arm.cdt.toolchain.compiler.1284825598;com.freescale.arm.cdt.toolchain.armCpp.cSource.431543962">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.freescale.arm.cdt.toolchain.c.symbols.discoveryProfile"/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.pathentry"/>
+</cproject>

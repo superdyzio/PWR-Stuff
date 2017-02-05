@@ -1,0 +1,21 @@
+﻿{% extends "base.html"%}
+
+{% block content %}
+  <table cellpadding="2" cellspacing="2" border="2" width=100%>
+  <tr>
+	<td> <b>Drużyna</b></td> <td><b>Czas</b></td> <td><b>Spontan</b></td> <td><b>OCENA</b></td>
+  </tr>
+    {% for o in oceny %}
+      <tr>
+        <td>{{o.Druzyna}}</td> <td>{{o.Czas}}</td> <td>{{o.Spontan}}</td> <td>{{o.Ocena}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
+
+{% block footer %}
+  <div style="text-align:center;">
+    </br></br></br><a href="/sedzia/"><button>Powrót do panelu sędziego</button></a>	
+    </br></br></br><a href="/"><button>Powrót do strony głównej</button></a>
+  </div>
+{% endblock %}

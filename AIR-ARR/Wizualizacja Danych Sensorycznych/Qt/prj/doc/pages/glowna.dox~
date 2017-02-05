@@ -1,0 +1,10 @@
+/*!
+
+	\mainpage 	Elektroniczna klepsydro - poziomica
+	\author		Jan Chodorowski 	(194959)
+	\author		Dawid Perdek		(200450)
+	\date		05.2015
+	\version 	0.3
+
+	\brief  Aplikacja wykonana z użyciem Qt jest uzupełnieniem urządzenia mającego za zadanie symulować w dwóch oddzielnych trybach 		zachowanie klepsydry oraz poziomicy. Dzięki niej można ujrzeć model reakcji urządzenia na kąt nachylenia zadawany za pomocą 			pokrętła, symulować taką reakcję z wykorzystaniem danych z pliku jak i również, po podłączeniu urządzenia do portu USB, 		wizualizować na komputerze rzeczywiste działanie wersji fizycznej.
+*/

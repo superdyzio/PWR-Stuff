@@ -1,0 +1,22 @@
+﻿{% extends "base.html"%}
+
+{% block title %} - WYBÓR KATEGORII{% endblock %}
+
+{% block content %}
+{{literka}}
+	  <div style="margin-left:35%;margin-right:35%;">
+	    <fieldset>
+	        <legend> Wprowadź ocenę i kliknij "Zapisz" </legend>
+     	 	  <form method="post" action=".">{% csrf_token %}
+     	     {{ form.as_p }}
+     	    <div style="text-align:center"><input type="submit" value="Zapisz"></div>
+    	   </form>
+  	</fieldset>
+{% endblock %}
+
+{% block footer %}
+  <div style="text-align:center;">
+    </br></br></br><a href="/sedzia/"><button>Powrót do panelu sędziego</button></a>
+    </br></br><a href="/"><button>Powrót do strony głównej</button></a>
+  </div>
+{% endblock %}

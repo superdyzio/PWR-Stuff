@@ -1,0 +1,5 @@
+<map id="OknoGlowne::wizualizuj" name="OknoGlowne::wizualizuj">
+<area shape="rect" id="node2" href="$class_okno_glowne.html#aadc88a8587224afdd39fc536f2774ecf" title="Slot odbierający sygnał z zewnątrz. " alt="" coords="217,31,415,57"/>
+<area shape="rect" id="node3" href="$class_poziomica.html#aaf8e0eb799bbe9d692c14dbff2e35619" title="Slot odbierający sygnał z zewnątrz. " alt="" coords="465,5,639,32"/>
+<area shape="rect" id="node4" href="$class_wykres.html#af44671484a1ff819d891ac84a9844c9e" title="Slot odbierający sygnał z zewnątrz. " alt="" coords="478,56,626,83"/>
+</map>

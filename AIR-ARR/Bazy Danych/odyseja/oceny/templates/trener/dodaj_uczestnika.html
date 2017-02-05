@@ -1,0 +1,21 @@
+﻿{% extends "base.html"%}
+
+{% block title %} - DODAWANIE UCZESTNIKA{% endblock %}
+
+{% block content %}
+	  <div style="margin-left:30%;margin-right:30%;">
+	    <fieldset>
+	        <legend>Wprowadź dane nowego uczestnika i kliknij "Zapisz" </legend>
+     	 	  <form method="post" action=".">{% csrf_token %}
+     	     {{ form.as_p }}
+     	    <div style="text-align:center"><input type="submit" value="Zapisz"></div>
+    	   </form>
+  	</fieldset>
+{% endblock %}
+
+{% block footer %}
+  <div style="text-align:center;">
+    </br></br></br><a href="/trener/"><button>Powrót do panelu trenera</button></a>
+    </br></br><a href="/"><button>Powrót do strony głównej</button></a>
+  </div>
+{% endblock %}

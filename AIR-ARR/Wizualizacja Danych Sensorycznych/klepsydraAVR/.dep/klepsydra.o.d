@@ -1,0 +1,1 @@
+klepsydra.o: klepsydra.c

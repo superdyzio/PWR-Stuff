@@ -1,0 +1,20 @@
+﻿{% extends "base.html"%}
+
+{% block content %}
+  <table cellpadding="2" cellspacing="2" border="2" width=100%>
+  <tr>
+	<td> <b>Nazwa</b></td> <td><b>Trener</b></td> <td><b>Konkurencja</b></td> <td><b>Kategoria</b></td> <td><b>WYNIK_K</b></td> <td><b>WYNIK_S</b></td>
+  </tr>
+    {% for team in druzyny %}
+      <tr>
+	<td>{{team.Nazwa}}</td> <td>{{team.Trener}}</td> <td>{{team.Konkurencja}}</td> <td>{{team.Kategoria}}</td> <td>{{team.Wynik_K}}</td> <td>{{team.Wynik_S}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
+
+{% block footer %}
+  <div style="text-align:center;">
+    </br></br></br><a href="/"><button>Powrót do strony głównej</button></a>
+  </div>
+{% endblock %}

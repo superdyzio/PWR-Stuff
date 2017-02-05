@@ -1,0 +1,6 @@
+<map id="OknoGlowne::obslugaTimera" name="OknoGlowne::obslugaTimera">
+<area shape="rect" id="node2" href="$class_klepsydra.html#a1f963fedde1335936d0cb95bc05f9e0b" title="Slot odbierający sygnał z zewnątrz. " alt="" coords="247,5,419,32"/>
+<area shape="rect" id="node3" href="$class_poziomica.html#aaf8e0eb799bbe9d692c14dbff2e35619" title="Slot odbierający sygnał z zewnątrz. " alt="" coords="246,56,421,83"/>
+<area shape="rect" id="node4" href="$class_wykres.html#a7101aec51f681d0283cfbc97e25107b9" title="Slot odbierający sygnał z zewnątrz. " alt="" coords="250,107,417,133"/>
+<area shape="rect" id="node5" href="$class_wykres.html#a7a5e292c929caec33c3e0e26a5c590dc" title="Metoda odpowiedzialna za wykreślenie punktu na wykresie. " alt="" coords="280,157,387,184"/>
+</map>

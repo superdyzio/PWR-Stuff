@@ -1,0 +1,33 @@
+﻿{% extends "base.html"%}
+
+{% block header %}
+  <div id="nav">
+    {% if user.is_authenticated %} <table width=100%><tr><td align="left" width=34%>Zalogowany użytkownik: <b>{{user.username}}</b> </td>
+	{% for u in uzytkownicy %} 
+		{% if u.login == user.username and u.TS == 'T' %} 
+			<td align="center" width=33%><a href="/trener/"><button>Panel trenera</button></a></td>
+		{% endif %} 
+		{% if u.login == user.username and u.TS = 'S' %} 
+			<td align="center" width=33%><a href="/sedzia/"><button>Panel sędziego</button></a></td>
+		{% endif %} 
+	{% endfor %} 
+	<td align="right" width=33%><a href="/logout/"><button>wyloguj się</button></a></td></tr></table>
+    {% else %}
+      <table width=100%><tr><td align="left" width=50%><a href="/login/"><button>zaloguj się</button></a></td><td align="right" width=50%><a href="/register/"><button>rejestracja</button></a></td></tr></table>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+  <p>
+    <div style="text-align:center;">
+      <h2>Strona domowa systemu oceniania uczestników zawodów "Odyseja umysłu"</h2>
+      <div><img src="media/main.jpg" /></div>
+      <p>{{podpis}}</p></div>
+  </p>
+{% endblock %}
+
+{% block footer %}
+  <div style="text-align:center;">
+    <a href="tabela.html"><button>Tabela końcowa</button></a>
+  </div>
+{% endblock %}

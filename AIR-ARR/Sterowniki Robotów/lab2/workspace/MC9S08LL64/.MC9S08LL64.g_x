@@ -1,0 +1,41 @@
+<CodeGenerationInfo>
+  <ToolchainSettings>
+    <option>
+      <name>PE_G_4PEx_ToolChain_Compiler_SearchUserPaths</name>
+      <values lines_count="2">
+        <Line>"${ProjDirPath}/Sources"</Line>
+        <Line>"${ProjDirPath}/Generated_Code"</Line>
+      </values>
+    </option>
+  </ToolchainSettings>
+  <GeneratedFilesList>
+    <GeneratedByPE>
+      <File Name="Generated_Code/PE_Types.h" FileDate="2015-03-27, 22:24:17" FileAge="1427491457354" FileType="45637" />
+      <File Name="Generated_Code/MyTimer.h" FileDate="2015-03-27, 23:03:47" FileAge="1427493827335" FileType="45637" />
+      <File Name="Generated_Code/IO_Map.h" FileDate="2015-03-27, 22:24:17" FileAge="1427491457329" FileType="45637" />
+      <File Name="Generated_Code/LED2.h" FileDate="2015-03-27, 23:03:47" FileAge="1427493827351" FileType="45637" />
+      <File Name="Generated_Code/MyTimer.c" FileDate="2015-03-27, 23:03:47" FileAge="1427493827331" FileType="45637" />
+      <File Name="Documentation/MC9S08LL64_Settings.xml" FileDate="2015-03-27, 23:03:47" FileAge="1427493827519" FileType="3072" />
+      <File Name="Generated_Code/IO_Map.c" FileDate="2015-03-27, 22:24:17" FileAge="1427491457301" FileType="45637" />
+      <File Name="Generated_Code/LED2.c" FileDate="2015-03-27, 23:03:47" FileAge="1427493827347" FileType="45637" />
+      <File Name="Project_Settings/Linker_Files/ProcessorExpert.prm" FileDate="2015-03-27, 22:24:17" FileAge="1427491457171" FileType="8" />
+      <File Name="Documentation/MC9S08LL64_SIGNALS.txt" FileDate="2015-03-27, 23:03:47" FileAge="1427493827465" FileType="3072" />
+      <File Name="Sources/Events.h" FileDate="2015-03-27, 23:03:47" FileAge="1427493827443" FileType="131328" />
+      <File Name="Generated_Code/PE_Timer.h" FileDate="2015-03-27, 23:03:47" FileAge="1427493827307" FileType="45637" />
+      <File Name="Generated_Code/Cpu.h" FileDate="2015-03-27, 23:03:47" FileAge="1427493827406" FileType="45637" />
+      <File Name="Sources/Events.c" FileDate="2015-03-27, 23:03:47" FileAge="1427493827450" FileType="131328" />
+      <File Name="Generated_Code/LED1.h" FileDate="2015-03-27, 23:03:47" FileAge="1427493827386" FileType="45637" />
+      <File Name="Generated_Code/PE_Timer.c" FileDate="2015-03-27, 23:03:47" FileAge="1427493827302" FileType="45637" />
+      <File Name="Generated_Code/Cpu.c" FileDate="2015-03-27, 23:03:47" FileAge="1427493827413" FileType="45637" />
+      <File Name="Generated_Code/PE_Const.h" FileDate="2015-03-27, 22:24:17" FileAge="1427491457338" FileType="45637" />
+      <File Name="Generated_Code/LED3.h" FileDate="2015-03-27, 23:03:47" FileAge="1427493827343" FileType="45637" />
+      <File Name="Generated_Code/LED1.c" FileDate="2015-03-27, 23:03:47" FileAge="1427493827382" FileType="45637" />
+      <File Name="Generated_Code/PE_Error.h" FileDate="2015-03-27, 22:24:17" FileAge="1427491457349" FileType="45637" />
+      <File Name="Generated_Code/Vectors.c" FileDate="2015-03-27, 23:03:47" FileAge="1427493827421" FileType="45637" />
+      <File Name="Generated_Code/LED3.c" FileDate="2015-03-27, 23:03:47" FileAge="1427493827339" FileType="45637" />
+      <File Name="Sources/main.c" FileDate="2015-03-27, 23:03:47" FileAge="1427493827396" FileType="128" />
+      <File Name="Documentation/MC9S08LL64.txt" FileDate="2015-03-27, 23:03:47" FileAge="1427493827546" FileType="3072" />
+    </GeneratedByPE>
+  </GeneratedFilesList>
+  <CodeGenReference>2</CodeGenReference>
+</CodeGenerationInfo>

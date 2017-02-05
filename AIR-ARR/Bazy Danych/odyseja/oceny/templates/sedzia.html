@@ -1,0 +1,22 @@
+﻿{% extends "base.html"%}
+
+{% block title %} - SĘDZIA{% endblock %}
+
+{% block content %}
+<center>
+    {% for u in uzytkownicy %} 
+        {% if u.login == user.username %}
+	    {% with sedzia=u %}
+		<a href="/sedzia/dodaj_ocene/"><button style="height:20px; width:300px;">Dodaj ocenę</button></a></br></br>
+		<a href="/sedzia/zobacz_oceny/"><button style="height:20px; width:300px;">Zobacz wystawione oceny</button></a></br></br>
+	    {% endwith %}
+	{% endif %} 
+    {% endfor %}
+</center>
+{% endblock %}
+
+{% block footer %}
+  <div style="text-align:center;">
+    </br></br></br><a href="/"><button>Powrót do strony głównej</button></a>
+  </div>
+{% endblock %}

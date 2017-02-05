@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "DrRobotMotionSensorDriver")
+set(DrRobotMotionSensorDriver_MAINTAINER "drrobot <support@drrobot.com>")
+set(DrRobotMotionSensorDriver_DEPRECATED "")
+set(DrRobotMotionSensorDriver_VERSION "1.2.1")
+set(DrRobotMotionSensorDriver_BUILD_DEPENDS )
+set(DrRobotMotionSensorDriver_RUN_DEPENDS )
+set(DrRobotMotionSensorDriver_BUILDTOOL_DEPENDS "catkin")

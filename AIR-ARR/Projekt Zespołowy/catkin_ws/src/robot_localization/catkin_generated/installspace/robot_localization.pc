@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: robot_localization
+Description: Description of robot_localization
+Version: 2.1.7
+Cflags: -I/usr/local/include -I/usr/include/eigen3
+Libs: -L/usr/local/lib -lfilter_base -lekf
+Requires: roscpp tf2 tf2_ros message_filters std_msgs geometry_msgs nav_msgs sensor_msgs diagnostic_msgs diagnostic_updater cmake_modules message_runtime

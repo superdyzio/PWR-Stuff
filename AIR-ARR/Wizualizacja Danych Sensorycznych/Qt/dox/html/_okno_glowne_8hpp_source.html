@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Klepsydra: Plik źródłowy /home/perdziu/Pulpit/Qt/prj/inc/OknoGlowne.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Klepsydra
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">WDS2015</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_okno_glowne_8hpp_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">OknoGlowne.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_okno_glowne_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef MAINWINDOW_HH</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MAINWINDOW_HH</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QComboBox&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QDial&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QFrame&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QLabel&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QPushButton&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QTabWidget&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QWidget&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;QtCore/QVariant&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QAction&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QApplication&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QButtonGroup&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QDialog&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QHeaderView&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;QTimer&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;QPainter&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;QMetaObject&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;QVariant&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;QApplication&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;QSlider&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;QProgressBar&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;dirent.h&gt;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;QSerialPort&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;QSerialPortInfo&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &quot;qcustomplot.hpp&quot;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_poziomica_8hpp.html">Poziomica.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_wykres_8hpp.html">Wykres.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_klepsydra_8hpp.html">Klepsydra.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_dane_symulacji_8hpp.html">DaneSymulacji.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_okienko.html">   51</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_okienko.html">Okienko</a> : <span class="keyword">public</span> QDialog {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_okienko.html#a24c668b03ec58c8aa00b2561dc22e12a">   57</a></span>&#160;        QPushButton *<a class="code" href="class_okienko.html#a24c668b03ec58c8aa00b2561dc22e12a">wczytajUstawieniaDomyslne</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_okienko.html#ad718640812dce4fbd4475b2547a62317">   61</a></span>&#160;        QPushButton *<a class="code" href="class_okienko.html#ad718640812dce4fbd4475b2547a62317">zapiszUstawieniaDomyslne</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_okienko.html#a07744ec8557c861e8ad10c49ebadc3a5">   65</a></span>&#160;        QPushButton *<a class="code" href="class_okienko.html#a07744ec8557c861e8ad10c49ebadc3a5">wyjdz</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_okienko.html#a06a28834956d8ecd1f3e8f7e24eb8def">   69</a></span>&#160;        QLabel *<a class="code" href="class_okienko.html#a06a28834956d8ecd1f3e8f7e24eb8def">stanUstawien</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="class_okienko.html#ac32342ec44488924a877769f2903a540">Okienko</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_okienko.html#abce0f3294207ce917c65af75a274b797">uruchom</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_okienko.html#afa8401b11b0a0424d033238d317b23b1">tlumacz</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="class_okienko.html#ad33d99bdec8af8aa2d76f5e6bea77c82">   87</a></span>&#160;        QString <a class="code" href="class_okienko.html#ad33d99bdec8af8aa2d76f5e6bea77c82">_plik</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_okienko.html#a3355d223d6d9ec623372c956648eea1e">   91</a></span>&#160;    QString <a class="code" href="class_okienko.html#a3355d223d6d9ec623372c956648eea1e">_port</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_okienko.html#afd168cd69d7c683249c03d33a9240c82">zapiszUstawienia</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_okienko.html#a12451af03ff3915d073c4fdf0339b9af">wczytajUstawienia</a>();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;};</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_okno_glowne.html">  116</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_okno_glowne.html">OknoGlowne</a> : <span class="keyword">public</span> QMainWindow {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        Q_OBJECT</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#ac8d8e2d01a83ae473a8da462711b3ebd">  119</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_okno_glowne.html#ac8d8e2d01a83ae473a8da462711b3ebd">aktualnyCzas</a>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#a3b176c3a891b61849859ff9f4b51c9f8">  120</a></span>&#160;   QString <a class="code" href="class_okno_glowne.html#a3b176c3a891b61849859ff9f4b51c9f8">_portInfo</a>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#a44a18d199fb5c14eb1f4db4ed27dac98">  121</a></span>&#160;   QSerialPort *<a class="code" href="class_okno_glowne.html#a44a18d199fb5c14eb1f4db4ed27dac98">serial</a> ;</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#a28c115d86b138eff91ba8075ae551b9d">  122</a></span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="class_okno_glowne.html#a28c115d86b138eff91ba8075ae551b9d">serialWlaczony</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#a510b3f0eee8bce7d58aab5acf94b0fdb">  123</a></span>&#160;        QTimer *<a class="code" href="class_okno_glowne.html#a510b3f0eee8bce7d58aab5acf94b0fdb">timer</a> ;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="class_okno_glowne.html#a57a550ddc9e8c0a2b8b9a34489c0e032">OknoGlowne</a>(QMainWindow *wRodzic = 0L);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_okno_glowne.html#a2b333605dca0ea3ce73d5b4b4c556997">utworzListePlikow</a>();</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_okno_glowne.html#afc1aa585988724bd1fcfbb7fb1c9ed8f">utworzListePortow</a>();</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_okno_glowne.html#ab65939ca334857be34f87f7f81ee2cb1">resizeEvent</a>(QResizeEvent* event);</div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#a1522a08fea6b1b86f98ba5368ada625a">  148</a></span>&#160;        QTabWidget *<a class="code" href="class_okno_glowne.html#a1522a08fea6b1b86f98ba5368ada625a">opcjeWidoku</a>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#a60b624592754d7d8d27c9fefbb509e91">  152</a></span>&#160;    <a class="code" href="class_klepsydra.html">Klepsydra</a> *<a class="code" href="class_okno_glowne.html#a60b624592754d7d8d27c9fefbb509e91">klepsydra</a>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#a18a1184e7b1304c01abec8d700a84abc">  156</a></span>&#160;    <a class="code" href="class_poziomica.html">Poziomica</a> *<a class="code" href="class_okno_glowne.html#a18a1184e7b1304c01abec8d700a84abc">poziomica</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#ae0d69cc9b7d95e3466d7aea1282a4446">  160</a></span>&#160;    <a class="code" href="class_wykres.html">Wykres</a> *<a class="code" href="class_okno_glowne.html#ae0d69cc9b7d95e3466d7aea1282a4446">wykres</a>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#aa60e9186904df96b08098409f48e5c35">  164</a></span>&#160;        QTabWidget *<a class="code" href="class_okno_glowne.html#aa60e9186904df96b08098409f48e5c35">trybyPracy</a>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#a691c8e427cb95d264a7fb55fc7fb0c87">  168</a></span>&#160;        QWidget *<a class="code" href="class_okno_glowne.html#a691c8e427cb95d264a7fb55fc7fb0c87">reczny</a>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#aeab19195b824dcf7793a706a81a3c089">  172</a></span>&#160;        QLabel *<a class="code" href="class_okno_glowne.html#aeab19195b824dcf7793a706a81a3c089">trybRecznyEtykieta</a>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#a8faac8d1648c2553587893070fb836d5">  176</a></span>&#160;        QDial *<a class="code" href="class_okno_glowne.html#a8faac8d1648c2553587893070fb836d5">pokretlo</a>;  </div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#a4ca4b6ceddb53a0d620f58850a474af4">  180</a></span>&#160;        QWidget *<a class="code" href="class_okno_glowne.html#a4ca4b6ceddb53a0d620f58850a474af4">symulacyjny</a>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#a3d156befbca8de643f4fdcac704a165d">  184</a></span>&#160;        QComboBox *<a class="code" href="class_okno_glowne.html#a3d156befbca8de643f4fdcac704a165d">wyborPliku</a>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#ae68b395b2089f35d566686cc53c7775d">  188</a></span>&#160;        QLabel *<a class="code" href="class_okno_glowne.html#ae68b395b2089f35d566686cc53c7775d">trybSymulacyjnyEtykieta</a>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#a6e3da0a6d0a2b49246fd4aba52d9ac1e">  192</a></span>&#160;    QWidget *<a class="code" href="class_okno_glowne.html#a6e3da0a6d0a2b49246fd4aba52d9ac1e">wizualizacyjny</a>;</div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#ade80eb4b13e75e855151072db848d134">  196</a></span>&#160;    QComboBox *<a class="code" href="class_okno_glowne.html#ade80eb4b13e75e855151072db848d134">wyborPortu</a>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#a821948c3d8c5956df36b0d8c68325578">  200</a></span>&#160;    QLabel *<a class="code" href="class_okno_glowne.html#a821948c3d8c5956df36b0d8c68325578">trybWizualizacyjnyEtykieta</a>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#afb1bc5d5bc6ac5c70b83ffb65be497d3">  204</a></span>&#160;    QFrame *<a class="code" href="class_okno_glowne.html#afb1bc5d5bc6ac5c70b83ffb65be497d3">opcjeProgramu</a>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#a717323c02941a18d5aa7730952b2f73f">  208</a></span>&#160;    QLabel *<a class="code" href="class_okno_glowne.html#a717323c02941a18d5aa7730952b2f73f">opcjeEtykieta</a>;</div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#a00abf122407c89298cc892ccda64b37c">  212</a></span>&#160;    QPushButton *<a class="code" href="class_okno_glowne.html#a00abf122407c89298cc892ccda64b37c">ustawienia</a>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#a7f71816d998430c17ec2b5bf0ee61b7d">  216</a></span>&#160;    QPushButton *<a class="code" href="class_okno_glowne.html#a7f71816d998430c17ec2b5bf0ee61b7d">zakoncz</a>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#af74f3ef1944fbe3aea25e947c21701bc">  220</a></span>&#160;        <a class="code" href="class_okienko.html">Okienko</a> *<a class="code" href="class_okno_glowne.html#af74f3ef1944fbe3aea25e947c21701bc">okienko</a>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="class_okno_glowne.html#a709808e0d72e2424dfb70fca01deba69">  224</a></span>&#160;        <a class="code" href="class_dane_symulacji.html">DaneSymulacji</a> <a class="code" href="class_okno_glowne.html#a709808e0d72e2424dfb70fca01deba69">_daneSymulacji</a>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;signals:</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_okno_glowne.html#acaf04e6eb03e095c0bbe046f4337765c">moznaOdczytac</a>();</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_okno_glowne.html#aadc88a8587224afdd39fc536f2774ecf">dokonajOdczytu</a>();</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_okno_glowne.html#ad18d4063fec8c724f8df72ee654c5b5b">wizualizuj</a>();</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_okno_glowne.html#a88fd737faa04b204c3754452d4b5041d">utworzOkienko</a>();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_okno_glowne.html#a5b09e8060488de7c9e47f192d9e41df8">odpalSymulacje</a>();</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_okno_glowne.html#a4d214bde6901716f6c3b780e752f43d9">obslugaZakladek</a>(<span class="keywordtype">int</span> nrZakladki);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_okno_glowne.html#ad963491099fa0faf2dd698ecc8f517dd">obslugaZamknieciaOkienka</a>();</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_okno_glowne.html#acd98955b4b4aa833ce0454918181879b">obslugaWybraniaPliku</a>(<span class="keywordtype">int</span> indeks);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_okno_glowne.html#a53d18ac2ce89ec47bd0e7593b1b03bf4">obslugaWybraniaPortu</a>(<span class="keywordtype">int</span> indeks);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_okno_glowne.html#adac8058a74f85e1a730b0fb2ddbe489d">obslugaTimera</a>();</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;};</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_okno_glowne_html_a691c8e427cb95d264a7fb55fc7fb0c87"><div class="ttname"><a href="class_okno_glowne.html#a691c8e427cb95d264a7fb55fc7fb0c87">OknoGlowne::reczny</a></div><div class="ttdeci">QWidget * reczny</div><div class="ttdoc">Wskaźnik na obiekt typu QWidget odpowiedzialny za działanie trybu ręcznego. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00168">OknoGlowne.hpp:168</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_acd98955b4b4aa833ce0454918181879b"><div class="ttname"><a href="class_okno_glowne.html#acd98955b4b4aa833ce0454918181879b">OknoGlowne::obslugaWybraniaPliku</a></div><div class="ttdeci">void obslugaWybraniaPliku(int indeks)</div><div class="ttdoc">Slot odbierający sygnał z zewnątrz. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8cpp_source.html#l00195">OknoGlowne.cpp:195</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_afc1aa585988724bd1fcfbb7fb1c9ed8f"><div class="ttname"><a href="class_okno_glowne.html#afc1aa585988724bd1fcfbb7fb1c9ed8f">OknoGlowne::utworzListePortow</a></div><div class="ttdeci">void utworzListePortow()</div><div class="ttdoc">Metoda tworząca listę portów do wyboru w trybie wizualizacyjnym. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8cpp_source.html#l00319">OknoGlowne.cpp:319</a></div></div>
+<div class="ttc" id="class_poziomica_html"><div class="ttname"><a href="class_poziomica.html">Poziomica</a></div><div class="ttdoc">Klasa odpowiedzialna za widok poziomicy. </div><div class="ttdef"><b>Definition:</b> <a href="_poziomica_8hpp_source.html#l00037">Poziomica.hpp:37</a></div></div>
+<div class="ttc" id="class_okienko_html_ad33d99bdec8af8aa2d76f5e6bea77c82"><div class="ttname"><a href="class_okienko.html#ad33d99bdec8af8aa2d76f5e6bea77c82">Okienko::_plik</a></div><div class="ttdeci">QString _plik</div><div class="ttdoc">Pole typu QString przechowujące nazwę pliku z danymi do trybu symulacji. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00087">OknoGlowne.hpp:87</a></div></div>
+<div class="ttc" id="class_okienko_html_afd168cd69d7c683249c03d33a9240c82"><div class="ttname"><a href="class_okienko.html#afd168cd69d7c683249c03d33a9240c82">Okienko::zapiszUstawienia</a></div><div class="ttdeci">void zapiszUstawienia()</div><div class="ttdoc">Slot odbierający sygnał z zewnątrz. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8cpp_source.html#l00272">OknoGlowne.cpp:272</a></div></div>
+<div class="ttc" id="class_klepsydra_html"><div class="ttname"><a href="class_klepsydra.html">Klepsydra</a></div><div class="ttdoc">Klasa odpowiedzialna za widok klepsydry. </div><div class="ttdef"><b>Definition:</b> <a href="_klepsydra_8hpp_source.html#l00037">Klepsydra.hpp:37</a></div></div>
+<div class="ttc" id="class_okienko_html_afa8401b11b0a0424d033238d317b23b1"><div class="ttname"><a href="class_okienko.html#afa8401b11b0a0424d033238d317b23b1">Okienko::tlumacz</a></div><div class="ttdeci">void tlumacz()</div><div class="ttdoc">Metoda przygotowująca tekst do tłumaczenie na inny język. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8cpp_source.html#l00265">OknoGlowne.cpp:265</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_acaf04e6eb03e095c0bbe046f4337765c"><div class="ttname"><a href="class_okno_glowne.html#acaf04e6eb03e095c0bbe046f4337765c">OknoGlowne::moznaOdczytac</a></div><div class="ttdeci">void moznaOdczytac()</div><div class="ttdoc">Sygnał mówiący o tym, że gotowe są dane do odczytu. </div></div>
+<div class="ttc" id="_poziomica_8hpp_html"><div class="ttname"><a href="_poziomica_8hpp.html">Poziomica.hpp</a></div><div class="ttdoc">Plik nagłówkowy klasy Poziomica. </div></div>
+<div class="ttc" id="class_okno_glowne_html_a7f71816d998430c17ec2b5bf0ee61b7d"><div class="ttname"><a href="class_okno_glowne.html#a7f71816d998430c17ec2b5bf0ee61b7d">OknoGlowne::zakoncz</a></div><div class="ttdeci">QPushButton * zakoncz</div><div class="ttdoc">Wskaźnik na obiekt typu QPushButton odpowiedzialny za przycisk ZAKOŃCZ w menu opcji programu...</div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00216">OknoGlowne.hpp:216</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_ae68b395b2089f35d566686cc53c7775d"><div class="ttname"><a href="class_okno_glowne.html#ae68b395b2089f35d566686cc53c7775d">OknoGlowne::trybSymulacyjnyEtykieta</a></div><div class="ttdeci">QLabel * trybSymulacyjnyEtykieta</div><div class="ttdoc">Wskaźnik na obiekt typu QLabel odpowiedzialny za etykietę trybu symulacyjnego. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00188">OknoGlowne.hpp:188</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_ade80eb4b13e75e855151072db848d134"><div class="ttname"><a href="class_okno_glowne.html#ade80eb4b13e75e855151072db848d134">OknoGlowne::wyborPortu</a></div><div class="ttdeci">QComboBox * wyborPortu</div><div class="ttdoc">Wskaźnik na obiekt typu QComboBox odpowiedzialny za opcję wyboru portu do czytania danych w trybie wi...</div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00196">OknoGlowne.hpp:196</a></div></div>
+<div class="ttc" id="_klepsydra_8hpp_html"><div class="ttname"><a href="_klepsydra_8hpp.html">Klepsydra.hpp</a></div><div class="ttdoc">Plik nagłówkowy klasy Klepsydra. </div></div>
+<div class="ttc" id="class_okno_glowne_html_a1522a08fea6b1b86f98ba5368ada625a"><div class="ttname"><a href="class_okno_glowne.html#a1522a08fea6b1b86f98ba5368ada625a">OknoGlowne::opcjeWidoku</a></div><div class="ttdeci">QTabWidget * opcjeWidoku</div><div class="ttdoc">Wskaźnik na obiekt typu QTabWidget odpowiedzialny za karty wyboru widoku (Klepsydra / Poziomica / Wyk...</div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00148">OknoGlowne.hpp:148</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_ad18d4063fec8c724f8df72ee654c5b5b"><div class="ttname"><a href="class_okno_glowne.html#ad18d4063fec8c724f8df72ee654c5b5b">OknoGlowne::wizualizuj</a></div><div class="ttdeci">void wizualizuj()</div><div class="ttdoc">Slot odbierający sygnał z zewnątrz. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8cpp_source.html#l00325">OknoGlowne.cpp:325</a></div></div>
+<div class="ttc" id="class_okno_glowne_html"><div class="ttname"><a href="class_okno_glowne.html">OknoGlowne</a></div><div class="ttdoc">Klasa odpowiedzialna za główne okno aplikacji. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00116">OknoGlowne.hpp:116</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a53d18ac2ce89ec47bd0e7593b1b03bf4"><div class="ttname"><a href="class_okno_glowne.html#a53d18ac2ce89ec47bd0e7593b1b03bf4">OknoGlowne::obslugaWybraniaPortu</a></div><div class="ttdeci">void obslugaWybraniaPortu(int indeks)</div><div class="ttdoc">Slot odbierający sygnał z zewnątrz. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8cpp_source.html#l00361">OknoGlowne.cpp:361</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a8faac8d1648c2553587893070fb836d5"><div class="ttname"><a href="class_okno_glowne.html#a8faac8d1648c2553587893070fb836d5">OknoGlowne::pokretlo</a></div><div class="ttdeci">QDial * pokretlo</div><div class="ttdoc">Wskaźnik na obiekt typu QDial odpowiedzialny za pokrętło używane w trybie ręcznym. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00176">OknoGlowne.hpp:176</a></div></div>
+<div class="ttc" id="class_okienko_html_a07744ec8557c861e8ad10c49ebadc3a5"><div class="ttname"><a href="class_okienko.html#a07744ec8557c861e8ad10c49ebadc3a5">Okienko::wyjdz</a></div><div class="ttdeci">QPushButton * wyjdz</div><div class="ttdoc">Wskaźnik na obiekt typu QPushButton odpowiedzialny za wyjście z okienka ustawień. ...</div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00065">OknoGlowne.hpp:65</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_afb1bc5d5bc6ac5c70b83ffb65be497d3"><div class="ttname"><a href="class_okno_glowne.html#afb1bc5d5bc6ac5c70b83ffb65be497d3">OknoGlowne::opcjeProgramu</a></div><div class="ttdeci">QFrame * opcjeProgramu</div><div class="ttdoc">Wskaźnik na obiekt typu QFrame odpowiedzialny za menu z opcjami programu (Ustawienia / ZAKOŃCZ)...</div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00204">OknoGlowne.hpp:204</a></div></div>
+<div class="ttc" id="class_dane_symulacji_html"><div class="ttname"><a href="class_dane_symulacji.html">DaneSymulacji</a></div><div class="ttdoc">Klasa odpowiedzialna za kontrolę trybu symulacji. </div><div class="ttdef"><b>Definition:</b> <a href="_dane_symulacji_8hpp_source.html#l00028">DaneSymulacji.hpp:28</a></div></div>
+<div class="ttc" id="class_okienko_html_a3355d223d6d9ec623372c956648eea1e"><div class="ttname"><a href="class_okienko.html#a3355d223d6d9ec623372c956648eea1e">Okienko::_port</a></div><div class="ttdeci">QString _port</div><div class="ttdoc">Pole typu QString przechowujące nazwę portu z którego mają być czytane dane w trybie wizualizacyjnym...</div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00091">OknoGlowne.hpp:91</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a510b3f0eee8bce7d58aab5acf94b0fdb"><div class="ttname"><a href="class_okno_glowne.html#a510b3f0eee8bce7d58aab5acf94b0fdb">OknoGlowne::timer</a></div><div class="ttdeci">QTimer * timer</div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00123">OknoGlowne.hpp:123</a></div></div>
+<div class="ttc" id="_dane_symulacji_8hpp_html"><div class="ttname"><a href="_dane_symulacji_8hpp.html">DaneSymulacji.hpp</a></div><div class="ttdoc">Plik nagłówkowy klasy DaneSymulacji. </div></div>
+<div class="ttc" id="class_okno_glowne_html_aeab19195b824dcf7793a706a81a3c089"><div class="ttname"><a href="class_okno_glowne.html#aeab19195b824dcf7793a706a81a3c089">OknoGlowne::trybRecznyEtykieta</a></div><div class="ttdeci">QLabel * trybRecznyEtykieta</div><div class="ttdoc">Wskaźnik na obiekt typu QLabel odpowiedzialny za etykietę trybu ręcznego. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00172">OknoGlowne.hpp:172</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a60b624592754d7d8d27c9fefbb509e91"><div class="ttname"><a href="class_okno_glowne.html#a60b624592754d7d8d27c9fefbb509e91">OknoGlowne::klepsydra</a></div><div class="ttdeci">Klepsydra * klepsydra</div><div class="ttdoc">Wskaźnik na obiekt typu Klepsydra odpowiedzialny za działanie widoku klepsydry. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00152">OknoGlowne.hpp:152</a></div></div>
+<div class="ttc" id="_wykres_8hpp_html"><div class="ttname"><a href="_wykres_8hpp.html">Wykres.hpp</a></div><div class="ttdoc">Plik nagłówkowy klasy Wykres. </div></div>
+<div class="ttc" id="class_okno_glowne_html_ad963491099fa0faf2dd698ecc8f517dd"><div class="ttname"><a href="class_okno_glowne.html#ad963491099fa0faf2dd698ecc8f517dd">OknoGlowne::obslugaZamknieciaOkienka</a></div><div class="ttdeci">void obslugaZamknieciaOkienka()</div><div class="ttdoc">Slot odbierający sygnał z zewnątrz. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8cpp_source.html#l00176">OknoGlowne.cpp:176</a></div></div>
+<div class="ttc" id="class_okienko_html_a12451af03ff3915d073c4fdf0339b9af"><div class="ttname"><a href="class_okienko.html#a12451af03ff3915d073c4fdf0339b9af">Okienko::wczytajUstawienia</a></div><div class="ttdeci">void wczytajUstawienia()</div><div class="ttdoc">Slot odbierający sygnał z zewnątrz. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8cpp_source.html#l00295">OknoGlowne.cpp:295</a></div></div>
+<div class="ttc" id="class_okienko_html"><div class="ttname"><a href="class_okienko.html">Okienko</a></div><div class="ttdoc">Klasa odpowiedzialna za wyskakujące okienko z opcjami. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00051">OknoGlowne.hpp:51</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_aa60e9186904df96b08098409f48e5c35"><div class="ttname"><a href="class_okno_glowne.html#aa60e9186904df96b08098409f48e5c35">OknoGlowne::trybyPracy</a></div><div class="ttdeci">QTabWidget * trybyPracy</div><div class="ttdoc">Wskaźnik na obiekt typu QTabWidget odpowiedzialny za karty wyboru trybu pracy (Ręczny / Symulacyjny /...</div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00164">OknoGlowne.hpp:164</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a5b09e8060488de7c9e47f192d9e41df8"><div class="ttname"><a href="class_okno_glowne.html#a5b09e8060488de7c9e47f192d9e41df8">OknoGlowne::odpalSymulacje</a></div><div class="ttdeci">void odpalSymulacje()</div><div class="ttdoc">Slot odbierający sygnał z zewnątrz. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8cpp_source.html#l00170">OknoGlowne.cpp:170</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_af74f3ef1944fbe3aea25e947c21701bc"><div class="ttname"><a href="class_okno_glowne.html#af74f3ef1944fbe3aea25e947c21701bc">OknoGlowne::okienko</a></div><div class="ttdeci">Okienko * okienko</div><div class="ttdoc">Wskaźnik na obiekt typu Okienko odpowiedzialny za wyskakujące okienko z opcjami. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00220">OknoGlowne.hpp:220</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a717323c02941a18d5aa7730952b2f73f"><div class="ttname"><a href="class_okno_glowne.html#a717323c02941a18d5aa7730952b2f73f">OknoGlowne::opcjeEtykieta</a></div><div class="ttdeci">QLabel * opcjeEtykieta</div><div class="ttdoc">Wskaźnik na obiekt typu QLabel odpowiedzialny za etykietę menu z opcjami programu. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00208">OknoGlowne.hpp:208</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a88fd737faa04b204c3754452d4b5041d"><div class="ttname"><a href="class_okno_glowne.html#a88fd737faa04b204c3754452d4b5041d">OknoGlowne::utworzOkienko</a></div><div class="ttdeci">void utworzOkienko()</div><div class="ttdoc">Slot odbierający sygnał z zewnątrz. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8cpp_source.html#l00223">OknoGlowne.cpp:223</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a57a550ddc9e8c0a2b8b9a34489c0e032"><div class="ttname"><a href="class_okno_glowne.html#a57a550ddc9e8c0a2b8b9a34489c0e032">OknoGlowne::OknoGlowne</a></div><div class="ttdeci">OknoGlowne(QMainWindow *wRodzic=0L)</div><div class="ttdoc">Konstruktor klasy OknoGlowne. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8cpp_source.html#l00008">OknoGlowne.cpp:8</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a18a1184e7b1304c01abec8d700a84abc"><div class="ttname"><a href="class_okno_glowne.html#a18a1184e7b1304c01abec8d700a84abc">OknoGlowne::poziomica</a></div><div class="ttdeci">Poziomica * poziomica</div><div class="ttdoc">Wskaźnik na obiekt typu Poziomica odpowiedzialny za działanie widoku poziomicy. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00156">OknoGlowne.hpp:156</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a2b333605dca0ea3ce73d5b4b4c556997"><div class="ttname"><a href="class_okno_glowne.html#a2b333605dca0ea3ce73d5b4b4c556997">OknoGlowne::utworzListePlikow</a></div><div class="ttdeci">void utworzListePlikow()</div><div class="ttdoc">Metoda tworząca listę plików do wyboru w trybie symulacyjnym. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8cpp_source.html#l00202">OknoGlowne.cpp:202</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_ab65939ca334857be34f87f7f81ee2cb1"><div class="ttname"><a href="class_okno_glowne.html#ab65939ca334857be34f87f7f81ee2cb1">OknoGlowne::resizeEvent</a></div><div class="ttdeci">void resizeEvent(QResizeEvent *event)</div><div class="ttdoc">Przeciążenie odziedziczonej metody resizeEvent pozwalającej na zmianę rozmiaru okienka. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8cpp_source.html#l00234">OknoGlowne.cpp:234</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a4ca4b6ceddb53a0d620f58850a474af4"><div class="ttname"><a href="class_okno_glowne.html#a4ca4b6ceddb53a0d620f58850a474af4">OknoGlowne::symulacyjny</a></div><div class="ttdeci">QWidget * symulacyjny</div><div class="ttdoc">Wskaźnik na obiekt typu QWidget odpowiedzialny za działanie trybu symulacyjnego. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00180">OknoGlowne.hpp:180</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_adac8058a74f85e1a730b0fb2ddbe489d"><div class="ttname"><a href="class_okno_glowne.html#adac8058a74f85e1a730b0fb2ddbe489d">OknoGlowne::obslugaTimera</a></div><div class="ttdeci">void obslugaTimera()</div><div class="ttdoc">Slot odbierający sygnał z zewnątrz. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8cpp_source.html#l00151">OknoGlowne.cpp:151</a></div></div>
+<div class="ttc" id="class_okienko_html_abce0f3294207ce917c65af75a274b797"><div class="ttname"><a href="class_okienko.html#abce0f3294207ce917c65af75a274b797">Okienko::uruchom</a></div><div class="ttdeci">void uruchom()</div><div class="ttdoc">Metoda odpowiedzialna za uruchomienie okienka z ustawieniami. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8cpp_source.html#l00242">OknoGlowne.cpp:242</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a28c115d86b138eff91ba8075ae551b9d"><div class="ttname"><a href="class_okno_glowne.html#a28c115d86b138eff91ba8075ae551b9d">OknoGlowne::serialWlaczony</a></div><div class="ttdeci">bool serialWlaczony</div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00122">OknoGlowne.hpp:122</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a821948c3d8c5956df36b0d8c68325578"><div class="ttname"><a href="class_okno_glowne.html#a821948c3d8c5956df36b0d8c68325578">OknoGlowne::trybWizualizacyjnyEtykieta</a></div><div class="ttdeci">QLabel * trybWizualizacyjnyEtykieta</div><div class="ttdoc">Wskaźnik na obiekt typu QLabel odpowiedzialny za etykietę trybu wizualizacyjnego. ...</div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00200">OknoGlowne.hpp:200</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a3d156befbca8de643f4fdcac704a165d"><div class="ttname"><a href="class_okno_glowne.html#a3d156befbca8de643f4fdcac704a165d">OknoGlowne::wyborPliku</a></div><div class="ttdeci">QComboBox * wyborPliku</div><div class="ttdoc">Wskaźnik na obiekt typu QComboBox odpowiedzialny za opcję wyboru pliku z danymi do trybu symulacyjneg...</div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00184">OknoGlowne.hpp:184</a></div></div>
+<div class="ttc" id="class_okienko_html_ac32342ec44488924a877769f2903a540"><div class="ttname"><a href="class_okienko.html#ac32342ec44488924a877769f2903a540">Okienko::Okienko</a></div><div class="ttdeci">Okienko()</div><div class="ttdoc">Konstruktor klasy Okienko. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8cpp_source.html#l00238">OknoGlowne.cpp:238</a></div></div>
+<div class="ttc" id="class_okienko_html_a24c668b03ec58c8aa00b2561dc22e12a"><div class="ttname"><a href="class_okienko.html#a24c668b03ec58c8aa00b2561dc22e12a">Okienko::wczytajUstawieniaDomyslne</a></div><div class="ttdeci">QPushButton * wczytajUstawieniaDomyslne</div><div class="ttdoc">Wskaźnik na obiekt typu QPushButton odpowiedzialny za wczytanie ustawień domyślnych. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00057">OknoGlowne.hpp:57</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a44a18d199fb5c14eb1f4db4ed27dac98"><div class="ttname"><a href="class_okno_glowne.html#a44a18d199fb5c14eb1f4db4ed27dac98">OknoGlowne::serial</a></div><div class="ttdeci">QSerialPort * serial</div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00121">OknoGlowne.hpp:121</a></div></div>
+<div class="ttc" id="class_wykres_html"><div class="ttname"><a href="class_wykres.html">Wykres</a></div><div class="ttdoc">Klasa odpowiedzialna za widok wykresu. </div><div class="ttdef"><b>Definition:</b> <a href="_wykres_8hpp_source.html#l00023">Wykres.hpp:23</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a709808e0d72e2424dfb70fca01deba69"><div class="ttname"><a href="class_okno_glowne.html#a709808e0d72e2424dfb70fca01deba69">OknoGlowne::_daneSymulacji</a></div><div class="ttdeci">DaneSymulacji _daneSymulacji</div><div class="ttdoc">Pole typu DaneSymulacji przechowujące obiekt tej klasy odpowiedzialny za kontrolę trybu symulacji...</div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00224">OknoGlowne.hpp:224</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_ac8d8e2d01a83ae473a8da462711b3ebd"><div class="ttname"><a href="class_okno_glowne.html#ac8d8e2d01a83ae473a8da462711b3ebd">OknoGlowne::aktualnyCzas</a></div><div class="ttdeci">int aktualnyCzas</div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00119">OknoGlowne.hpp:119</a></div></div>
+<div class="ttc" id="class_okienko_html_ad718640812dce4fbd4475b2547a62317"><div class="ttname"><a href="class_okienko.html#ad718640812dce4fbd4475b2547a62317">Okienko::zapiszUstawieniaDomyslne</a></div><div class="ttdeci">QPushButton * zapiszUstawieniaDomyslne</div><div class="ttdoc">Wskaźnik na obiekt typu QPushButton odpowiedzialny za zapisanie obecnych ustawień jako domyślne...</div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00061">OknoGlowne.hpp:61</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_ae0d69cc9b7d95e3466d7aea1282a4446"><div class="ttname"><a href="class_okno_glowne.html#ae0d69cc9b7d95e3466d7aea1282a4446">OknoGlowne::wykres</a></div><div class="ttdeci">Wykres * wykres</div><div class="ttdoc">Wskaźnik na obiekt typu Wykres odpowiedzialny za działanie widoku wykresu. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00160">OknoGlowne.hpp:160</a></div></div>
+<div class="ttc" id="class_okienko_html_a06a28834956d8ecd1f3e8f7e24eb8def"><div class="ttname"><a href="class_okienko.html#a06a28834956d8ecd1f3e8f7e24eb8def">Okienko::stanUstawien</a></div><div class="ttdeci">QLabel * stanUstawien</div><div class="ttdoc">Wskaźnik na obiekt typu QLabel odpowiedzialny za etykietę okienka ustawień. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00069">OknoGlowne.hpp:69</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a00abf122407c89298cc892ccda64b37c"><div class="ttname"><a href="class_okno_glowne.html#a00abf122407c89298cc892ccda64b37c">OknoGlowne::ustawienia</a></div><div class="ttdeci">QPushButton * ustawienia</div><div class="ttdoc">Wskaźnik na obiekt typu QPushButton odpowiedzialny za przycisk Ustawienia w menu opcji programu...</div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00212">OknoGlowne.hpp:212</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a3b176c3a891b61849859ff9f4b51c9f8"><div class="ttname"><a href="class_okno_glowne.html#a3b176c3a891b61849859ff9f4b51c9f8">OknoGlowne::_portInfo</a></div><div class="ttdeci">QString _portInfo</div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00120">OknoGlowne.hpp:120</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_aadc88a8587224afdd39fc536f2774ecf"><div class="ttname"><a href="class_okno_glowne.html#aadc88a8587224afdd39fc536f2774ecf">OknoGlowne::dokonajOdczytu</a></div><div class="ttdeci">void dokonajOdczytu()</div><div class="ttdoc">Slot odbierający sygnał z zewnątrz. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8cpp_source.html#l00344">OknoGlowne.cpp:344</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a4d214bde6901716f6c3b780e752f43d9"><div class="ttname"><a href="class_okno_glowne.html#a4d214bde6901716f6c3b780e752f43d9">OknoGlowne::obslugaZakladek</a></div><div class="ttdeci">void obslugaZakladek(int nrZakladki)</div><div class="ttdoc">Slot odbierający sygnał z zewnątrz. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8cpp_source.html#l00126">OknoGlowne.cpp:126</a></div></div>
+<div class="ttc" id="class_okno_glowne_html_a6e3da0a6d0a2b49246fd4aba52d9ac1e"><div class="ttname"><a href="class_okno_glowne.html#a6e3da0a6d0a2b49246fd4aba52d9ac1e">OknoGlowne::wizualizacyjny</a></div><div class="ttdeci">QWidget * wizualizacyjny</div><div class="ttdoc">Wskaźnik na obiekt typu QWidget odpowiedzialny za działanie trybu wizualizacyjnego. </div><div class="ttdef"><b>Definition:</b> <a href="_okno_glowne_8hpp_source.html#l00192">OknoGlowne.hpp:192</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_4aa64b0872d36146e049722e293482e3.html">prj</a></li><li class="navelem"><a class="el" href="dir_72345776cd6700fb0dedb8f1faaa0c00.html">inc</a></li><li class="navelem"><a class="el" href="_okno_glowne_8hpp.html">OknoGlowne.hpp</a></li>
+    <li class="footer">Wygenerowano Pn, 15 cze 2015 17:53:13 dla Klepsydra programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

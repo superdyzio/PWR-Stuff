@@ -1,0 +1,6 @@
+<map id="OknoGlowne::obslugaWybraniaPortu" name="OknoGlowne::obslugaWybraniaPortu">
+<area shape="rect" id="node2" href="$class_okno_glowne.html#ad18d4063fec8c724f8df72ee654c5b5b" title="Slot odbierający sygnał z zewnątrz. " alt="" coords="259,31,421,57"/>
+<area shape="rect" id="node3" href="$class_okno_glowne.html#aadc88a8587224afdd39fc536f2774ecf" title="Slot odbierający sygnał z zewnątrz. " alt="" coords="470,31,669,57"/>
+<area shape="rect" id="node4" href="$class_poziomica.html#aaf8e0eb799bbe9d692c14dbff2e35619" title="Slot odbierający sygnał z zewnątrz. " alt="" coords="718,5,893,32"/>
+<area shape="rect" id="node5" href="$class_wykres.html#af44671484a1ff819d891ac84a9844c9e" title="Slot odbierający sygnał z zewnątrz. " alt="" coords="731,56,879,83"/>
+</map>

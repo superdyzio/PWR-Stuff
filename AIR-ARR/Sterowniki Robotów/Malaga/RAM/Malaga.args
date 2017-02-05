@@ -1,0 +1,42 @@
+"./Generated_Code/Vectors_c.obj"
+"./Generated_Code/TU2_c.obj"
+"./Generated_Code/TU1_c.obj"
+"./Generated_Code/PwmLdd7_c.obj"
+"./Generated_Code/PwmLdd6_c.obj"
+"./Generated_Code/PwmLdd5_c.obj"
+"./Generated_Code/PwmLdd4_c.obj"
+"./Generated_Code/PwmLdd3_c.obj"
+"./Generated_Code/PwmLdd2_c.obj"
+"./Generated_Code/PwmLdd1_c.obj"
+"./Generated_Code/Przycisk_c.obj"
+"./Generated_Code/Potencjometr_c.obj"
+"./Generated_Code/PWM_Yellow_c.obj"
+"./Generated_Code/PWM_SERVO_c.obj"
+"./Generated_Code/PWM_RGB_RED_c.obj"
+"./Generated_Code/PWM_RGB_GREEN_c.obj"
+"./Generated_Code/PWM_RGB_BLUE_c.obj"
+"./Generated_Code/PE_LDD_c.obj"
+"./Generated_Code/LED_Purple_c.obj"
+"./Generated_Code/LED_Green_c.obj"
+"./Generated_Code/Joystick_c.obj"
+"./Generated_Code/IntI2cLdd1_c.obj"
+"./Generated_Code/FreeCntrLdd1_c.obj"
+"./Generated_Code/FC1_c.obj"
+"./Generated_Code/ExtIntLdd1_c.obj"
+"./Generated_Code/Cpu_c.obj"
+"./Generated_Code/AdcLdd1_c.obj"
+"./Generated_Code/ASerialLdd1_c.obj"
+"./Generated_Code/AS1_c.obj"
+"./Sources/main_c.obj"
+"./Sources/Events_c.obj"
+-proc cortex-m4
+-fp soft
+-little
+-msgstyle parseable
+-g3
+-thumb
+-interworking
+-lavender model=ewl ,print=int ,scan=int ,io=raw
+"$(ProjDirPath)/Project_Settings/Linker_Files/ProcessorExpert.lcf"
+-main __thumb_startup
+-L"$(MCUToolsBaseDirEnv)/ARM_EABI_Support/ewl/lib"

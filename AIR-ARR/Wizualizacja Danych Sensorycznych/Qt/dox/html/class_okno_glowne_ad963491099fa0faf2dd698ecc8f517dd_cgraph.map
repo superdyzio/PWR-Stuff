@@ -1,0 +1,9 @@
+<map id="OknoGlowne::obslugaZamknieciaOkienka" name="OknoGlowne::obslugaZamknieciaOkienka">
+<area shape="rect" id="node2" href="$class_okno_glowne.html#acd98955b4b4aa833ce0454918181879b" title="Slot odbierający sygnał z zewnątrz. " alt="" coords="272,5,477,46"/>
+<area shape="rect" id="node4" href="$class_okno_glowne.html#a53d18ac2ce89ec47bd0e7593b1b03bf4" title="Slot odbierający sygnał z zewnątrz. " alt="" coords="272,70,477,111"/>
+<area shape="rect" id="node3" href="$class_dane_symulacji.html#a927e15b17742e072a9efff938b850fbd" title="Metoda wczytująca dane do symulacji z pliku. " alt="" coords="525,12,720,39"/>
+<area shape="rect" id="node5" href="$class_okno_glowne.html#ad18d4063fec8c724f8df72ee654c5b5b" title="Slot odbierający sygnał z zewnątrz. " alt="" coords="541,77,704,104"/>
+<area shape="rect" id="node6" href="$class_okno_glowne.html#aadc88a8587224afdd39fc536f2774ecf" title="Slot odbierający sygnał z zewnątrz. " alt="" coords="769,77,967,104"/>
+<area shape="rect" id="node7" href="$class_poziomica.html#aaf8e0eb799bbe9d692c14dbff2e35619" title="Slot odbierający sygnał z zewnątrz. " alt="" coords="1017,52,1191,79"/>
+<area shape="rect" id="node8" href="$class_wykres.html#af44671484a1ff819d891ac84a9844c9e" title="Slot odbierający sygnał z zewnątrz. " alt="" coords="1030,103,1178,129"/>
+</map>

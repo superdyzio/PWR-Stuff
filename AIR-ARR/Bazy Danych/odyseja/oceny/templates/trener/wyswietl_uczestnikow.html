@@ -1,0 +1,21 @@
+﻿{% extends "base.html"%}
+
+{% block content %}
+  <table cellpadding="2" cellspacing="2" border="2" width=100%>
+  <tr>
+	<td> <b>Imię</b></td> <td><b>Nazwisko</b></td> <td><b>Lider</b></td>
+  </tr>
+    {% for u in uczestnicy %}
+      <tr>
+        <td>{{u.Imie}}</td> <td>{{u.Nazwisko}}</td> <td>{{u.Lider}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
+
+{% block footer %}
+  <div style="text-align:center;">
+    </br></br></br><a href="/trener/"><button>Powrót do panelu trenera</button></a>	
+    </br></br></br><a href="/"><button>Powrót do strony głównej</button></a>
+  </div>
+{% endblock %}

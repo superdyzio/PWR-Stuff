@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/perdziu/catkin_ws/src/geographic_msgs/devel/setup.sh

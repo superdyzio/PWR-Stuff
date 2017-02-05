@@ -1,0 +1,8 @@
+prefix=/home/perdziu/catkin_ws/install
+
+Name: robot_localization
+Description: Description of robot_localization
+Version: 2.1.7
+Cflags: -I/home/perdziu/catkin_ws/install/include -I/usr/include/eigen3
+Libs: -L/home/perdziu/catkin_ws/install/lib -lfilter_base -lekf
+Requires: roscpp tf2 tf2_ros message_filters std_msgs geometry_msgs nav_msgs sensor_msgs diagnostic_msgs diagnostic_updater cmake_modules message_runtime

@@ -1,0 +1,8 @@
+prefix=/home/perdziu/catkin_ws/devel
+
+Name: drrobot_jaguar4x4_player
+Description: Description of drrobot_jaguar4x4_player
+Version: 1.2.1
+Cflags: -I/home/perdziu/catkin_ws/devel/include -I/home/perdziu/catkin_ws/src/drrobot_jaguar4x4_player/include
+Libs: -L/home/perdziu/catkin_ws/devel/lib -ldrrobot_jaguar4x4_player
+Requires: DrRobotMotionSensorDriver geometery_msgs nav_msgs roscpp roslib rospy sensor_msgs std_msgs tf message_runtime

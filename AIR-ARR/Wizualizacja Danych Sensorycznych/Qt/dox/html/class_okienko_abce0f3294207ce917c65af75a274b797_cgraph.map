@@ -1,0 +1,5 @@
+<map id="Okienko::uruchom" name="Okienko::uruchom">
+<area shape="rect" id="node2" href="$class_okienko.html#afa8401b11b0a0424d033238d317b23b1" title="Metoda przygotowująca tekst do tłumaczenie na inny język. " alt="" coords="214,5,338,32"/>
+<area shape="rect" id="node3" href="$class_okienko.html#afd168cd69d7c683249c03d33a9240c82" title="Slot odbierający sygnał z zewnątrz. " alt="" coords="185,56,367,83"/>
+<area shape="rect" id="node4" href="$class_okienko.html#a12451af03ff3915d073c4fdf0339b9af" title="Slot odbierający sygnał z zewnątrz. " alt="" coords="182,107,370,133"/>
+</map>

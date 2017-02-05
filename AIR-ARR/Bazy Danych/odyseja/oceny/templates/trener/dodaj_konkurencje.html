@@ -1,0 +1,25 @@
+﻿{% extends "base.html"%}
+
+{% block title %} - WYBÓR KONKURENCJI{% endblock %}
+
+{% block content %}
+  {% for d in druzyny %} 
+      {% if d.Trener.login == user.username and d.Konkurencja == null %}
+	  <div style="margin-left:30%;margin-right:30%;">
+	    <fieldset>
+	        <legend> Wybierz konkurencję dla swojej drużyny i kliknij "Zapisz" </legend>
+     	 	  <form method="post" action=".">{% csrf_token %}
+     	     {{ form.as_p }}
+     	    <div style="text-align:center"><input type="submit" value="Zapisz"></div>
+    	   </form>
+  	</fieldset>
+	{% endif %} 
+    {% endfor %}
+{% endblock %}
+
+{% block footer %}
+  <div style="text-align:center;">
+    </br></br></br><a href="/trener/"><button>Powrót do panelu trenera</button></a>
+    </br></br><a href="/"><button>Powrót do strony głównej</button></a>
+  </div>
+{% endblock %}

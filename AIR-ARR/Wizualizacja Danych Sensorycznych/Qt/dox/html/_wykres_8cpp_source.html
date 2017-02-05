@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Klepsydra: Plik źródłowy /home/perdziu/Pulpit/Qt/prj/src/Wykres.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Klepsydra
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">WDS2015</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_wykres_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">Wykres.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_wykres_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_wykres_8hpp.html">Wykres.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_wykres.html#a417ca66dbd0f73f01706c206e084b415">    8</a></span>&#160;<a class="code" href="class_wykres.html#a417ca66dbd0f73f01706c206e084b415">Wykres::Wykres</a>(QWidget *wRodzic) : QCustomPlot(wRodzic) {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_wykres.html#ab12030dc178ebc020e10003c6e39ec45">_wektorCzasu</a>.clear();       <span class="comment">// zerowanie wektorów czasu i wartości</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_wykres.html#a45c26b74b649e78080a28a17f4ac9b3c">_wektorWartosci</a>.clear();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_wykres.html#adf02d7c931fe90a3a6153dd5879d0689">   13</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_wykres.html#adf02d7c931fe90a3a6153dd5879d0689">Wykres::zeruj</a>() {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_wykres.html#ab12030dc178ebc020e10003c6e39ec45">_wektorCzasu</a>.clear();       <span class="comment">// zerowanie wektorów czasu i wartości</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_wykres.html#a45c26b74b649e78080a28a17f4ac9b3c">_wektorWartosci</a>.clear();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_wykres.html#a7a5e292c929caec33c3e0e26a5c590dc">   18</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_wykres.html#a7a5e292c929caec33c3e0e26a5c590dc">Wykres::plotuj</a>(<span class="keywordtype">double</span> czas, <span class="keywordtype">double</span> wartosc) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_wykres.html#ab12030dc178ebc020e10003c6e39ec45">_wektorCzasu</a>.push_back(czas);       <span class="comment">// dodanie obecnego czasu do wektora czasu</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_wykres.html#a45c26b74b649e78080a28a17f4ac9b3c">_wektorWartosci</a>.push_back(wartosc); <span class="comment">// dodanie obecnej wartości do wektora wartości</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    QVector&lt;double&gt; qczas = QVector&lt;double&gt;::fromStdVector(<a class="code" href="class_wykres.html#ab12030dc178ebc020e10003c6e39ec45">_wektorCzasu</a>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    QVector&lt;double&gt; qwartosci = QVector&lt;double&gt;::fromStdVector(<a class="code" href="class_wykres.html#a45c26b74b649e78080a28a17f4ac9b3c">_wektorWartosci</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    this-&gt;addGraph();   <span class="comment">// dodanie wykresu</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    this-&gt;graph(0)-&gt;setData(qczas,qwartosci);   <span class="comment">// wyznaczenie danych do wykresu</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    this-&gt;xAxis-&gt;setRange(czas-10,czas);    <span class="comment">// wyznaczenie zakresów osi</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    this-&gt;yAxis-&gt;setRange(-180, 180);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    this-&gt;replot();     <span class="comment">// wyrysowanie zaktualizowanego wykresu</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_wykres.html#a7101aec51f681d0283cfbc97e25107b9">   30</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_wykres.html#a7101aec51f681d0283cfbc97e25107b9">Wykres::plotujSymulacje</a>(<a class="code" href="class_dane_symulacji.html">DaneSymulacji</a> &amp;daneSymulacji) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    daneSymulacji.<a class="code" href="class_dane_symulacji.html#a0ed117e77c824817696f75e737f057b6">_aktualnyCzas</a>++;      <span class="comment">// inkrementacja aktualnego czasu symulacji</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    this-&gt;addGraph();       <span class="comment">// dodanie wykresu</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    QVector&lt;double&gt; czas = QVector&lt;double&gt;::fromStdVector(daneSymulacji.<a class="code" href="class_dane_symulacji.html#a638b652239173430c7921573bc071769">_czas</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    QVector&lt;double&gt; wartosci = QVector&lt;double&gt;::fromStdVector(daneSymulacji.<a class="code" href="class_dane_symulacji.html#a0aa6d88f5c9fd89a7fa9e3bc6f2c1cff">_wartosci</a>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    this-&gt;graph(0)-&gt;setData(czas,wartosci);     <span class="comment">// wyznaczenie danych do wykresu</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    this-&gt;xAxis-&gt;setRange((<span class="keywordtype">double</span>)daneSymulacji.<a class="code" href="class_dane_symulacji.html#a0ed117e77c824817696f75e737f057b6">_aktualnyCzas</a>/10-10,(<span class="keywordtype">double</span>)daneSymulacji.<a class="code" href="class_dane_symulacji.html#a0ed117e77c824817696f75e737f057b6">_aktualnyCzas</a>/10);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    this-&gt;yAxis-&gt;setRange(-180, 180);   <span class="comment">// wyznaczenie zakresów osi</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    this-&gt;replot();     <span class="comment">// wyrysowanie zaktualizowanego wykresu</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_wykres.html#af44671484a1ff819d891ac84a9844c9e">   41</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_wykres.html#af44671484a1ff819d891ac84a9844c9e">Wykres::plotujOdczyt</a>() {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    this-&gt;addGraph();       <span class="comment">// dodanie wykresu</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    QVector&lt;double&gt; czas = QVector&lt;double&gt;::fromStdVector(<a class="code" href="class_wykres.html#ab12030dc178ebc020e10003c6e39ec45">_wektorCzasu</a>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    QVector&lt;double&gt; wartosci = QVector&lt;double&gt;::fromStdVector(<a class="code" href="class_wykres.html#a45c26b74b649e78080a28a17f4ac9b3c">_wektorWartosci</a>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    this-&gt;graph(0)-&gt;setData(czas,wartosci);     <span class="comment">// wyznaczenie danych do wykresu</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">double</span> teraz = <a class="code" href="class_wykres.html#ab12030dc178ebc020e10003c6e39ec45">_wektorCzasu</a>[<a class="code" href="class_wykres.html#ab12030dc178ebc020e10003c6e39ec45">_wektorCzasu</a>.size()-1];</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    this-&gt;xAxis-&gt;setRange(teraz-10,teraz+1);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    this-&gt;yAxis-&gt;setRange(-180, 180);   <span class="comment">// wyznaczenie zakresów osi</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    this-&gt;replot();     <span class="comment">// wyrysowanie zaktualizowanego wykresu</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="ttc" id="class_wykres_html_af44671484a1ff819d891ac84a9844c9e"><div class="ttname"><a href="class_wykres.html#af44671484a1ff819d891ac84a9844c9e">Wykres::plotujOdczyt</a></div><div class="ttdeci">void plotujOdczyt()</div><div class="ttdoc">Slot odbierający sygnał z zewnątrz. </div><div class="ttdef"><b>Definition:</b> <a href="_wykres_8cpp_source.html#l00041">Wykres.cpp:41</a></div></div>
+<div class="ttc" id="class_dane_symulacji_html_a0aa6d88f5c9fd89a7fa9e3bc6f2c1cff"><div class="ttname"><a href="class_dane_symulacji.html#a0aa6d88f5c9fd89a7fa9e3bc6f2c1cff">DaneSymulacji::_wartosci</a></div><div class="ttdeci">vector&lt; double &gt; _wartosci</div><div class="ttdoc">Wektor typu double przechowujący wartości symulacji. </div><div class="ttdef"><b>Definition:</b> <a href="_dane_symulacji_8hpp_source.html#l00041">DaneSymulacji.hpp:41</a></div></div>
+<div class="ttc" id="class_dane_symulacji_html_a0ed117e77c824817696f75e737f057b6"><div class="ttname"><a href="class_dane_symulacji.html#a0ed117e77c824817696f75e737f057b6">DaneSymulacji::_aktualnyCzas</a></div><div class="ttdeci">double _aktualnyCzas</div><div class="ttdoc">Pole typu double przechowujące aktualny czas symulacji. </div><div class="ttdef"><b>Definition:</b> <a href="_dane_symulacji_8hpp_source.html#l00037">DaneSymulacji.hpp:37</a></div></div>
+<div class="ttc" id="class_wykres_html_a417ca66dbd0f73f01706c206e084b415"><div class="ttname"><a href="class_wykres.html#a417ca66dbd0f73f01706c206e084b415">Wykres::Wykres</a></div><div class="ttdeci">Wykres(QWidget *wRodzic=0L)</div><div class="ttdoc">Konstruktor klasy wykres. </div><div class="ttdef"><b>Definition:</b> <a href="_wykres_8cpp_source.html#l00008">Wykres.cpp:8</a></div></div>
+<div class="ttc" id="class_dane_symulacji_html"><div class="ttname"><a href="class_dane_symulacji.html">DaneSymulacji</a></div><div class="ttdoc">Klasa odpowiedzialna za kontrolę trybu symulacji. </div><div class="ttdef"><b>Definition:</b> <a href="_dane_symulacji_8hpp_source.html#l00028">DaneSymulacji.hpp:28</a></div></div>
+<div class="ttc" id="class_wykres_html_a45c26b74b649e78080a28a17f4ac9b3c"><div class="ttname"><a href="class_wykres.html#a45c26b74b649e78080a28a17f4ac9b3c">Wykres::_wektorWartosci</a></div><div class="ttdeci">vector&lt; double &gt; _wektorWartosci</div><div class="ttdoc">Wektor typu double przechowujący wartości. </div><div class="ttdef"><b>Definition:</b> <a href="_wykres_8hpp_source.html#l00054">Wykres.hpp:54</a></div></div>
+<div class="ttc" id="class_wykres_html_ab12030dc178ebc020e10003c6e39ec45"><div class="ttname"><a href="class_wykres.html#ab12030dc178ebc020e10003c6e39ec45">Wykres::_wektorCzasu</a></div><div class="ttdeci">vector&lt; double &gt; _wektorCzasu</div><div class="ttdoc">Wektor typu double przechowujący czas. </div><div class="ttdef"><b>Definition:</b> <a href="_wykres_8hpp_source.html#l00050">Wykres.hpp:50</a></div></div>
+<div class="ttc" id="_wykres_8hpp_html"><div class="ttname"><a href="_wykres_8hpp.html">Wykres.hpp</a></div><div class="ttdoc">Plik nagłówkowy klasy Wykres. </div></div>
+<div class="ttc" id="class_dane_symulacji_html_a638b652239173430c7921573bc071769"><div class="ttname"><a href="class_dane_symulacji.html#a638b652239173430c7921573bc071769">DaneSymulacji::_czas</a></div><div class="ttdeci">vector&lt; double &gt; _czas</div><div class="ttdoc">Wektor typu double przechowujący czasy odpowiadające wartościom. </div><div class="ttdef"><b>Definition:</b> <a href="_dane_symulacji_8hpp_source.html#l00045">DaneSymulacji.hpp:45</a></div></div>
+<div class="ttc" id="class_wykres_html_adf02d7c931fe90a3a6153dd5879d0689"><div class="ttname"><a href="class_wykres.html#adf02d7c931fe90a3a6153dd5879d0689">Wykres::zeruj</a></div><div class="ttdeci">void zeruj()</div><div class="ttdoc">Metoda odpowiedzialna za wyczyszczenie pola wykresu. </div><div class="ttdef"><b>Definition:</b> <a href="_wykres_8cpp_source.html#l00013">Wykres.cpp:13</a></div></div>
+<div class="ttc" id="class_wykres_html_a7a5e292c929caec33c3e0e26a5c590dc"><div class="ttname"><a href="class_wykres.html#a7a5e292c929caec33c3e0e26a5c590dc">Wykres::plotuj</a></div><div class="ttdeci">void plotuj(double czas, double wartosc)</div><div class="ttdoc">Metoda odpowiedzialna za wykreślenie punktu na wykresie. </div><div class="ttdef"><b>Definition:</b> <a href="_wykres_8cpp_source.html#l00018">Wykres.cpp:18</a></div></div>
+<div class="ttc" id="class_wykres_html_a7101aec51f681d0283cfbc97e25107b9"><div class="ttname"><a href="class_wykres.html#a7101aec51f681d0283cfbc97e25107b9">Wykres::plotujSymulacje</a></div><div class="ttdeci">void plotujSymulacje(DaneSymulacji &amp;daneSymulacji)</div><div class="ttdoc">Slot odbierający sygnał z zewnątrz. </div><div class="ttdef"><b>Definition:</b> <a href="_wykres_8cpp_source.html#l00030">Wykres.cpp:30</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_4aa64b0872d36146e049722e293482e3.html">prj</a></li><li class="navelem"><a class="el" href="dir_400757c3a0df52e783ed9699284f29ce.html">src</a></li><li class="navelem"><a class="el" href="_wykres_8cpp.html">Wykres.cpp</a></li>
+    <li class="footer">Wygenerowano Pn, 15 cze 2015 17:53:13 dla Klepsydra programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>
