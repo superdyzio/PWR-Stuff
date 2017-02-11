@@ -1,0 +1,84 @@
+{% extends 'index.html' %}
+{% load thumbnail %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+    <div class="col-xs-12">
+        <div class="table-form">
+            {% if playersfields %}
+                <form action="{% url 'filter-players' %}" method="GET">
+                    <input type="text" name="search_phrase" placeholder="{% trans "Type search phrase here" %}">
+                    <input type="submit" value="{% trans "Search" %}">
+                </form>
+                <br>
+            {% endif %}
+            {% if search_phrase and not playersfields %}
+                <button onclick="history.go(-1)">{% trans "Back" %}</button>
+                <br/>
+                <br/>
+            {% endif %}
+            {% if search_phrase %}
+                <div>
+                    <strong>{% trans "Search results" %}:</strong>
+                </div>
+            {% endif %}
+        </div>
+        <table class="table table-striped table-bordered table-hover">
+            <thead class="thead-inverse">
+            <tr>
+                    <th>Lp</th>
+                    <th>{% trans "Last Name" %}
+                        <a href="{% url 'players' %}?sort=surname&desc=no">
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </a>
+                        <a href="{% url 'players' %}?sort=surname&desc=yes">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </th>
+                    <th>{% trans "First Name" %}
+                        <a href="{% url 'players' %}?sort=name&desc=no">
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </a>
+                        <a href="{% url 'players' %}?sort=name&desc=yes">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </th>
+                    <th>{% trans "Position" %}
+                        <a href="{% url 'players' %}?sort=position&desc=no">
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </a>
+                        <a href="{% url 'players' %}?sort=position&desc=yes">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            {% if playersfields %}
+                {% for player in playersfields %}
+                    <tr>
+                        <td> {{ forloop.counter }} </td>
+                        <td>
+                            <a href="{% url "player-details" player.slug %}">
+                                {{ player.surname }}
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{% url "player-details" player.slug %}">
+                                {{ player.name }}
+                            </a>
+                        </td>
+                        <td> {{ player.position }} </td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                   {% if search_phrase|length > 0 %}
+                            <td colspan="4">{% trans "There are no players matching criteria" %}.</td>
+                        {% else %}
+                            <td colspan="4">{% trans "There are no players" %}.</td>
+                        {% endif %}
+                </tr>
+            {% endif %}
+        </table>
+    </div>
+{% endblock %}

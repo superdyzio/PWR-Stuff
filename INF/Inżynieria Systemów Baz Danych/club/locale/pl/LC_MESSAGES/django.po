@@ -1,0 +1,311 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-19 01:34+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: club/admin.py:9
+msgid "Personal info"
+msgstr "Dane osobowe"
+
+#: club/admin.py:12
+msgid "Permissions"
+msgstr "Uprawnienia"
+
+#: club/admin.py:14
+msgid "Important dates"
+msgstr "Ważne daty"
+
+#: club/forms.py:7
+msgid "Username"
+msgstr "Nazwa użytkownika"
+
+#: club/forms.py:9
+msgid "Password"
+msgstr "Hasło"
+
+#: club/models.py:11
+msgid "Team name"
+msgstr "Zespół"
+
+#: club/models.py:12
+msgid "In our league"
+msgstr "Czy w naszej lidze?"
+
+#: club/models.py:13
+msgid "Is ours team"
+msgstr "Czy nasza drużyna?"
+
+#: club/models.py:16
+msgid "Team"
+msgstr "Zespół"
+
+#: club/models.py:17
+msgid "Teams"
+msgstr "Zespoły"
+
+#: club/models.py:25
+msgid "Trophy name"
+msgstr "Nazwa trofeum"
+
+#: club/models.py:26
+msgid "Polish name of the trophy"
+msgstr "Polska nazwa trofeum"
+
+#: club/models.py:27
+msgid "Year start of the season"
+msgstr "Rok rozpoczęcia sezonu"
+
+#: club/models.py:28
+msgid "Year end of the season"
+msgstr "Rok zakończenia sezonu"
+
+#: club/models.py:31
+msgid "Trophy"
+msgstr "Trofeum"
+
+#: club/models.py:32
+msgid "Trophies"
+msgstr "Trofea"
+
+#: club/models.py:40
+msgid "Lineup name"
+msgstr "Nazwa składu"
+
+#: club/models.py:41
+msgid "Polish name of the lineup"
+msgstr "Polska nazwa składu"
+
+#: club/models.py:44 club/models.py:99 club/models.py:138
+msgid "Lineup"
+msgstr "Skład"
+
+#: club/models.py:45
+msgid "Lineups"
+msgstr "Składy"
+
+#: club/models.py:52
+msgid "Role name"
+msgstr "Nazwa roli"
+
+#: club/models.py:53
+msgid "Polish name of the role"
+msgstr "Polska nazwa roli"
+
+#: club/models.py:56 club/models.py:137
+msgid "Role"
+msgstr "Rola"
+
+#: club/models.py:57
+msgid "Roles"
+msgstr "Role"
+
+#: club/models.py:65 club/models.py:68 club/models.py:101
+msgid "Position"
+msgstr "Pozycja"
+
+#: club/models.py:69
+msgid "Positions"
+msgstr "Pozycje"
+
+#: club/models.py:76 club/models.py:167
+msgid "Name"
+msgstr "Imię"
+
+#: club/models.py:77
+msgid "Surname"
+msgstr "Nazwisko"
+
+#: club/models.py:78 club/models.py:132
+msgid "Gender"
+msgstr "Płeć"
+
+#: club/models.py:78 club/models.py:132
+msgid "M"
+msgstr ""
+
+#: club/models.py:79
+msgid "Person ID"
+msgstr "Pesel"
+
+#: club/models.py:80
+msgid "Is this player the team captain?"
+msgstr "Czy zawodnik jest kapitanem drużyny?"
+
+#: club/models.py:81 club/models.py:133
+msgid "Date of birth"
+msgstr "Data urodzenia"
+
+#: club/models.py:82
+msgid "Height"
+msgstr "Wzrost"
+
+#: club/models.py:83
+msgid "Weight"
+msgstr "Waga"
+
+#: club/models.py:84 club/models.py:134
+msgid "Country"
+msgstr "Kraj"
+
+#: club/models.py:84 club/models.py:134
+msgid "PL"
+msgstr ""
+
+#: club/models.py:86
+msgid "L"
+msgstr ""
+
+#: club/models.py:86
+msgid "Left"
+msgstr "Lewa"
+
+#: club/models.py:87 club/models.py:90
+msgid "R"
+msgstr ""
+
+#: club/models.py:87
+msgid "Right"
+msgstr "Prawa"
+
+#: club/models.py:89
+msgid "Better leg"
+msgstr "Lepsza noga"
+
+#: club/models.py:91
+msgid "Player number"
+msgstr "Numer zawodnika"
+
+#: club/models.py:93
+msgid "Y"
+msgstr "T"
+
+#: club/models.py:93
+msgid "Yes"
+msgstr "Tak"
+
+#: club/models.py:94 club/models.py:96
+msgid "N"
+msgstr "N"
+
+#: club/models.py:94
+msgid "No"
+msgstr "Nie"
+
+#: club/models.py:96
+msgid "Injury"
+msgstr "Kontuzja"
+
+#: club/models.py:97
+msgid "Image"
+msgstr "Zdjęcie"
+
+#: club/models.py:100
+msgid "Transfer from"
+msgstr "Transfer z"
+
+#: club/models.py:104
+msgid "Player"
+msgstr "Zawodnik"
+
+#: club/models.py:105
+msgid "Players"
+msgstr "Zawodnicy"
+
+#: club/models.py:130
+msgid "First name"
+msgstr "Imię"
+
+#: club/models.py:131
+msgid "Last name"
+msgstr "Nazwisko"
+
+#: club/models.py:135
+msgid "Phone number"
+msgstr "Numer telefonu"
+
+#: club/models.py:141
+msgid "Employee"
+msgstr "Pracownik"
+
+#: club/models.py:142
+msgid "Employees"
+msgstr "Pracownicy"
+
+#: club/models.py:171 club/models.py:203
+msgid "Season"
+msgstr "Sezon"
+
+#: club/models.py:172
+msgid "Seasons"
+msgstr "Sezony"
+
+#: club/models.py:180
+msgid "Fixture name"
+msgstr "Nazwa kolejki"
+
+#: club/models.py:181
+msgid "Polish name of the fixture"
+msgstr "Polska nazwa kolejki"
+
+#: club/models.py:185
+msgid "Fixture"
+msgstr "Kolejka "
+
+#: club/models.py:186
+msgid "Fixtures"
+msgstr "Kolejki"
+
+#: club/models.py:193
+msgid "Home team goals"
+msgstr "Gospodarz"
+
+#: club/models.py:194
+msgid "Away team goals"
+msgstr "Gość"
+
+#: club/models.py:195
+msgid "Game Date"
+msgstr "Data meczu"
+
+#: club/models.py:196
+msgid "Game hour"
+msgstr "Godzina meczu"
+
+#: club/models.py:197
+msgid "Statistics"
+msgstr "Statystyki"
+
+#: club/models.py:199
+msgid "Home Team"
+msgstr "Gospodarz"
+
+#: club/models.py:200
+msgid "Away Team"
+msgstr "Gość"
+
+#: club/models.py:202
+msgid "Match Fixture"
+msgstr "Kolejka meczu"
+
+#: club/models.py:206
+msgid "Game"
+msgstr "Mecz"
+
+#: club/models.py:207
+msgid "Games"
+msgstr "Mecze"

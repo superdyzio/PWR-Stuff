@@ -1,0 +1,135 @@
+{% extends 'index.html' %}
+{% load thumbnail %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+    <div class="col-xs-12">
+        {% if seasons %}
+            <ul class="nav-lineups">
+                {% for season in seasons %}
+                    <li{% if season.id|slugify == season_id %} class="active"{% endif %}>
+                        <a href="{% url 'games' season.id 1 %}" class="btn btn-default"
+                                title="{{ season.name }}">
+                                    {% trans 'Season' %} {{ season.name }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% if fixtures %}
+            <ul class="nav-lineups">
+                {% for fixture in fixtures %}
+                    <li{% if fixture.id|slugify == fixture_id %} class="active"{% endif %}>
+                        <a href="{% url 'games' season_id fixture.id %}" class="btn btn-default"
+                            {% if request.LANGUAGE_CODE == 'pl' and fixture.name_pl %}
+                                title="{{ fixture.name_pl }}">
+                                    {{ fixture.name_pl }}
+                            {% else  %}
+                                 title="{{ fixture.name }}">
+                                    {{ fixture.name }}
+                            {% endif %}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <div class="table-form">
+            {% if gamesfields %}
+                <form action="{% url 'filter-games' season_id fixture_id %}" method="GET">
+                    <input type="text" name="search_phrase" placeholder="{% trans "Type search phrase here" %}">
+                    <input type="submit" value="{% trans "Search" %}">
+                </form>
+                <br>
+            {% endif %}
+            {% if search_phrase and not gamesfields %}
+                <button onclick="history.go(-1)">{% trans "Back" %}</button>
+                <br/>
+                <br/>
+            {% endif %}
+            {% if search_phrase %}
+                <div>
+                    <strong>{% trans "Search results" %}:</strong>
+                </div>
+            {% endif %}
+        </div>
+        <div>
+            <table class="table table-striped table-bordered table-hover">
+                <thead class="thead-inverse">
+                <tr>
+                    <th>Lp</th>
+                    <th>{% trans "Home team" %}
+                        <a href="{% url 'games' season_id fixture_id %}?sort=homeTeam&desc=no">
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </a>
+                        <a href="{% url 'games' season_id fixture_id %}?sort=homeTeam&desc=yes">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </th>
+                    <th>{% trans "Result" %}</th>
+                    <th>{% trans "Away team" %}
+                        <a href="{% url 'games' season_id fixture_id %}?sort=awayTeam&desc=no">
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </a>
+                        <a href="{% url 'games' season_id fixture_id %}?sort=awayTeam&desc=yes">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </th>
+                    <th>{% trans 'Game date' %}
+                        <a href="{% url 'games' season_id fixture_id %}?sort=game_date&desc=no">
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </a>
+                        <a href="{% url 'games' season_id fixture_id %}?sort=game_date&desc=yes">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </th>
+                    <th>
+                        {% trans 'Game hour' %}
+                    </th>
+                    {#                DETAILS#}
+                    <th></th>
+                </thead>
+                <tbody>
+                {% if gamesfields %}
+                    {% for game in gamesfields %}
+                        <tr>
+                            <td> {{ forloop.counter }} </td>
+                            <td>
+                                {% if game.homeTeam.isOursTeam %}<strong>{% endif %}
+                                    {{ game.homeTeam }}
+                                {% if game.homeTeam.isOursTeam %}</strong>{% endif %}
+                            </td>
+                            <td>
+                                <span>{{ game.homeTeamGoals }} : {{ game.awayTeamGoals }}</span>
+                            </td>
+                            <td>
+                                {% if game.awayTeam.isOursTeam %}<strong>{% endif %}
+                                    {{ game.awayTeam }}
+                                {% if game.awayTeam.isOursTeam %}</strong>{% endif %}
+                            </td>
+                            <td>
+                                {{ game.game_date }}
+                            </td>
+                            <td>
+                                {{ game.game_hour }}
+                            </td>
+                            <td>
+{#                                <a href="{% url "game-details" game.slug %}">#}
+{#                                    {% trans "Details" %}#}
+{#                                </a>#}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        {% if search_phrase|length > 0 %}
+                            <td colspan="7">{% trans "There are no games matching criteria" %}.</td>
+                        {% else %}
+                            <td colspan="7">{% trans "There are no games" %}.</td>
+                        {% endif %}
+                    </tr>
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

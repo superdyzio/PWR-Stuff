@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% load thumbnail %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+    <div class="col-xs-12">
+        <div class="special-nav-container">
+            <ul class="nav-lineups">
+                {% for lineup in lineupsfields %}
+                    <li>
+                        <a href="{% url 'lineup-details' lineup.id %}" class="btn btn-default"
+                            {% if request.LANGUAGE_CODE == 'pl' %}
+                                title="{{ lineup.name_pl }}">
+                                    {{ lineup.name_pl }}
+                            {% else  %}
+                                 title="{{ lineup.name }}">
+                                    {{ lineup.name }}
+                            {% endif %}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

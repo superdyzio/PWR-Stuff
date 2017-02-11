@@ -1,0 +1,6382 @@
+[
+  {
+    "model": "club.teams",
+    "pk": "1",
+    "fields": {
+      "name": "Arsenal",
+      "inLeague": "1",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "2",
+    "fields": {
+      "name": "Bournemouth",
+      "inLeague": "1",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "3",
+    "fields": {
+      "name": "Burnley",
+      "inLeague": "1",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "4",
+    "fields": {
+      "name": "Chelsea",
+      "inLeague": "1",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "5",
+    "fields": {
+      "name": "Crystal Palace",
+      "inLeague": "1",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "6",
+    "fields": {
+      "name": "Everton",
+      "inLeague": "1",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "7",
+    "fields": {
+      "name": "Hull",
+      "inLeague": "1",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "8",
+    "fields": {
+      "name": "Leicester",
+      "inLeague": "1",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "9",
+    "fields": {
+      "name": "Liverpool",
+      "inLeague": "1",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "10",
+    "fields": {
+      "name": "Manchester City",
+      "inLeague": "1",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "11",
+    "fields": {
+      "name": "Manchester Utd",
+      "inLeague": "1",
+      "isOursTeam": "1"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "12",
+    "fields": {
+      "name": "Middlesbrough",
+      "inLeague": "1",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "13",
+    "fields": {
+      "name": "Southampton",
+      "inLeague": "1",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "14",
+    "fields": {
+      "name": "Stoke",
+      "inLeague": "1",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "15",
+    "fields": {
+      "name": "Sunderland",
+      "inLeague": "1",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "16",
+    "fields": {
+      "name": "Swansea",
+      "inLeague": "1",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "17",
+    "fields": {
+      "name": "Tottenham",
+      "inLeague": "1",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "18",
+    "fields": {
+      "name": "Watford",
+      "inLeague": "1",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "19",
+    "fields": {
+      "name": "West Brom",
+      "inLeague": "1",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "20",
+    "fields": {
+      "name": "West Ham",
+      "inLeague": "1",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "1",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "1",
+      "game_date": "2016-11-05",
+      "game_hour": "16:00:00",
+      "slug": "west-ham-stoke-2016-11-05",
+      "homeTeam": "20",
+      "awayTeam": "14",
+      "fixture": "1",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "2",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "1",
+      "game_date": "2016-11-05",
+      "game_hour": "16:00:00",
+      "slug": "manchester-city-middlesbrough-2016-11-05",
+      "homeTeam": "10",
+      "awayTeam": "12",
+      "fixture": "1",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "3",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "2",
+      "game_date": "2016-11-05",
+      "game_hour": "16:00:00",
+      "slug": "burnley-crystal-palace-2016-11-05",
+      "homeTeam": "3",
+      "awayTeam": "5",
+      "fixture": "1",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "4",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "2",
+      "game_date": "2016-11-05",
+      "game_hour": "16:00:00",
+      "slug": "bournemouth-sunderland-2016-11-05",
+      "homeTeam": "2",
+      "awayTeam": "15",
+      "fixture": "1",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "5",
+    "fields": {
+      "homeTeamGoals": "5",
+      "awayTeamGoals": "0",
+      "game_date": "2016-11-05",
+      "game_hour": "18:30:00",
+      "slug": "chelsea-everton-2016-11-05",
+      "homeTeam": "4",
+      "awayTeam": "6",
+      "fixture": "1",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "6",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "1",
+      "game_date": "2016-11-06",
+      "game_hour": "13:00:00",
+      "slug": "arsenal-tottenham-2016-11-06",
+      "homeTeam": "1",
+      "awayTeam": "17",
+      "fixture": "1",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "7",
+    "fields": {
+      "homeTeamGoals": "6",
+      "awayTeamGoals": "1",
+      "game_date": "2016-11-06",
+      "game_hour": "15:15:00",
+      "slug": "liverpool-watford-2016-11-06",
+      "homeTeam": "9",
+      "awayTeam": "18",
+      "fixture": "1",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "8",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "1",
+      "game_date": "2016-11-06",
+      "game_hour": "15:15:00",
+      "slug": "hull-Southampton-2016-11-06",
+      "homeTeam": "7",
+      "awayTeam": "13",
+      "fixture": "1",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "9",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "3",
+      "game_date": "2016-11-06",
+      "game_hour": "16:00:00",
+      "slug": "swansea-manchester-united-2016-11-06",
+      "homeTeam": "16",
+      "awayTeam": "11",
+      "fixture": "1",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "10",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "2",
+      "game_date": "2016-11-06",
+      "game_hour": "17:30:00",
+      "slug": "leicester-west-brom-2016-11-06",
+      "homeTeam": "8",
+      "awayTeam": "19",
+      "fixture": "1",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "11",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "1",
+      "game_date": "2016-11-19",
+      "game_hour": "13:30:00",
+      "slug": "manchester-united-arsenal-2016-11-19",
+      "homeTeam": "18",
+      "awayTeam": "8",
+      "fixture": "2",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "12",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "1",
+      "game_date": "2016-11-19",
+      "game_hour": "16:00:00",
+      "slug": "watford-leicester-2016-11-19",
+      "homeTeam": "18",
+      "awayTeam": "8",
+      "fixture": "2",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "13",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "0",
+      "game_date": "2016-11-19",
+      "game_hour": "16:00:00",
+      "slug": "sunderland-hull-2016-11-19",
+      "homeTeam": "15",
+      "awayTeam": "7",
+      "fixture": "2",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "14",
+    "fields": {
+      "homeTeamGoals": "0",
+      "awayTeamGoals": "1",
+      "game_date": "2016-11-19",
+      "game_hour": "16:00:00",
+      "slug": "stoke-bournemouth-2016-11-19",
+      "homeTeam": "14",
+      "awayTeam": "2",
+      "fixture": "2",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "15",
+    "fields": {
+      "homeTeamGoals": "0",
+      "awayTeamGoals": "0",
+      "game_date": "2016-11-19",
+      "game_hour": "16:00:00",
+      "slug": "southampton-liverpool-2016-11-19",
+      "homeTeam": "13",
+      "awayTeam": "9",
+      "fixture": "2",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "16",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "1",
+      "game_date": "2016-11-19",
+      "game_hour": "16:00:00",
+      "slug": "everton-swansea-2016-11-19",
+      "homeTeam": "6",
+      "awayTeam": "16",
+      "fixture": "2",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "17",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "2",
+      "game_date": "2016-11-19",
+      "game_hour": "13:30:00",
+      "slug": "crystal-palace-manchester-city-2016-11-19",
+      "homeTeam": "5",
+      "awayTeam": "10",
+      "fixture": "2",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "18",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "2",
+      "game_date": "2016-11-19",
+      "game_hour": "18:30:00",
+      "slug": "tottenham-west-ham-2016-11-19",
+      "homeTeam": "17",
+      "awayTeam": "20",
+      "fixture": "2",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "19",
+    "fields": {
+      "homeTeamGoals": "0",
+      "awayTeamGoals": "1",
+      "game_date": "2016-11-20",
+      "game_hour": "17:00:00",
+      "slug": "middlesbrough-chelsea-2016-11-20",
+      "homeTeam": "12",
+      "awayTeam": "4",
+      "fixture": "2",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "20",
+    "fields": {
+      "homeTeamGoals": "4",
+      "awayTeamGoals": "0",
+      "game_date": "2016-11-21",
+      "game_hour": "21:00:00",
+      "slug": "west-brom-burnley-2016-11-21",
+      "homeTeam": "19",
+      "awayTeam": "2",
+      "fixture": "2",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "21",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "2",
+      "game_date": "2016-11-26",
+      "game_hour": "13:30:00",
+      "slug": "burnley-manchester-city-2016-11-26",
+      "homeTeam": "3",
+      "awayTeam": "10",
+      "fixture": "3",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "22",
+    "fields": {
+      "homeTeamGoals": "5",
+      "awayTeamGoals": "4",
+      "game_date": "2016-11-26",
+      "game_hour": "16:00:00",
+      "slug": "swansea-crystal-palace-2016-11-26",
+      "homeTeam": "16",
+      "awayTeam": "5",
+      "fixture": "3",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "23",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "0",
+      "game_date": "2016-11-26",
+      "game_hour": "16:00:00",
+      "slug": "liverpool-sunderland-2016-11-26",
+      "homeTeam": "9",
+      "awayTeam": "15",
+      "fixture": "3",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "24",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "2",
+      "game_date": "2016-11-26",
+      "game_hour": "16:00:00",
+      "slug": "leicester-middlesbrough-2016-11-26",
+      "homeTeam": "8",
+      "awayTeam": "12",
+      "fixture": "3",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "25",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "1",
+      "game_date": "2016-11-26",
+      "game_hour": "16:00:00",
+      "slug": "hull-west-brom-2016-11-26",
+      "homeTeam": "7",
+      "awayTeam": "19",
+      "fixture": "3",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "26",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "1",
+      "game_date": "2016-11-26",
+      "game_hour": "18:30:00",
+      "slug": "chelsea-tottenham-2016-11-26",
+      "homeTeam": "4",
+      "awayTeam": "17",
+      "fixture": "3",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "27",
+    "fields": {
+      "homeTeamGoals": "0",
+      "awayTeamGoals": "1",
+      "game_date": "2016-11-27",
+      "game_hour": "13:00:00",
+      "slug": "watford-stoke-2016-11-27",
+      "homeTeam": "18",
+      "awayTeam": "14",
+      "fixture": "3",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "28",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "1",
+      "game_date": "2016-11-27",
+      "game_hour": "15:15:00",
+      "slug": "arsenal-bournemouth-2016-11-27",
+      "homeTeam": "1",
+      "awayTeam": "2",
+      "fixture": "3",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "29",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "0",
+      "game_date": "2016-11-27",
+      "game_hour": "17:30:00",
+      "slug": "southampton-everton-2016-11-27",
+      "homeTeam": "13",
+      "awayTeam": "6",
+      "fixture": "3",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "30",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "1",
+      "game_date": "2016-11-27",
+      "game_hour": "17:30:00",
+      "slug": "manchester-united-west-ham-2016-11-27",
+      "homeTeam": "11",
+      "awayTeam": "20",
+      "fixture": "3",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "31",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "3",
+      "game_date": "2016-12-03",
+      "game_hour": "13:30:00",
+      "slug": "manchester-city-chelsea-2016-12-03",
+      "homeTeam": "10",
+      "awayTeam": "4",
+      "fixture": "4",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "32",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "1",
+      "game_date": "2016-12-03",
+      "game_hour": "16:00:00",
+      "slug": "west-brom-watford-2016-12-03",
+      "homeTeam": "19",
+      "awayTeam": "18",
+      "fixture": "4",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "33",
+    "fields": {
+      "homeTeamGoals": "5",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-03",
+      "game_hour": "16:00:00",
+      "slug": "tottenham-swansea-2016-12-03",
+      "homeTeam": "17",
+      "awayTeam": "16",
+      "fixture": "4",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "34",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "1",
+      "game_date": "2016-12-03",
+      "game_hour": "16:00:00",
+      "slug": "sunderland-leicester-2016-12-03",
+      "homeTeam": "15",
+      "awayTeam": "8",
+      "fixture": "4",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "35",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-03",
+      "game_hour": "16:00:00",
+      "slug": "stoke-burnley-2016-12-03",
+      "homeTeam": "14",
+      "awayTeam": "3",
+      "fixture": "4",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "36",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-03",
+      "game_hour": "16:00:00",
+      "slug": "crystal-palace-southampton-2016-12-03",
+      "homeTeam": "5",
+      "awayTeam": "13",
+      "fixture": "4",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "37",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "5",
+      "game_date": "2016-12-03",
+      "game_hour": "18:30:00",
+      "slug": "west-ham-arsenal-2016-12-03",
+      "homeTeam": "20",
+      "awayTeam": "1",
+      "fixture": "4",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "38",
+    "fields": {
+      "homeTeamGoals": "4",
+      "awayTeamGoals": "3",
+      "game_date": "2016-12-04",
+      "game_hour": "14:30:00",
+      "slug": "bournemouth-liverpool-2016-12-04",
+      "homeTeam": "2",
+      "awayTeam": "9",
+      "fixture": "4",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "39",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "1",
+      "game_date": "2016-12-04",
+      "game_hour": "17:00:00",
+      "slug": "everton-manchester-united-2016-12-04",
+      "homeTeam": "13",
+      "awayTeam": "11",
+      "fixture": "4",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "40",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-05",
+      "game_hour": "21:00:00",
+      "slug": "middlesbrough-hull-2016-12-05",
+      "homeTeam": "12",
+      "awayTeam": "7",
+      "fixture": "4",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "41",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "2",
+      "game_date": "2016-12-10",
+      "game_hour": "13:30:00",
+      "slug": "watford-everton-2016-12-10",
+      "homeTeam": "18",
+      "awayTeam": "6",
+      "fixture": "5",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "42",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-10",
+      "game_hour": "16:00:00",
+      "slug": "swansea-sunderland-2016-12-10",
+      "homeTeam": "16",
+      "awayTeam": "15",
+      "fixture": "5",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "43",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "3",
+      "game_date": "2016-12-10",
+      "game_hour": "16:00:00",
+      "slug": "hull-crystal-palace-2016-12-10",
+      "homeTeam": "7",
+      "awayTeam": "5",
+      "fixture": "5",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "44",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "2",
+      "game_date": "2016-12-10",
+      "game_hour": "16:00:00",
+      "slug": "burnley-bournemouth-2016-12-10",
+      "homeTeam": "3",
+      "awayTeam": "2",
+      "fixture": "5",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "45",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "1",
+      "game_date": "2016-12-10",
+      "game_hour": "16:00:00",
+      "slug": "arsenal-stoke-2016-12-10",
+      "homeTeam": "1",
+      "awayTeam": "14",
+      "fixture": "5",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "46",
+    "fields": {
+      "homeTeamGoals": "4",
+      "awayTeamGoals": "2",
+      "game_date": "2016-12-10",
+      "game_hour": "18:30:00",
+      "slug": "leicester-manchester-city-2016-12-10",
+      "homeTeam": "8",
+      "awayTeam": "10",
+      "fixture": "5",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "47",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-11",
+      "game_hour": "13:00:00",
+      "slug": "chelsea-west-brom-2016-12-11",
+      "homeTeam": "4",
+      "awayTeam": "19",
+      "fixture": "5",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "48",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-11",
+      "game_hour": "15:15:00",
+      "slug": "southampton-middlesbrough-2016-12-11",
+      "homeTeam": "13",
+      "awayTeam": "12",
+      "fixture": "5",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "49",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-11",
+      "game_hour": "15:15:00",
+      "slug": "manchester-united-tottenham-2016-12-11",
+      "homeTeam": "11",
+      "awayTeam": "17",
+      "fixture": "5",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "50",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "2",
+      "game_date": "2016-12-11",
+      "game_hour": "17:30:00",
+      "slug": "liverpool-west-ham-2016-12-11",
+      "homeTeam": "9",
+      "awayTeam": "20",
+      "fixture": "5",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "51",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "1",
+      "game_date": "2016-12-13",
+      "game_hour": "20:45:00",
+      "slug": "everton-arsenal-2016-12-13",
+      "homeTeam": "6",
+      "awayTeam": "1",
+      "fixture": "6",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "52",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-13",
+      "game_hour": "20:45:00",
+      "slug": "bournemouth-leicester-2016-12-13",
+      "homeTeam": "2",
+      "awayTeam": "8",
+      "fixture": "6",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "53",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-14",
+      "game_hour": "20:45:00",
+      "slug": "west-ham-burnley-2016-12-14",
+      "homeTeam": "20",
+      "awayTeam": "3",
+      "fixture": "6",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "54",
+    "fields": {
+      "homeTeamGoals": "0",
+      "awayTeamGoals": "1",
+      "game_date": "2016-12-14",
+      "game_hour": "20:45:00",
+      "slug": "sunderland-chelsea-2016-12-14",
+      "homeTeam": "15",
+      "awayTeam": "4",
+      "fixture": "6",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "55",
+    "fields": {
+      "homeTeamGoals": "0",
+      "awayTeamGoals": "3",
+      "game_date": "2016-12-14",
+      "game_hour": "20:45:00",
+      "slug": "middlesbrough-liverpool-2016-12-14",
+      "homeTeam": "12",
+      "awayTeam": "9",
+      "fixture": "6",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "56",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "1",
+      "game_date": "2016-12-14",
+      "game_hour": "21:00:00",
+      "slug": "west-brom-swansea-2016-12-14",
+      "homeTeam": "19",
+      "awayTeam": "16",
+      "fixture": "6",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "57",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-14",
+      "game_hour": "21:00:00",
+      "slug": "tottenham-hull-2016-12-14",
+      "homeTeam": "17",
+      "awayTeam": "7",
+      "fixture": "6",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "58",
+    "fields": {
+      "homeTeamGoals": "0",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-14",
+      "game_hour": "21:00:00",
+      "slug": "stoke-southampton-2016-12-14",
+      "homeTeam": "14",
+      "awayTeam": "13",
+      "fixture": "6",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "59",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-14",
+      "game_hour": "21:00:00",
+      "slug": "manchester-city-watford-2016-12-14",
+      "homeTeam": "10",
+      "awayTeam": "18",
+      "fixture": "6",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "60",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "2",
+      "game_date": "2016-12-14",
+      "game_hour": "21:00:00",
+      "slug": "crystal-palace-manchester-united-2016-12-14",
+      "homeTeam": "5",
+      "awayTeam": "11",
+      "fixture": "6",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "61",
+    "fields": {
+      "homeTeamGoals": "0",
+      "awayTeamGoals": "1",
+      "game_date": "2016-12-17",
+      "game_hour": "13:30:00",
+      "slug": "crystal-palace-chelsea-2016-12-17",
+      "homeTeam": "5",
+      "awayTeam": "4",
+      "fixture": "7",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "62",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-17",
+      "game_hour": "16:00:00",
+      "slug": "west-ham-hull-2016-12-17",
+      "homeTeam": "20",
+      "awayTeam": "7",
+      "fixture": "7",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "63",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-17",
+      "game_hour": "16:00:00",
+      "slug": "sunderland-watford-2016-12-17",
+      "homeTeam": "15",
+      "awayTeam": "18",
+      "fixture": "7",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "64",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "2",
+      "game_date": "2016-12-17",
+      "game_hour": "16:00:00",
+      "slug": "stoke-leicester-2016-12-17",
+      "homeTeam": "14",
+      "awayTeam": "8",
+      "fixture": "7",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "65",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-17",
+      "game_hour": "16:00:00",
+      "slug": "middlesbrough-swansea-2016-12-17",
+      "homeTeam": "12",
+      "awayTeam": "16",
+      "fixture": "7",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "66",
+    "fields": {
+      "homeTeamGoals": "0",
+      "awayTeamGoals": "2",
+      "game_date": "2016-12-17",
+      "game_hour": "18:30:00",
+      "slug": "west-brom-manchester-united-2016-12-17",
+      "homeTeam": "19",
+      "awayTeam": "11",
+      "fixture": "7",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "67",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "3",
+      "game_date": "2016-12-18",
+      "game_hour": "14:30:00",
+      "slug": "bournemouth-southampton-2016-12-18",
+      "homeTeam": "2",
+      "awayTeam": "13",
+      "fixture": "7",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "68",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "1",
+      "game_date": "2016-12-18",
+      "game_hour": "17:00:00",
+      "slug": "tottenham-burnley-2016-12-18",
+      "homeTeam": "17",
+      "awayTeam": "3",
+      "fixture": "7",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "69",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "1",
+      "game_date": "2016-12-18",
+      "game_hour": "17:00:00",
+      "slug": "manchester-city-arsenal-2016-12-18",
+      "homeTeam": "10",
+      "awayTeam": "1",
+      "fixture": "7",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "70",
+    "fields": {
+      "homeTeamGoals": "0",
+      "awayTeamGoals": "1",
+      "game_date": "2016-12-19",
+      "game_hour": "21:00:00",
+      "slug": "everton-liverpool-2016-12-19",
+      "homeTeam": "6",
+      "awayTeam": "9",
+      "fixture": "7",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "71",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "1",
+      "game_date": "2016-12-26",
+      "game_hour": "13:30:00",
+      "slug": "watford-crystal-palace-2016-12-26",
+      "homeTeam": "18",
+      "awayTeam": "5",
+      "fixture": "8",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "72",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "4",
+      "game_date": "2016-12-26",
+      "game_hour": "16:00:00",
+      "slug": "swansea-west-ham-2016-12-26",
+      "homeTeam": "16",
+      "awayTeam": "20",
+      "fixture": "8",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "73",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "1",
+      "game_date": "2016-12-26",
+      "game_hour": "16:00:00",
+      "slug": "manchester-united-sunderland-2016-12-26",
+      "homeTeam": "11",
+      "awayTeam": "15",
+      "fixture": "8",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "74",
+    "fields": {
+      "homeTeamGoals": "0",
+      "awayTeamGoals": "2",
+      "game_date": "2016-12-26",
+      "game_hour": "16:00:00",
+      "slug": "leicester-everton-2016-12-26",
+      "homeTeam": "8",
+      "awayTeam": "6",
+      "fixture": "8",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "75",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-26",
+      "game_hour": "16:00:00",
+      "slug": "chelsea-bournemouth-2016-12-26",
+      "homeTeam": "4",
+      "awayTeam": "2",
+      "fixture": "8",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "76",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-26",
+      "game_hour": "16:00:00",
+      "slug": "burnley-middlesbrough-2016-12-26",
+      "homeTeam": "3",
+      "awayTeam": "12",
+      "fixture": "8",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "77",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-26",
+      "game_hour": "16:00:00",
+      "slug": "arsenal-west-brom-2016-12-26",
+      "homeTeam": "1",
+      "awayTeam": "19",
+      "fixture": "8",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "78",
+    "fields": {
+      "homeTeamGoals": "0",
+      "awayTeamGoals": "3",
+      "game_date": "2016-12-26",
+      "game_hour": "18:15:00",
+      "slug": "hull-manchester-city-2016-12-26",
+      "homeTeam": "7",
+      "awayTeam": "10",
+      "fixture": "8",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "79",
+    "fields": {
+      "homeTeamGoals": "4",
+      "awayTeamGoals": "1",
+      "game_date": "2016-12-27",
+      "game_hour": "18:15:00",
+      "slug": "liverpool-stoke-2016-12-27",
+      "homeTeam": "9",
+      "awayTeam": "14",
+      "fixture": "8",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "80",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "4",
+      "game_date": "2016-12-28",
+      "game_hour": "20:45:00",
+      "slug": "southampton-tottenham-2016-12-28",
+      "homeTeam": "13",
+      "awayTeam": "17",
+      "fixture": "8",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "81",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "2",
+      "game_date": "2016-12-30",
+      "game_hour": "21:00:00",
+      "slug": "hull-everton-2016-12-30",
+      "homeTeam": "7",
+      "awayTeam": "6",
+      "fixture": "9",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "82",
+    "fields": {
+      "homeTeamGoals": "0",
+      "awayTeamGoals": "3",
+      "game_date": "2016-12-31",
+      "game_hour": "16:00:00",
+      "slug": "swansea-bournemouth-2016-12-31",
+      "homeTeam": "16",
+      "awayTeam": "2",
+      "fixture": "9",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "83",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "2",
+      "game_date": "2016-12-31",
+      "game_hour": "16:00:00",
+      "slug": "southampton-west-brom-2016-12-31",
+      "homeTeam": "13",
+      "awayTeam": "19",
+      "fixture": "9",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "84",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "1",
+      "game_date": "2016-12-31",
+      "game_hour": "16:00:00",
+      "slug": "manchester-united-middlesbrough-2016-12-31",
+      "homeTeam": "11",
+      "awayTeam": "12",
+      "fixture": "9",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "85",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-31",
+      "game_hour": "16:00:00",
+      "slug": "leicester-west-ham-2016-12-31",
+      "homeTeam": "8",
+      "awayTeam": "20",
+      "fixture": "9",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "86",
+    "fields": {
+      "homeTeamGoals": "4",
+      "awayTeamGoals": "2",
+      "game_date": "2016-12-31",
+      "game_hour": "16:00:00",
+      "slug": "chelsea-stoke-2016-12-31",
+      "homeTeam": "4",
+      "awayTeam": "14",
+      "fixture": "9",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "87",
+    "fields": {
+      "homeTeamGoals": "4",
+      "awayTeamGoals": "1",
+      "game_date": "2016-12-31",
+      "game_hour": "16:00:00",
+      "slug": "burnley-sunderland-2016-12-31",
+      "homeTeam": "3",
+      "awayTeam": "15",
+      "fixture": "9",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "88",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "0",
+      "game_date": "2016-12-31",
+      "game_hour": "18:30:00",
+      "slug": "liverpool-manchester-city-2016-12-31",
+      "homeTeam": "9",
+      "awayTeam": "10",
+      "fixture": "9",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "89",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "4",
+      "game_date": "2017-01-01",
+      "game_hour": "14:15:00",
+      "slug": "watford-tottenham-2017-01-01",
+      "homeTeam": "18",
+      "awayTeam": "17",
+      "fixture": "9",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "90",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "0",
+      "game_date": "2017-01-01",
+      "game_hour": "17:00:00",
+      "slug": "arsenal-crystal-palace-2017-01-01",
+      "homeTeam": "1",
+      "awayTeam": "5",
+      "fixture": "9",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "91",
+    "fields": {
+      "homeTeamGoals": "0",
+      "awayTeamGoals": "0",
+      "game_date": "2017-01-02",
+      "game_hour": "13:30:00",
+      "slug": "middlesbrough-leicester-2017-01-02",
+      "homeTeam": "12",
+      "awayTeam": "8",
+      "fixture": "10",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "92",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "1",
+      "game_date": "2017-01-02",
+      "game_hour": "16:00:00",
+      "slug": "west-brom-hull-2017-01-02",
+      "homeTeam": "19",
+      "awayTeam": "7",
+      "fixture": "10",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "93",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "2",
+      "game_date": "2017-01-02",
+      "game_hour": "16:00:00",
+      "slug": "sunderlad-liverpool-2017-01-02",
+      "homeTeam": "15",
+      "awayTeam": "9",
+      "fixture": "10",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "94",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "1",
+      "game_date": "2017-01-02",
+      "game_hour": "16:00:00",
+      "slug": "manchester-city-burnley-2017-01-02",
+      "homeTeam": "10",
+      "awayTeam": "3",
+      "fixture": "10",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "95",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "0",
+      "game_date": "2017-01-02",
+      "game_hour": "16:00:00",
+      "slug": "everton-southampton-2017-01-02",
+      "homeTeam": "6",
+      "awayTeam": "13",
+      "fixture": "10",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "96",
+    "fields": {
+      "homeTeamGoals": "0",
+      "awayTeamGoals": "2",
+      "game_date": "2017-01-02",
+      "game_hour": "18:15:00",
+      "slug": "west-ham-manchester-united-2017-01-02",
+      "homeTeam": "20",
+      "awayTeam": "11",
+      "fixture": "10",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "97",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "3",
+      "game_date": "2017-01-03",
+      "game_hour": "20:45:00",
+      "slug": "bournemouth-arsenal-2017-01-03",
+      "homeTeam": "2",
+      "awayTeam": "1",
+      "fixture": "10",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "98",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "0",
+      "game_date": "2017-01-03",
+      "game_hour": "21:00:00",
+      "slug": "stoke-watford-2017-01-03",
+      "homeTeam": "14",
+      "awayTeam": "18",
+      "fixture": "10",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "99",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "2",
+      "game_date": "2017-01-03",
+      "game_hour": "14:30:00",
+      "slug": "crystal-palace-swansea-2017-01-03",
+      "homeTeam": "5",
+      "awayTeam": "16",
+      "fixture": "10",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "100",
+    "fields": {
+      "homeTeamGoals": "2",
+      "awayTeamGoals": "0",
+      "game_date": "2017-01-04",
+      "game_hour": "21:00:00",
+      "slug": "tottenham-chelsea-2017-01-04",
+      "homeTeam": "17",
+      "awayTeam": "4",
+      "fixture": "10",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "101",
+    "fields": {
+      "homeTeamGoals": "4",
+      "awayTeamGoals": "0",
+      "game_date": "2017-01-14",
+      "game_hour": "13:30:00",
+      "slug": "tottenham-west-brom-2017-01-14",
+      "homeTeam": "17",
+      "awayTeam": "19",
+      "fixture": "11",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "102",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "0",
+      "game_date": "2017-01-14",
+      "game_hour": "16:00:00",
+      "slug": "west-ham-crystal-palace-2017-01-14",
+      "homeTeam": "20",
+      "awayTeam": "5",
+      "fixture": "11",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "103",
+    "fields": {
+      "homeTeamGoals": "0",
+      "awayTeamGoals": "0",
+      "game_date": "2017-01-14",
+      "game_hour": "16:00:00",
+      "slug": "watford-middlesbrough-2017-01-14",
+      "homeTeam": "18",
+      "awayTeam": "12",
+      "fixture": "11",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "104",
+    "fields": {
+      "homeTeamGoals": "0",
+      "awayTeamGoals": "4",
+      "game_date": "2017-01-14",
+      "game_hour": "16:00:00",
+      "slug": "swansea-arsenal-2017-01-14",
+      "homeTeam": "16",
+      "awayTeam": "1",
+      "fixture": "11",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "105",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "3",
+      "game_date": "2017-01-14",
+      "game_hour": "16:00:00",
+      "slug": "sunderland-stoke-2017-01-14",
+      "homeTeam": "15",
+      "awayTeam": "14",
+      "fixture": "11",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "106",
+    "fields": {
+      "homeTeamGoals": "3",
+      "awayTeamGoals": "1",
+      "game_date": "2017-01-14",
+      "game_hour": "16:00:00",
+      "slug": "hull-bournemouth-2017-01-14",
+      "homeTeam": "7",
+      "awayTeam": "2",
+      "fixture": "11",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "107",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "0",
+      "game_date": "2017-01-14",
+      "game_hour": "16:00:00",
+      "slug": "burnley-southampton-2017-01-14",
+      "homeTeam": "3",
+      "awayTeam": "13",
+      "fixture": "11",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "108",
+    "fields": {
+      "homeTeamGoals": "0",
+      "awayTeamGoals": "3",
+      "game_date": "2017-01-14",
+      "game_hour": "18:30:00",
+      "slug": "leicester-chelsea-2017-01-14",
+      "homeTeam": "8",
+      "awayTeam": "4",
+      "fixture": "11",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "109",
+    "fields": {
+      "homeTeamGoals": "4",
+      "awayTeamGoals": "0",
+      "game_date": "2017-01-15",
+      "game_hour": "14:30:00",
+      "slug": "everton-manchester-city-2017-01-15",
+      "homeTeam": "5",
+      "awayTeam": "10",
+      "fixture": "11",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.games",
+    "pk": "110",
+    "fields": {
+      "homeTeamGoals": "1",
+      "awayTeamGoals": "1",
+      "game_date": "2017-01-15",
+      "game_hour": "17:00:00",
+      "slug": "manchester-united-liverpool-2017-01-15",
+      "homeTeam": "11",
+      "awayTeam": "9",
+      "fixture": "11",
+      "season": "1"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "1",
+    "fields": {
+      "name": "First Division",
+      "name_pl": "Pierwsza dywizja",
+      "season_start": "1907",
+      "season_end": "1908"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "2",
+    "fields": {
+      "name": "FA Cup",
+      "name_pl": "FA Cup",
+      "season_start": "1908",
+      "season_end": "1909"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "3",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "1908",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "4",
+    "fields": {
+      "name": "First Division",
+      "name_pl": "Pierwsza dywizja",
+      "season_start": "1910",
+      "season_end": "1911"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "5",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "1911",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "6",
+    "fields": {
+      "name": "Second Division",
+      "name_pl": "Druga dywizja",
+      "season_start": "1935",
+      "season_end": "1936"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "7",
+    "fields": {
+      "name": "FA Cup",
+      "name_pl": "FA Cup",
+      "season_start": "1947",
+      "season_end": "1948"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "8",
+    "fields": {
+      "name": "First Division",
+      "name_pl": "Pierwsza dywizja",
+      "season_start": "1951",
+      "season_end": "1952"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "9",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "1952",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "10",
+    "fields": {
+      "name": "First Division",
+      "name_pl": "Pierwsza dywizja",
+      "season_start": "1955",
+      "season_end": "1956"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "11",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "1956",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "12",
+    "fields": {
+      "name": "First Division",
+      "name_pl": "Pierwsza dywizja",
+      "season_start": "1956",
+      "season_end": "1957"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "13",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "1957",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "14",
+    "fields": {
+      "name": "FA Cup",
+      "name_pl": "FA Cup",
+      "season_start": "1962",
+      "season_end": "1963"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "15",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "1965",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "16",
+    "fields": {
+      "name": "First Division",
+      "name_pl": "Pierwsza dywizja",
+      "season_start": "1964",
+      "season_end": "1965"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "17",
+    "fields": {
+      "name": "First Division",
+      "name_pl": "Pierwsza dywizja",
+      "season_start": "1966",
+      "season_end": "1967"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "18",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "1967",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "19",
+    "fields": {
+      "name": "European Cup",
+      "name_pl": "Puchar Europejski",
+      "season_start": "1967",
+      "season_end": "1968"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "20",
+    "fields": {
+      "name": "Second Division",
+      "name_pl": "Druga dywizja",
+      "season_start": "1974",
+      "season_end": "1975"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "21",
+    "fields": {
+      "name": "FA Cup",
+      "name_pl": "FA Cup",
+      "season_start": "1976",
+      "season_end": "1977"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "22",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "1977",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "23",
+    "fields": {
+      "name": "FA Cup",
+      "name_pl": "FA Cup",
+      "season_start": "1982",
+      "season_end": "1983"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "24",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "1983",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "25",
+    "fields": {
+      "name": "FA Cup",
+      "name_pl": "FA Cup",
+      "season_start": "1984",
+      "season_end": "1985"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "26",
+    "fields": {
+      "name": "FA Cup",
+      "name_pl": "FA Cup",
+      "season_start": "1989",
+      "season_end": "1990"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "27",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "1990",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "29",
+    "fields": {
+      "name": "European Super Cup",
+      "name_pl": "Superpuchar UEFA",
+      "season_start": "1991",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "30",
+    "fields": {
+      "name": "Football League Cup",
+      "name_pl": "Puchar Ligi Angielskiej",
+      "season_start": "1991",
+      "season_end": "1992"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "31",
+    "fields": {
+      "name": "First Division",
+      "name_pl": "Pierwsza dywizja",
+      "season_start": "1992",
+      "season_end": "1993"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "32",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "1993",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "33",
+    "fields": {
+      "name": "Premier League",
+      "name_pl": "Premier League",
+      "season_start": "1993",
+      "season_end": "1994"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "34",
+    "fields": {
+      "name": "FA Cup",
+      "name_pl": "FA Cup",
+      "season_start": "1993",
+      "season_end": "1994"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "35",
+    "fields": {
+      "name": "Premier League",
+      "name_pl": "Premier League",
+      "season_start": "1995",
+      "season_end": "1996"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "36",
+    "fields": {
+      "name": "FA Cup",
+      "name_pl": "FA Cup",
+      "season_start": "1995",
+      "season_end": "1996"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "37",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "1996",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "38",
+    "fields": {
+      "name": "Premier League",
+      "name_pl": "Premier League",
+      "season_start": "1996",
+      "season_end": "1997"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "39",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "1997",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "40",
+    "fields": {
+      "name": "Premier League",
+      "name_pl": "Premier League",
+      "season_start": "1998",
+      "season_end": "1999"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "41",
+    "fields": {
+      "name": "FA Cup",
+      "name_pl": "FA Cup",
+      "season_start": "1998",
+      "season_end": "1999"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "42",
+    "fields": {
+      "name": "European Cup",
+      "name_pl": "Puchar Europejski",
+      "season_start": "1998",
+      "season_end": "1999"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "43",
+    "fields": {
+      "name": "Intercontinental Cup",
+      "name_pl": "Puchar interkontynentalny",
+      "season_start": "1999",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "44",
+    "fields": {
+      "name": "Premier League",
+      "name_pl": "Premier League",
+      "season_start": "1999",
+      "season_end": "2000"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "45",
+    "fields": {
+      "name": "Premier League",
+      "name_pl": "Premier League",
+      "season_start": "2000",
+      "season_end": "2001"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "46",
+    "fields": {
+      "name": "Premier League",
+      "name_pl": "Premier League",
+      "season_start": "2002",
+      "season_end": "2003"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "47",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "2003",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "48",
+    "fields": {
+      "name": "FA Cup",
+      "name_pl": "FA Cup",
+      "season_start": "2003",
+      "season_end": "2004"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "49",
+    "fields": {
+      "name": "Football League Cup",
+      "name_pl": "Puchar Ligi Angielskiej",
+      "season_start": "2005",
+      "season_end": "2006"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "50",
+    "fields": {
+      "name": "Premier League",
+      "name_pl": "Premier League",
+      "season_start": "2006",
+      "season_end": "2007"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "51",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "2007",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "52",
+    "fields": {
+      "name": "Premier League",
+      "name_pl": "Premier League",
+      "season_start": "2007",
+      "season_end": "2008"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "53",
+    "fields": {
+      "name": "UEFA Champions League",
+      "name_pl": "Liga mistrzów",
+      "season_start": "2007",
+      "season_end": "2008"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "54",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "2008",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "55",
+    "fields": {
+      "name": "FIFA Club World Cup",
+      "name_pl": "Klubowe mistrzostwa świata",
+      "season_start": "2008",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "56",
+    "fields": {
+      "name": "Premier League",
+      "name_pl": "Premier League",
+      "season_start": "2008",
+      "season_end": "2009"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "57",
+    "fields": {
+      "name": "Football League Cup",
+      "name_pl": "Puchar Ligi Angielskiej",
+      "season_start": "2008",
+      "season_end": "2009"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "58",
+    "fields": {
+      "name": "Football League Cup",
+      "name_pl": "Puchar Ligi Angielskiej",
+      "season_start": "2009",
+      "season_end": "2010"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "59",
+    "fields": {
+      "name": "Premier League",
+      "name_pl": "Premier League",
+      "season_start": "2010",
+      "season_end": "2011"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "60",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "2010",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "61",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "2011",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "62",
+    "fields": {
+      "name": "Premier League",
+      "name_pl": "Premier League",
+      "season_start": "2012",
+      "season_end": "2013"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "63",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "2013",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "64",
+    "fields": {
+      "name": "FA Cup",
+      "name_pl": "FA Cup",
+      "season_start": "2015",
+      "season_end": "2016"
+    }
+  },
+
+  {
+    "model": "club.trophies",
+    "pk": "65",
+    "fields": {
+      "name": "FA Charity/Community Shield",
+      "name_pl": "Puchar Dobroczynności",
+      "season_start": "2016",
+      "season_end": null
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "1",
+    "fields": {
+      "name": "David",
+      "surname": "de Gea",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1990-11-7",
+      "height": "192",
+      "weight": "80",
+      "country": "ES",
+      "better_leg": "R",
+      "number": "1",
+      "injury": "N",
+      "slug": "david-de-gea",
+      "lineup": "1",
+      "fromTeam": "21",
+      "position": "1"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "21",
+    "fields": {
+      "name": "Atlético Madrid",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "2",
+    "fields": {
+      "name": "Sergio",
+      "surname": "Romero",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1987-02-22",
+      "height": "191",
+      "weight": "82",
+      "country": "AR",
+      "better_leg": "L",
+      "number": "20",
+      "injury": "N",
+      "slug": "sergio-romero",
+      "lineup": "1",
+      "fromTeam": "22",
+      "position": "1"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "22",
+    "fields": {
+      "name": "Sampdoria",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "3",
+    "fields": {
+      "name": "Eric",
+      "surname": "Bailly",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1994-04-12",
+      "height": "185",
+      "weight": "85",
+      "country": "CI",
+      "better_leg": "L",
+      "number": "3",
+      "injury": "N",
+      "slug": "eric-bailly",
+      "lineup": "1",
+      "fromTeam": "23",
+      "position": "2"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "23",
+    "fields": {
+      "name": "Villarreal",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "4",
+    "fields": {
+      "name": "Phil",
+      "surname": "Jones",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1992-04-21",
+      "height": "180",
+      "weight": "71",
+      "country": "GB",
+      "better_leg": "P",
+      "number": "4",
+      "injury": "N",
+      "slug": "phil-jones",
+      "lineup": "1",
+      "fromTeam": "24",
+      "position": "2"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "24",
+    "fields": {
+      "name": "Blackburn",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "5",
+    "fields": {
+      "name": "Marcos",
+      "surname": "Rojo",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1990-03-20",
+      "height": "188",
+      "weight": "78",
+      "country": "AR",
+      "better_leg": "L",
+      "number": "5",
+      "injury": "T",
+      "slug": "marcos-rojo",
+      "lineup": "1",
+      "fromTeam": "25",
+      "position": "2"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "25",
+    "fields": {
+      "name": "Sporting Lisbon",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "6",
+    "fields": {
+      "name": "Chris",
+      "surname": "Smalling",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1989-11-22",
+      "height": "193",
+      "weight": "89",
+      "country": "GB",
+      "better_leg": "P",
+      "number": "12",
+      "injury": "N",
+      "slug": "chris-smalling",
+      "lineup": "1",
+      "fromTeam": "26",
+      "position": "2"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "26",
+    "fields": {
+      "name": "Fulham",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "7",
+    "fields": {
+      "name": "Daley",
+      "surname": "Blind",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1990-03-09",
+      "height": "180",
+      "weight": "71",
+      "country": "NL",
+      "better_leg": "L",
+      "number": "17",
+      "injury": "N",
+      "slug": "daley-blind",
+      "lineup": "1",
+      "fromTeam": "27",
+      "position": "3"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "27",
+    "fields": {
+      "name": "Ajax Amsterdam",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "8",
+    "fields": {
+      "name": "Luke",
+      "surname": "Shaw",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1995-07-12",
+      "height": "185",
+      "weight": "70",
+      "country": "GB",
+      "better_leg": "L",
+      "number": "23",
+      "injury": "T",
+      "slug": "luke-shaw",
+      "lineup": "1",
+      "fromTeam": "13",
+      "position": "3"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "9",
+    "fields": {
+      "name": "Timothy",
+      "surname": "Fosu-Mensah",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1998-01-02",
+      "height": "191",
+      "weight": "78",
+      "country": "NL",
+      "better_leg": "P",
+      "number": "24",
+      "injury": "N",
+      "slug": "timothy-fosu-mensah",
+      "lineup": "1",
+      "position": "4"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "10",
+    "fields": {
+      "name": "Antonio",
+      "surname": "Valencia",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1985-08-04",
+      "height": "180",
+      "weight": "77",
+      "country": "EC",
+      "better_leg": "P",
+      "number": "25",
+      "injury": "N",
+      "slug": "antonio-valencia",
+      "lineup": "1",
+      "fromTeam": "28",
+      "position": "4"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "28",
+    "fields": {
+      "name": "Wigan Athletic",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "11",
+    "fields": {
+      "name": "Matteo",
+      "surname": "Darmian",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1989-12-02",
+      "height": "183",
+      "weight": "69",
+      "country": "IT",
+      "better_leg": "P",
+      "number": "36",
+      "injury": "N",
+      "slug": "mateo-darmian",
+      "lineup": "1",
+      "fromTeam": "29",
+      "position": "4"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "29",
+    "fields": {
+      "name": "Torino FC",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "12",
+    "fields": {
+      "name": "Axel",
+      "surname": "Tuanzebe",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1997-11-14",
+      "height": "184",
+      "weight": "68",
+      "country": "GB",
+      "better_leg": "P",
+      "number": "38",
+      "injury": "Y",
+      "slug": "axel-tuanzebe",
+      "lineup": "2",
+      "position": "4"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "13",
+    "fields": {
+      "name": "Paul",
+      "surname": "Pogba",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1993-03-15",
+      "height": "191",
+      "weight": "76",
+      "country": "FR",
+      "better_leg": "P",
+      "number": "6",
+      "injury": "F",
+      "slug": "paul-pogbra",
+      "lineup": "1",
+      "fromTeam": "30",
+      "position": "9"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "30",
+    "fields": {
+      "name": "Juventus FC",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "14",
+    "fields": {
+      "name": "Juan",
+      "surname": "Mata",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1988-04-28",
+      "height": "170",
+      "weight": "64",
+      "country": "ES",
+      "better_leg": "L",
+      "number": "8",
+      "injury": "N",
+      "slug": "juan-mata",
+      "lineup": "1",
+      "fromTeam": "4",
+      "position": "10"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "15",
+    "fields": {
+      "name": "Jesse",
+      "surname": "Lingard",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1992-12-15",
+      "height": "175",
+      "weight": "58",
+      "country": "GB",
+      "better_leg": "P",
+      "number": "14",
+      "injury": "N",
+      "slug": "jesse-lingard",
+      "lineup": "1",
+      "position": "12"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "16",
+    "fields": {
+      "name": "Michael",
+      "surname": "Carrick",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1981-07-28",
+      "height": "188",
+      "weight": "72",
+      "country": "GB",
+      "better_leg": "P",
+      "number": "16",
+      "injury": "N",
+      "slug": "michael-carrick",
+      "lineup": "1",
+      "fromTeam": "17",
+      "position": "8"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "17",
+    "fields": {
+      "name": "Ashley",
+      "surname": "Young",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1985-07-09",
+      "height": "175",
+      "weight": "64",
+      "country": "GB",
+      "better_leg": "L",
+      "number": "18",
+      "injury": "N",
+      "slug": "ashley-young",
+      "lineup": "1",
+      "fromTeam": "31",
+      "position": "11"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "31",
+    "fields": {
+      "name": "Aston Villa",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "18",
+    "fields": {
+      "name": "Ander",
+      "surname": "Herrera",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1989-04-14",
+      "height": "183",
+      "weight": "76",
+      "country": "ES",
+      "better_leg": "P",
+      "number": "21",
+      "injury": "N",
+      "slug": "ander-herrera",
+      "lineup": "1",
+      "fromTeam": "32",
+      "position": "9"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "32",
+    "fields": {
+      "name": "Athletic Bilbao",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "19",
+    "fields": {
+      "name": "Henrikh",
+      "surname": "Mkhitaryan",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1989-01-21",
+      "height": "178",
+      "weight": "71",
+      "country": "AM",
+      "better_leg": "P",
+      "number": "22",
+      "injury": "N",
+      "slug": "henrikh-mkhitaryan",
+      "lineup": "1",
+      "fromTeam": "33",
+      "position": "9"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "33",
+    "fields": {
+      "name": "Borrusia Dortmund",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "20",
+    "fields": {
+      "name": "Marouane",
+      "surname": "Fellaini",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1987-11-22",
+      "height": "193",
+      "weight": "84",
+      "country": "BE",
+      "better_leg": "P",
+      "number": "27",
+      "injury": "N",
+      "slug": "maurouane-fellaini",
+      "lineup": "1",
+      "fromTeam": "6",
+      "position": "8"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "21",
+    "fields": {
+      "name": "Bastian",
+      "surname": "Schweinsteiger",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1984-04-01",
+      "height": "183",
+      "weight": "78",
+      "country": "DE",
+      "better_leg": "P",
+      "number": "31",
+      "injury": "F",
+      "slug": "bastian-schweinsteiger",
+      "lineup": "1",
+      "fromTeam": "34",
+      "position": "9"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "34",
+    "fields": {
+      "name": "FC Bayern Munich",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "22",
+    "fields": {
+      "name": "Memphis",
+      "surname": "Depay",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1994-02-13",
+      "height": "175",
+      "weight": "70",
+      "country": "NL",
+      "better_leg": "L",
+      "number": "7",
+      "injury": "N",
+      "slug": "mamphis-depay",
+      "lineup": "1",
+      "fromTeam": "35",
+      "position": "11"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "35",
+    "fields": {
+      "name": "PSV Eindhoven",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "23",
+    "fields": {
+      "name": "Zlatan",
+      "surname": "Ibrahimovic",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1981-10-03",
+      "height": "196",
+      "weight": "93",
+      "country": "SE",
+      "better_leg": "P",
+      "number": "9",
+      "injury": "N",
+      "slug": "zlatan-ibrahimovic",
+      "lineup": "1",
+      "fromTeam": "36",
+      "position": "13"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "36",
+    "fields": {
+      "name": "Paris Saint-Germain F.C",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "24",
+    "fields": {
+      "name": "Wayne",
+      "surname": "Rooney",
+      "gender": "M",
+      "captain": "True",
+      "date_of_birth": "1985-10-24",
+      "height": "175",
+      "weight": "77",
+      "country": "GB",
+      "better_leg": "P",
+      "number": "10",
+      "injury": "N",
+      "slug": "wayne-rooney",
+      "lineup": "1",
+      "fromTeam": "6",
+      "position": "13"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "25",
+    "fields": {
+      "name": "Anthony",
+      "surname": "Martial",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1995-12-05",
+      "height": "183",
+      "weight": "71",
+      "country": "FR",
+      "better_leg": "L",
+      "number": "11",
+      "injury": "N",
+      "slug": "anthony-martial",
+      "lineup": "1",
+      "fromTeam": "37",
+      "position": "11"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "37",
+    "fields": {
+      "name": "AS Monaco",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "26",
+    "fields": {
+      "name": "Marcus",
+      "surname": "Rashford",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1997-10-31",
+      "height": "180",
+      "weight": "68",
+      "country": "GB",
+      "better_leg": "P",
+      "number": "19",
+      "injury": "N",
+      "slug": "marcus-rashford",
+      "lineup": "1",
+      "position": "12"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "27",
+    "fields": {
+      "name": "Adnan ",
+      "surname": "Januzaj",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1995-02-05",
+      "height": "176",
+      "weight": "63",
+      "country": "BE",
+      "better_leg": "L",
+      "number": "15",
+      "injury": "F",
+      "slug": "adnan-januzaj",
+      "lineup": "1",
+      "position": "11"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "28",
+    "fields": {
+      "name": "Sam",
+      "surname": "Johnstone",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1993-03-25",
+      "height": "188",
+      "weight": "73",
+      "country": "GB",
+      "better_leg": "L",
+      "number": "32",
+      "injury": "F",
+      "slug": "sam-johnstone",
+      "lineup": "2",
+      "position": "1"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "29",
+    "fields": {
+      "name": "Cameron",
+      "surname": "Borthwick-Jackson",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1997-02-02",
+      "height": "184",
+      "weight": "73",
+      "country": "GB",
+      "better_leg": "L",
+      "number": "43",
+      "injury": "F",
+      "slug": "cameron-borthwick-jackson",
+      "lineup": "1",
+      "position": "3"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "30",
+    "fields": {
+      "name": "Andreas",
+      "surname": "Pereira",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1996-01-01",
+      "height": "183",
+      "weight": "69",
+      "country": "BR",
+      "better_leg": "L",
+      "number": "44",
+      "injury": "N",
+      "slug": "andreas-pereira",
+      "lineup": "1",
+      "position": "10"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "31",
+    "fields": {
+      "name": "Guillermo",
+      "surname": "Varela",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1993-03-24",
+      "height": "185",
+      "weight": "76",
+      "country": "UY",
+      "better_leg": "P",
+      "injury": "T",
+      "slug": "guillermo-varela",
+      "lineup": "1",
+      "position": "4"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "32",
+    "fields": {
+      "name": "James",
+      "surname": "Wilson",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1995-12-01",
+      "height": "187",
+      "weight": "77",
+      "country": "GB",
+      "better_leg": "L",
+      "injury": "Y",
+      "slug": "james-wilson",
+      "lineup": "1",
+      "position": "13"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "33",
+    "fields": {
+      "name": "Matt",
+      "surname": "Olosunde",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1998-03-07",
+      "height": "191",
+      "weight": "80",
+      "country": "GB",
+      "better_leg": "L",
+      "injury": "F",
+      "slug": "matt-olosunde",
+      "lineup": "2",
+      "position": "2"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "34",
+    "fields": {
+      "name": "Regan",
+      "surname": "Poole",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1998-06-18",
+      "height": "185",
+      "weight": "73",
+      "country": "GB",
+      "better_leg": "R",
+      "injury": "F",
+      "slug": "regan-poole",
+      "lineup": "2",
+      "position": "4"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "35",
+    "fields": {
+      "name": "Charlie",
+      "surname": "Scott",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1997-09-02",
+      "height": "178",
+      "weight": "63",
+      "country": "GB",
+      "better_leg": "L",
+      "injury": "F",
+      "slug": "charlie-scott",
+      "lineup": "2",
+      "position": "3"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "36",
+    "fields": {
+      "name": "Sadiq",
+      "surname": "El Fitouri",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1994-10-10",
+      "height": "186",
+      "weight": "78",
+      "country": "LY",
+      "better_leg": "L",
+      "injury": "N",
+      "slug": "sadiq-el-fituori",
+      "lineup": "2",
+      "position": "2"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "37",
+    "fields": {
+      "name": "Joe",
+      "surname": "Riley",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1996-12-06",
+      "height": "183",
+      "weight": "74",
+      "country": "GB",
+      "better_leg": "P",
+      "injury": "F",
+      "slug": "joe-riley",
+      "lineup": "2",
+      "position": "2"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "38",
+    "fields": {
+      "name": "Scott",
+      "surname": "McTominay",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1996-12-06",
+      "height": "185",
+      "weight": "66",
+      "country": "GB",
+      "better_leg": "P",
+      "injury": "F",
+      "slug": "scott-mctominay",
+      "lineup": "2",
+      "position": "8"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "39",
+    "fields": {
+      "name": "Tosin",
+      "surname": "Kehinde",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1998-06-18",
+      "height": "179",
+      "weight": "77",
+      "country": "NG",
+      "better_leg": "L",
+      "injury": "F",
+      "slug": "tosin-kehinde",
+      "lineup": "2",
+      "position": "11"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "40",
+    "fields": {
+      "name": "Josh",
+      "surname": "Harrop",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1995-12-15",
+      "height": "182",
+      "weight": "73",
+      "country": "GB",
+      "better_leg": "L",
+      "injury": "F",
+      "slug": "josh-harrop",
+      "lineup": "2",
+      "position": "9"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "41",
+    "fields": {
+      "name": "Sean",
+      "surname": "Goss",
+      "gender": "M",
+      "captain": "True",
+      "date_of_birth": "1995-10-01",
+      "height": "184",
+      "weight": "76",
+      "country": "GB",
+      "better_leg": "P",
+      "injury": "F",
+      "slug": "sean-goss",
+      "lineup": "2",
+      "position": "10"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "42",
+    "fields": {
+      "name": "Devonte",
+      "surname": "Redmond",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1996-10-19",
+      "height": "177",
+      "weight": "69",
+      "country": "GB",
+      "better_leg": "P",
+      "injury": "T",
+      "slug": "devonte-redmond",
+      "lineup": "2",
+      "position": "8"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "43",
+    "fields": {
+      "name": "Matty",
+      "surname": "Willock",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1996-09-20",
+      "height": "175",
+      "weight": "67",
+      "country": "GB",
+      "better_leg": "L",
+      "injury": "T",
+      "slug": "matty-willock",
+      "lineup": "2",
+      "position": "12"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "44",
+    "fields": {
+      "name": "Demetri",
+      "surname": "Mitchell",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1997-01-11",
+      "height": "185",
+      "weight": "73",
+      "country": "GB",
+      "better_leg": "P",
+      "injury": "N",
+      "slug": "demetri-mitchell",
+      "lineup": "2",
+      "position": "13"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "45",
+    "fields": {
+      "name": "Josh",
+      "surname": "Doughty",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1997-04-08",
+      "height": "177",
+      "weight": "64",
+      "country": "GB",
+      "better_leg": "L",
+      "injury": "T",
+      "slug": "josh-dought",
+      "lineup": "2",
+      "position": "13"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "46",
+    "fields": {
+      "name": "Indy",
+      "surname": "Boonen",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1999-01-04",
+      "height": "193",
+      "weight": "77",
+      "country": "BE",
+      "better_leg": "L",
+      "injury": "F",
+      "slug": "indy-boonen",
+      "lineup": "3",
+      "fromTeam": "38",
+      "position": "9"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "38",
+    "fields": {
+      "name": "Genk",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "47",
+    "fields": {
+      "name": "DJ",
+      "surname": "Buffonge",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1998-11-07",
+      "height": "184",
+      "weight": "75",
+      "country": "GB",
+      "better_leg": "L",
+      "injury": "F",
+      "slug": "dj-buffonge",
+      "lineup": "3",
+      "fromTeam": "26",
+      "position": "8"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "48",
+    "fields": {
+      "name": "Zachary",
+      "surname": "Dearnley",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1998-10-28",
+      "height": "189",
+      "weight": "79",
+      "country": "GB",
+      "better_leg": "P",
+      "injury": "F",
+      "slug": "zachary-dearnley",
+      "lineup": "3",
+      "position": "10"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "49",
+    "fields": {
+      "name": "Kayne",
+      "surname": "Diedrick-Roberts",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1998-11-04",
+      "height": "182",
+      "weight": "71",
+      "country": "GB",
+      "better_leg": "L",
+      "injury": "F",
+      "slug": "kayne-diedrick-roberts",
+      "lineup": "3",
+      "fromTeam": "26",
+      "position": "13"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "50",
+    "fields": {
+      "name": "Callum",
+      "surname": "Gribbin",
+      "gender": "M",
+      "captain": "True",
+      "date_of_birth": "1998-12-18",
+      "height": "189",
+      "weight": "79",
+      "country": "GB",
+      "better_leg": "P",
+      "injury": "F",
+      "slug": "callum-gribbin",
+      "lineup": "3",
+      "position": "9"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "51",
+    "fields": {
+      "name": "Ethan",
+      "surname": "Hamilton",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1998-10-18",
+      "height": "172",
+      "weight": "66",
+      "country": "GB",
+      "better_leg": "L",
+      "injury": "T",
+      "slug": "ethan-hamilton",
+      "lineup": "3",
+      "position": "11"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "52",
+    "fields": {
+      "name": "Jake",
+      "surname": "Kenyon",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1999-01-02",
+      "height": "176",
+      "weight": "68",
+      "country": "GB",
+      "better_leg": "L",
+      "injury": "T",
+      "slug": "jake-kenyon",
+      "lineup": "3",
+      "position": "12"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "53",
+    "fields": {
+      "name": "Faustin",
+      "surname": "Makela",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1999-07-01",
+      "height": "181",
+      "weight": "69",
+      "country": "CG",
+      "better_leg": "P",
+      "injury": "F",
+      "slug": "faustin-makela",
+      "lineup": "3",
+      "position": "8"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "54",
+    "fields": {
+      "name": "Ilias",
+      "surname": "Moutha-Sebtaoui",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1999-04-01",
+      "height": "178",
+      "weight": "70",
+      "country": "BL",
+      "better_leg": "P",
+      "injury": "F",
+      "slug": "ilias-moutha-sebtaoui",
+      "lineup": "3",
+      "position": "12"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "39",
+    "fields": {
+      "name": "Standard Liège",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "55",
+    "fields": {
+      "name": "Thomas",
+      "surname": "Sang",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1999-06-29",
+      "height": "184",
+      "weight": "76",
+      "country": "GB",
+      "better_leg": "P",
+      "injury": "F",
+      "slug": "thomas-sang",
+      "lineup": "3",
+      "position": "2"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "56",
+    "fields": {
+      "name": "Tyrell",
+      "surname": "Warren",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1998-10-05",
+      "height": "182",
+      "weight": "75",
+      "country": "GB",
+      "better_leg": "",
+      "injury": "F",
+      "slug": "tyrell-warren",
+      "lineup": "3",
+      "position": "2"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "57",
+    "fields": {
+      "name": "Callum",
+      "surname": "Whelan",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1998-09-24",
+      "height": "187",
+      "weight": "78",
+      "country": "GB",
+      "better_leg": "L",
+      "injury": "F",
+      "slug": "callum-whelan",
+      "lineup": "3",
+      "position": "11"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "58",
+    "fields": {
+      "name": "Aidan",
+      "surname": "Barlow",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "2000-01-10",
+      "height": "174",
+      "weight": "63",
+      "country": "GB",
+      "better_leg": "P",
+      "injury": "F",
+      "slug": "aidan-barlow",
+      "lineup": "3",
+      "position": "10"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "59",
+    "fields": {
+      "name": "Jake",
+      "surname": "Barrett",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1999-10-16",
+      "height": "177",
+      "weight": "65",
+      "country": "GB",
+      "better_leg": "L",
+      "injury": "T",
+      "slug": "jake-barrett",
+      "lineup": "3",
+      "position": "2"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "60",
+    "fields": {
+      "name": "Joshua",
+      "surname": "Bohui",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1999-03-03",
+      "height": "174",
+      "weight": "59",
+      "country": "GB",
+      "better_leg": "L",
+      "injury": "F",
+      "slug": "joshua-bohui",
+      "lineup": "3",
+      "fromTeam": "40",
+      "position": "11"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "40",
+    "fields": {
+      "name": "Brentford",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "61",
+    "fields": {
+      "name": "Nishan",
+      "surname": "Burkart",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "2000-01-31",
+      "height": "172",
+      "weight": "58",
+      "country": "CH",
+      "better_leg": "P",
+      "injury": "F",
+      "slug": "nishan-burkart",
+      "lineup": "3",
+      "position": "13"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "41",
+    "fields": {
+      "name": "FC Zürich",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "62",
+    "fields": {
+      "name": "Tahith",
+      "surname": "Chong",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1999-12-04",
+      "height": "175",
+      "weight": "63",
+      "country": "NL",
+      "better_leg": "L",
+      "injury": "F",
+      "slug": "tahith-chond",
+      "lineup": "3",
+      "position": "13"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "63",
+    "fields": {
+      "name": "Max",
+      "surname": "Dunne",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "2000-01-10",
+      "height": "171",
+      "weight": "60",
+      "country": "GB",
+      "better_leg": "L",
+      "injury": "F",
+      "slug": "max-dunne",
+      "lineup": "3",
+      "position": "3"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "64",
+    "fields": {
+      "name": "Luca",
+      "surname": "Ercolani",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1999-11-25",
+      "height": "175",
+      "weight": "70",
+      "country": "GB",
+      "better_leg": "L",
+      "injury": "F",
+      "slug": "luca-ercolani",
+      "lineup": "3",
+      "fromTeam": "42",
+      "position": "3"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "42",
+    "fields": {
+      "name": "Forli",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "65",
+    "fields": {
+      "name": "Alex",
+      "surname": "Fojticek",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "2000-03-03",
+      "height": "177",
+      "weight": "65",
+      "country": "RU",
+      "better_leg": "L",
+      "injury": "F",
+      "slug": "alex-fojticek",
+      "lineup": "3",
+      "fromTeam": "43",
+      "position": "1"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "43",
+    "fields": {
+      "name": "1. FC Tatran Prešov",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "66",
+    "fields": {
+      "name": "Angel",
+      "surname": "Gomes",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "2000-08-31",
+      "height": "170",
+      "weight": "58",
+      "country": "GB",
+      "better_leg": "L",
+      "injury": "F",
+      "slug": "angel-gomes",
+      "lineup": "3",
+      "position": "10"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "67",
+    "fields": {
+      "name": "Max",
+      "surname": "Johnstone",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1998-08-18",
+      "height": "180",
+      "weight": "70",
+      "country": "GB",
+      "better_leg": "P",
+      "injury": "T",
+      "slug": "max-johnstone",
+      "lineup": "3",
+      "fromTeam": "44",
+      "position": "1"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "44",
+    "fields": {
+      "name": "Fleetwood Town",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "68",
+    "fields": {
+      "name": "Lee",
+      "surname": "O'Connor",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "2000-07-28",
+      "height": "170",
+      "weight": "55",
+      "country": "GB",
+      "better_leg": "P",
+      "injury": "F",
+      "slug": "lee-oconnor",
+      "lineup": "3",
+      "fromTeam": "45",
+      "position": "8"
+    }
+  },
+
+  {
+    "model": "club.teams",
+    "pk": "45",
+    "fields": {
+      "name": "Villa",
+      "inLeague": "0",
+      "isOursTeam": "0"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "69",
+    "fields": {
+      "name": "Harry",
+      "surname": "Spratt",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "2000-01-28",
+      "height": "171",
+      "weight": "59",
+      "country": "GB",
+      "better_leg": "L",
+      "injury": "F",
+      "slug": "harry-spratt",
+      "lineup": "3",
+      "position": "3"
+    }
+  },
+
+  {
+    "model": "club.players",
+    "pk": "70",
+    "fields": {
+      "name": "George",
+      "surname": "Tanner",
+      "gender": "M",
+      "captain": "False",
+      "date_of_birth": "1999-11-16",
+      "height": "175",
+      "weight": "73",
+      "country": "GB",
+      "better_leg": "P",
+      "injury": "T",
+      "slug": "george-tanner",
+      "lineup": "3",
+      "position": "13"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "1",
+    "fields": {
+      "username": "mkowal",
+      "first_name": "Michał",
+      "last_name": "Kowal",
+      "email": "michal.kowal@ifive.pl",
+      "is_superuser": "1",
+      "is_staff": "1",
+      "is_active":"1",
+      "date_joined": "2017-01-17 09:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "date_of_birth": "1994-07-02",
+      "country": "PL",
+      "phone_number": "535250460",
+      "slug": "michal-kowal"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "2",
+    "fields": {
+      "username": "dperdek",
+      "first_name": "Dawid",
+      "last_name": "Perdek",
+      "email": "perdziu1993@gmail.com",
+      "is_superuser": "1",
+      "is_staff": "1",
+      "is_active":"1",
+      "date_joined": "2017-01-17 09:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "date_of_birth": "1993-01-01",
+      "country": "PL",
+      "slug": "dawid-perdek"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "3",
+    "fields": {
+      "username": "aglazer",
+      "first_name": "Avram",
+      "last_name": "Glazer",
+      "email": "avram.glazer@klub-pilkarski.com",
+      "is_superuser": "0",
+      "is_staff": "1",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "avram-glazer",
+      "role": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "4",
+    "fields": {
+      "username": "jglazer",
+      "first_name": "Joel",
+      "last_name": "Glazer",
+      "email": "joel.glazer@klub-pilkarski.com",
+      "is_superuser": "0",
+      "is_staff": "1",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "joel-glazer",
+      "role": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "5",
+    "fields": {
+      "username": "ewoodward",
+      "first_name": "Edward",
+      "last_name": "Woodward",
+      "date_of_birth": "1971-11-09",
+      "email": "edward.woodward@klub-pilkarski.com",
+      "is_superuser": "0",
+      "is_staff": "1",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "edward-woodward",
+      "role": "2",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "6",
+    "fields": {
+      "username": "jmourinho",
+      "first_name": "Jose",
+      "last_name": "Mourinho",
+      "email": "jose.mourinho@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "date_of_birth": "1963-01-26",
+      "country": "PT",
+      "slug": "jose-mourinho",
+      "role": "3",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "7",
+    "fields": {
+      "username": "rfaria",
+      "first_name": "Rui",
+      "last_name": "Faria",
+      "email": "rui.faria@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "date_of_birth": "1963-01-26",
+      "country": "PT",
+      "slug": "rui-faria",
+      "role": "4",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "8",
+    "fields": {
+      "username": "icollins",
+      "first_name": "Ian",
+      "last_name": "Collins",
+      "email": "ian.collins@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "ian-collins",
+      "role": "11",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "9",
+    "fields": {
+      "username": "asinclair",
+      "first_name": "Anthony",
+      "last_name": "Sinclair",
+      "email": "anthony.sinclair@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "anthony-sinclair",
+      "role": "10",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "10",
+    "fields": {
+      "username": "slouro",
+      "first_name": "Silvino",
+      "last_name": "Louro",
+      "email": "silvino-louro@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "silvino-louro",
+      "role": "5",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "11",
+    "fields": {
+      "username": "rformosinho",
+      "first_name": "Ricardo",
+      "last_name": "Formosinho",
+      "email": "ricardo.formosinho@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "ricardo-formosinho",
+      "role": "5",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "12",
+    "fields": {
+      "username": "ealvarez",
+      "first_name": "Emilio",
+      "last_name": "Alvarez",
+      "email": "emilio.alvarez@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "emilio-alvarez",
+      "role": "5",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "13",
+    "fields": {
+      "username": "clalin",
+      "first_name": "Carlos",
+      "last_name": "Lalin",
+      "email": "carlos.lalin@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "carlos-lalin",
+      "role": "5",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "14",
+    "fields": {
+      "username": "gcerra",
+      "first_name": "Giovanni",
+      "last_name": "Cerra",
+      "email": "giovanni-cerra@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "giovanni-cerra",
+      "role": "5",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "15",
+    "fields": {
+      "username": "jmurtough",
+      "first_name": "John",
+      "last_name": "Murtough",
+      "email": "john.murtough@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "john-murtough",
+      "role": "5",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "16",
+    "fields": {
+      "username": "jlawlor",
+      "first_name": "Jim",
+      "last_name": "Lawlor",
+      "email": "jim.lawlor@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "jim-lawlor",
+      "role": "9",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "17",
+    "fields": {
+      "username": "tnielsen",
+      "first_name": "Tommy",
+      "last_name": "Nielsen",
+      "email": "tommy.nielsen@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "tommy-nielsen",
+      "role": "9",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "18",
+    "fields": {
+      "username": "gguzman",
+      "first_name": "Gerado",
+      "last_name": "Guzmán",
+      "email": "gerado.guzman@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "gerado-guzman",
+      "role": "9",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "19",
+    "fields": {
+      "username": "sorlandelli",
+      "first_name": "Sandro",
+      "last_name": "Orlandelli",
+      "email": "sandro.orlandelli@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "sandro-orlandelli",
+      "role": "9",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "20",
+    "fields": {
+      "username": "smcnally",
+      "first_name": "Steve",
+      "last_name": "McNally",
+      "email": "steve.mcnally@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "steve-mcnally",
+      "role": "8",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "21",
+    "fields": {
+      "username": "tgill",
+      "first_name": "Tony",
+      "last_name": "Gill",
+      "email": "tony.gill@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "tony-gill",
+      "role": "8",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "22",
+    "fields": {
+      "username": "nhough",
+      "first_name": "Neil",
+      "last_name": "Hough",
+      "email": "neil-hough@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "neil-hough",
+      "role": "8",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "23",
+    "fields": {
+      "username": "mjohnson",
+      "first_name": "Mandy",
+      "last_name": "Johnson",
+      "email": "mandy-johnson@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "mandy-johnson",
+      "role": "7",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "24",
+    "fields": {
+      "username": "jdavin",
+      "first_name": "John",
+      "last_name": "Davin",
+      "email": "john.davin@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "john-davin",
+      "role": "7",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "25",
+    "fields": {
+      "username": "garmer",
+      "first_name": "Gary",
+      "last_name": "Armer",
+      "email": "gary.armer@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "gary-armer",
+      "role": "6",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "26",
+    "fields": {
+      "username": "tlea",
+      "first_name": "Trevor",
+      "last_name": "Lea",
+      "email": "trevor.lea@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "trevor-lea",
+      "role": "6",
+      "lineup": "1"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "27",
+    "fields": {
+      "username": "tstrudwick",
+      "first_name": "Tony",
+      "last_name": "Strudwick",
+      "email": "tony.strudwick@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "tony-strudwick",
+      "role": "6",
+      "lineup": "2"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "28",
+    "fields": {
+      "username": "gwalker",
+      "first_name": "Gary",
+      "last_name": "Walker",
+      "email": "gary.walker@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "gary-walker",
+      "role": "7",
+      "lineup": "2"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "29",
+    "fields": {
+      "username": "rhawkins",
+      "first_name": "Richard",
+      "last_name": "Hawkins",
+      "email": "richard.hawkins@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "richard-hawkins",
+      "role": "8",
+      "lineup": "2"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "30",
+    "fields": {
+      "username": "rthorpe",
+      "first_name": "Robin",
+      "last_name": "Thorpe",
+      "email": "robin.thorpe@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "robin-thorpe",
+      "role": "6",
+      "lineup": "3"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "31",
+    "fields": {
+      "username": "dkelly",
+      "first_name": "David",
+      "last_name": "Kelly",
+      "email": "david.kelly@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "david-kelly",
+      "role": "7",
+      "lineup": "3"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "32",
+    "fields": {
+      "username": "pgaudino",
+      "first_name": "Paulo",
+      "last_name": "Gaudino",
+      "email": "paulo.gaudino@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "paulo-gaudino",
+      "role": "8",
+      "lineup": "3"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "33",
+    "fields": {
+      "username": "rgiggs",
+      "first_name": "Ryan",
+      "last_name": "Giggs",
+      "email": "ryan.giggs@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "ryan-giggs",
+      "role": "3",
+      "lineup": "2"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "34",
+    "fields": {
+      "username": "pscholes",
+      "first_name": "Paul",
+      "last_name": "Scholes",
+      "email": "paul.scholes@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "paul-scholes",
+      "role": "4",
+      "lineup": "2"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "35",
+    "fields": {
+      "username": "nbutt",
+      "first_name": "Nicky",
+      "last_name": "Butt",
+      "email": "nicky.butt@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "nicky-butt",
+      "role": "3",
+      "lineup": "3"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "36",
+    "fields": {
+      "username": "dbeckham",
+      "first_name": "David",
+      "last_name": "Beckham",
+      "email": "david.beckham@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "david-beckham",
+      "role": "4",
+      "lineup": "3"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "37",
+    "fields": {
+      "username": "ncox",
+      "first_name": "Nick",
+      "last_name": "Cox",
+      "email": "nick.cox@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "nick-cox",
+      "role": "5",
+      "lineup": "2"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "38",
+    "fields": {
+      "username": "tmartin",
+      "first_name": "Tommy",
+      "last_name": "Martin",
+      "email": "tommy.martin@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "tommy-martin",
+      "role": "5",
+      "lineup": "2"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "39",
+    "fields": {
+      "username": "kmckenna",
+      "first_name": "Kieran",
+      "last_name": "McKenna",
+      "email": "kieran.mckenna@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "kieran-mckenna",
+      "role": "5",
+      "lineup": "2"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "40",
+    "fields": {
+      "username": "jcokke",
+      "first_name": "John",
+      "last_name": "Cooke",
+      "email": "john.cokke@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "john-cokke",
+      "role": "5",
+      "lineup": "2"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "41",
+    "fields": {
+      "username": "clittle",
+      "first_name": "Colin",
+      "last_name": "Little",
+      "email": "colin.little@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "colin-little",
+      "role": "5",
+      "lineup": "2"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "42",
+    "fields": {
+      "username": "twhelan",
+      "first_name": "Tony",
+      "last_name": "Whelan",
+      "email": "tony.whelan@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "tony-whelan",
+      "role": "5",
+      "lineup": "3"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "43",
+    "fields": {
+      "username": "emulvey",
+      "first_name": "Eamon",
+      "last_name": "Mulvey",
+      "email": "eamon.mulvey@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "eamon-mulvey",
+      "role": "5",
+      "lineup": "3"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "44",
+    "fields": {
+      "username": "afettis",
+      "first_name": "Alan",
+      "last_name": "Fettis",
+      "email": "alan.fettis@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "alan-fettis",
+      "role": "5",
+      "lineup": "3"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "45",
+    "fields": {
+      "username": "jrobinson",
+      "first_name": "Jack",
+      "last_name": "Robinson",
+      "email": "jack.robinson@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "jack-robinson",
+      "role": "5",
+      "lineup": "3"
+    }
+  },
+
+  {
+    "model": "club.employees",
+    "pk": "46",
+    "fields": {
+      "username": "eleach",
+      "first_name": "Eddie",
+      "last_name": "Leach",
+      "email": "eddie.leach@klub-pilkarski.com",
+      "is_staff": "0",
+      "is_active":"1",
+      "date_joined": "2017-01-17 10:00:00",
+      "password": "pbkdf2_sha256$30000$f5FpOJuS3sIg$YwW8acP9+6J1nTNvEplD4W8ZgYV4mTeluDHllTxQgD8=",
+      "gender": "M",
+      "country": "GB",
+      "slug": "eddie-leach",
+      "role": "5",
+      "lineup": "3"
+    }
+  },
+
+
+  {
+    "model": "club.positions",
+    "pk": "1",
+    "fields": {
+      "name": "GK"
+    }
+  },
+
+  {
+    "model": "club.positions",
+    "pk": "2",
+    "fields": {
+      "name": "CB"
+    }
+  },
+
+  {
+    "model": "club.positions",
+    "pk": "3",
+    "fields": {
+      "name": "LB"
+    }
+  },
+
+  {
+    "model": "club.positions",
+    "pk": "4",
+    "fields": {
+      "name": "RB"
+    }
+  },
+
+  {
+    "model": "club.positions",
+    "pk": "5",
+    "fields": {
+      "name": "LWB"
+    }
+  },
+
+  {
+    "model": "club.positions",
+    "pk": "6",
+    "fields": {
+      "name": "RWB"
+    }
+  },
+
+  {
+    "model": "club.positions",
+    "pk": "7",
+    "fields": {
+      "name": "SW"
+    }
+  },
+
+  {
+    "model": "club.positions",
+    "pk": "8",
+    "fields": {
+      "name": "DM"
+    }
+  },
+
+  {
+    "model": "club.positions",
+    "pk": "9",
+    "fields": {
+      "name": "CM"
+    }
+  },
+
+  {
+    "model": "club.positions",
+    "pk": "10",
+    "fields": {
+      "name": "AM"
+    }
+  },
+
+  {
+    "model": "club.positions",
+    "pk": "11",
+    "fields": {
+      "name": "LW"
+    }
+  },
+
+  {
+    "model": "club.positions",
+    "pk": "12",
+    "fields": {
+      "name": "RW"
+    }
+  },
+
+  {
+    "model": "club.positions",
+    "pk": "13",
+    "fields": {
+      "name": "CF"
+    }
+  },
+
+  {
+    "model": "club.positions",
+    "pk": "14",
+    "fields": {
+      "name": "WF"
+    }
+  },
+
+  {
+    "model": "club.lineups",
+    "pk": "1",
+    "fields": {
+      "name": "First Team",
+      "name_pl": "Pierwszy zespół"
+    }
+  },
+
+  {
+    "model": "club.lineups",
+    "pk": "2",
+    "fields": {
+      "name": "Team Reserves",
+      "name_pl": "Zespół rezerwowy"
+    }
+  },
+
+  {
+    "model": "club.lineups",
+    "pk": "3",
+    "fields": {
+      "name": "The Academy",
+      "name_pl": "Akademia"
+    }
+  },
+
+  {
+    "model": "club.roles",
+    "pk": "1",
+    "fields": {
+      "name": "President",
+      "name_pl": "Prezydent"
+    }
+  },
+
+  {
+    "model": "club.roles",
+    "pk": "2",
+    "fields": {
+      "name": "Vice-chairman",
+      "name_pl": "Wiceprezydent"
+    }
+  },
+
+  {
+    "model": "club.roles",
+    "pk": "3",
+    "fields": {
+      "name": "Manager",
+      "name_pl": "Menadżer"
+    }
+  },
+
+  {
+    "model": "club.roles",
+    "pk": "4",
+    "fields": {
+      "name": "Assistant manager",
+      "name_pl": "Asystent menadżera"
+    }
+  },
+
+  {
+    "model": "club.roles",
+    "pk": "5",
+    "fields": {
+      "name": "Trainer",
+      "name_pl": "Trener"
+    }
+  },
+
+  {
+    "model": "club.roles",
+    "pk": "6",
+    "fields": {
+      "name": "Physiotherapist",
+      "name_pl": "Fizjoterapeuta"
+    }
+  },
+
+  {
+    "model": "club.roles",
+    "pk": "7",
+    "fields": {
+      "name": "Masseur",
+      "name_pl": "Masażysta"
+    }
+  },
+
+  {
+    "model": "club.roles",
+    "pk": "8",
+    "fields": {
+      "name": "Doctor",
+      "name_pl": "Lekarz"
+    }
+  },
+
+  {
+    "model": "club.roles",
+    "pk": "9",
+    "fields": {
+      "name": "Scout",
+      "name_pl": "Skaut"
+    }
+  },
+
+  {
+    "model": "club.roles",
+    "pk": "10",
+    "fields": {
+      "name": "Team leader",
+      "name_pl": "Kierownik"
+    }
+  },
+
+  {
+    "model": "club.roles",
+    "pk": "11",
+    "fields": {
+      "name": "Facility manager",
+      "name_pl": "Kierownik obiektu"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "1",
+    "fields": {
+      "name": "Fixture 1",
+      "name_pl": "Kolejka 1"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "2",
+    "fields": {
+      "name": "Fixture 2",
+      "name_pl": "Kolejka 2"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "3",
+    "fields": {
+      "name": "Fixture 3",
+      "name_pl": "Kolejka 3"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "4",
+    "fields": {
+      "name": "Fixture 4",
+      "name_pl": "Kolejka 4"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "5",
+    "fields": {
+      "name": "Fixture 5",
+      "name_pl": "Kolejka 5"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "6",
+    "fields": {
+      "name": "Fixture 6",
+      "name_pl": "Kolejka 6"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "7",
+    "fields": {
+      "name": "Fixture 7",
+      "name_pl": "Kolejka 7"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "8",
+    "fields": {
+      "name": "Fixture 8",
+      "name_pl": "Kolejka 8"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "9",
+    "fields": {
+      "name": "Fixture 9",
+      "name_pl": "Kolejka 9"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "10",
+    "fields": {
+      "name": "Fixture 10",
+      "name_pl": "Kolejka 10"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "11",
+    "fields": {
+      "name": "Fixture 11",
+      "name_pl": "Kolejka 11"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "12",
+    "fields": {
+      "name": "Fixture 12",
+      "name_pl": "Kolejka 12"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "13",
+    "fields": {
+      "name": "Fixture 13",
+      "name_pl": "Kolejka 13"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "14",
+    "fields": {
+      "name": "Fixture 14",
+      "name_pl": "Kolejka 14"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "15",
+    "fields": {
+      "name": "Fixture 15",
+      "name_pl": "Kolejka 15"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "16",
+    "fields": {
+      "name": "Fixture 16",
+      "name_pl": "Kolejka 16"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "17",
+    "fields": {
+      "name": "Fixture 17",
+      "name_pl": "Kolejka 17"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "18",
+    "fields": {
+      "name": "Fixture 18",
+      "name_pl": "Kolejka 18"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "19",
+    "fields": {
+      "name": "Fixture 19",
+      "name_pl": "Kolejka 19"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "20",
+    "fields": {
+      "name": "Fixture 20",
+      "name_pl": "Kolejka 20"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "21",
+    "fields": {
+      "name": "Fixture 21",
+      "name_pl": "Kolejka 21"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "22",
+    "fields": {
+      "name": "Fixture 22",
+      "name_pl": "Kolejka 22"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "23",
+    "fields": {
+      "name": "Fixture 23",
+      "name_pl": "Kolejka 23"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "24",
+    "fields": {
+      "name": "Fixture 24",
+      "name_pl": "Kolejka 24"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "25",
+    "fields": {
+      "name": "Fixture 25",
+      "name_pl": "Kolejka 25"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "26",
+    "fields": {
+      "name": "Fixture 26",
+      "name_pl": "Kolejka 26"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "27",
+    "fields": {
+      "name": "Fixture 27",
+      "name_pl": "Kolejka 27"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "28",
+    "fields": {
+      "name": "Fixture 28",
+      "name_pl": "Kolejka 28"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "29",
+    "fields": {
+      "name": "Fixture 29",
+      "name_pl": "Kolejka 29"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "30",
+    "fields": {
+      "name": "Fixture 30",
+      "name_pl": "Kolejka 30"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "31",
+    "fields": {
+      "name": "Fixture 31",
+      "name_pl": "Kolejka 31"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "32",
+    "fields": {
+      "name": "Fixture 32",
+      "name_pl": "Kolejka 32"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "33",
+    "fields": {
+      "name": "Fixture 33",
+      "name_pl": "Kolejka 33"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "34",
+    "fields": {
+      "name": "Fixture 34",
+      "name_pl": "Kolejka 34"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "35",
+    "fields": {
+      "name": "Fixture 35",
+      "name_pl": "Kolejka 35"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "36",
+    "fields": {
+      "name": "Fixture 36",
+      "name_pl": "Kolejka 36"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "37",
+    "fields": {
+      "name": "Fixture 37",
+      "name_pl": "Kolejka 37"
+    }
+  },
+
+  {
+    "model": "club.fixtures",
+    "pk": "38",
+    "fields": {
+      "name": "Fixture 38",
+      "name_pl": "Kolejka 38"
+    }
+  },
+
+  {
+    "model": "club.seasons",
+    "pk": "1",
+    "fields": {
+      "name": "2017/2018"
+    }
+  },
+
+  {
+    "model": "auth.group",
+    "pk": "1",
+    "fields": {
+      "name": "Presidents"
+    }
+  },
+
+  {
+    "model": "auth.group",
+    "pk": "2",
+    "fields": {
+      "name": "Managers"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "1",
+    "fields": {
+      "group": "1",
+      "permission": "25"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "2",
+    "fields": {
+      "group": "1",
+      "permission": "26"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "3",
+    "fields": {
+      "group": "1",
+      "permission": "27"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "4",
+    "fields": {
+      "group": "1",
+      "permission": "28"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "5",
+    "fields": {
+      "group": "1",
+      "permission": "29"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "6",
+    "fields": {
+      "group": "1",
+      "permission": "30"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "7",
+    "fields": {
+      "group": "1",
+      "permission": "31"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "8",
+    "fields": {
+      "group": "1",
+      "permission": "32"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "9",
+    "fields": {
+      "group": "1",
+      "permission": "33"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "10",
+    "fields": {
+      "group": "1",
+      "permission": "34"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "11",
+    "fields": {
+      "group": "1",
+      "permission": "35"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "12",
+    "fields": {
+      "group": "1",
+      "permission": "36"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "13",
+    "fields": {
+      "group": "1",
+      "permission": "37"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "14",
+    "fields": {
+      "group": "1",
+      "permission": "38"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "15",
+    "fields": {
+      "group": "1",
+      "permission": "39"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "16",
+    "fields": {
+      "group": "1",
+      "permission": "40"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "17",
+    "fields": {
+      "group": "1",
+      "permission": "41"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "18",
+    "fields": {
+      "group": "1",
+      "permission": "42"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "19",
+    "fields": {
+      "group": "1",
+      "permission": "43"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "20",
+    "fields": {
+      "group": "1",
+      "permission": "44"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "21",
+    "fields": {
+      "group": "1",
+      "permission": "45"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "22",
+    "fields": {
+      "group": "1",
+      "permission": "46"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "23",
+    "fields": {
+      "group": "1",
+      "permission": "47"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "24",
+    "fields": {
+      "group": "1",
+      "permission": "48"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "25",
+    "fields": {
+      "group": "1",
+      "permission": "49"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "26",
+    "fields": {
+      "group": "1",
+      "permission": "50"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "27",
+    "fields": {
+      "group": "1",
+      "permission": "51"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "28",
+    "fields": {
+      "group": "1",
+      "permission": "52"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "29",
+    "fields": {
+      "group": "1",
+      "permission": "53"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "30",
+    "fields": {
+      "group": "1",
+      "permission": "54"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "31",
+    "fields": {
+      "group": "2",
+      "permission": "32"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "32",
+    "fields": {
+      "group": "2",
+      "permission": "34"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "33",
+    "fields": {
+      "group": "2",
+      "permission": "35"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "34",
+    "fields": {
+      "group": "2",
+      "permission": "37"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "35",
+    "fields": {
+      "group": "2",
+      "permission": "38"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "36",
+    "fields": {
+      "group": "2",
+      "permission": "40"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "37",
+    "fields": {
+      "group": "2",
+      "permission": "41"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "38",
+    "fields": {
+      "group": "2",
+      "permission": "43"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "39",
+    "fields": {
+      "group": "2",
+      "permission": "44"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "40",
+    "fields": {
+      "group": "2",
+      "permission": "46"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "41",
+    "fields": {
+      "group": "2",
+      "permission": "47"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "42",
+    "fields": {
+      "group": "2",
+      "permission": "49"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "43",
+    "fields": {
+      "group": "2",
+      "permission": "50"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "44",
+    "fields": {
+      "group": "2",
+      "permission": "52"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "45",
+    "fields": {
+      "group": "2",
+      "permission": "53"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "46",
+    "fields": {
+      "group": "2",
+      "permission": "25"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "47",
+    "fields": {
+      "group": "2",
+      "permission": "26"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "48",
+    "fields": {
+      "group": "2",
+      "permission": "28"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "49",
+    "fields": {
+      "group": "2",
+      "permission": "29"
+    }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": "50",
+    "fields": {
+      "group": "2",
+      "permission": "31"
+    }
+  },
+
+  {
+    "model": "club.employees_groups",
+    "pk": "1",
+    "fields": {
+      "employees": "3",
+      "group": "1"
+    }
+  },
+
+  {
+    "model": "club.employees_groups",
+    "pk": "2",
+    "fields": {
+      "employees": "4",
+      "group": "1"
+    }
+  },
+
+  {
+    "model": "club.employees_groups",
+    "pk": "3",
+    "fields": {
+      "employees": "5",
+      "group": "2"
+    }
+  }
+]

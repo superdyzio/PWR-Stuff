@@ -1,0 +1,76 @@
+{% extends 'index.html' %}
+{% load thumbnail %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+    <div class="col-xs-12">
+        <div class="details_view">
+            <div class="data_row">
+                <span class="data_label">{% trans "Name" %}: </span>
+                <span class="data_value">{{ player.name }}</span>
+            </div>
+            <div class="data_row">
+                <span class="data_label">{% trans "Surname" %}: </span>
+                <span class="data_value">{{ player.surname }}</span>
+            </div>
+            <div class="data_row">
+                <span class="data_label">{% trans "Date of birth" %}: </span>
+                <span class="data_value">{{ player.date_of_birth }}</span>
+            </div>
+            <div class="data_row">
+                <span class="data_label">{% trans "Height" %}: </span>
+                <span class="data_value">{{ player.height }}</span>
+            </div>
+            <div class="data_row">
+                <span class="data_label">{% trans "Weight" %}: </span>
+                <span class="data_value">{{ player.weight }}</span>
+            </div>
+            <div class="data_row">
+                <span class="data_label">{% trans "Country" %}: </span>
+                <span class="data_value">
+                    {% for country in countries %}
+                        {% if country.0 == player.country %}
+                            {{ country.1 }}
+                        {% endif %}
+                    {% endfor %}
+                </span>
+            </div>
+            <div class="data_row">
+                <span class="data_label">{% trans "Better leg" %}: </span>
+                <span class="data_value">
+                    {% for leg in legs %}
+                        {% if leg.0 == player.better_leg %}
+                            {{ leg.1 }}
+                        {% endif %}
+                    {% endfor %}
+                </span>
+            </div>
+            <div class="data_row">
+                <span class="data_label">{% trans "Number" %}: </span>
+                <span class="data_value">{{ player.number }}</span>
+            </div>
+            <div class="data_row">
+                <span class="data_label">{% trans "Injury" %}: </span>
+                <span class="data_value">
+                    {% for injury in injuries %}
+                        {% if injury.0 == player.injury %}
+                            {{ injury.1 }}
+                        {% endif %}
+                    {% endfor %}
+                </span>
+            </div>
+            <div class="data_row">
+                <span class="data_label">{% trans "Lineup" %}: </span>
+                <span class="data_value">{{ player.lineup }}</span>
+            </div>
+            <div class="data_row">
+                <span class="data_label">{% trans "Transfer from" %}: </span>
+                <span class="data_value">{{ player.fromTeam }}</span>
+            </div>
+            <div class="data_row">
+                <span class="data_label">{% trans "Position" %}: </span>
+                <span class="data_value">{{ player.position }}</span>
+            </div>
+        </div>
+    </div>
+{% endblock %}

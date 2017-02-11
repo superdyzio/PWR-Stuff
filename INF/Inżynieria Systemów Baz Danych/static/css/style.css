@@ -1,0 +1,37 @@
+body{color:#000;font-size:14px;font-family: 'Open Sans', sans-serif;}
+#logo{display:block;width:100%;background:gray;text-align:center;height:40px;line-height:30px;}
+.navbar-brand{font-size:17px;}
+#footer{background:#f5f5f5;padding:15px 0;}
+#wrapper{margin:100px 0 50px;min-height:400px;display:flex;align-items:center;justify-content:center;}
+#languages-top li{display:inline-block}
+#languages-top p{padding:15px;margin-bottom:0;background:#eee;line-height:20px}
+#languages-top a:hover{background:#eee}
+thead.thead-inverse {background-color: lightgrey; font-weight: bold;}
+div.details_view div:nth-child(odd) {background-color: lightgrey;}
+div.data_row {font-size: larger; height: 70px;}
+div.data_row span.data_label {font-weight: bold;}
+div.data_row span.data_value {font-style: italic;}
+input[type="text"] {width: 200px;}
+div.table-form {margin-bottom: 30px;}
+th a{color: inherit;}
+table.table{margin-bottom:35px;}
+#login-form{text-align:center;}
+#login-form input{width:200px;margin:0 auto;}
+#header .navbar-right{display:flex;align-items:center;}
+#header .navbar-right > a{padding:15px;color:#777;}
+#header .navbar-right > a:hover,
+#header .navbar-right > a.active{color:#555;background:#e7e7e7;text-decoration:none}
+.nav-lineups{text-align:center;}
+.nav-lineups li{margin-right:10px;display:inline-block;margin-bottom:10px;}
+.nav-lineups li.active a{border-color:#adadad;background-color:#e6e6e6;}
+.special-nav-container{display:flex;align-items:center;justify-content:center;min-height:400px;flex-direction:row;}
+.special-nav-container a{font-size:36px;padding:30px;flex-direction:column;}
+.special-nav-container li{margin-right:25px;margin-bottom:25px;}
+.special-nav-container li:last-child, .nav-lineups li:last-child{margin-right:0;}
+@media screen and (max-width:767px){
+    #header ul.nav{text-align:center;}
+    #header .navbar-right{justify-content:center}
+    #header .navbar-right > a{margin-right:15px;}
+    .navbar-default .navbar-nav > li > a{padding-top:15px;padding-bottom:15px;}
+    #header .navbar-right form a:last-child{margin-left:-4px}
+}

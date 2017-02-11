@@ -1,0 +1,72 @@
+{% extends 'index.html' %}
+{% load thumbnail %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+    <div class="col-xs-12">
+        <div class="details_view">
+            <div class="data_row">
+                <span class="data_label">{% trans "Last name" %}: </span>
+                <span class="data_value">{{ employee.last_name }}</span>
+            </div>
+            <div class="data_row">
+                <span class="data_label">{% trans "First name" %}: </span>
+                <span class="data_value">{{ employee.first_name }}</span>
+            </div>
+            {% if employee.date_of_birth %}
+                <div class="data_row">
+                    <span class="data_label">{% trans "Date of birth" %}: </span>
+                    <span class="data_value">{{ employee.date_of_birth }}</span>
+                </div>
+            {% endif %}
+            {% if employee.country %}
+                <div class="data_row">
+                    <span class="data_label">{% trans "Country" %}: </span>
+                    <span class="data_value">
+                        {% for country in countries %}
+                            {% if country.0 == employee.country %}
+                                {{ country.1 }}
+                            {% endif %}
+                        {% endfor %}
+                    </span>
+                </div>
+            {% endif %}
+            {% if employee.email %}
+                <div class="data_row">
+                    <span class="data_label">{% trans "Email" %}: </span>
+                    <span class="data_value">{{ employee.email }}</span>
+                </div>
+            {% endif %}
+            {% if employee.phone_number %}
+                <div class="data_row">
+                    <span class="data_label">{% trans "Phone number" %}: </span>
+                    <span class="data_value">{{ employee.phone_number }}</span>
+                </div>
+            {% endif %}
+            {% if employee.role %}
+                <div class="data_row">
+                    <span class="data_label">{% trans "Role" %}: </span>
+                    <span class="data_value">
+                        {% if request.LANGUAGE_CODE == 'pl' %}
+                            {{ employee.role.name_pl }}
+                        {% else %}
+                            {{ employee.role.name }}
+                        {% endif %}
+                    </span>
+                </div>
+            {% endif %}
+            {% if employee.lineup %}
+                <div class="data_row">
+                    <span class="data_label">{% trans "Lineup" %}: </span>
+                    <span class="data_value">
+                        {% if request.LANGUAGE_CODE == 'pl' %}
+                            {{ employee.lineup.name_pl }}
+                        {% else %}
+                            {{ employee.lineup.name }}
+                        {% endif %}
+                    </span>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

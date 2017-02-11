@@ -1,0 +1,1223 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-19 01:34+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: klubpilkarski/core_variables.py:5 klubpilkarski/settings.py:109
+msgid "Polish"
+msgstr "Polski"
+
+#: klubpilkarski/core_variables.py:6 klubpilkarski/settings.py:108
+msgid "English"
+msgstr "Angielski"
+
+#: klubpilkarski/core_variables.py:10
+msgid "M"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:10
+msgid "Man"
+msgstr "Mężczyzna"
+
+#: klubpilkarski/core_variables.py:11
+msgid "W"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:11
+msgid "Woman"
+msgstr "Kobieta"
+
+#: klubpilkarski/core_variables.py:15
+msgid "Unknown or unspecified country"
+msgstr "Nieznany lub nieokreślony kraj"
+
+#: klubpilkarski/core_variables.py:16
+msgid "Andorra"
+msgstr "Andora"
+
+#: klubpilkarski/core_variables.py:17
+msgid "United Arab Emirates"
+msgstr "Zjednoczone Emiraty Arabskie"
+
+#: klubpilkarski/core_variables.py:18
+msgid "Afghanistan"
+msgstr "Afganistan"
+
+#: klubpilkarski/core_variables.py:19
+msgid "Antigua & Barbuda"
+msgstr "Antigua i Barbuda"
+
+#: klubpilkarski/core_variables.py:20
+msgid "Anguilla"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:21
+msgid "Albania"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:22
+msgid "Armenia"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:23
+msgid "Netherlands Antilles"
+msgstr "Antyle Holenderskie"
+
+#: klubpilkarski/core_variables.py:24
+msgid "Angola"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:25
+msgid "Antarctica"
+msgstr "Antarktyda"
+
+#: klubpilkarski/core_variables.py:26
+msgid "Argentina"
+msgstr "Argentyna"
+
+#: klubpilkarski/core_variables.py:27
+msgid "American Samoa"
+msgstr "Samoa Amerykańskie"
+
+#: klubpilkarski/core_variables.py:28
+msgid "Austria"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:29
+msgid "Australia"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:30
+msgid "Aruba"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:31
+msgid "Azerbaijan"
+msgstr "Azerbejdżan"
+
+#: klubpilkarski/core_variables.py:32
+msgid "Bosnia and Herzegovina"
+msgstr "Bośnia i Hercegowina"
+
+#: klubpilkarski/core_variables.py:33
+msgid "Barbados"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:34
+msgid "Bangladesh"
+msgstr "Bangladesz"
+
+#: klubpilkarski/core_variables.py:35
+msgid "Belgium"
+msgstr "Belgia"
+
+#: klubpilkarski/core_variables.py:36
+msgid "Burkina Faso"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:37
+msgid "Bulgaria"
+msgstr "Bułgaria"
+
+#: klubpilkarski/core_variables.py:38
+msgid "Bahrain"
+msgstr "Bahrajn"
+
+#: klubpilkarski/core_variables.py:39
+msgid "Burundi"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:40
+msgid "Benin"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:41
+msgid "Bermuda"
+msgstr "Bermudy"
+
+#: klubpilkarski/core_variables.py:42
+msgid "Brunei Darussalam"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:43
+msgid "Bolivia"
+msgstr "Boliwia"
+
+#: klubpilkarski/core_variables.py:44
+msgid "Brazil"
+msgstr "Brazylia"
+
+#: klubpilkarski/core_variables.py:45
+msgid "Bahama"
+msgstr "Bahamy"
+
+#: klubpilkarski/core_variables.py:46
+msgid "Bhutan"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:47
+msgid "Bouvet Island"
+msgstr "Wyspa Bouyet"
+
+#: klubpilkarski/core_variables.py:48
+msgid "Botswana"
+msgstr "Botswany"
+
+#: klubpilkarski/core_variables.py:49
+msgid "Belarus"
+msgstr "Białoruś"
+
+#: klubpilkarski/core_variables.py:50
+msgid "Belize"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:51
+msgid "Canada"
+msgstr "Kanada"
+
+#: klubpilkarski/core_variables.py:52
+msgid "Cocos (Keeling) Islands"
+msgstr "Wyspy Cooka"
+
+#: klubpilkarski/core_variables.py:53
+msgid "Central African Republic"
+msgstr "Republika Środkowoafrykańska"
+
+#: klubpilkarski/core_variables.py:54
+msgid "Congo"
+msgstr "Kongo"
+
+#: klubpilkarski/core_variables.py:55
+msgid "Switzerland"
+msgstr "Szwajcaria"
+
+#: klubpilkarski/core_variables.py:56
+msgid "Ivory Coast"
+msgstr "Wybrzeże Kości Słoniowej"
+
+#: klubpilkarski/core_variables.py:57
+msgid "Cook Islands"
+msgstr "Wyspy Cooka"
+
+#: klubpilkarski/core_variables.py:58
+msgid "Chile"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:59
+msgid "Cameroon"
+msgstr "Kamerun"
+
+#: klubpilkarski/core_variables.py:60
+msgid "China"
+msgstr "Chiny"
+
+#: klubpilkarski/core_variables.py:61
+msgid "Colombia"
+msgstr "Kolumbia"
+
+#: klubpilkarski/core_variables.py:62
+msgid "Costa Rica"
+msgstr "Kostaryka"
+
+#: klubpilkarski/core_variables.py:63
+msgid "Cuba"
+msgstr "Kuba"
+
+#: klubpilkarski/core_variables.py:64
+msgid "Cape Verde"
+msgstr "Wyspy Zielonego Przylądka"
+
+#: klubpilkarski/core_variables.py:65
+msgid "Christmas Island"
+msgstr "Wyspa Bożego Narodzenia"
+
+#: klubpilkarski/core_variables.py:66
+msgid "Cyprus"
+msgstr "Cypr"
+
+#: klubpilkarski/core_variables.py:67
+msgid "Czech Republic"
+msgstr "Czechy"
+
+#: klubpilkarski/core_variables.py:68
+msgid "Germany"
+msgstr "Niemcy"
+
+#: klubpilkarski/core_variables.py:69
+msgid "Djibouti"
+msgstr "Dżibuti"
+
+#: klubpilkarski/core_variables.py:70
+msgid "Denmark"
+msgstr "Dania"
+
+#: klubpilkarski/core_variables.py:71
+msgid "Dominica"
+msgstr "Dominika"
+
+#: klubpilkarski/core_variables.py:72
+msgid "Dominican Republic"
+msgstr "Republika Dominikany"
+
+#: klubpilkarski/core_variables.py:73
+msgid "Algeria"
+msgstr "Algieria"
+
+#: klubpilkarski/core_variables.py:74
+msgid "Ecuador"
+msgstr "Ekwador"
+
+#: klubpilkarski/core_variables.py:75
+msgid "Estonia"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:76
+msgid "Egypt"
+msgstr "Egipt"
+
+#: klubpilkarski/core_variables.py:77
+msgid "Western Sahara"
+msgstr "Sahara Zachodnia"
+
+#: klubpilkarski/core_variables.py:78
+msgid "Eritrea"
+msgstr "Erytrea"
+
+#: klubpilkarski/core_variables.py:79
+msgid "Spain"
+msgstr "Hiszpania"
+
+#: klubpilkarski/core_variables.py:80
+msgid "Ethiopia"
+msgstr "Etipioa"
+
+#: klubpilkarski/core_variables.py:81
+msgid "Finland"
+msgstr "Finlandia"
+
+#: klubpilkarski/core_variables.py:82
+msgid "Fiji"
+msgstr "Fidżi"
+
+#: klubpilkarski/core_variables.py:83
+msgid "Falkland Islands (Malvinas)"
+msgstr "Falklandy (Malwiny)"
+
+#: klubpilkarski/core_variables.py:84
+msgid "Micronesia"
+msgstr "Mikronezja"
+
+#: klubpilkarski/core_variables.py:85
+msgid "Faroe Islands"
+msgstr "Wyspy Owcze"
+
+#: klubpilkarski/core_variables.py:86
+msgid "France"
+msgstr "Francja"
+
+#: klubpilkarski/core_variables.py:87
+msgid "France, Metropolitan"
+msgstr "Francja metropolitarna"
+
+#: klubpilkarski/core_variables.py:88
+msgid "Gabon"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:89
+msgid "United Kingdom"
+msgstr "Zjednoczone Królestwo"
+
+#: klubpilkarski/core_variables.py:90
+msgid "Grenada"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:91
+msgid "Georgia"
+msgstr "Gruzja"
+
+#: klubpilkarski/core_variables.py:92
+msgid "French Guiana"
+msgstr "Gujana Francuska"
+
+#: klubpilkarski/core_variables.py:93
+msgid "Ghana"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:94
+msgid "Gibraltar"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:95
+msgid "Greenland"
+msgstr "Grenlandia"
+
+#: klubpilkarski/core_variables.py:96
+msgid "Gambia"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:97
+msgid "Guinea"
+msgstr "Gwinea"
+
+#: klubpilkarski/core_variables.py:98
+msgid "Guadeloupe"
+msgstr "Gwadelupa"
+
+#: klubpilkarski/core_variables.py:99
+msgid "Equatorial Guinea"
+msgstr "Gwinea Równikowa"
+
+#: klubpilkarski/core_variables.py:100
+msgid "Greece"
+msgstr "Grecja"
+
+#: klubpilkarski/core_variables.py:101
+msgid "South Georgia and the South Sandwich Islands"
+msgstr "Georgia Południowa i Sandwich Południowy"
+
+#: klubpilkarski/core_variables.py:102
+msgid "Guatemala"
+msgstr "Gwatemala"
+
+#: klubpilkarski/core_variables.py:103
+msgid "Guam"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:104
+msgid "Guinea-Bissau"
+msgstr "Gwinea Bissau"
+
+#: klubpilkarski/core_variables.py:105
+msgid "Guyana"
+msgstr "Gujana"
+
+#: klubpilkarski/core_variables.py:106
+msgid "Hong Kong"
+msgstr "Hongkong"
+
+#: klubpilkarski/core_variables.py:107
+msgid "Heard & McDonald Islands"
+msgstr "Heard i Wyspy McDonalda"
+
+#: klubpilkarski/core_variables.py:108
+msgid "Honduras"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:109
+msgid "Croatia"
+msgstr "Chorwacja"
+
+#: klubpilkarski/core_variables.py:110
+msgid "Haiti"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:111
+msgid "Hungary"
+msgstr "Węgry"
+
+#: klubpilkarski/core_variables.py:112
+msgid "Indonesia"
+msgstr "Indonezja"
+
+#: klubpilkarski/core_variables.py:113
+msgid "Ireland"
+msgstr "Irlandia"
+
+#: klubpilkarski/core_variables.py:114
+msgid "Israel"
+msgstr "Izrael"
+
+#: klubpilkarski/core_variables.py:115
+msgid "India"
+msgstr "Indie"
+
+#: klubpilkarski/core_variables.py:116
+msgid "British Indian Ocean Territory"
+msgstr "Brytyjskie Terytorium Oceanu Indyjskiego"
+
+#: klubpilkarski/core_variables.py:117
+msgid "Iraq"
+msgstr "Irak"
+
+#: klubpilkarski/core_variables.py:118
+msgid "Islamic Republic of Iran"
+msgstr "Islamska Republika Iranu"
+
+#: klubpilkarski/core_variables.py:119
+msgid "Iceland"
+msgstr "Islandia"
+
+#: klubpilkarski/core_variables.py:120
+msgid "Italy"
+msgstr "Włochy"
+
+#: klubpilkarski/core_variables.py:121
+msgid "Jamaica"
+msgstr "Jamajka"
+
+#: klubpilkarski/core_variables.py:122
+msgid "Jordan"
+msgstr "Jordania"
+
+#: klubpilkarski/core_variables.py:123
+msgid "Japan"
+msgstr "Japonia"
+
+#: klubpilkarski/core_variables.py:124
+msgid "Kenya"
+msgstr "Kenia"
+
+#: klubpilkarski/core_variables.py:125
+msgid "Kyrgyzstan"
+msgstr "Kirgistan"
+
+#: klubpilkarski/core_variables.py:126
+msgid "Cambodia"
+msgstr "Kambodża"
+
+#: klubpilkarski/core_variables.py:127
+msgid "Kiribati"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:128
+msgid "Comoros"
+msgstr "Komory"
+
+#: klubpilkarski/core_variables.py:129
+msgid "St. Kitts and Nevis"
+msgstr "Saint Kitts i Nevis"
+
+#: klubpilkarski/core_variables.py:130
+msgid "Korea, Democratic People's Republic of"
+msgstr "Republika Korei Ludowo-Demokratyczna"
+
+#: klubpilkarski/core_variables.py:131
+msgid "Korea, Republic of"
+msgstr "Republika Korei"
+
+#: klubpilkarski/core_variables.py:132
+msgid "Kuwait"
+msgstr "Kuwejt"
+
+#: klubpilkarski/core_variables.py:133
+msgid "Cayman Islands"
+msgstr "Kajmany"
+
+#: klubpilkarski/core_variables.py:134
+msgid "Kazakhstan"
+msgstr "Kazachstan"
+
+#: klubpilkarski/core_variables.py:135
+msgid "Lao People's Democratic Republic"
+msgstr "Laotańska Republika Ludowo-Demokratyczna"
+
+#: klubpilkarski/core_variables.py:136
+msgid "Lebanon"
+msgstr "Liban"
+
+#: klubpilkarski/core_variables.py:137
+msgid "Saint Lucia"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:138
+msgid "Liechtenstein"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:139
+msgid "Sri Lanka"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:140
+msgid "Liberia"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:141
+msgid "Lesotho"
+msgstr "Lesoto"
+
+#: klubpilkarski/core_variables.py:142
+msgid "Lithuania"
+msgstr "Litwa"
+
+#: klubpilkarski/core_variables.py:143
+msgid "Luxembourg"
+msgstr "Luksemburg"
+
+#: klubpilkarski/core_variables.py:144
+msgid "Latvia"
+msgstr "Łotwa"
+
+#: klubpilkarski/core_variables.py:145
+msgid "Libyan Arab Jamahiriya"
+msgstr "Liban"
+
+#: klubpilkarski/core_variables.py:146
+msgid "Morocco"
+msgstr "Maroko"
+
+#: klubpilkarski/core_variables.py:147
+msgid "Monaco"
+msgstr "Monako"
+
+#: klubpilkarski/core_variables.py:148
+msgid "Moldova, Republic of"
+msgstr "Republika Mołdawii"
+
+#: klubpilkarski/core_variables.py:149
+msgid "Madagascar"
+msgstr "Madagaskar"
+
+#: klubpilkarski/core_variables.py:150
+msgid "Marshall Islands"
+msgstr "Wyspy Marshalla"
+
+#: klubpilkarski/core_variables.py:151
+msgid "Mali"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:152
+msgid "Mongolia"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:153
+msgid "Burma"
+msgstr "Birma"
+
+#: klubpilkarski/core_variables.py:154
+msgid "Macau"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:155
+msgid "Northern Mariana Islands"
+msgstr "Mariany Północne"
+
+#: klubpilkarski/core_variables.py:156
+msgid "Martinique"
+msgstr "Martynika"
+
+#: klubpilkarski/core_variables.py:157
+msgid "Mauritania"
+msgstr "Mauretania"
+
+#: klubpilkarski/core_variables.py:158
+msgid "Montserrat"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:159
+msgid "Malta"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:160
+msgid "Mauritius"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:161
+msgid "Maldives"
+msgstr "Malediwy"
+
+#: klubpilkarski/core_variables.py:162
+msgid "Malawi"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:163
+msgid "Mexico"
+msgstr "Meksyk"
+
+#: klubpilkarski/core_variables.py:164
+msgid "Malaysia"
+msgstr "Malezja"
+
+#: klubpilkarski/core_variables.py:165
+msgid "Montenegro"
+msgstr "Czarnogóra"
+
+#: klubpilkarski/core_variables.py:166
+msgid "Mozambique"
+msgstr "Mozambik"
+
+#: klubpilkarski/core_variables.py:167
+msgid "Namibia"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:168
+msgid "New Caledonia"
+msgstr "Nowa Kaledonia"
+
+#: klubpilkarski/core_variables.py:169
+msgid "Niger"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:170
+msgid "Norfolk Island"
+msgstr "Wyspa Norfolk"
+
+#: klubpilkarski/core_variables.py:171
+msgid "Nigeria"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:172
+msgid "Nicaragua"
+msgstr "Nikaragua"
+
+#: klubpilkarski/core_variables.py:173
+msgid "Netherlands"
+msgstr "Holandia"
+
+#: klubpilkarski/core_variables.py:174
+msgid "Norway"
+msgstr "Norwegia"
+
+#: klubpilkarski/core_variables.py:175
+msgid "Nepal"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:176
+msgid "Nauru"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:177
+msgid "Niue"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:178
+msgid "New Zealand"
+msgstr "Nowa Zelandia"
+
+#: klubpilkarski/core_variables.py:179
+msgid "Oman"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:180
+msgid "Panama"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:181
+msgid "Peru"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:182
+msgid "French Polynesia"
+msgstr "Polinezja Francuska"
+
+#: klubpilkarski/core_variables.py:183
+msgid "Papua New Guinea"
+msgstr "Papua Nowa Gwinea"
+
+#: klubpilkarski/core_variables.py:184
+msgid "Philippines"
+msgstr "Filipiny"
+
+#: klubpilkarski/core_variables.py:185
+msgid "Pakistan"
+msgstr "Pakistan"
+
+#: klubpilkarski/core_variables.py:186
+msgid "Poland"
+msgstr "Polska"
+
+#: klubpilkarski/core_variables.py:187
+msgid "St. Pierre & Miquelon"
+msgstr "Saint-Pierre i Miquelon"
+
+#: klubpilkarski/core_variables.py:188
+msgid "Pitcairn"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:189
+msgid "Puerto Rico"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:190
+msgid "Portugal"
+msgstr "Portugalia"
+
+#: klubpilkarski/core_variables.py:191
+msgid "Palau"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:192
+msgid "Paraguay"
+msgstr "Paragwaj"
+
+#: klubpilkarski/core_variables.py:193
+msgid "Qatar"
+msgstr "Katar"
+
+#: klubpilkarski/core_variables.py:194
+msgid "Reunion"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:195
+msgid "Romania"
+msgstr "Rumunia"
+
+#: klubpilkarski/core_variables.py:196
+msgid "Russian Federation"
+msgstr "Rosja"
+
+#: klubpilkarski/core_variables.py:197
+msgid "Rwanda"
+msgstr "Rwandy"
+
+#: klubpilkarski/core_variables.py:198
+msgid "Saudi Arabia"
+msgstr "Arabia Saudyjska"
+
+#: klubpilkarski/core_variables.py:199
+msgid "Solomon Islands"
+msgstr "Wyspy Salomona"
+
+#: klubpilkarski/core_variables.py:200
+msgid "Seychelles"
+msgstr "Seszele"
+
+#: klubpilkarski/core_variables.py:201
+msgid "Sudan"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:202
+msgid "Sweden"
+msgstr "Szwecja"
+
+#: klubpilkarski/core_variables.py:203
+msgid "Singapore"
+msgstr "Singapur"
+
+#: klubpilkarski/core_variables.py:204
+msgid "St. Helena"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:205
+msgid "Slovenia"
+msgstr "Słowenia"
+
+#: klubpilkarski/core_variables.py:206
+msgid "Svalbard & Jan Mayen Islands"
+msgstr "Svalbard i Jan Mayen"
+
+#: klubpilkarski/core_variables.py:207
+msgid "Slovakia"
+msgstr "Słowacja"
+
+#: klubpilkarski/core_variables.py:208
+msgid "Sierra Leone"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:209
+msgid "San Marino"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:210
+msgid "Senegal"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:211
+msgid "Somalia"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:212
+msgid "Suriname"
+msgstr "Surinam"
+
+#: klubpilkarski/core_variables.py:213
+msgid "Sao Tome & Principe"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:214
+msgid "El Salvador"
+msgstr "Salvador"
+
+#: klubpilkarski/core_variables.py:215
+msgid "Syrian Arab Republic"
+msgstr "Syria"
+
+#: klubpilkarski/core_variables.py:216
+msgid "Swaziland"
+msgstr "Suazi"
+
+#: klubpilkarski/core_variables.py:217
+msgid "Turks & Caicos Islands"
+msgstr "Wyspy Turks & Caicos"
+
+#: klubpilkarski/core_variables.py:218
+msgid "Chad"
+msgstr "Czad"
+
+#: klubpilkarski/core_variables.py:219
+msgid "French Southern Territories"
+msgstr "Francuskie Terytoria Południowe"
+
+#: klubpilkarski/core_variables.py:220
+msgid "Togo"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:221
+msgid "Thailand"
+msgstr "Tajlandia"
+
+#: klubpilkarski/core_variables.py:222
+msgid "Tajikistan"
+msgstr "Tadżykistan"
+
+#: klubpilkarski/core_variables.py:223
+msgid "Tokelau"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:224
+msgid "Turkmenistan"
+msgstr "Turkmenia"
+
+#: klubpilkarski/core_variables.py:225
+msgid "Tunisia"
+msgstr "Tunezja"
+
+#: klubpilkarski/core_variables.py:226
+msgid "Tonga"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:227
+msgid "East Timor"
+msgstr "Wschodni Timor"
+
+#: klubpilkarski/core_variables.py:228
+msgid "Turkey"
+msgstr "Turcja"
+
+#: klubpilkarski/core_variables.py:229
+msgid "Trinidad & Tobago"
+msgstr "Trinidad i Tobago"
+
+#: klubpilkarski/core_variables.py:230
+msgid "Tuvalu"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:231
+msgid "Taiwan, Province of China"
+msgstr "Tajwan, Prowincja Chin"
+
+#: klubpilkarski/core_variables.py:232
+msgid "Tanzania, United Republic of"
+msgstr "Tanzania"
+
+#: klubpilkarski/core_variables.py:233
+msgid "Ukraine"
+msgstr "Ukraina"
+
+#: klubpilkarski/core_variables.py:234
+msgid "Uganda"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:235
+msgid "United States Minor Outlying Islands"
+msgstr "Stany Zjednoczone Dalekie Wyspy Mniejsze"
+
+#: klubpilkarski/core_variables.py:236
+msgid "United States of America"
+msgstr "Stany Zjednoczone Ameryki"
+
+#: klubpilkarski/core_variables.py:237
+msgid "Uruguay"
+msgstr "Urugwaj"
+
+#: klubpilkarski/core_variables.py:238
+msgid "Uzbekistan"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:239
+msgid "Vatican City State (Holy See)"
+msgstr "Watykan"
+
+#: klubpilkarski/core_variables.py:240
+msgid "St. Vincent & the Grenadines"
+msgstr "Saint Vincent i Grenadyny"
+
+#: klubpilkarski/core_variables.py:241
+msgid "Venezuela"
+msgstr "Wenezuela"
+
+#: klubpilkarski/core_variables.py:242
+msgid "British Virgin Islands"
+msgstr "Brytyjskie Wyspy Dziewicze"
+
+#: klubpilkarski/core_variables.py:243
+msgid "United States Virgin Islands"
+msgstr "Wyspy Dziewicze Stanów Zjednoczonych"
+
+#: klubpilkarski/core_variables.py:244
+msgid "Viet Nam"
+msgstr "Wietnam"
+
+#: klubpilkarski/core_variables.py:245
+msgid "Vanuatu"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:246
+msgid "Wallis & Futuna Islands"
+msgstr "Wallis i Futuna"
+
+#: klubpilkarski/core_variables.py:247
+msgid "Samoa"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:248
+msgid "Yemen"
+msgstr "Jemen"
+
+#: klubpilkarski/core_variables.py:249
+msgid "Mayotte"
+msgstr "Majotta"
+
+#: klubpilkarski/core_variables.py:250
+msgid "Yugoslavia"
+msgstr "Jugosławia"
+
+#: klubpilkarski/core_variables.py:251
+msgid "South Africa"
+msgstr "Afryka Południowa"
+
+#: klubpilkarski/core_variables.py:252
+msgid "Zambia"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:253
+msgid "Zaire"
+msgstr ""
+
+#: klubpilkarski/core_variables.py:254
+msgid "Zimbabwe"
+msgstr ""
+
+#: templates/block/footer.html:6
+msgid "All rights reserved."
+msgstr "Wszystkie prawa zastrzeżone."
+
+#: templates/block/header.html:13
+msgid "Football club"
+msgstr "Klub piłkarski"
+
+#: templates/block/header.html:18 templates/lineup_details.html:22
+msgid "Players"
+msgstr "Zawodnicy"
+
+#: templates/block/header.html:25 templates/lineup_details.html:76
+msgid "Employees"
+msgstr "Pracownicy"
+
+#: templates/block/header.html:32
+msgid "Trophies"
+msgstr "Trofea"
+
+#: templates/block/header.html:38
+msgid "Lineups"
+msgstr "Składy"
+
+#: templates/block/header.html:44
+msgid "Games"
+msgstr "Mecze"
+
+#: templates/block/header.html:53 templates/login.html:9
+msgid "Login"
+msgstr "Zaloguj się"
+
+#: templates/block/header.html:56
+msgid "Logout"
+msgstr "Wyloguj się"
+
+#: templates/employee_details.html:9
+msgid "Last name"
+msgstr "Nazwisko"
+
+#: templates/employee_details.html:13
+msgid "First name"
+msgstr "Imię"
+
+#: templates/employee_details.html:18 templates/player_details.html:17
+msgid "Date of birth"
+msgstr "Data urodzenia"
+
+#: templates/employee_details.html:24 templates/player_details.html:29
+msgid "Country"
+msgstr "Kraj"
+
+#: templates/employee_details.html:36
+msgid "Email"
+msgstr ""
+
+#: templates/employee_details.html:42
+msgid "Phone number"
+msgstr "Numer telefonu"
+
+#: templates/employee_details.html:48 templates/employees.html:47
+#: templates/lineup_details.html:97
+msgid "Role"
+msgstr "Rola"
+
+#: templates/employee_details.html:60 templates/player_details.html:63
+msgid "Lineup"
+msgstr "Skład"
+
+#: templates/employees.html:10 templates/games.html:39
+#: templates/players.html:10 templates/trophies.html:10
+msgid "Type search phrase here"
+msgstr "Wpisz by wyszukać"
+
+#: templates/employees.html:11 templates/games.html:40
+#: templates/players.html:11 templates/trophies.html:11
+msgid "Search"
+msgstr "Szukaj"
+
+#: templates/employees.html:16 templates/games.html:45
+#: templates/players.html:16 templates/trophies.html:16
+msgid "Back"
+msgstr "Wstecz"
+
+#: templates/employees.html:22 templates/games.html:51
+#: templates/players.html:22 templates/trophies.html:22
+msgid "Search results"
+msgstr "Wyniki wyszukiwania"
+
+#: templates/employees.html:31 templates/lineup_details.html:27
+#: templates/lineup_details.html:81 templates/players.html:30
+msgid "Last Name"
+msgstr "Nazwisko"
+
+#: templates/employees.html:39 templates/lineup_details.html:35
+#: templates/lineup_details.html:89 templates/players.html:38
+msgid "First Name"
+msgstr "Imię"
+
+#: templates/employees.html:84
+msgid "There are no employees matching criteria"
+msgstr "Nie ma pracowników spełniających kryteria"
+
+#: templates/employees.html:86
+msgid "There are no employees"
+msgstr "Nie ma pracowników"
+
+#: templates/games.html:13
+msgid "Season"
+msgstr "Sezon"
+
+#: templates/games.html:60
+msgid "Home team"
+msgstr "Gospodarz"
+
+#: templates/games.html:68
+msgid "Result"
+msgstr "Wynik"
+
+#: templates/games.html:69
+msgid "Away team"
+msgstr "Gość"
+
+#: templates/games.html:77
+msgid "Game date"
+msgstr "Data meczu"
+
+#: templates/games.html:86
+msgid "Game hour"
+msgstr "Godzina meczu"
+
+#: templates/games.html:117
+msgid "Details"
+msgstr "Szczegóły"
+
+#: templates/games.html:125
+msgid "There are no games matching criteria"
+msgstr "Nie ma meczy spełniających kryteria."
+
+#: templates/games.html:127
+msgid "There are no games"
+msgstr "Nie ma meczy"
+
+#: templates/index.html:7
+msgid "Football Club"
+msgstr "Klub piłkarski"
+
+#: templates/index.html:9
+msgid "football, club"
+msgstr "klub, piłkarski"
+
+#: templates/lineup_details.html:43 templates/player_details.html:71
+#: templates/players.html:46
+msgid "Position"
+msgstr "Pozycja"
+
+#: templates/lineup_details.html:72
+msgid "There are no players."
+msgstr "Nie ma zawodników"
+
+#: templates/lineup_details.html:126
+msgid "There are no employees."
+msgstr "Nie ma pracowników"
+
+#: templates/player_details.html:9
+msgid "Name"
+msgstr "Imię"
+
+#: templates/player_details.html:13
+msgid "Surname"
+msgstr "Nazwisko"
+
+#: templates/player_details.html:21
+msgid "Height"
+msgstr "Wzrost"
+
+#: templates/player_details.html:25
+msgid "Weight"
+msgstr "Waga"
+
+#: templates/player_details.html:39
+msgid "Better leg"
+msgstr "Lepsza noga"
+
+#: templates/player_details.html:49
+msgid "Number"
+msgstr "Numer zawodnika"
+
+#: templates/player_details.html:53
+msgid "Injury"
+msgstr "Kontuzja"
+
+#: templates/player_details.html:67
+msgid "Transfer from"
+msgstr "Transfer z"
+
+#: templates/players.html:76
+msgid "There are no players matching criteria"
+msgstr "Nie ma zawodników spełniających kryteria."
+
+#: templates/players.html:78
+msgid "There are no players"
+msgstr "Nie ma zawodników"
+
+#: templates/trophies.html:30
+msgid "Trophy name"
+msgstr "Nazwa trofeum"
+
+#: templates/trophies.html:46
+msgid "Year"
+msgstr "Rok"
+
+#: templates/trophies.html:78
+msgid "There are no trophies matching criteria"
+msgstr "Nie ma trofeów spełniających kryteria."
+
+#: templates/trophies.html:80
+msgid "There are no trophies"
+msgstr "Nie ma trofeów."

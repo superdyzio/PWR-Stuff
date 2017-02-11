@@ -1,0 +1,45 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans 'Football Club' as club %}</title>
+    <meta name="description" content="{{ club }}">
+    <meta name="keywords" content="{% trans 'football, club' %}">
+    <meta name="author" content="Michał Kowal & Dawid Perdek">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    {% block html_header %}
+    {% endblock %}
+</head>
+<body>
+{% include 'block/header.html' %}
+<div id="wrapper">
+    <div class="container">
+        <div class="row">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </div>
+</div>
+{% include 'block/footer.html' %}
+{% block js_bottom %}
+    <script type="text/javascript" src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('form#languages-top a').click(function () {
+                var lang = $(this).attr('data-lang');
+                $('form#languages-top input.lang').val(lang);
+                $('form#languages-top').submit();
+                return false;
+            });
+        });
+    </script>
+{% endblock %}
+</body>
+</html>

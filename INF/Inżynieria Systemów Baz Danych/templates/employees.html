@@ -1,0 +1,94 @@
+{% extends 'index.html' %}
+{% load thumbnail %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+    <div class="col-xs-12">
+        <div class="table-form">
+            {% if employeesfields %}
+                <form action="{% url 'filter-employees' %}" method="GET">
+                    <input type="text" name="search_phrase" placeholder="{% trans "Type search phrase here" %}">
+                    <input type="submit" value="{% trans "Search" %}">
+                </form>
+                <br>
+            {% endif %}
+            {% if search_phrase and not employeesfields %}
+                <button onclick="history.go(-1)">{% trans "Back" %}</button>
+                <br/>
+                <br/>
+            {% endif %}
+            {% if search_phrase %}
+                <div>
+                    <strong>{% trans "Search results" %}:</strong>
+                </div>
+            {% endif %}
+        </div>
+        <div>
+            <table class="table table-striped table-bordered table-hover">
+                <thead class="thead-inverse">
+                <tr>
+                    <th>Lp</th>
+                    <th>{% trans "Last Name" %}
+                        <a href="{% url 'employees' %}?sort=last_name&desc=no">
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </a>
+                        <a href="{% url 'employees' %}?sort=last_name&desc=yes">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </th>
+                    <th>{% trans "First Name" %}
+                        <a href="{% url 'employees' %}?sort=first_name&desc=no">
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </a>
+                        <a href="{% url 'employees' %}?sort=first_name&desc=yes">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </th>
+                    <th>{% trans "Role" %}
+                        <a href="{% url 'employees' %}?sort=role&desc=no">
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </a>
+                        <a href="{% url 'employees' %}?sort=role&desc=yes">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                {% if employeesfields %}
+                    {% for employee in employeesfields %}
+                        <tr>
+                            <td> {{ forloop.counter }} </td>
+                            <td>
+                                <a href="{% url "employee-details" employee.slug %}">
+                                    {{ employee.last_name }}
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{% url "employee-details" employee.slug %}">
+                                    {{ employee.first_name }}
+                                </a>
+                            </td>
+                            <td>
+                                {% if request.LANGUAGE_CODE == 'pl' %}
+                                    {{ employee.role.name_pl }}
+                                {% else %}
+                                    {{ employee.role.name }}
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        {% if search_phrase|length > 0 %}
+                            <td colspan="4">{% trans "There are no employees matching criteria" %}.</td>
+                        {% else %}
+                            <td colspan="4">{% trans "There are no employees" %}.</td>
+                        {% endif %}
+                    </tr>
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

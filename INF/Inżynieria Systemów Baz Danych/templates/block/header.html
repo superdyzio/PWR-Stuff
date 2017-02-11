@@ -1,0 +1,80 @@
+{% load i18n %}
+<header id="header">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="{% url 'home' %}">
+                  {% trans 'Football club' %}</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li {% if page == 'players' %}class="active"{% endif %}>
+                        {% trans 'Players' as players %}
+                        <a href="{% url 'players' %}" title="{{ players }}">
+                            {{ players }}
+                        </a>
+                    </li>
+                    {% if request.user.id %}
+                        <li {% if page == 'employees' %}class="active"{% endif %}>
+                            {% trans 'Employees' as employees %}
+                            <a href="{% url 'employees' %}" title="{{ employees }}">
+                                {{ employees }}
+                            </a>
+                        </li>
+                    {% endif %}
+                    <li {% if page == 'trophies' %}class="active"{% endif %}>
+                        {% trans 'Trophies' as trophies %}
+                        <a href="{% url 'trophies' %}" title="{{ trophies }}">
+                            {{ trophies }}
+                        </a>
+                    </li>
+                    <li {% if page == 'lineups' %}class="active"{% endif %}>
+                        {% trans 'Lineups' as lineups %}
+                        <a href="{% url 'lineups' %}" title="{{ lineups }}">
+                            {{ lineups }}
+                        </a>
+                    </li>
+                    <li {% if page == 'games' %}class="active"{% endif %}>
+                        {% trans 'Games' as games %}
+                        <a href="{% url 'games' 1 1 %}" title="{{ games }}">
+                            {{ games }}
+                        </a>
+                    </li>
+                </ul>
+                <div class="navbar-right">
+                    {% if not request.user.id %}
+                        <a href="{% url 'login' %}" {% if page == 'login' %}class="active"{% endif %}>
+                            {% trans 'Login' %}
+                        </a>
+                    {% else %}
+                        <a href="{% url 'logout' %}">{% trans 'Logout' %}</a>
+                    {% endif %}
+                    <form action="{% url 'set_language' %}" method="POST" id="languages-top">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% csrf_token %}
+                        <input type="hidden" class="lang" name="language" value="" />
+                        <ul class="nav navbar-nav">
+                            {% for language in languages %}
+                                <li>
+                                    {% if language.code == LANGUAGE_CODE %}
+                                        <p>{{ language.code }}</p>
+                                    {% else %}
+                                        <a href="#" data-lang="{{ language.code }}">{{ language.code }}</a>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </form>
+                </div>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+</header>
