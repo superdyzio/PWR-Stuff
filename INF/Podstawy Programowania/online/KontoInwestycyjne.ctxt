@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=KontoInwestycyjne()
+comment1.params=kwota
+comment1.target=void\ wplac(double)
+comment2.params=kwota
+comment2.target=void\ wyplac(double)
+comment3.params=
+comment3.target=double\ dajStan()
+comment4.params=
+comment4.target=void\ aktualizuj()
+numComments=5

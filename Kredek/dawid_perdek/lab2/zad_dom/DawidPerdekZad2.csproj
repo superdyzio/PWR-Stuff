@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44278EF9-70DF-4ABD-A00C-9E9FB952CD38}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DawidPerdekZad2</RootNamespace>
+    <AssemblyName>DawidPerdekZad2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Burger.cs" />
+    <Compile Include="FormAddingMeal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddingMeal.Designer.cs">
+      <DependentUpon>FormAddingMeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddingPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddingPerson.Designer.cs">
+      <DependentUpon>FormAddingPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddingPersonGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddingPersonGrade.Designer.cs">
+      <DependentUpon>FormAddingPersonGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddIngredient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddIngredient.Designer.cs">
+      <DependentUpon>FormAddIngredient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHomework1Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHomework1Main.Designer.cs">
+      <DependentUpon>FormHomework1Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHomework0Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHomework0Main.Designer.cs">
+      <DependentUpon>FormHomework0Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRemoveIngredient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRemoveIngredient.Designer.cs">
+      <DependentUpon>FormRemoveIngredient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRemoveMeal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRemoveMeal.Designer.cs">
+      <DependentUpon>FormRemoveMeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grade.cs" />
+    <Compile Include="Ingredient.cs" />
+    <Compile Include="Meal.cs" />
+    <Compile Include="Pasta.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="Pizza.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddingMeal.resx">
+      <DependentUpon>FormAddingMeal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddingPerson.resx">
+      <DependentUpon>FormAddingPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddingPersonGrade.resx">
+      <DependentUpon>FormAddingPersonGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddIngredient.resx">
+      <DependentUpon>FormAddIngredient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHomework0Main.resx">
+      <DependentUpon>FormHomework0Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHomework1Main.resx">
+      <DependentUpon>FormHomework1Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRemoveIngredient.resx">
+      <DependentUpon>FormRemoveIngredient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRemoveMeal.resx">
+      <DependentUpon>FormRemoveMeal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\happy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\burger1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\burger2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\burger3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pasta1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pasta2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pasta3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza3.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

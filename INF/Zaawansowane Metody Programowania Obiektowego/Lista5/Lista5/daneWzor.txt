@@ -1,0 +1,4 @@
+kula
+obiekt1 2.0 2.0 2.0 1.0
+walec
+obiekt2 4.0 4.0 4.0 1.5 x

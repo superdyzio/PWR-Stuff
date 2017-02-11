@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=c
+comment0.target=Samochod(double)
+comment1.params=v
+comment1.target=void\ zatankuj(double)
+comment2.params=s
+comment2.target=boolean\ czyPrzejedzie(double)
+comment3.params=
+comment3.target=int\ main()
+numComments=4

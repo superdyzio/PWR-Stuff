@@ -1,0 +1,60 @@
+1)
+	let rec replace (x,y,l) =
+		if (l = []) then []
+		else	if (List.hd l = x) then y :: replace(x,y,Lista.tl l)
+			else List.hd l :: replace(x,y,List.tl l);;
+
+2)
+	let rec rozdziel l =
+		match l with
+			a::b -> let(d,t,n) = rozdziel b
+				in (	if (a mod 6 = 0) then ([a]@d,[a]@t,n)
+					else	if (a mod 3 = 0) then (d,[a]@t,n)
+						else	if (a mod 2 = 0) then ([a]@d,t,n)
+							else (d,t,[a]@n)	)
+	|	[]	->	([],[],[]);;
+
+3)
+	let rec potega(p,w) =
+		if w = 0 then 1
+		else p * potega(p,w-1);;
+
+	let rec doDzies(system,liczba) = 
+		let size = List.length liczba in
+		if size = 0 then 0
+		else (List.hd liczba) * potega(system,size-1) + doDzies(system,List.tl liczba);;
+
+	let rec naNowy(system,liczba) =
+		if liczba = 0 then []
+		else liczba mod system :: naNowy(system,liczba/n);;
+
+	let zamien(liczba,ssystem,nsystem) = List.rev (naNowy(nsystem,doDzies(ssystem,liczba)));;
+
+4)
+	let lub a b =
+		match a,b with
+			false,false -> false
+		|	_ -> true
+	;;
+	
+	let kon a b =
+		match a,b with
+			true,true -> true
+		|	_ -> false
+	;;
+
+	let imp a b =
+		match a,b with
+			true,false -> false
+		|	_ -> true	
+	;;
+
+	let row a b =
+		match a,b with
+			true,true -> true
+		|	false,false -> true
+		|	_ -> false
+	;;
+
+	let wyrazenie a b c d =
+		imp a (row (lub (imp (row (lub a b) (imp c d)) a) (kon a (row c b))) (lub (imp (row d (kon a c)) b) c));;

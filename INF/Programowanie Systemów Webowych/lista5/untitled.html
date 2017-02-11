@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script src="scripts.js">
+    </script>
+    
+    <script type="text/javascript">
+    "use strict";
+    document.writeln("hello<br>");
+    var hres=window.innerWidth;
+
+    window.addEventListener("resize", function(){
+        hres=window.innerWidth;
+        document.getElementById("res").innerHTML = hres;
+    });
+    function multiply() {
+        var a = parseInt(document.getElementById("a").value, 10);
+        var b = parseInt(document.getElementById("b").value, 10);
+        document.getElementById("number2").innerHTML=(a*b);
+    }
+    function subtractf() {
+
+        var a = parseFloat(document.getElementById("a").value, 10);
+        var b = parseFloat(document.getElementById("b").value, 10);
+        document.getElementById("number3").innerHTML=(a-b);
+    }
+    function age() {
+
+        var agei = window.prompt("Please enter your age", "5");
+
+        if (agei !== null) {
+            if(agei<18){
+                window.alert("you are underage!");
+            }
+            else{
+                window.location = "https://www.pokerstars.eu/pl/";
+            }
+        }
+    }
+    </script>
+
+    <button type="button"
+    onclick="document.getElementById('number').innerHTML = Math.floor(Math.random()*100)">
+    Display a random number between 1 and 100</button>
+
+    <p id="number"></p>
+    <div><input  type="text" id="a"name="number1"  ><span>Podaj numer</span></div>
+    <div><input  type="text" id="b" name="number2"  ><span>Podaj numer</span></div>
+    <script>
+
+    </script>
+    <button type="button"
+    onclick="multiply()">
+    calculate the product(int only)</button><br>
+    <button type="button"
+    onclick="subtractf()">
+    calculate the product</button>
+    <br>
+    <button type="button"
+    onclick="document.getElementById('res').innerHTML = countdown(10)">
+    number tree</button>
+    <br>
+    <button type="button" id="myBtn">
+        enter</button>
+
+        <p id="number2"></p>
+        <p id="number3"></p>
+        <div>screen horizontal resolution:
+            <div id="res"></div>
+        </div>
+        <p id="countdown"></p>
+
+        <script type="text/javascript">
+        document.getElementById("myBtn").addEventListener("click", age);
+        document.getElementById("res").innerHTML = hres;
+        </script>
+    </body>
+    </html>

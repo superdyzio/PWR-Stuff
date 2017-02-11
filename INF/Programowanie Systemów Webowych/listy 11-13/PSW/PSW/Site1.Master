@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="PSW.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <title>Pizzeria</title>
+    <meta name="description" content="pizzeria">
+    <link rel="stylesheet" type="text/css" href="./static/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./static/app.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+    <header id="header">
+        <div class="container">
+            <div id="logo">
+                <a href="/" title="Pizzeria">
+                    Pizzeria
+                </a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li id="li1" onclick="navItemChange('#li1')">
+                        <a href="./index.aspx" title="O nas">O nas</a>
+                    </li>
+                    <li id="li2" onclick="navItemChange('#li2')">
+                        <a href="./products.aspx" title="Nasze produkty">Nasze produkty</a>
+                    </li>
+                    <li id="li3" onclick="navItemChange('#li3')">
+                        <a href="./contact.aspx" title="Kontakt">Kontakt</a>
+                    </li>
+                    <li id="li4" onclick="navItemChange('#li4')">
+                        <a href="./basket.aspx" title="Koszyk">Koszyk</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+    </div>
+        <section class="section-products content">
+            <div class="container">
+                <label>Zmień kolor headera i footera</label>
+                <select onchange="changeBackgroundColor(this);">
+                    <option>white</option>
+                    <option>red</option>
+                    <option>blue</option>
+                    <option>green</option>
+                    <option>black</option>
+                </select>
+            </div>
+        </section>
+    <footer id="footer">
+        <div class="container">
+            <p class="copyright">&#169; Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

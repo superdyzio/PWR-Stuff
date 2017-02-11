@@ -1,0 +1,4 @@
+Dawid Perdek 23 5,5 wzorowo 4,5 nieźle 4 dobrze
+Mateusz Kubanek 23 2 fatalnie 2,5 słabo
+Mateusz Rado 23 5,5 wzorowo
+Adam Kruk 23 3 dostateczny 2 słabo

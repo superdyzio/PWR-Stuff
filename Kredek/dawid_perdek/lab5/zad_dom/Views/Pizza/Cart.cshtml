@@ -1,0 +1,40 @@
+﻿@model List<DawidPerdekZad5.Models.Pizza>
+
+@{
+    ViewBag.Title = "Koszyk";
+}
+
+<h2>Twój koszyk</h2>
+
+@using (@Html.BeginForm("Delete"))
+{
+    @Html.Hidden("id", -1)
+    <button type="submit" class="btn btn-info">Potwierdź zamówienie</button>
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Lp.</th>
+            <th>Nazwa</th>
+            <th>Składniki</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pizza in Model)
+        {
+            <tr>
+                <td>@pizza.PizzaId</td>
+                <td>@pizza.Name</td>
+                <td>@pizza.Ingredients</td>
+                <td>@using (@Html.BeginForm("Delete"))
+                    {
+                        @Html.Hidden("id", pizza.PizzaId)
+                    <button type="submit" class="btn btn-danger">Usuń</button>
+                    } </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

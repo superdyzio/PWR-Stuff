@@ -1,0 +1,204 @@
+h1 {
+    text-shadow: 2px 2px #ff0000;
+}
+
+.div_class_1 {
+  border-color: black;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 15px 60px 30px 45px;
+  -webkit-border-radius: 15px 60px 30px 45px;
+  -moz-border-radius: 15px 60px 30px 45px;
+}
+
+.div_class_2 {
+  border-color: blue;
+  border-style: dashed;
+  border-width: 1px;
+  border-radius: 70px
+  -webkit-border-radius: 70px;
+  -moz-border-radius: 70px;
+}
+
+.div_class_3 {
+  border-color: brown;
+  border-style: dotted;
+  border-width: 10px;
+  border-radius: 60px 30px 45px;
+  -webkit-border-radius: 60px 30px 45px;
+  -moz-border-radius: 60px 30px 45px;
+}
+
+h2 {
+  box-shadow: 10px 10px 5px #888888;
+  -webkit-box-shadow: 10px 10px 5px #888888;
+  -moz-box-shadow: 10px 10px 5px #888888;
+}
+
+h3 {
+  background-image: linear-gradient(to right, white, blue);
+}
+
+.div_radial {
+  background-image: radial-gradient(blue, gold);
+}
+
+body {
+  background-image: url(http://img.shmbk.pl/rimgspr/19195985_crop_518_461_dla-domu-dekoracje-obrazy-kare-design-chihuahua-obraz-50x50cm-33051.jpg);
+  background-repeat: repeat-y;
+  background-position: center;
+  background-origin: initial;
+}
+
+#div_border {
+  border: 30px solid transparent;
+  border-image: url(http://www.urban-terror.pl/sites/default/files/imagecache/Avatar_50/avatar/picture-568-e13fc48febc360c6dfeec36c6fe4fd1b.jpg) 30;
+  border-image-repeat: repeat-y;
+  border-image-slice: 50;
+  -webkit-border-image: url(http://www.urban-terror.pl/sites/default/files/imagecache/Avatar_50/avatar/picture-568-e13fc48febc360c6dfeec36c6fe4fd1b.jpg) 30;
+  -webkit-border-image-repeat: repeat-y;
+  -webkit-border-image-slice: 50;
+  -moz-border-image: url(http://www.urban-terror.pl/sites/default/files/imagecache/Avatar_50/avatar/picture-568-e13fc48febc360c6dfeec36c6fe4fd1b.jpg);
+  -moz-border-image-repeat: repeat-y;
+  -moz-border-image-slice: 50;
+}
+
+#p1 {background-color: rgba(255, 0, 0, 0.4);}
+#p2 {background-color: hsla(120, 100%, 75%, 0.7);}
+
+@keyframes example {
+  0%   {background-color: red; left:0px; top:0px;}
+  25%  {background-color: yellow; left:200px; top:0px;}
+  50%  {background-color: blue; left:200px; top:200px;}
+  75%  {background-color: green; left:0px; top:200px;}
+  100% {background-color: red; left:0px; top:0px;}
+}
+
+@-webkit-keyframes example {
+  0%   {background-color: red; left:0px; top:0px;}
+  25%  {background-color: yellow; left:200px; top:0px;}
+  50%  {background-color: blue; left:200px; top:200px;}
+  75%  {background-color: green; left:0px; top:200px;}
+  100% {background-color: red; left:0px; top:0px;}
+}
+
+@-moz-keyframes example {
+  0%   {background-color: red; left:0px; top:0px;}
+  25%  {background-color: yellow; left:200px; top:0px;}
+  50%  {background-color: blue; left:200px; top:200px;}
+  75%  {background-color: green; left:0px; top:200px;}
+  100% {background-color: red; left:0px; top:0px;}
+}
+
+@-o-keyframes example {
+  0%   {background-color: red; left:0px; top:0px;}
+  25%  {background-color: yellow; left:200px; top:0px;}
+  50%  {background-color: blue; left:200px; top:200px;}
+  75%  {background-color: green; left:0px; top:200px;}
+  100% {background-color: red; left:0px; top:0px;}
+}
+
+.div_animation {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 10s;
+  -webkit-animation-name: example;
+  -webkit-animation-duration: 10s;
+  -moz-animation-name: example;
+  -moz-animation-duration: 10s;
+  -o-animation-name: example;
+  -o-animation-duration: 10s;
+}
+
+#div_transition {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: width 2s linear;
+  -o-transition: width 2s linear;
+  -moz-transition: width 2s linear;
+  -webkit-transition: width 2s linear;
+}
+
+#div_transition:hover {
+  width: 700px;
+}
+
+#div_transformation {
+  position: relative;
+  left: 1200px;
+  width: 300px;
+  height: 300px;
+  background-color: green;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(BungeeInline-Regular.ttf);
+}
+
+.another_font {
+  font-family: 'myFirstFont', Fallback, sans-serif;
+}
+
+.container {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  background-color: lightgrey;
+  width: 100%;
+  height: 400px;
+}
+
+.flex_item {
+  background-color: cornflowerblue;
+  width: 250px;
+  height: 300px;
+  margin: 10px;
+}
+
+.flex_item:hover {
+  width: 400px;
+  background-color: red;
+}
+
+.div_columns {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 90px;
+  -moz-column-gap: 90px;
+  column-gap: 90px;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        background-color: lightgreen;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+  .div_columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+  }
+}
+
+.div_columns2 {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 90px;
+  -moz-column-gap: 90px;
+  column-gap: 90px;
+}

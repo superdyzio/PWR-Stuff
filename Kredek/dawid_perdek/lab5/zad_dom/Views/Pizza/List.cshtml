@@ -1,0 +1,43 @@
+﻿@model List<DawidPerdekZad5.Models.Pizza>
+
+@{
+    ViewBag.Title = "Menu";
+}
+
+<h2>Menu</h2>
+
+@Html.ActionLink("Dodaj pizze", "Add", null, new { @class = "btn btn-success" })
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Lp.</th>
+            <th>Nazwa</th>
+            <th>Składniki</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pizza in Model)
+        {
+            <tr>
+                <td>@pizza.PizzaId</td>
+                <td>@pizza.Name</td>
+                <td>@pizza.Ingredients</td>
+                <td>@Html.ActionLink("Edytuj", "Edit", new { id = pizza.PizzaId }, new { @class = "btn btn-primary" })
+                    @using (Html.BeginForm("AddToCart"))
+                    {
+                        @Html.Hidden("id", pizza.PizzaId)
+                        @Html.Hidden("action", 1)
+                        <button type="submit" class="btn btn-info">Dodaj</button>
+                    }
+                    @using (@Html.BeginForm("Delete"))
+                    {
+                        @Html.Hidden("id", pizza.PizzaId)
+                        @Html.Hidden("action", 0)
+                        <button type="submit" class="btn btn-danger">Usuń</button>
+                    }</td>
+            </tr>
+        }
+    </tbody>
+</table>

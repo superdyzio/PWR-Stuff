@@ -1,0 +1,68 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dawidperdek.zad4app.InfoTabFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Liczba sportowców:"
+            android:id="@+id/textViewTotalPlayersLabel"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="133dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Liczba piłkarzy:"
+            android:id="@+id/textViewTotalFootballersLabel"
+            android:layout_marginTop="56dp"
+            android:layout_below="@+id/textViewTotalPlayersLabel"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Liczba koszykarzy:"
+            android:id="@+id/textViewTotalBasketballersLabel"
+            android:layout_below="@+id/textViewTotalFootballersLabel"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="65dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textViewTotalPlayers"
+            android:layout_alignBottom="@+id/textViewTotalPlayersLabel"
+            android:layout_toEndOf="@+id/textViewTotalPlayersLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textViewTotalFootballers"
+            android:layout_alignTop="@+id/textViewTotalFootballersLabel"
+            android:layout_toEndOf="@+id/textViewTotalFootballersLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textViewTotalBasketballers"
+            android:layout_alignTop="@+id/textViewTotalBasketballersLabel"
+            android:layout_toEndOf="@+id/textViewTotalBasketballersLabel" />
+    </RelativeLayout>
+</FrameLayout>

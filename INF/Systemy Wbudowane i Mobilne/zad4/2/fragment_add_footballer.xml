@@ -1,0 +1,112 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dawidperdek.zad4app.AddFootballerFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Dodaj piłkarza:"
+        android:id="@+id/textViewAddFootballerTitle"
+        android:layout_gravity="center_horizontal|top" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zapisz"
+        android:id="@+id/buttonSaveNewFootballer"
+        android:layout_gravity="center_horizontal|bottom"
+        android:onClick="SaveNewFootballer" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_gravity="center" >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Imię"
+            android:ems="10"
+            android:id="@+id/editTextNewFootballerName"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Nazwisko"
+            android:ems="10"
+            android:id="@+id/editTextNewFootballerSurname"
+            android:layout_below="@+id/editTextNewFootballerName"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editTextNewFootballerGoals"
+            android:text="Bramki"
+            android:layout_below="@+id/seekBarNewFootballerHeight"
+            android:layout_marginTop="52dp"
+            android:layout_alignStart="@+id/editTextNewFootballerAssists" />
+
+        <SeekBar
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBarNewFootballerHeight"
+            android:layout_marginTop="85dp"
+            android:layout_below="@+id/editTextNewFootballerSurname"
+            android:layout_alignParentStart="true"
+            android:max="60"
+            android:progress="30" />
+
+        <SeekBar
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBarNewFootballerWeight"
+            android:layout_alignBottom="@+id/seekBarNewFootballerHeight"
+            android:layout_alignParentEnd="true"
+            android:progress="25"
+            android:max="50" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Wzrost (160-220 cm):"
+            android:id="@+id/textViewNewFootballerHeightLabel"
+            android:layout_above="@+id/seekBarNewFootballerWeight"
+            android:layout_alignParentStart="true"
+            android:textSize="14dp"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Waga (60-110 kg):"
+            android:id="@+id/textViewNewFootballerWeightLabel"
+            android:layout_above="@+id/seekBarNewFootballerWeight"
+            android:layout_alignStart="@+id/seekBarNewFootballerWeight"
+            android:textSize="14dp"
+            android:textIsSelectable="false" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editTextNewFootballerAssists"
+            android:text="Asysty"
+            android:layout_below="@+id/editTextNewFootballerGoals"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</FrameLayout>

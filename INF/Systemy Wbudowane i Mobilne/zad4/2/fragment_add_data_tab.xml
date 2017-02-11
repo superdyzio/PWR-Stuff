@@ -1,0 +1,38 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dawidperdek.zad4app.AddDataTabFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:orientation="horizontal"
+        android:id="@+id/radioGroupSport">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Koszykarz"
+            android:id="@+id/radioButtonBasketballer"
+            android:layout_weight="0.5"
+            android:layout_gravity="right" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Piłkarz"
+            android:id="@+id/radioButtonFootballer"
+            android:layout_weight="0.5" />
+
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="520dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:id="@+id/addingContainer"></FrameLayout>
+</FrameLayout>

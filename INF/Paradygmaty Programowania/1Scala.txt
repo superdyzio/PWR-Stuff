@@ -1,0 +1,19 @@
+def silnia (n:Int):Int = if (n <= 1) 1 else (n) * silnia (n-1)
+
+def fib (n:Int):Int = if (n <= 2) 1 else fib (n-2) + fib (n-1)
+def sumafib (n:Int):Int = if (n == 1) 1 else fib n + sumafib (n-1)
+
+def merge (a:List[Int],b:List[Int],c:List[Int]):List[Int] = {
+if (a == Nil || b == Nil || c == Nil) Nil
+else a.head :: b.head :: c.head :: merge(a.tail, b.tail, c.tail)
+}
+
+def length (l:List[Int]):Int = {
+if (l == Nil) 0
+else 1 + length (l.tail)
+}
+
+def potega (l:List[Int],p:Int):List[Int] = {
+if (l == Nil) Nil
+else Math.pow(l.head, p).toInt :: potega (l.tail,p)
+}

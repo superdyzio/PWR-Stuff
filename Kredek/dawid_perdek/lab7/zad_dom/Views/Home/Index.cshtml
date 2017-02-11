@@ -1,0 +1,47 @@
+﻿<script src="~/Scripts/jquery-2.2.3.min.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.6.1/js/ngDialog.min.js"></script>
+<script src="~/Scripts/Flights.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.6.1/css/ngDialog-theme-default.min.css" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.2.3/css/ngDialog.css" />
+
+<style>
+    .FreeSeats {
+        background-color: lightblue;
+    }
+    .LastSeats {
+        background-color: lightyellow;
+    }
+    .NoSeats {
+        background-color: lightcoral;
+    }
+</style>
+
+<div ng-app="FlightsApp">
+    <div id="divCTRL" ng-controller="FlightsController">
+        <button class="btn btn-primary col-md-1" onclick="getFlightsByCity()">City:</button>
+        <input type="text" class="col-md-2" id="cityName">
+        <div class="col-md-1">
+            <input type="checkbox" id="cityFrom"> From<br>
+            <input type="checkbox" id="cityTo"> To<br>
+        </div>
+        <table class="table table-bordered">
+            <thead class="thead">
+                <tr>
+                    <th id="header" class="col-md-3 btn" ng-click="sortByCityFrom()">From</th>
+                    <th id="header" class="col-md-3 btn" ng-click="sortByCityTo()">To</th>
+                    <th id="header" class="col-md-3 btn" ng-click="sortByDepartureTime()">Departure</th>
+                    <th id="header" class="col-md-3 btn" ng-click="sortByPrice()">Price</th>
+                </tr>
+            </thead>
+            <tbody id="table">
+                <tr ng-class="getColor(flight)" ng-repeat="flight in flights | orderBy: order.field: order.reverse" ng-click="toggleFlightDetails(flight)" >
+                    <td class="col-md-3">{{ flight.CityFrom }}</td>
+                    <td class="col-md-3">{{ flight.CityTo }}</td>
+                    <td class="col-md-3">{{ toTime(flight.DepartureTime) }}</td>
+                    <td class="col-md-3">{{ flight.Price | currency }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

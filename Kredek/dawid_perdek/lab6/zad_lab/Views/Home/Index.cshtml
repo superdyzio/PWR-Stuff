@@ -1,0 +1,108 @@
+﻿<div class="row">
+    <div class="col-md-3" id="toBold">Tytuł</div>
+    <div class="col-md-3" id="toBold">Autor</div>
+    <div class="col-md-3" id="toBold">ISBN</div>
+    <div class="col-md-3" id="toBold">Rok wydania</div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">Nauka c#</div>
+    <div class="col-md-3">Jan Kowalski</div>
+    <div class="col-md-3">1122-33555</div>
+    <div class="col-md-3">2005</div>
+</div>
+
+<div class="row">
+    <div class="col-md-3" id="toRed">Nauka HTML</div>
+    <div class="col-md-3">John Smith</div>
+    <div class="col-md-3">1122-33444</div>
+    <div class="col-md-3">2015</div>
+</div>
+
+<div id="toAppend"></div>
+<input type="text" id="search">
+<button class="btn btn-success" onclick="search()">Szukaj</button>
+
+<canvas></canvas>
+
+
+<script src="../../Scripts/jquery-1.10.2.min.js"></script>
+
+<script>
+    var can = document.querySelector("canvas"), c = can.getContext("2d");
+    c.beginPath();
+    c.moveTo(50, 0);
+    c.lineTo(100, 50);
+    c.lineTo(0, 50);
+    c.lineTo(50, 0);
+    c.fillStyle = "yellow";
+    c.fill();
+    c.fillStyle = "red";
+    c.fillRect(0, 50, 100, 100);
+    c.fillStyle = "blue";
+    c.fillRect(10, 60, 20, 20);
+    c.fillRect(70, 60, 20, 20);
+    c.fillStyle = "brown";
+    c.fillRect(35, 90, 30, 60);
+    for (var i = 0; i < 15; i++) {
+        c.fillRect(105 + i * 10, 80, 5, 70);
+    }
+
+    console.log("Hello world! from html file");
+    //document.write("Hello world from html file");
+    //alert("okienko hello world");
+    var redTitle = document.getElementById("toRed");
+    redTitle.style.color = 'red';
+    $('[id=toBold]').each(function (i, obj) {
+        console.log("element" + i);
+        
+    });
+    //    var myClasses = document.querySelector(".col-md-3");
+    var y = 9;
+    var z = "w"
+    console.log(typeof (x));
+    console.log(typeof (y));
+    if (y === '9') {
+        console.log("True");
+    }
+    else {
+        console.log("false");
+    };
+    book = {
+        'title': 'Nauka asp.net',
+        'author': 'John Kowalski',
+        'ISBN': 1234454,
+        'year': 2006
+    };
+    book2 = {
+        'title': 'Nauka hehe',
+        'author': 'Dawid Perdek',
+        'ISBN': 12343213,
+        'year': 2016
+    };
+    books = [];
+    books.push(book);
+    books.push(book2);
+    console.log("Our books are:", books);
+
+    $('document').ready(function () {
+        console.log("jquery działa");
+        for (var i = 0; i < books.length; i++) {
+            $('#toAppend').append("<div class=\"col-md-3\">"+books[i].title+"</div>");
+        }
+    });
+
+    function search() {
+        $("#toAppend").html("");
+        var searchText = document.getElementById("search").value;
+        newBooks = books.filter(function (element) {
+            return element.title.indexOf(searchText) !== -1;
+        });
+        console.log(newBooks);
+        for (var i = 0; i < newBooks.length; i++) {
+            $('#toAppend').append("<div class=\"col-md-3\">" + newBooks[i].title + "</div>");
+        }
+    }
+</script>
+
+<script src="../../Scripts/nauka.js"></script>

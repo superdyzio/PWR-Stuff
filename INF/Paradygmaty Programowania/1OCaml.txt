@@ -1,0 +1,23 @@
+let rec silnia n =
+	if n <= 1 then 1
+	else n * silnia (n-1);;
+
+let rec fib n =
+	if n <= 2 then 1
+	else fib (n-2) + fib (n-1);;
+
+let rec sumafib n =
+	if n = 1 then 1 
+	else fib n + sumafib (n-1);;
+
+let rec merge (a,b,c) =
+	if (a = [] or b = [] or c = []) then []
+	else List.hd a :: List.hd b :: List.hd c :: merge(List.tl a, List.tl b, List.tl c);;
+     
+let rec length l =
+	if (l = []) then 0
+	else 1 + length (List.tl l);;
+
+let rec potega (l,p) =
+	if (l = []) then []
+	else (List.hd l ** p) :: potega (List.tl l,p);;

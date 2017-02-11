@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=c\ i
+comment0.target=void\ zalozKontoAkcyjne(double,\ int)
+comment1.params=p\ i
+comment1.target=void\ zalozKontoLokata(double,\ int)
+comment2.params=
+comment2.target=void\ aktualizujKonta()
+comment3.params=
+comment3.target=int\ main()
+numComments=4

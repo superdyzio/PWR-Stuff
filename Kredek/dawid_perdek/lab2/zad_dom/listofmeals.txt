@@ -1,0 +1,4 @@
+Burger Dnia - 18 - pyszny burger - 400 - burger1 - 0 - Burger - Średnio - wołowina - cebula - pomidory - sałata
+makaron z kurczakiem - 12,3 - makaron z grillowanym kurczakiem - 350 - pasta2 - 1 - Makaron - Świderki - kurczak - makaron
+margarita - 9,9 - standardowa pizza - 600 - pizza1 - 2 - Pizza - True - ser
+funghi - 12 - pizza z pieczarkami - 650 - pizza2 - 3 - Pizza - False - ser - pieczarki

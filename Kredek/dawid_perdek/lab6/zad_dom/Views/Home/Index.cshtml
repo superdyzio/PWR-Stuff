@@ -1,0 +1,36 @@
+﻿<table class="table table-bordered table-striped">
+    <thead class="thead">
+        <tr>
+            <th class="col-md-3" id="header">Miejsce</th>
+            <th class="col-md-3" id="header">Drużyna</th>
+            <th class="col-md-3" id="header">Mecze</th>
+            <th class="col-md-3" id="header">Punkty</th>
+        </tr>
+    </thead>
+    <tbody id="table"></tbody>
+</table>
+
+<button class="btn btn-success" onclick="getToPosition()">Wyświetl do pozycji:</button>
+<input type="number" id="getToPosition">
+
+<button class="btn btn-success" onclick="getMaxPoints()">Wyświetl z maksymalną liczbą punktów:</button>
+<input type="number" id="getMaxPoints">
+
+<button class="btn btn-success" onclick="getTeam()">Szukaj drużyny:</button>
+<input type="text" id="getTeam">
+
+<button class="btn btn-primary" onclick="fullTable()">Pełna tabela</button>
+
+<button class="btn btn-primary" onclick="addTeam()">Dodaj drużynę</button>
+<input type="text" id="newTeamName">
+<input type="number" id="newTeamGames">
+<input type="number" id="newTeamPoints">
+
+<div align="center">
+    <img id="ball" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Soccerball1.png" style="display:none" />
+    <canvas id="can" height="400" width="600"></canvas>
+</div>
+
+<script src="../../Scripts/jquery-1.10.2.min.js"></script>
+<script src="../../Scripts/logo.js"></script>
+<script src="../../Scripts/footballTable.js"></script>

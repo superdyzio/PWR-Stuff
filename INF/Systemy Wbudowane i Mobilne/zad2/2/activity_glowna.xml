@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.dawidperdek.myandroidapp2.GlownaActivity">
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Uruchom &quot;Piłkarskie Info&quot;"
+        android:id="@+id/uruchom_info_app"
+        android:layout_marginTop="59dp"
+        android:onClick="uruchomAplikacje"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Radio"
+        android:id="@+id/przycisk1"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="przycisk1OnClick" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Kamera"
+        android:id="@+id/przycisk2"
+        android:layout_below="@+id/przycisk1"
+        android:layout_alignEnd="@+id/przycisk1"
+        android:onClick="przycisk2OnClick" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Kalendarz"
+        android:id="@+id/przycisk3"
+        android:layout_below="@+id/przycisk2"
+        android:layout_centerHorizontal="true"
+        android:onClick="przycisk3OnClick" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Zadanie z laboratorium"
+        android:id="@+id/zad_lab"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="uruchomZadLab" />
+</RelativeLayout>

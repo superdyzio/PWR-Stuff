@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.dawidperdek.androidzadanie2.AddingActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/imie"
+        android:ems="10"
+        android:id="@+id/imie"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:editable="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/nazwisko"
+        android:ems="10"
+        android:id="@+id/nazwisko"
+        android:layout_below="@+id/imie"
+        android:layout_alignParentStart="true"
+        android:editable="true" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/facet"
+        android:id="@+id/radioM"
+        android:layout_below="@+id/nazwisko"
+        android:layout_alignParentStart="true" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/baba"
+        android:id="@+id/radioK"
+        android:layout_below="@+id/nazwisko"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/rokUrodzenia"
+        android:layout_below="@+id/radioM"
+        android:layout_alignParentStart="true"
+        android:editable="true"
+        android:text="Rok urodzenia" />
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:id="@+id/pochodzenie"
+        android:layout_below="@+id/rokUrodzenia"
+        android:layout_centerHorizontal="true"
+        android:descendantFocusability="blocksDescendants"
+        android:listSelector="@android:color/darker_gray"
+        android:choiceMode="singleChoice" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student"
+        android:id="@+id/switchStudent"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignEnd="@+id/pochodzenie" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Student?"
+        android:id="@+id/textView"
+        android:layout_below="@+id/pochodzenie"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Spryt:"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/switchStudent"
+        android:layout_alignParentStart="true" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBarSpryt"
+        android:layout_below="@+id/switchStudent"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dodaj"
+        android:id="@+id/buttonPersonAdd"
+        android:layout_below="@+id/ratingBarSpryt"
+        android:layout_alignParentStart="true"
+        android:onClick="osobaDodaj" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anuluj"
+        android:id="@+id/buttonPersonCancel"
+        android:layout_below="@+id/ratingBarSpryt"
+        android:layout_alignEnd="@+id/ratingBarSpryt"
+        android:onClick="osobaAnuluj" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Wprowadzane wartości nie są w żaden sposób sprawdzane - należy uważnie wypełniać pola"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/buttonPersonAdd"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

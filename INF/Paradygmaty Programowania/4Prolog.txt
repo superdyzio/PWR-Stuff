@@ -1,0 +1,56 @@
+1)
+	kobieta(anna).
+	kobieta(gosia).
+	kobieta(zosia).
+	mezczyzna(jan).
+	mezczyzna(marek).
+	mezczyzna(andrzej).
+	mezczyzna(grzes).
+	rodzic(jan,marek).
+	rodzic(jan,andrzej).
+	rodzic(anna,marek).
+	rodzic(anna,andrzej).
+	rodzic(marek,gosia).
+	rodzic(marek,zosia).
+	rodzic(andrzej,grzes).
+	
+	dziadek(X,Y) <= rodzic(X,Z) and rodzic(Z,Y).
+	
+	rodzenstwo(X,Y) <= rodzic(Z,X) and rodzic(Z,Y).
+
+	kuzyn(X,Y) <= rodzenstwo(Osoba1, Osoba2) and rodzic(Osoba1,X) and rodzic(Osoba2,Y).
+
+	malzenstwo(X,Y) <= mezczyzna(X) and kobieta(Y) and rodzic(X,Z) and rodzic(Y,Z).
+
+	? dziadek(jan,grzes).
+
+	? kuzyn(grzes,gosia).
+
+	? malzenstwo(jan,anna).
+
+
+2)	
+ 
+	przesiadka(3,5).
+	przesiadka(114,3).
+	przesiadka(3,0).
+	przesiadka(5,0).
+	przesiadka(0,149).
+	przesiadka(114,149).
+	przesiadka(0,10).
+	przystanek(114,p1).
+	przystanek(114,p2).
+	przystanek(3,p3).
+	przystanek(5,p3).
+	przystanek(10,p4).
+	przystanek(149,p5).
+	przystanek(0,p5).
+	przystanek(0,p6).
+	przystanek(149,p7).
+	przystanek(10,p8).
+ 
+	dojedziemy1(X,Y) <= przystanek(A,X) and przystanek(B,Y) and przesiadka(A,C) and przesiadka(C,D) and przesiadka(D,B).
+	dojedziemy2(X,Y) <= przystanek(A,X) and przystanek(B,Y) and przesiadka(B,A).
+
+	? dojedziemy2(p1,p7).
+	? dojedziemy2(p7,p1).

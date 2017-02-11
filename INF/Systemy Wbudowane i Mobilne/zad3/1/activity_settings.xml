@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.dawidperdek.androidzadanie2.SettingsActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout">
+
+        <SeekBar
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/seekBarR"
+            android:layout_weight="0.3"
+            android:focusableInTouchMode="false"
+            android:max="255"
+            android:progress="255" />
+
+        <SeekBar
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/seekBarG"
+            android:layout_weight="0.3"
+            android:max="255"
+            android:progress="255" />
+
+        <SeekBar
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/seekBarB"
+            android:layout_weight="0.3"
+            android:max="255"
+            android:progress="255" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/BackgroundColor"
+            android:layout_weight="0.1" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zatwierdz"
+        android:id="@+id/buttonBack"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="zatwierdz" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextPowitanie"
+        android:layout_centerHorizontal="true"
+        android:editable="true"
+        android:text="Tutaj pojawi się twój tekst powitalny"
+        android:layout_below="@+id/linearLayout2" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout2"
+        android:layout_below="@+id/linearLayout">
+
+        <SeekBar
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/seekBarTextR"
+            android:layout_weight="0.33"
+            android:focusableInTouchMode="false"
+            android:max="255"
+            android:progress="255" />
+
+        <SeekBar
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/seekBarTextG"
+            android:layout_weight="0.33"
+            android:max="255"
+            android:progress="255" />
+
+        <SeekBar
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/seekBarTextB"
+            android:layout_weight="0.33"
+            android:max="255"
+            android:progress="255" />
+
+    </LinearLayout>
+
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerPowitania"
+        android:layout_below="@+id/editTextPowitanie"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:spinnerMode="dropdown" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50px"
+        android:layout_below="@+id/spinnerPowitania"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout3">
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Mała"
+            android:id="@+id/fontMala"
+            android:layout_weight="0.33"
+            android:onClick="radioMala" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Średnia"
+            android:id="@+id/fontSrednia"
+            android:layout_weight="0.33"
+            android:onClick="radioSrednia" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Duża"
+            android:id="@+id/fontDuza"
+            android:layout_weight="0.33"
+            android:onClick="radioDuza" />
+    </LinearLayout>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wewnetrzna"
+        android:id="@+id/checkBoxInternal"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="66dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zewnetrzna"
+        android:id="@+id/checkBoxExternal"
+        android:layout_alignTop="@+id/checkBoxInternal"
+        android:layout_alignEnd="@+id/linearLayout3"
+        android:onClick="clickExt" />
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+﻿<script src="~/Scripts/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.6.1/js/ngDialog.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.6.1/css/ngDialog-theme-default.min.css"/>
+
+<div ng-app="MyApp">
+    <div ng-controller="MyCtrl">
+        <button ng-click="clickToOpen()">My Modal</button>
+    </div>
+    <script type="text/ng-template" id="templateId">
+        <div class="btn btn-danger">Przycisk</div>
+    </script>
+</div>
+
+<script>
+    var app = angular.module('MyApp', ['ngDialog']);
+    app.controller('MyCtrl', function ($scope, ngDialog) {
+        $scope.clickToOpen = function () {
+            ngDialog.open({
+                template: 'templateId',
+                scope: $scope
+            });
+        };
+    });
+</script>

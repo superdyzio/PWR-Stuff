@@ -1,0 +1,14 @@
+1)
+	def replace[A] (x:A,y:A,l:List[A]) : List[A] =
+		if (l == Nil) Nil
+		else	if (l.head == x) y :: replace(x,y,l.tail)
+			else l.head :: replace(x,y,l.tail)
+
+4)
+	def lub (a:Boolean, b:Boolean):Boolean = (a||b)
+	def kon (a:Boolean, b:Boolean):Boolean = (a&b)
+	def imp (a:Boolean, b:Boolean):Boolean = lub(!a,b)
+	def row (a:Boolean, b:Boolean):Boolean = (a==b)
+	
+	def wyrazenie (a:Boolean, b:Boolean, c:Boolean, d:Boolean):Boolean = 
+		imp(a,row(lub(imp(row(lub(a,b),imp(c,d)),a),kon(a,row(c,b)),lub(imp(row(d,kon(a,c)))),b),c))

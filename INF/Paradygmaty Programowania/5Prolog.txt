@@ -1,0 +1,48 @@
+person(bert,55,m,carpenter).
+person(allan,25,m,footballplayer).
+person(allan,25,m,butcher).
+person(john,25,m,pickpocket).
+person(barbara,39,f,doctor).
+
+hadaffair(barbara,john).
+hadaffair(barbara,allan).
+hadaffair(susan,john).
+hadaffair(susan,bert).
+
+killedwith(susan,club).
+killed(susan).
+
+smearedin(bert,blood).
+smearedin(susan,blood).
+smearedin(allan,mud).
+smearedin(john,chocolate).
+smearedin(barbara,blood).
+
+owns(bert,woodenleg).
+owns(john,pistol).
+
+operatesidentically(woodenleg,club).
+operatesidentically(bar,club).
+operatesidentically(pairofscissors,knife).
+operatesidentically(footballboot,club).
+
+
+
+/* podejrzane sa osoby posiadajace bron ktora zabita susan (lub jej odpowiednik - broni nie susan hehe) */
+suspectbyweapon(X) <= killedwith(susan,Weapon) and operatesidentically(Object,Weapon) and owns(X,Object).
+
+
+/* podejrzani sa mezczyzni majacy romans z susan */
+suspect(X) <= person(X, _, m, _) and hadaffair(susan, X).
+
+
+/* podejrzane sa kobiety majace romans z kims z kim miala romans susan */
+suspect(X) <= person(X, _, f, _) and hadaffair(X, Man) and hadaffair(susan, Man).
+
+
+/* podejrzani sa kieszonkowcy - motyw piniendzy */
+suspect(X) <= person(X, _, _, pickpocket).
+
+
+killer(Killer) <= person(Killer, _, _, _) and killed(Killed) and Killed <> Killer and suspect(Killer) and suspectbyweapon(Killer) and smearedin(Killer,Goo) and 
+smearedin(Killed,Goo).

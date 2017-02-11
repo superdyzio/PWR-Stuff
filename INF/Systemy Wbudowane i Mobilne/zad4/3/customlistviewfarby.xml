@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants" >
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/buttonListaKolor"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/nazwafarby"
+        android:id="@+id/etykietaListaNazwa"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/buttonListaKolor" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textViewListaNazwa"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/etykietaListaNazwa"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="R:"
+        android:id="@+id/etykietaListaR"
+        android:layout_below="@+id/etykietaListaNazwa"
+        android:layout_toEndOf="@+id/buttonListaKolor" />
+
+    <TextView
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textViewListaR"
+        android:layout_below="@+id/etykietaListaNazwa"
+        android:layout_toEndOf="@+id/etykietaListaR"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="G:"
+        android:id="@+id/etykietaListaG"
+        android:layout_alignTop="@+id/textViewListaR"
+        android:layout_toEndOf="@+id/textViewListaR" />
+
+    <TextView
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textViewListaG"
+        android:textAlignment="center"
+        android:layout_alignTop="@+id/etykietaListaG"
+        android:layout_toEndOf="@+id/etykietaListaG" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="B:"
+        android:id="@+id/etykietaListaB"
+        android:layout_alignTop="@+id/textViewListaG"
+        android:layout_toEndOf="@+id/textViewListaG" />
+
+    <TextView
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textViewListaB"
+        android:textAlignment="center"
+        android:layout_alignTop="@+id/etykietaListaB"
+        android:layout_toEndOf="@+id/etykietaListaB" />
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textViewListaMix1"
+        android:layout_below="@+id/buttonListaKolor"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textViewListaMix2"
+        android:layout_alignTop="@+id/textViewListaMix1"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textViewListaWsp"
+        android:layout_alignTop="@+id/textViewListaMix1"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center" />
+</RelativeLayout>

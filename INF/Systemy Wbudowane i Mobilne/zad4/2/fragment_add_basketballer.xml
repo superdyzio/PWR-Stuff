@@ -1,0 +1,120 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dawidperdek.zad4app.AddBasketballerFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Dodaj koszykarza:"
+        android:id="@+id/textViewAddBasketballerTitle"
+        android:layout_gravity="center_horizontal|top" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zapisz"
+        android:id="@+id/buttonSaveNewBasketballer"
+        android:layout_gravity="center_horizontal|bottom"
+        android:onClick="SaveNewBasketballer" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_gravity="center">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Imię"
+            android:ems="10"
+            android:id="@+id/editTextNewBasketballerName"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Nazwisko"
+            android:ems="10"
+            android:id="@+id/editTextNewBasketballerSurname"
+            android:layout_below="@+id/editTextNewBasketballerName"
+            android:layout_centerHorizontal="true" />
+
+        <SeekBar
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBarNewBasketballerHeight"
+            android:layout_marginTop="85dp"
+            android:layout_below="@+id/editTextNewBasketballerSurname"
+            android:layout_alignParentStart="true"
+            android:max="60"
+            android:progress="30" />
+
+        <SeekBar
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBarNewBasketballerWeight"
+            android:layout_alignBottom="@+id/seekBarNewBasketballerHeight"
+            android:layout_alignParentEnd="true"
+            android:progress="25"
+            android:max="50" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Wzrost (160-220 cm):"
+            android:id="@+id/textViewNewBasketballerHeightLabel"
+            android:layout_above="@+id/seekBarNewBasketballerWeight"
+            android:layout_alignParentStart="true"
+            android:textSize="14dp"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Waga (60-110 kg):"
+            android:id="@+id/textViewNewBasketballerWeightLabel"
+            android:layout_above="@+id/seekBarNewBasketballerWeight"
+            android:layout_alignStart="@+id/seekBarNewBasketballerWeight"
+            android:textSize="14dp"
+            android:textIsSelectable="false" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBarNewBasketballerRating"
+            android:layout_below="@+id/editTextNewBasketballerRebounds"
+            android:layout_alignStart="@+id/editTextNewBasketballerRebounds" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editTextNewBasketballerPoints"
+            android:text="Punkty"
+            android:layout_below="@+id/seekBarNewBasketballerHeight"
+            android:layout_alignStart="@+id/ratingBarNewBasketballerRating"
+            android:layout_marginTop="52dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editTextNewBasketballerRebounds"
+            android:text="Zbiórki"
+            android:layout_below="@+id/editTextNewBasketballerPoints"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</FrameLayout>
