@@ -1,0 +1,89 @@
+/*
+$HeadURL: svn+ssh://dperdek@panamint.ict.pwr.wroc.pl/home/dperdek/repos/z1/trunk/src/menu.cpp~ $
+$Author: dperdek $
+$Date: 2015-11-11 19:51:40 +0100 (śro) $
+$Revision: 6 $
+*/
+
+#include "menu.hh"
+
+/*!
+ * \file
+ * \brief Plik zawierający implementację metod klasy pomocniczej przy obsłudze programu.
+ */
+
+Menu::Menu() {
+	_lista.dodaj("command4move.so");
+	_lista.dodaj("command4turn.so");
+	_lista.dodaj("command4rotate.so");
+}
+
+void Menu::wyswietlListe() {
+	for (auto& lib : _lista)
+		cout << lib.first << endl;
+}
+
+void Menu::wyswietlKomendy() {
+	for (unsigned int i = 0; i < _komendy.size(); i++)
+		_komendy[i]->PrintCmd();
+}
+
+const Biblioteka* Menu::znajdzBiblioteke(string klucz) const { 
+	typedef map<string,Biblioteka*>::const_iterator MapIterator;
+	MapIterator iter;
+	for (iter = _lista.begin(); iter != _lista.end(); iter++)
+		if (iter->first == klucz) 
+			break;
+	if (iter == _lista.end()) 
+		return NULL;
+	else 
+		return iter->second;
+}
+
+bool Menu::wczytajPlik(istringstream& dane) {
+	string prep = "cpp -P ";
+	FILE *wPlik;
+	string nazwa;
+	char linia[20];
+	nazwa = "sekwencja.cmd";
+	ostringstream plik;
+	prep += nazwa;
+	wPlik = popen(prep.c_str(),"r");
+	if (!wPlik) {
+		cout << "Nie udało się otworzyć pliku.";
+		return false;
+	}
+	while (fgets(linia,20,wPlik))
+		plik << linia;
+	dane.str(plik.str());
+	if (!wPlik) 
+		return false;
+	return pclose(wPlik) == 0;
+}
+
+void Menu::wczytajKomendy(istringstream& dane) {
+	_komendy.clear();
+	string klucz;
+	while (dane >> klucz)  {
+		auto bib = znajdzBiblioteke(klucz.c_str());
+		if (bib != NULL) {
+			auto komenda = bib->CreateCmd();
+			if (komenda) {
+				komenda->ReadParams(dane);
+				komenda->PrintCmd();
+				_komendy.push_back(komenda);
+			}
+		}
+	}
+}
+
+void Menu::wyswietlMenu() {
+	cout << "1 - Wczytanie pliku z komendami" << endl;
+	cout << "2 - Pokazanie wczytanej sekwencji" << endl;
+	cout << "3 - Pokazanie dostępnych instrukcji/wtyczek" << endl;
+	cout << "4 - Wykonanie wczytanej sekwencji" << endl;
+	cout << "5 - Dodawanie nowej wtyczki" << endl;
+	cout << "6 - Usuwanie wtyczki" << endl;
+	cout << "0 - KONIEC" << endl;
+	cout << "Twój wybór: ";
+}

@@ -1,0 +1,13 @@
+#
+# W tym pliku zapisane sa kolejne punkty obrysu korpusu
+# robota. Podane sa one w jego lokalnym ukladzie wspolrzednych,
+# ktory skojarzony jest ze srodkiem robota.
+#
+-90  80
+-90 -80
+ 90 -80
+ 90   0
+ 60   0   # Ten element pozwala ustalic, gdzie jest przod
+ 90   0
+ 90  80
+-90  80

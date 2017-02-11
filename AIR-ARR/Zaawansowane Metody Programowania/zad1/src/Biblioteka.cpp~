@@ -1,0 +1,65 @@
+/*
+$HeadURL: svn+ssh://dperdek@panamint.ict.pwr.wroc.pl/home/dperdek/repos/z1/trunk/src/Biblioteka.cpp~ $
+$Author: dperdek $
+$Date: 2015-11-11 19:51:40 +0100 (śro) $
+$Revision: 6 $
+*/
+
+#include <iostream>
+#include <iomanip>
+#include <iostream>
+#include <cstring>
+#include <dlfcn.h>
+#include "command.hh"
+#include "Biblioteka.hh"
+
+using namespace std;
+
+/*!
+ * \file 
+ * \brief Plik zawierający implementację metod klasy Biblioteka.
+*/
+
+bool Biblioteka::wczytaj(const char* nazwaBiblioteki) {
+	void *pLibHnd = dlopen(nazwaBiblioteki,RTLD_LAZY);
+	void *pFun;
+	if (!pLibHnd) {
+		cerr << "Brak biblioteki: "<< nazwaBiblioteki << endl;
+		return false;
+	}
+	pFun = dlsym(pLibHnd,"CreateCmd");
+	if (!pFun) {
+		cerr << "Nie znaleziono funkcji CreateCmd" << endl;
+		return false;
+	}
+// podwójny wskaźnik na bezparametrową funkcję zwracającą Command*
+	_pCreateCmd = *reinterpret_cast<Command* (**)(void)>(&pFun);
+	Command *pCmd = _pCreateCmd();
+	cout << endl;
+	cout << pCmd->GetCmdName() << endl;
+	cout << endl;
+	pCmd->PrintSyntax();
+	cout << endl;
+	pCmd->PrintCmd();
+	cout << endl;
+	delete pCmd;
+	dlclose(pLibHnd);
+  	return true;
+}
+
+bool Biblioteka::ReadParams(std::istream& Strm_CmdsList) {
+	_pCmd->ReadParams(Strm_CmdsList); 
+	return true;
+}
+
+void Biblioteka::PrintCmd()  {
+	_pCmd->PrintCmd();
+}
+
+void Biblioteka::PrintSyntax() {
+	_pCmd->PrintSyntax();
+}
+
+const char* Biblioteka::GetCmdName() const  {
+	return _pCmd->GetCmdName();
+}

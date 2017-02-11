@@ -1,0 +1,10 @@
+ <Scene>
+<!--
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation='grammar/opis_sceny.xsd'
+-->
+  <Robot  Pos_X="0" Pos_Y="0" Angle="0" />
+  <Object Name="A" Pos_X="500" Pos_Y="500" Size="3" />
+  <Object Name="B" Pos_X="1000" Pos_Y="500" Size="5" />
+  <Object Name="Obiekt C" Pos_X="1500" Pos_Y="500" Size="7" />
+ </Scene>

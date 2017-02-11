@@ -1,0 +1,23 @@
+#include "ObslugaBibliotek.hh"
+#include <iostream>
+#include <iomanip>
+#include "Biblioteka.hh"
+#include <iostream>
+#include <dlfcn.h>
+#include "command.hh"
+
+using namespace std;
+
+/*!
+ * \file
+ * \brief Plik zawierający implementację metod klasy ObslugaBibliotek.
+*/
+
+bool ObslugaBibliotek::dodaj(const char* nazwaBiblioteki) {
+	Biblioteka nowaBiblioteka;
+	if(!nowaBiblioteka.wczytaj(nazwaBiblioteki)) 
+		return 0;
+	cout << "Wczytano bibliotekę." << endl;
+	return 1;
+}
+

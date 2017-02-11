@@ -1,0 +1,36 @@
+/*
+$HeadURL: svn+ssh://dperdek@panamint.ict.pwr.wroc.pl/home/dperdek/repos/z1/trunk/src/ListaBibliotek.cpp~ $
+$Author: dperdek $
+$Date: 2015-11-11 19:51:40 +0100 (śro) $
+$Revision: 6 $
+*/
+
+#include "ListaBibliotek.hh"
+#include <iostream>
+#include <iomanip>
+#include "Biblioteka.hh"
+#include <iostream>
+#include <dlfcn.h>
+#include "command.hh"
+
+using namespace std;
+
+/*!
+ * \file
+ * \brief Plik zawierający implementację metod klasy ObslugaBibliotek.
+*/
+
+ListaBibliotek::~ListaBibliotek() {
+	for (auto& lib : (*this))
+		delete lib.second;
+}
+
+bool ListaBibliotek::dodaj(const char* nazwaBiblioteki) {
+	Biblioteka *nowaBiblioteka = new Biblioteka();
+	if(!nowaBiblioteka->wczytaj(nazwaBiblioteki)) {
+		return false; 
+	}		
+	this->insert( pair<string,Biblioteka*>(nowaBiblioteka->GetCmdName(),nowaBiblioteka));
+	return true;
+}
+

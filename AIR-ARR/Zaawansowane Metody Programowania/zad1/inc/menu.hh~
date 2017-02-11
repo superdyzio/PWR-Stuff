@@ -1,0 +1,88 @@
+/*
+$HeadURL: svn+ssh://dperdek@panamint.ict.pwr.wroc.pl/home/dperdek/repos/z1/trunk/inc/menu.hh~ $
+$Author: dperdek $
+$Date: 2015-11-11 19:51:40 +0100 (śro) $
+$Revision: 6 $
+*/
+
+#ifndef MENU_HH
+#define MENU_HH
+
+#include <iostream>
+#include <iomanip>
+#include <dlfcn.h>
+#include <cassert>
+#include <unistd.h>
+#include <vector>
+#include <string>
+#include <sstream>
+#include "Biblioteka.hh"
+#include "ListaBibliotek.hh"
+#include "command.hh"
+#include "RobotMobilny.hh"
+#include "lacze_do_gnuplota.hh"
+
+using namespace std;
+
+/*!
+ * \file
+ * \brief Plik zawierający definicję klasy pomocniczej przy obsłudze programu.
+ */
+
+/*!
+ * \brief Klasa pozwalająca na prostą i poprawną obsługę programu.
+ */
+class Menu {
+/*!
+ * \brief Wektor przechowujący dostępne komendy.
+ */
+	vector<Command*> _komendy;
+/*!
+ * \brief Pole klasy ListaBibliotek przechowujące listę dołączonych bibliotek.
+ */
+	ListaBibliotek _lista;
+public:
+/*!
+ * \brief Konsturktor.
+ */
+	Menu();
+/*!
+ * \brief Metoda wyświetlająca listę bibliotek.
+ *
+ * \return Nic nie zwraca.
+ */
+	void wyswietlListe();
+/*!
+ * \brief Metoda wyświetlająca listę komend.
+ *
+ * \return Nic nie zwraca.
+ */
+	void wyswietlKomendy();
+/*!
+ * \brief Metoda znajdująca bibliotekę w mapie i zwracającą wskaźnik do jej obiektu.
+ *
+ * \param[in]	klucz - słowo kluczowe pozwalające na znalezienie biblioteki
+ * \return Metoda zwraca stały wskaźnik na obiekt typu Biblioteka.
+ */
+	const Biblioteka* znajdzBiblioteke(string klucz) const;
+/*!
+ * \brief Metoda wczytująca dane z pliku.
+ *  
+ * \param[in]	dane - referencja na strumień wejściowy
+ * \return Zwraca wartość logiczną mówiącą o powodzeniu wykonania operacji.
+ */
+	bool wczytajPlik(istringstream& dane);
+/*!
+ * \brief Metoda wczytująca komendy.
+ *
+ * \param[in]	dane - referencja na strumień wejściowy
+ * \return Nic nie zwraca.
+ */
+	void wczytajKomendy(istringstream& dane); 
+/*!
+ * \brief Metoda wyświetlająca tekstowe menu użytkownika.
+ */
+	void wyswietlMenu();    
+};
+
+#endif
