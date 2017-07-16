@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSI3_ApplicationServiceContract", "RSI3_ApplicationServiceContract\RSI3_ApplicationServiceContract.csproj", "{11F7DE83-0B92-4394-98D6-12365B0A7046}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSI3_ApplicationServiceHost", "RSI3_ApplicationServiceHost\RSI3_ApplicationServiceHost.csproj", "{947F2468-A587-4E79-8A7D-8BC9D38E3969}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSI3_CachingProxyContract", "RSI3_CachingProxyContract\RSI3_CachingProxyContract.csproj", "{55F736E4-7011-40C9-983E-E367643AB765}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSI3_CachingProxyHost", "RSI3_CachingProxyHost\RSI3_CachingProxyHost.csproj", "{54858D01-4DA7-41AA-898E-D65FD7EC0D40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSI3_ReverseProxyContract", "RSI3_ReverseProxyContract\RSI3_ReverseProxyContract.csproj", "{973921F3-C128-4DA3-AC02-928CB7A510B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSI3_ReverseProxyHost", "RSI3_ReverseProxyHost\RSI3_ReverseProxyHost.csproj", "{1F90FC3F-31CF-4FF4-A705-E6313A042963}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSI3_ClientHost", "RSI3_ClientHost\RSI3_ClientHost.csproj", "{CFE6066F-BDE3-44E5-AA6A-8C4B5065F6DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11F7DE83-0B92-4394-98D6-12365B0A7046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11F7DE83-0B92-4394-98D6-12365B0A7046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11F7DE83-0B92-4394-98D6-12365B0A7046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11F7DE83-0B92-4394-98D6-12365B0A7046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{947F2468-A587-4E79-8A7D-8BC9D38E3969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{947F2468-A587-4E79-8A7D-8BC9D38E3969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{947F2468-A587-4E79-8A7D-8BC9D38E3969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{947F2468-A587-4E79-8A7D-8BC9D38E3969}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55F736E4-7011-40C9-983E-E367643AB765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55F736E4-7011-40C9-983E-E367643AB765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55F736E4-7011-40C9-983E-E367643AB765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55F736E4-7011-40C9-983E-E367643AB765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54858D01-4DA7-41AA-898E-D65FD7EC0D40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54858D01-4DA7-41AA-898E-D65FD7EC0D40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54858D01-4DA7-41AA-898E-D65FD7EC0D40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54858D01-4DA7-41AA-898E-D65FD7EC0D40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{973921F3-C128-4DA3-AC02-928CB7A510B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{973921F3-C128-4DA3-AC02-928CB7A510B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{973921F3-C128-4DA3-AC02-928CB7A510B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{973921F3-C128-4DA3-AC02-928CB7A510B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F90FC3F-31CF-4FF4-A705-E6313A042963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F90FC3F-31CF-4FF4-A705-E6313A042963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F90FC3F-31CF-4FF4-A705-E6313A042963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F90FC3F-31CF-4FF4-A705-E6313A042963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFE6066F-BDE3-44E5-AA6A-8C4B5065F6DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFE6066F-BDE3-44E5-AA6A-8C4B5065F6DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFE6066F-BDE3-44E5-AA6A-8C4B5065F6DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFE6066F-BDE3-44E5-AA6A-8C4B5065F6DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

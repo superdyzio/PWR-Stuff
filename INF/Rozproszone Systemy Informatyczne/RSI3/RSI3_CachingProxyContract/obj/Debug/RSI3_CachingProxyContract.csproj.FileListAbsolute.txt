@@ -1,0 +1,6 @@
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_CachingProxyContract\bin\Debug\RSI3_CachingProxyContract.dll.config
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_CachingProxyContract\bin\Debug\RSI3_CachingProxyContract.dll
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_CachingProxyContract\bin\Debug\RSI3_CachingProxyContract.pdb
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_CachingProxyContract\obj\Debug\RSI3_CachingProxyContract.csprojResolveAssemblyReference.cache
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_CachingProxyContract\obj\Debug\RSI3_CachingProxyContract.dll
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_CachingProxyContract\obj\Debug\RSI3_CachingProxyContract.pdb

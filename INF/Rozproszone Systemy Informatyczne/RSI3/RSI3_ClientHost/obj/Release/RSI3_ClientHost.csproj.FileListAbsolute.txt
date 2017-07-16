@@ -1,0 +1,6 @@
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_ClientHost\bin\Release\RSI3_ClientHost.exe.config
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_ClientHost\bin\Release\RSI3_ClientHost.exe
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_ClientHost\bin\Release\RSI3_ClientHost.pdb
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_ClientHost\obj\Release\RSI3_ClientHost.exe
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_ClientHost\obj\Release\RSI3_ClientHost.pdb
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_ClientHost\obj\Release\RSI3_ClientHost.csprojResolveAssemblyReference.cache

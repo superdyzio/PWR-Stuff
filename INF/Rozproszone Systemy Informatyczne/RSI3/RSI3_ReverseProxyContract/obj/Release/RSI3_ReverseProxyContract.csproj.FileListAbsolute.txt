@@ -1,0 +1,7 @@
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_ReverseProxyContract\bin\Release\RSI3_ReverseProxyContract.dll.config
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_ReverseProxyContract\bin\Release\RSI3_ReverseProxyContract.dll
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_ReverseProxyContract\bin\Release\RSI3_ReverseProxyContract.pdb
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_ReverseProxyContract\obj\Release\XsdGeneratedCode\GeneratedXsdTypes.cs
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_ReverseProxyContract\obj\Release\RSI3_ReverseProxyContract.dll
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_ReverseProxyContract\obj\Release\RSI3_ReverseProxyContract.pdb
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_ReverseProxyContract\obj\Release\RSI3_ReverseProxyContract.csprojResolveAssemblyReference.cache

@@ -1,0 +1,6 @@
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_ApplicationServiceContract\bin\Debug\RSI3_ApplicationServiceContract.dll.config
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_ApplicationServiceContract\bin\Debug\RSI3_ApplicationServiceContract.dll
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_ApplicationServiceContract\bin\Debug\RSI3_ApplicationServiceContract.pdb
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_ApplicationServiceContract\obj\Debug\RSI3_ApplicationServiceContract.csprojResolveAssemblyReference.cache
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_ApplicationServiceContract\obj\Debug\RSI3_ApplicationServiceContract.dll
+D:\Studia\Informatyka\Semestr 6\Rozproszone Systemy Informatyczne\laboratorium\lista3\RSI3\RSI3_ApplicationServiceContract\obj\Debug\RSI3_ApplicationServiceContract.pdb

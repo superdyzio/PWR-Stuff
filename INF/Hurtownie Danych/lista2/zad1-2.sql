@@ -1,0 +1,1 @@
+select * from Sales.SalesOrderHeader where year(OrderDate) = (select distinct top 1 year(OrderDate) as OrderYear from Sales.SalesOrderHeader order by OrderYear);

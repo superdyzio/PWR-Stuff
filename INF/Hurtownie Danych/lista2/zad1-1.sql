@@ -1,0 +1,1 @@
+select distinct year(OrderDate) as OrderYear from Sales.SalesOrderHeader;

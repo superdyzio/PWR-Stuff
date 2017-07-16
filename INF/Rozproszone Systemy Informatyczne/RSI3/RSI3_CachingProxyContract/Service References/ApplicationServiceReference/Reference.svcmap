@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c7955485-ecf1-49df-8c28-dc43fa7cc6bd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:10001/RSI3/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="e579801b-d6d9-4c17-bbef-4d73b0fd54aa" SourceId="1" SourceUrl="http://localhost:10001/RSI3/?disco" />
+    <MetadataFile FileName="ApplicationService.wsdl" MetadataType="Wsdl" ID="bb86660c-0368-4900-ab94-5a68c60ae5bb" SourceId="1" SourceUrl="http://localhost:10001/RSI3/?wsdl" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="3574d078-d016-4407-a47b-28cac01d64a5" SourceId="1" SourceUrl="http://localhost:10001/RSI3/?xsd=xsd0" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="a82e2d1e-43ae-43e1-b9d8-1e5933a55a69" SourceId="1" SourceUrl="http://localhost:10001/RSI3/?xsd=xsd1" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="e8427aac-c93e-4c32-9531-8a0d654eced7" SourceId="1" SourceUrl="http://localhost:10001/RSI3/?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
