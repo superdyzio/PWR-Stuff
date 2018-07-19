@@ -1,0 +1,120 @@
+MODULE main
+--FROZENVAR number : 0..12;
+FROZENVAR number : 0..8;
+DEFINE MAX_FACTORIAL := 720;
+VAR 
+    e : {e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13,e14,e15,e16, e17};
+    i : 1..20;
+    factorial : 1..MAX_FACTORIAL;
+    sigma : 0..20;
+    primes :-1..20;
+    j : 3..20;
+    x : 0..20;
+    c : 0..20; -- licznik pętli
+
+ASSIGN
+    init(e) := e2;
+    init(i) := 1;
+    init(factorial) := 1;
+    init(sigma) := 0;
+    init(primes) := 0;
+    init(j) := 3;
+    init(x) := 0;
+    init(c) := 0;
+
+    next(e) := case
+        e=e2 & number > 2 : e3;
+        e=e2 & number <= 2 : e16;
+        e=e3 & j <= number : e4;
+        e=e3 & j > number : e10;
+        e=e4 : e5;
+        e=e5 : e6;
+        e=e6 & x < j - 2 : e7;
+        e=e6 & x >= j - 2 : e9;
+        e=e7 : e8;
+        e=e8 : e6;
+        e=e9 : e3;
+        e=e10 : e11;
+        e=e11 & number = 3 : e12;
+        e=e11 & number != 3 : e14;
+        e=e12 : e17;
+        e=e14 : e17;
+        e=e16 : e16;
+        e=e17 : e17;
+        TRUE : e;
+    esac;
+
+    next(i) := case
+        next(e)=e5 : 1;
+        i+1 > 20 : i; -- zakres
+        next(e)=e8 : i+1;
+        TRUE: i;
+    esac;
+
+    next(factorial) := case
+        next(e)=e4 : 1;
+        factorial*i > MAX_FACTORIAL : factorial; -- zakres
+        next(e)=e7 : factorial*i;
+        TRUE: factorial;
+    esac;
+
+    next(sigma) := case
+        sigma + (factorial - j * (factorial / j)) > 20 : sigma; -- zakres
+        next(e)=e9 : sigma + (factorial - j * (factorial / j));
+        TRUE: sigma;
+    esac;
+
+    next(primes) := case
+        sigma - 1 > 20 : primes; -- zakres
+        sigma - 1 < -1 : primes; -- zakres
+        next(e)=e10 : sigma - 1;
+        next(e)=e12 : 2; -- cout >> 2
+        next(e)=e16 : -1; -- cout >> "wrong number"
+        TRUE: primes;
+    esac;
+
+    next(j) := case
+        j+1 > 20 : j; -- zakres
+        e=e9 & next(e)=e3 : j+1;
+        TRUE: j;
+    esac;
+
+    next(x) := case
+        e=e5 & next(e)=e6 : 0;
+        x+1 > 20 : x; -- zakres
+        e=e8 & next(e)=e6 : x+1;
+        TRUE: x;
+    esac;
+
+    next(c) := case
+        c+1 > 20 : c; -- zakres
+        next(e)=e4 : c+1;
+        TRUE: c;
+    esac;
+
+--int number, i = 1, factorial = 1, sigma = 0, primes;    e0 - pomijamy
+--cin << number;                                          e1 - pomijamy 
+--if(number > 2){                                         e2
+--  for(int j = 3; j <= number; j++){                     e3
+--    factorial = 1;                                      e4
+--    i = 1;                                              e5
+--    for(int x = 0; x < j - 2; x++){                     e6
+--      factorial = factorial * i;                        e7
+--      i++;}                                             e8
+--    sigma = sigma + (factorial - j * (factorial / j));} e9
+--  primes = -1 + sigma;                                  e10
+--  if(number == 3)                                       e11
+--    cout >> 2;                                          e12 - prawie KONIEC
+--  else                                                  e13 - pomijamy
+--    cout >> primes;                                     e14 - prawie KONIEC
+--} else                                                  e15 - pomijamy
+--  cout >> ”wrong number”;                               e16 - KONIEC
+--                                                        e17 - SUPER KONIEC dla e12 i e14
+
+-- czy podanie number 0..2 spowoduje wypisanie "wrong number" (primes=-1)
+CTLSPEC AG(number <= 2 -> EF(e=e16))
+-- jaka może być liczba liczb pierwszych dla  3..8
+CTLSPEC number=3 -> !EF(e=e17)
+CTLSPEC number=8 -> !EF(e=e17)
+-- ile razy wykona się zewnętrzna pętla for dla number = 5
+CTLSPEC number=5 -> !EF(e=e17) -- zwróci FALSE i ostatnia wartość c=3

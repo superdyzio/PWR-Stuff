@@ -1,0 +1,69 @@
+MODULE Miesiac(typ_roku)
+VAR
+    miesiac : {Styczen, Luty, Marzec, Kwiecien, Maj, Czerwiec, Lipiec, Sierpien, Wrzesien, Pazdziernik, Listopad, Grudzien};
+    dzien : 1..31;
+ASSIGN
+    init(miesiac) := Styczen;
+    init(dzien) := 1;
+    next(miesiac) := case
+        miesiac=Styczen & dzien=31 : Luty;
+	miesiac=Luty & ((typ_roku=Przestepny & dzien=29) | (typ_roku=Normalny & dzien=28)) : Marzec;
+	miesiac=Marzec & dzien=31 : Kwiecien;
+	miesiac=Kwiecien & dzien=30 : Maj;
+	miesiac=Maj & dzien=31 : Czerwiec;
+	miesiac=Czerwiec & dzien=30 : Lipiec;
+	miesiac=Lipiec & dzien=31 : Sierpien;
+	miesiac=Sierpien & dzien=31 : Wrzesien;
+	miesiac=Wrzesien & dzien=30 : Pazdziernik;
+	miesiac=Pazdziernik & dzien=31 : Listopad;
+	miesiac=Listopad & dzien=30 : Grudzien;
+	miesiac=Grudzien & dzien=31 : Styczen;
+	TRUE: miesiac;
+    esac;
+    next(dzien) := case
+        next(miesiac) != miesiac : 1;
+	dzien=31 : 1; -- musi byc bo nie pozwala odpalac
+	TRUE: dzien+1;
+    esac;
+
+MODULE Rok(miesiac)
+VAR
+    typ : {Normalny, Przestepny};
+    rok : 1900..2018;
+DEFINE
+    przestepny := ((next(rok) mod 4 = 0) & (next(rok) mod 100 != 0) | (next(rok) mod 400 = 0));
+    zmiana_roku := miesiac=Grudzien & next(miesiac)=Styczen;
+ASSIGN
+    init(typ) := Normalny;
+    init(rok) := 1900;
+    next(typ) := case
+    	przestepny : Przestepny;
+	!przestepny : Normalny;
+	TRUE : typ;
+    esac;
+    next(rok) := case
+        zmiana_roku & rok < 2018 : rok+1;
+	TRUE: rok;
+    esac;
+
+MODULE main
+VAR
+    m : Miesiac(r.typ);
+    r : Rok(m.miesiac);
+
+-- rok przestepny
+CTLSPEC AF(r.typ=Przestepny & m.miesiac=Luty & m.dzien<=29) -- czy w roku przestepnym luty ma 29 dni (cz1) TRUE
+CTLSPEC AF(r.typ=Przestepny & m.miesiac=Luty & m.dzien=29) -- czy w roku przestepnym luty ma 29 dni (cz2) TRUE
+CTLSPEC EF(r.typ=Przestepny & m.miesiac=Luty & m.dzien>29) -- czy w roku przestepnym luty ma 29 dni (cz3) FALSE
+-- rok normalny
+CTLSPEC AF(r.typ=Normalny & m.miesiac=Luty & m.dzien<=28) -- czy w roku normalnym luty ma 28 dni (cz1) TRUE
+CTLSPEC AF(r.typ=Normalny & m.miesiac=Luty & m.dzien=28) -- czy w roku normalnym luty ma 28 dni (cz2) TRUE
+CTLSPEC EF(r.typ=Normalny & m.miesiac=Luty & m.dzien>28) -- czy w roku normalnym luty ma 28 dni (cz3) FALSE
+-- ---------------------------
+CTLSPEC EF(r.typ=Przestepny) -- czy mozliwe jest osiagniecie roku przestepnego TRUE
+CTLSPEC EG(r.typ=Normalny) -- czy mozliwe zeby ciagle byl rok normalny FALSE
+CTLSPEC EF(m.dzien > 31)-- czy mozliwe zeby dzien byl wiekszy od 31 FALSE
+CTLSPEC AG(m.dzien <= 31) -- zawsze dzien jest mniejszy lub równy 31 TRUE
+-- zmiany miesiecy
+CTLSPEC AG(m.miesiac=Grudzien & m.dzien=31 -> EX(m.miesiac=Styczen)) -- po grudniu mamy styczeń
+CTLSPEC AG(m.miesiac=Styczen & m.dzien=31 -> EX(m.miesiac=Luty)) -- po styczniu mamy luty

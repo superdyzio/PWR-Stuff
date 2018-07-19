@@ -1,0 +1,197 @@
+------------------------ SERWER ---------------------------
+MODULE Serwer(k1_syn, k1_ack, k2_syn, k2_ack)
+DEFINE 
+   synack_timeout := 10; -- czas opóźnienia wysłania sygnału SYNACK
+VAR
+   t : 0..30; -- zegar
+   stan : {Gotowy, Po_syn, Po_synack, Po_ack};
+   synack : boolean; -- sygnał SYNACK do klienta
+   gotowy : boolean; -- flaga o gotowości serwera do przyjmowania klientów
+   start: boolean; -- flaga do startowania sesji dla klienta
+   klient: 0..2; -- numer aktualnie obsługiwanego klienta (0 jeśli brak klienta)
+   k_syn : boolean; -- sygnał SYN od klienta
+   k_ack : boolean; -- sygnał ACK od klienta
+   czy_obsluzyc : boolean; -- decyzja czy obsluzyc klienta
+ASSIGN
+   init(t) := 0;
+   init(stan) := Gotowy;
+   init(synack) := FALSE;
+   init(gotowy) := TRUE;
+   init(start) := FALSE;
+   init(klient) := 0;
+   init(k_syn) := FALSE;
+   init(k_ack) := FALSE;
+   init(czy_obsluzyc) := FALSE;
+
+   next(t) := case
+       next(stan) != stan : 0; -- zerowanie na zmianie stanu
+       TRUE: (t+1) mod 30;
+   esac;
+
+   next(stan) := case
+       stan=Gotowy & next(k_syn) : Po_syn;
+       stan=Po_syn & czy_obsluzyc=FALSE : Gotowy;
+       stan=Po_syn & next(synack) : Po_synack;
+       stan=Po_synack & next(k_ack) : Po_ack;
+       stan=Po_ack & next(start) : Gotowy;
+       TRUE : stan;
+   esac;
+
+   next(synack) := case
+       stan=Po_syn & t >= 10 : TRUE;
+       stan!=Po_syn : FALSE;
+       TRUE: synack;
+   esac;
+
+   next(gotowy) := case
+       next(stan)=Gotowy : TRUE;
+       TRUE: FALSE;
+   esac;
+
+   next(czy_obsluzyc) := case
+       stan=Gotowy & next(stan)=Po_syn : {FALSE, TRUE};
+       TRUE: czy_obsluzyc;
+   esac;
+
+   next(klient) := case
+       klient=0 & stan=Gotowy & k1_syn : 1;
+       klient=0 & stan=Gotowy & k2_syn : 2;
+       stan=Po_ack & next(stan)=Gotowy : 0;
+       stan=Po_syn & next(stan)=Gotowy : 0;
+       TRUE: klient;
+   esac;
+
+   next(start) := case
+       stan=Po_ack : TRUE;
+       stan=Gotowy : FALSE;
+       TRUE: start;
+   esac;
+
+   next(k_syn) := case
+       klient != 0 : TRUE;
+       TRUE: FALSE;
+   esac;
+
+   next(k_ack) := case
+       klient = 1 : next(k1_ack);
+       klient = 2 : next(k2_ack);
+       TRUE: FALSE;
+   esac;
+------------------------ KLIENT ---------------------------
+MODULE Klient(nr, klient, serwer_gotowy, synack, start, koniec_sesja)
+DEFINE
+   synack_timeout := 20; -- max czas czekania na SYNACK od serwera
+VAR
+   t : 0..50; -- zegar
+   stan : {Gotowy, Po_syn, Po_synack, Po_ack, Pracuje};
+   syn : boolean; -- sygnał SYN do serwera
+   ack : boolean; -- sygnał ACK do serwera
+   koniec_synack : boolean; -- sygnał o przekroczeniu czasu oczekiwania na SYNACK od serwera
+   koniec_klient : boolean; -- sygnał o zakończeniu sesji przez klienta
+   klient_timeout : 20..30; -- losowa wartość czasu po którym klient kończy sesję
+ASSIGN
+   init(t) := 0;
+   init(stan) := Gotowy;
+   init(syn) := FALSE;
+   init(ack) := FALSE;
+   init(koniec_synack) := FALSE;
+   init(koniec_klient) := FALSE;
+   init(klient_timeout) := 20;
+
+   next(t) := case
+       next(stan) != stan : 0; -- zerowanie na zmianie stanu
+       TRUE : (t+1) mod 50;
+   esac;
+
+   next(stan) := case
+       stan=Gotowy & next(syn) : Po_syn;
+       stan=Po_syn & next(koniec_synack) : Gotowy;
+       stan=Po_syn & next(synack) & (nr=klient) : Po_synack;
+       stan=Po_synack & next(ack) : Po_ack;
+       stan=Po_ack & next(start) : Pracuje;
+       stan=Pracuje & (next(koniec_sesja) | next(koniec_klient)) : Gotowy;
+       TRUE : stan;
+   esac;
+
+   next(syn) := case
+       stan=Gotowy: TRUE;
+       TRUE: FALSE;
+   esac;
+
+   next(ack) := case
+       stan = Po_synack & t >= 15 : TRUE; -- po 15 sekundach odpowiadamy ACK
+       TRUE: FALSE;
+   esac;
+
+   next(koniec_synack) := case
+       stan = Po_syn & t >= synack_timeout : TRUE;
+       TRUE : FALSE;
+   esac;
+
+   next(koniec_klient) := case
+       stan = Pracuje & t >= klient_timeout : TRUE;
+       TRUE : FALSE;
+   esac;
+
+   next(klient_timeout) := case
+       stan = Po_ack & next(stan) = Pracuje : 20..30;
+       TRUE : klient_timeout;
+   esac;
+   
+------------------------ SESJA ----------------------------
+MODULE Sesja(nr, klient, start, koniec_klient)
+DEFINE
+   sesja_timeout := 25;
+VAR
+   t : 0..30; -- zegar
+   stan : {Gotowa, Pracuje};
+   koniec_sesja : boolean; -- sygnał o zakończeniu sesji przez sesję
+ASSIGN
+   init(t) := 0;
+   init(stan) := Gotowa;
+   init(koniec_sesja) := FALSE;
+
+   next(t) := case
+       stan=Gotowa: 0;
+       TRUE : (t+1) mod 30;
+   esac;
+   
+   next(stan) := case
+      stan=Gotowa & next(start) & (nr=klient) : Pracuje;
+      stan=Pracuje & (next(koniec_sesja) | next(koniec_klient)) : Gotowa;
+      TRUE : stan;
+   esac;
+   
+   next(koniec_sesja) := case
+       next(t) >= sesja_timeout : TRUE;
+       TRUE: FALSE;
+   esac;
+   
+------------------------ MAIN ----------------------------
+MODULE main
+VAR
+    s : Serwer(k1.syn, k1.ack, k2.syn, k2.ack);
+    k1 : Klient(1, s.klient, s.gotowy, s.synack, s.start, s1.koniec_sesja);
+    k2 : Klient(2, s.klient, s.gotowy, s.synack, s.start, s2.koniec_sesja);
+    s1: Sesja(1, s.klient, s.start, k1.koniec_klient);
+    s2: Sesja(2, s.klient, s.start, k2.koniec_klient);
+-- <<<<<<<<<<<<<<<<<< WERYFIKATORY >>>>>>>>>>>>>>>>>>>>>>>
+-- czy po nawiązaniu połączenia serwer uruchamia odpowiednią sesję dla klienta
+CTLSPEC AG(s.klient=1 & s.stan=Po_ack -> EX(s1.stan=Pracuje & k1.stan=Pracuje))
+CTLSPEC AG(s.klient=2 & s.stan=Po_ack -> EX(s2.stan=Pracuje & k2.stan=Pracuje))
+-- czy klient kończy sesję wcześniej od sesji, jeśli t1 < t2
+CTLSPEC AG(s1.stan=Pracuje & k1.stan=Pracuje & k1.klient_timeout < s1.sesja_timeout -> s1.t <= k1.klient_timeout & k1.t <= k1.klient_timeout)
+-- czy sesja kończy sesję wcześniej od klienta, jeśli t1 > t2
+CTLSPEC AG(s1.stan=Pracuje & k1.stan=Pracuje & k1.klient_timeout > s1.sesja_timeout -> s1.t <= s1.sesja_timeout & k1.t <= s1.sesja_timeout)
+-- klient po przekroczeniu czasu oczekiwania wraca do stanu gotowości
+CTLSPEC AG(k1.stan=Po_syn & k1.t > k1.synack_timeout -> EX(k1.koniec_synack))
+CTLSPEC AG(k1.stan=Po_syn & k1.koniec_synack -> EX(k1.stan=Gotowy))
+CTLSPEC AG(k2.stan=Po_syn & k2.koniec_synack -> EX(k2.stan=Gotowy))
+-- czy klient może zostać obsłużony
+CTLSPEC EF(k1.stan=Pracuje)
+CTLSPEC EF(k2.stan=Pracuje)
+-- czy serwer odrzuca klienta
+CTLSPEC AG(s.stan=Po_syn & s.czy_obsluzyc=FALSE -> EX(s.stan=Gotowy))
+-- czy serwer przyjmuje klienta
+CTLSPEC AG(s.stan=Po_syn & s.klient=1 & s.czy_obsluzyc=TRUE -> EX(AF(s.stan=Po_synack & s.klient=1)))
+CTLSPEC AG(s.stan=Po_syn & s.klient=1 & s.t >= s.synack_timeout & s.czy_obsluzyc=TRUE -> EX(s.stan=Po_synack & s.klient=1))

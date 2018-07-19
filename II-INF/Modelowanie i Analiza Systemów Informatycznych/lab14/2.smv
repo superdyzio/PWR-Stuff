@@ -1,0 +1,27 @@
+MODULE main
+VAR cyfra : 0..9; pozycja : 0..3; 
+INIT cyfra in {0,1,2,3,4,5,6,7,8,9} & pozycja = 0;
+TRANS next(pozycja) = case
+	pozycja = 3 : 3;
+	pozycja = 0 & cyfra = 1 : 1;
+	pozycja = 1 & cyfra = 5 : 2; 
+	pozycja = 1 & cyfra = 1 : 1;
+	pozycja = 2 & cyfra = 9 : 3;
+	pozycja = 2 & cyfra = 1 : 1;
+	TRUE : 0;
+esac;
+TRANS next(cyfra) in case
+	pozycja = 3 : cyfra;
+	TRUE : {0,1,2,3,4,5,6,7,8,9};
+esac;	
+
+CTLSPEC AG(pozycja=0 & cyfra=1 -> AX(pozycja=1))
+CTLSPEC AG(pozycja=1 & cyfra=5 -> AX(pozycja=2))
+CTLSPEC AG(pozycja=2 & cyfra=9 -> AX(pozycja=3))
+CTLSPEC AG(pozycja=1 & cyfra=1 -> AX(pozycja=1))
+CTLSPEC AG(pozycja=2 & cyfra=1 -> AX(pozycja=1))
+CTLSPEC AG(pozycja=0 & cyfra!=1 -> AX(pozycja=0))
+CTLSPEC AG(pozycja=1 & cyfra!=5 & cyfra!=1 -> AX(pozycja=0))
+CTLSPEC AG(pozycja=2 & cyfra!=9 & cyfra!=1 -> AX(pozycja=0))
+CTLSPEC AG(pozycja=3 -> AX(pozycja=3))
+CTLSPEC AG(pozycja=3 & cyfra=9 -> AX(cyfra=9))

@@ -1,0 +1,138 @@
+MODULE server(syn, ack, disc)
+
+VAR	time : 	2..5;
+	timer : 0..5;
+	syn_server : boolean;
+	syn-ack_server : boolean;
+	ack_server : boolean;
+	connected : boolean;
+	disconnect : boolean;
+
+ASSIGN	init(disconnect) := FALSE;
+	next(disconnect) := 
+	case
+		5 = timer & !connected : TRUE;
+		timer >= 2 & disc : TRUE;
+		TRUE : FALSE;
+	esac;
+	init(timer) := 0;
+	next(timer) :=
+	case
+		timer <= 2 & syn_server : timer + 1;
+		timer >= 2 & connected : 0;
+		timer >= 2 & disc : 0;
+		timer < 5 & syn_server : timer + 1;
+		timer = 5 : 0;
+		TRUE : 0;
+	esac;
+	init(syn_server) := FALSE;
+	next(syn_server) := 
+	case
+		connected : FALSE;
+		TRUE : syn;
+	esac;
+	init(syn-ack_server) := FALSE;
+	next(syn-ack_server) := 
+	case
+		disconnect : FALSE;
+		timer = 5 : FALSE;
+		timer >= 2 & connected : FALSE;
+		timer >= 2 & disc : FALSE;
+		timer < 5 & syn-ack_server : TRUE;
+		timer <= time & syn_server : {TRUE, FALSE};
+		TRUE : FALSE;
+	esac;
+	init(ack_server) := FALSE;
+	next(ack_server) := 
+	case
+		connected : FALSE;
+		TRUE : ack;
+	esac;
+	init(connected) := FALSE;
+	next(connected) := 
+	case
+		timer = 5 : FALSE;
+		timer >= 2 & connected : FALSE;
+		timer >= 2 & disc : FALSE;
+		timer >= time & timer < 5 & ack_server & !connected : TRUE;
+		TRUE : FALSE;
+	esac;
+
+MODULE klient(syn-ack, connect, disk)
+
+VAR	disconnect : boolean;
+	connected : boolean;
+	syn_klient : boolean;
+	ack_klient : boolean;
+	logowanie : boolean;
+
+ASSIGN	init(disconnect) := FALSE;
+	next(disconnect) :=
+	case
+		connected : {TRUE, FALSE};
+		logowanie : {TRUE, FALSE};
+		TRUE : FALSE;
+	esac;
+	init(logowanie) := FALSE;
+	next(logowanie) :=
+	case
+		connect : FALSE;
+		connected : FALSE;
+		disk : FALSE;
+		logowanie : TRUE;
+		TRUE : {TRUE, FALSE};
+	esac;
+	syn_klient := logowanie;
+	ack_klient := syn-ack;
+	init(connected) := FALSE;
+	next(connected) :=
+	case
+		disconnect : FALSE;
+		disk : FALSE;
+		connected : TRUE;
+		connect : TRUE;
+		TRUE : FALSE;
+	esac;
+
+MODULE main
+
+VAR	kli : klient(sr.syn-ack_server, sr.connected, sr.disconnect);
+	sr : server(kli.syn_klient, kli.ack_klient, kli.disconnect);
+
+
+CTLSPEC AG((sr.timer=0 & sr.syn_server=TRUE) -> AX(sr.timer=1))
+CTLSPEC AG((sr.timer=5) -> AX(sr.timer=0))
+COMPUTE MIN[sr.timer=1,sr.timer=2] --ma byc 1
+COMPUTE MAX[sr.timer=1,sr.timer=2] --ma byc 1
+
+CTLSPEC AG(sr.syn_server & AX(kli.disconnect) -> AX(!sr.syn_server))
+LTLSPEC F(sr.syn_server & G(!kli.disconnect) -> (F(sr.syn-ack_server) & sr.timer<5))
+CTLSPEC AG(sr.timer=5 -> AX(sr.disconnect -> !kli.connected))
+CTLSPEC AF(((sr.syn-ack_server & !kli.disconnect & sr.timer<5) -> AX(sr.ack_server -> AX(sr.connected))))
+CTLSPEC AG((sr.ack_server & !kli.disconnect & sr.timer>=sr.time) -> AX(sr.connected -> AX(!sr.connected)))
+CTLSPEC AG(sr.syn_server -> AX(sr.syn-ack_server | !sr.syn-ack_server))
+CTLSPEC AG(sr.connected -> (sr.timer >=2 & sr.timer <= 5))
+CTLSPEC AG(kli.disconnect -> AF(sr.disconnect -> (sr.timer >=2 & sr.timer <= 5)))
+CTLSPEC AG(sr.timer=5 -> AX(!sr.connected))
+
+
+
+MODULE main
+VAR
+	c1 : Client(server, s1);
+	c2 : Client(server, s2);
+	server : Server(c1, c2, s1, s2);
+	s1 : Session(server, c1);
+	s2 : Session(server, c2);
+	
+MODULE Client(server, session)
+
+MODULE Server(client1, client2, session1, session2)
+VAR
+	SYN : boolean;
+	SYN_ACK : boolean;
+	ACK : boolean;
+	timer : 2..5;
+	time : 0..5;
+
+MODULE Session(server, client)

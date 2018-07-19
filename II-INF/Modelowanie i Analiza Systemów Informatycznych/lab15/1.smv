@@ -1,0 +1,208 @@
+MODULE Server(c1_syn, c1_ack, c2_syn, c2_ack)
+DEFINE 
+   timeout_synack := 10;
+VAR
+   t : 0..30;
+   state : {READY, SYN_RECEIVED, SYNACK_SEND, ACK_RECEIVED};
+   synack : boolean;
+   ready : boolean;
+   start : boolean;
+   client : 0..2;
+   c_syn : boolean;
+   c_ack : boolean;
+   welcome_client : boolean;
+ASSIGN
+   init(t) := 0;
+   init(state) := READY;
+   init(synack) := FALSE;
+   init(ready) := TRUE;
+   init(start) := FALSE;
+   init(client) := 0;
+   init(c_syn) := FALSE;
+   init(c_ack) := FALSE;
+   init(welcome_client) := FALSE;
+
+   next(t) := case
+       next(state) != state : 0;
+       TRUE : (t+1) mod 30;
+   esac;
+
+   next(state) := case
+       state = READY & next(c_syn) : SYN_RECEIVED;
+       state = SYN_RECEIVED & welcome_client = FALSE : READY;
+       state = SYN_RECEIVED & next(synack) : SYNACK_SEND;
+       state = SYNACK_SEND & next(c_ack) : ACK_RECEIVED;
+       state = ACK_RECEIVED & next(start) : READY;
+       TRUE : state;
+   esac;
+
+   next(synack) := case
+       state = SYN_RECEIVED & t >= 10 : TRUE;
+       state != SYN_RECEIVED : FALSE;
+       TRUE : synack;
+   esac;
+
+   next(ready) := case
+       next(state) = READY : TRUE;
+       TRUE : FALSE;
+   esac;
+
+   next(welcome_client) := case
+       state = READY & next(state) = SYN_RECEIVED : {FALSE, TRUE};
+       TRUE : welcome_client;
+   esac;
+
+   next(client) := case
+       client = 0 & state = READY & c1_syn : 1;
+       client = 0 & state = READY & c2_syn : 2;
+       state = SYN_RECEIVED & next(state) = READY : 0;
+       state = SYN_RECEIVED & next(state) = READY : 0;
+       TRUE : client;
+   esac;
+
+   next(start) := case
+       state = SYN_RECEIVED : TRUE;
+       state = READY : FALSE;
+       TRUE : start;
+   esac;
+
+   next(c_syn) := case
+       client != 0 : TRUE;
+       TRUE : FALSE;
+   esac;
+
+   next(c_ack) := case
+       client = 1 : next(c1_ack);
+       client = 2 : next(c2_ack);
+       TRUE : FALSE;
+   esac;
+
+ 
+ 
+MODULE Session(no, client, start, client_end_session)
+DEFINE
+   session_timeout := 25;  
+VAR
+   t : 0..30;
+   state : {READY, BUSY};
+   end_session : boolean; 
+ASSIGN
+   init(t) := 0;
+   init(state) := READY;
+   init(end_session) := FALSE;
+
+   next(t) := case
+       state = READY : 0;
+       TRUE : (t+1) mod 30;
+   esac;
+   
+   next(state) := case
+      state = READY & next(start) & (no = client) : BUSY;
+      state = BUSY & (next(end_session) | next(client_end_session)) : READY;
+      TRUE : state;
+   esac;
+   
+   next(end_session) := case
+       next(t) >= session_timeout : TRUE;
+       TRUE : FALSE;
+   esac;
+   
+  
+  
+MODULE Client(no, client, server_ready, synack, start, end_session)
+DEFINE
+   synack_timeout := 20;  
+VAR
+   t : 0..50;
+   state : {READY, SYN_SEND, SYNACK_RECEIVED, ACK_SEND, BUSY};
+   syn : boolean;
+   ack : boolean;
+   abort_synack : boolean;
+   abort_session : boolean;
+   client_timeout : 20..30;
+ASSIGN
+   init(t) := 0;
+   init(state) := READY;
+   init(syn) := FALSE;
+   init(ack) := FALSE;
+   init(abort_synack) := FALSE;
+   init(abort_session) := FALSE;
+   init(client_timeout) := 20;
+
+   next(t) := case
+       next(state) != state : 0;
+       TRUE : (t+1) mod 50;
+   esac;
+
+   next(state) := case
+       state = READY & next(syn) : SYN_SEND;
+       state = SYN_SEND & next(abort_synack) : READY;
+       state = SYN_SEND & next(synack) & (no = client) : SYNACK_RECEIVED;
+       state = SYNACK_RECEIVED & next(ack) : ACK_SEND;
+       state = ACK_SEND & next(start) : BUSY;
+       state = BUSY & (next(end_session) | next(abort_session)) : READY;
+       TRUE : state;
+   esac;
+
+   next(syn) := case
+       state = READY : TRUE;
+       TRUE : FALSE;
+   esac;
+
+   next(ack) := case
+       state = SYNACK_RECEIVED & t >= 15 : TRUE;
+       TRUE : FALSE;
+   esac;
+
+   next(abort_synack) := case
+       state = SYN_SEND & t >= synack_timeout : TRUE;
+       TRUE : FALSE;
+   esac;
+
+   next(abort_session) := case
+       state = BUSY & t >= client_timeout : TRUE;
+       TRUE : FALSE;
+   esac;
+
+   next(client_timeout) := case
+       state = ACK_SEND & next(state) = BUSY : 20..30;
+       TRUE : client_timeout;
+   esac;
+   
+   
+   
+MODULE main
+VAR
+    s : Server(c1.syn, c1.ack, c2.syn, c2.ack);
+    c1 : Client(1, s.client, s.ready, s.synack, s.start, s1.end_session);
+    c2 : Client(2, s.client, s.ready, s.synack, s.start, s2.end_session);
+    s1: Session(1, s.client, s.start, c1.abort_session);
+    s2: Session(2, s.client, s.start, c2.abort_session);
+	
+	
+	
+-- czy po nawiązaniu połączenia serwer uruchamia odpowiednią sesję dla klienta
+CTLSPEC AG(s.client = 1 & s.state = ACK_RECEIVED -> EX(s1.state = BUSY & c1.state = BUSY))
+CTLSPEC AG(s.client = 2 & s.state = ACK_RECEIVED -> EX(s2.state = BUSY & c2.state = BUSY))
+
+-- czy klient kończy sesję wcześniej od sesji, jeśli t1 < t2
+CTLSPEC AG(s1.state = BUSY & c1.state = BUSY & c1.client_timeout < s1.session_timeout -> s1.t <= c1.client_timeout & c1.t <= c1.client_timeout)
+
+-- czy sesja kończy sesję wcześniej od klienta, jeśli t1 > t2
+CTLSPEC AG(s1.state = BUSY & c1.state = BUSY & c1.client_timeout > s1.session_timeout -> s1.t <= s1.session_timeout & c1.t <= s1.session_timeout)
+
+-- klient po przekroczeniu czasu oczekiwania wraca do stanu gotowości
+CTLSPEC AG(c1.state = SYN_SEND & c1.t > c1.synack_timeout -> EX(c1.abort_synack))
+CTLSPEC AG(c1.state = SYN_SEND & c1.abort_synack -> EX(c1.state = READY))
+CTLSPEC AG(c2.state = SYN_SEND & c2.abort_synack -> EX(c2.state = READY))
+
+-- czy klient może zostać obsłużony
+CTLSPEC EF(c1.state = BUSY)
+CTLSPEC EF(c2.state = BUSY)
+
+-- czy serwer odrzuca klienta
+CTLSPEC AG(s.state = SYN_RECEIVED & s.welcome_client = FALSE -> EX(s.state = READY))
+
+-- czy serwer przyjmuje klienta
+CTLSPEC AG(s.state = SYN_RECEIVED & s.client = 1 & s.welcome_client = TRUE -> EX(AF(s.state = SYNACK_SEND & s.client = 1)))
+CTLSPEC AG(s.state = SYN_RECEIVED & s.client = 1 & s.t >= s.timeout_synack & s.welcome_client = TRUE -> EX(s.state = SYNACK_SEND & s.client = 1))

@@ -1,0 +1,123 @@
+--int number, i = 1, factorial = 1, sigma = 0, primes;    l0 - nie interesuj nas
+--cin << number;                                          l1 - nie interesuje nas  
+--if(number > 2){                                         l2
+--  for(int j = 3; j <= number; j++){                     l3
+--    factorial = 1;                                      l4
+--    i = 1;                                              l5
+--    for(int x = 0; x < j - 2; x++){                     l6
+--      factorial = factorial * i;                        l7
+--      i++;}                                             l8
+--    sigma = sigma + (factorial - j * (factorial / j));} l9
+--  primes = -1 + sigma;                                  l10
+--  if(number == 3)                                       l11
+--    cout >> 2;                                          l12 - prawie KONIEC
+--  else                                                  l13 - nie interesuje nas
+--    cout >> primes;                                     l14 - prawie KONIEC
+--} else                                                  l15 - nie interesuje nas
+--  cout >> ”wrong number”;                               l16 - KONIEC
+--                                                        l17 - napewno koniec dla l12 i l14
+
+
+MODULE main
+
+FROZENVAR number : 0..8;
+DEFINE MAX_FACTORIAL := 720;
+VAR 
+    l : {l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13,l14,l15,l16, l17};
+    i : 1..20;
+    factorial : 1..MAX_FACTORIAL;
+    sigma : 0..20;
+    primes :-1..20;
+    j : 3..20;
+    x : 0..20;
+    c : 0..20; 
+
+ASSIGN
+    init(l) := l2;
+    init(i) := 1;
+    init(factorial) := 1;
+    init(sigma) := 0;
+    init(primes) := 0;
+    init(j) := 3;
+    init(x) := 0;
+    init(c) := 0;
+
+    next(l) := case
+        l=l2 & number > 2 : l3;
+        l=l2 & number <= 2 : l16;
+        l=l3 & j <= number : l4;
+        l=l3 & j > number : l10;
+        l=l4 : l5;
+        l=l5 : l6;
+        l=l6 & x < j - 2 : l7;
+        l=l6 & x >= j - 2 : l9;
+        l=l7 : l8;
+        l=l8 : l6;
+        l=l9 : l3;
+        l=l10 : l11;
+        l=l11 & number = 3 : l12;
+        l=l11 & number != 3 : l14;
+        l=l12 : l17;
+        l=l14 : l17;
+        l=l16 : l16;
+        l=l17 : l17;
+        TRUE : l;
+    esac;
+
+    next(i) := case
+        next(l)=l5 : 1;
+        i+1 > 20 : i; -- zakres
+        next(l)=l8 : i+1;
+        TRUE: i;
+    esac;
+
+    next(factorial) := case
+        next(l)=l4 : 1;
+        factorial*i > MAX_FACTORIAL : factorial; -- zakres
+        next(l)=l7 : factorial*i;
+        TRUE: factorial;
+    esac;
+
+    next(sigma) := case
+        sigma + (factorial - j * (factorial / j)) > 20 : sigma; -- zakres
+        next(l)=l9 : sigma + (factorial - j * (factorial / j));
+        TRUE: sigma;
+    esac;
+
+    next(primes) := case
+        sigma - 1 > 20 : primes; -- zakres
+        sigma - 1 < -1 : primes; -- zakres
+        next(l)=l10 : sigma - 1;
+        next(l)=l12 : 2; -- cout >> 2
+        next(l)=l16 : -1; -- cout >> "wrong number"
+        TRUE: primes;
+    esac;
+
+    next(j) := case
+        j+1 > 20 : j; -- zakres
+        l=l9 & next(l)=l3 : j+1;
+        TRUE: j;
+    esac;
+
+    next(x) := case
+        l=l5 & next(l)=l6 : 0;
+        x+1 > 20 : x; -- zakres
+        l=l8 & next(l)=l6 : x+1;
+        TRUE: x;
+    esac;
+
+    next(c) := case
+        c+1 > 20 : c; -- zakres
+        next(l)=l4 : c+1;
+        TRUE: c;
+    esac;
+
+
+
+-- czy podanie number 0..2 spowoduje wypisanie "wrong number" (primes=-1)
+CTLSPEC AG(number <= 2 -> EF(l=l16))
+-- jaka może być liczba liczb pierwszych dla  3..8
+CTLSPEC number=3 -> !EF(l=l17)
+CTLSPEC number=8 -> !EF(l=l17)
+-- ile razy wykona się zewnętrzna pętla for dla number = 5
+CTLSPEC number=5 -> !EF(l=l17) -- zwróci FALSE i ostatnia wartość c=3

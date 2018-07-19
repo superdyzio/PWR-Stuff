@@ -1,0 +1,97 @@
+MODULE main
+VAR
+	client : client(server);
+	server : server(client);
+
+MODULE server(client)
+VAR
+	state : {OPEN, CONNECTING, CONNECTED, DISCONNECTING};
+	SYN : boolean;
+	SYN_ACK : boolean;
+	ACK : boolean;
+	timer : 2..5;
+	time : 0..5;
+ASSIGN
+	init(SYN) := FALSE;
+	init(SYN_ACK) := FALSE;
+	init(ACK) := FALSE;
+	init(state) := OPEN;
+	init(timer) := 2..5;
+	init(time) := 0;
+	next(state) := case
+		state = DISCONNECTING: OPEN;
+		timer = time: DISCONNECTING;
+		ACK: CONNECTED;
+		SYN: CONNECTING;
+		TRUE:state;
+		esac;
+
+	next(SYN_ACK) := case
+		next(state) = CONNECTED : FALSE;
+		SYN : TRUE;
+		TRUE : SYN_ACK;
+		esac;
+
+	next(client.SYN_ACK) := case
+		next(state) = CONNECTED : FALSE;
+		SYN : TRUE;
+		TRUE :client.SYN_ACK;
+		esac;
+	
+	next(timer) := case
+		next(state) = CONNECTING : 2..5;
+		next(state) = CONNECTED : timer;
+		TRUE: timer;
+		esac;
+
+	next(time) := case
+		state != CONNECTED : 0;
+		time = 5 : time;
+		state = CONNECTED : time + 1;
+		TRUE: 0;
+		esac;
+
+		
+MODULE client(server)
+VAR
+	state : {OPEN, CONNECTING, CONNECTED, DISCONNECTING};
+	SYN : boolean;
+	SYN_ACK : boolean;
+	ACK : boolean;
+
+ASSIGN
+	init(SYN) := FALSE;
+	init(SYN_ACK) := FALSE;
+	init(ACK) := FALSE;
+	init(state) := OPEN;
+	next(state) := case
+		state = CONNECTED & server.state = DISCONNECTING : DISCONNECTING;
+		ACK : CONNECTED;
+		SYN : CONNECTING;
+		state = DISCONNECTING: OPEN;
+		TRUE : state;
+		esac;
+	
+	next(SYN) := case
+		next(state) = CONNECTED : FALSE;
+		server.state = OPEN : TRUE;
+		TRUE : SYN;
+		esac;
+
+	next(server.SYN) := case
+		next(state) = CONNECTED : FALSE;
+		server.state = OPEN : TRUE;
+		TRUE : server.SYN;
+		esac;
+	
+	next(ACK) := case
+		next(state) = CONNECTED : FALSE;
+		SYN_ACK : TRUE;
+		TRUE : ACK;
+		esac;
+
+	next(server.ACK) := case
+		next(state) = CONNECTED : FALSE;
+		SYN_ACK : TRUE;
+		TRUE : server.ACK;
+		esac;

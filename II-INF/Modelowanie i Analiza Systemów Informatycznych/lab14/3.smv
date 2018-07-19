@@ -1,0 +1,83 @@
+MODULE Miesiac(typ_roku)
+VAR 
+	miesiac : {styczen, luty, marzec, kwiecien, maj, czerwiec, lipiec, sierpien, wrzesien, pazdziernik, listopad, grudzien}; 
+	dzien : 1..31;
+ASSIGN
+	init(dzien) := 1;
+	next(dzien) := case
+        next(miesiac) != miesiac : 1;
+		dzien = 31 : 1;
+		TRUE: dzien+1;
+    esac;
+	init(miesiac) := styczen;
+	next(miesiac) := case
+        miesiac = styczen & dzien = 31 : luty;
+		miesiac = luty & ((typ_roku = przestepny & dzien = 29) | (typ_roku = normalny & dzien = 28)) : marzec;
+		miesiac = marzec & dzien = 31 : kwiecien;
+		miesiac = kwiecien & dzien = 30 : maj;
+		miesiac = maj & dzien = 31 : czerwiec;
+		miesiac = czerwiec & dzien = 30 : lipiec;
+		miesiac = lipiec & dzien = 31 : sierpien;
+		miesiac = sierpien & dzien = 31 : wrzesien;
+		miesiac = wrzesien & dzien = 30 : pazdziernik;
+		miesiac = pazdziernik & dzien = 31 : listopad;
+		miesiac = listopad & dzien = 30 : grudzien;
+		miesiac = grudzien & dzien = 31 : styczen;
+		TRUE: miesiac;
+    esac;
+
+
+MODULE Rok(miesiac)
+VAR 
+	typ : {normalny, przestepny}; 
+	rok : 1900..2018;
+DEFINE
+    sprawdz_przestepny := ((next(rok) mod 4 = 0) & (next(rok) mod 100 != 0) | (next(rok) mod 400 = 0));
+    zmiana_roku := miesiac = grudzien & next(miesiac) = styczen;
+ASSIGN
+	init(rok) := 1900;
+	next(rok) := case
+		zmiana_roku & rok < 2018 : rok+1;
+	TRUE: rok;
+    esac;
+	init(typ) := normalny;
+	next(typ) := case
+    	sprawdz_przestepny : przestepny;
+		!sprawdz_przestepny : normalny;
+		TRUE : typ;
+    esac;
+
+
+MODULE main
+VAR
+	m : Miesiac(r.typ);
+	r : Rok(m.miesiac);
+	
+	
+	
+CTLSPEC AF(r.typ = przestepny & m.miesiac = luty & m.dzien <= 29)
+CTLSPEC AF(r.typ = przestepny & m.miesiac = luty & m.dzien = 29)
+CTLSPEC EF(r.typ = przestepny & m.miesiac = luty & m.dzien > 29)
+
+CTLSPEC AF(r.typ = normalny & m.miesiac = luty & m.dzien <= 28)
+CTLSPEC AF(r.typ = normalny & m.miesiac = luty & m.dzien = 28)
+CTLSPEC EF(r.typ = normalny & m.miesiac = luty & m.dzien > 28)
+
+CTLSPEC EF(r.typ = przestepny)
+CTLSPEC EG(r.typ = normalny)
+CTLSPEC EF(m.dzien > 31)
+CTLSPEC AG(m.dzien <= 31)
+
+CTLSPEC AG(m.miesiac = grudzien & m.dzien = 31 -> EX(m.miesiac = styczen))
+CTLSPEC AG(m.miesiac = styczen & m.dzien = 31 -> EX(m.miesiac = luty))
+CTLSPEC AG(m.miesiac = luty & r.typ = przestepny & m.dzien = 29 -> EX(m.miesiac = marzec))
+CTLSPEC AG(m.miesiac = luty & r.typ = normalny & m.dzien = 28 -> EX(m.miesiac = marzec))
+CTLSPEC AG(m.miesiac = marzec & m.dzien = 31 -> EX(m.miesiac = kwiecien))
+CTLSPEC AG(m.miesiac = kwiecien & m.dzien = 30 -> EX(m.miesiac = maj))
+CTLSPEC AG(m.miesiac = maj & m.dzien = 31 -> EX(m.miesiac = czerwiec))
+CTLSPEC AG(m.miesiac = czerwiec & m.dzien = 30 -> EX(m.miesiac = lipiec))
+CTLSPEC AG(m.miesiac = lipiec & m.dzien = 31 -> EX(m.miesiac = sierpien))
+CTLSPEC AG(m.miesiac = sierpien & m.dzien = 31 -> EX(m.miesiac = wrzesien))
+CTLSPEC AG(m.miesiac = wrzesien & m.dzien = 30 -> EX(m.miesiac = pazdziernik))
+CTLSPEC AG(m.miesiac = pazdziernik & m.dzien = 31 -> EX(m.miesiac = listopad))
+CTLSPEC AG(m.miesiac = listopad & m.dzien = 30 -> EX(m.miesiac = grudzien))

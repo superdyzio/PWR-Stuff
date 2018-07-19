@@ -1,0 +1,484 @@
+*** This is NuSMV 2.6.0 (compiled on Wed Oct 14 15:37:51 2015)
+*** Enabled addons are: compass
+*** For more information on NuSMV see <http://nusmv.fbk.eu>
+*** or email to <nusmv-users@list.fbk.eu>.
+*** Please report bugs to <Please report bugs to <nusmv-users@fbk.eu>>
+
+*** Copyright (c) 2010-2014, Fondazione Bruno Kessler
+
+*** This version of NuSMV is linked to the CUDD library version 2.4.1
+*** Copyright (c) 1995-2004, Regents of the University of Colorado
+
+*** This version of NuSMV is linked to the MiniSat SAT solver. 
+*** See http://minisat.se/MiniSat.html
+*** Copyright (c) 2003-2006, Niklas Een, Niklas Sorensson
+*** Copyright (c) 2007-2010, Niklas Sorensson
+
+-- specification AG (number <= 2 -> EF l = l16)  is true
+-- specification (number = 3 -> !(EF l = l17))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: CTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 1.1 <-
+    number = 3
+    l = l2
+    i = 1
+    factorial = 1
+    sigma = 0
+    primes = 0
+    j = 3
+    x = 0
+    c = 0
+    MAX_FACTORIAL = 720
+  -> State: 1.2 <-
+    l = l3
+  -> State: 1.3 <-
+    l = l4
+    c = 1
+  -> State: 1.4 <-
+    l = l5
+  -> State: 1.5 <-
+    l = l6
+  -> State: 1.6 <-
+    l = l7
+  -> State: 1.7 <-
+    l = l8
+    i = 2
+  -> State: 1.8 <-
+    l = l6
+    x = 1
+  -> State: 1.9 <-
+    l = l9
+    sigma = 1
+  -> State: 1.10 <-
+    l = l3
+    j = 4
+  -> State: 1.11 <-
+    l = l10
+  -> State: 1.12 <-
+    l = l11
+  -> State: 1.13 <-
+    l = l12
+    primes = 2
+  -> State: 1.14 <-
+    l = l17
+-- specification (number = 8 -> !(EF l = l17))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: CTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 2.1 <-
+    number = 8
+    l = l2
+    i = 1
+    factorial = 1
+    sigma = 0
+    primes = 0
+    j = 3
+    x = 0
+    c = 0
+    MAX_FACTORIAL = 720
+  -> State: 2.2 <-
+    l = l3
+  -> State: 2.3 <-
+    l = l4
+    c = 1
+  -> State: 2.4 <-
+    l = l5
+  -> State: 2.5 <-
+    l = l6
+  -> State: 2.6 <-
+    l = l7
+  -> State: 2.7 <-
+    l = l8
+    i = 2
+  -> State: 2.8 <-
+    l = l6
+    x = 1
+  -> State: 2.9 <-
+    l = l9
+    sigma = 1
+  -> State: 2.10 <-
+    l = l3
+    j = 4
+  -> State: 2.11 <-
+    l = l4
+    c = 2
+  -> State: 2.12 <-
+    l = l5
+    i = 1
+  -> State: 2.13 <-
+    l = l6
+    x = 0
+  -> State: 2.14 <-
+    l = l7
+  -> State: 2.15 <-
+    l = l8
+    i = 2
+  -> State: 2.16 <-
+    l = l6
+    x = 1
+  -> State: 2.17 <-
+    l = l7
+    factorial = 2
+  -> State: 2.18 <-
+    l = l8
+    i = 3
+  -> State: 2.19 <-
+    l = l6
+    x = 2
+  -> State: 2.20 <-
+    l = l9
+    sigma = 3
+  -> State: 2.21 <-
+    l = l3
+    j = 5
+  -> State: 2.22 <-
+    l = l4
+    factorial = 1
+    c = 3
+  -> State: 2.23 <-
+    l = l5
+    i = 1
+  -> State: 2.24 <-
+    l = l6
+    x = 0
+  -> State: 2.25 <-
+    l = l7
+  -> State: 2.26 <-
+    l = l8
+    i = 2
+  -> State: 2.27 <-
+    l = l6
+    x = 1
+  -> State: 2.28 <-
+    l = l7
+    factorial = 2
+  -> State: 2.29 <-
+    l = l8
+    i = 3
+  -> State: 2.30 <-
+    l = l6
+    x = 2
+  -> State: 2.31 <-
+    l = l7
+    factorial = 6
+  -> State: 2.32 <-
+    l = l8
+    i = 4
+  -> State: 2.33 <-
+    l = l6
+    x = 3
+  -> State: 2.34 <-
+    l = l9
+    sigma = 4
+  -> State: 2.35 <-
+    l = l3
+    j = 6
+  -> State: 2.36 <-
+    l = l4
+    factorial = 1
+    c = 4
+  -> State: 2.37 <-
+    l = l5
+    i = 1
+  -> State: 2.38 <-
+    l = l6
+    x = 0
+  -> State: 2.39 <-
+    l = l7
+  -> State: 2.40 <-
+    l = l8
+    i = 2
+  -> State: 2.41 <-
+    l = l6
+    x = 1
+  -> State: 2.42 <-
+    l = l7
+    factorial = 2
+  -> State: 2.43 <-
+    l = l8
+    i = 3
+  -> State: 2.44 <-
+    l = l6
+    x = 2
+  -> State: 2.45 <-
+    l = l7
+    factorial = 6
+  -> State: 2.46 <-
+    l = l8
+    i = 4
+  -> State: 2.47 <-
+    l = l6
+    x = 3
+  -> State: 2.48 <-
+    l = l7
+    factorial = 24
+  -> State: 2.49 <-
+    l = l8
+    i = 5
+  -> State: 2.50 <-
+    l = l6
+    x = 4
+  -> State: 2.51 <-
+    l = l9
+  -> State: 2.52 <-
+    l = l3
+    j = 7
+  -> State: 2.53 <-
+    l = l4
+    factorial = 1
+    c = 5
+  -> State: 2.54 <-
+    l = l5
+    i = 1
+  -> State: 2.55 <-
+    l = l6
+    x = 0
+  -> State: 2.56 <-
+    l = l7
+  -> State: 2.57 <-
+    l = l8
+    i = 2
+  -> State: 2.58 <-
+    l = l6
+    x = 1
+  -> State: 2.59 <-
+    l = l7
+    factorial = 2
+  -> State: 2.60 <-
+    l = l8
+    i = 3
+  -> State: 2.61 <-
+    l = l6
+    x = 2
+  -> State: 2.62 <-
+    l = l7
+    factorial = 6
+  -> State: 2.63 <-
+    l = l8
+    i = 4
+  -> State: 2.64 <-
+    l = l6
+    x = 3
+  -> State: 2.65 <-
+    l = l7
+    factorial = 24
+  -> State: 2.66 <-
+    l = l8
+    i = 5
+  -> State: 2.67 <-
+    l = l6
+    x = 4
+  -> State: 2.68 <-
+    l = l7
+    factorial = 120
+  -> State: 2.69 <-
+    l = l8
+    i = 6
+  -> State: 2.70 <-
+    l = l6
+    x = 5
+  -> State: 2.71 <-
+    l = l9
+    sigma = 5
+  -> State: 2.72 <-
+    l = l3
+    j = 8
+  -> State: 2.73 <-
+    l = l4
+    factorial = 1
+    c = 6
+  -> State: 2.74 <-
+    l = l5
+    i = 1
+  -> State: 2.75 <-
+    l = l6
+    x = 0
+  -> State: 2.76 <-
+    l = l7
+  -> State: 2.77 <-
+    l = l8
+    i = 2
+  -> State: 2.78 <-
+    l = l6
+    x = 1
+  -> State: 2.79 <-
+    l = l7
+    factorial = 2
+  -> State: 2.80 <-
+    l = l8
+    i = 3
+  -> State: 2.81 <-
+    l = l6
+    x = 2
+  -> State: 2.82 <-
+    l = l7
+    factorial = 6
+  -> State: 2.83 <-
+    l = l8
+    i = 4
+  -> State: 2.84 <-
+    l = l6
+    x = 3
+  -> State: 2.85 <-
+    l = l7
+    factorial = 24
+  -> State: 2.86 <-
+    l = l8
+    i = 5
+  -> State: 2.87 <-
+    l = l6
+    x = 4
+  -> State: 2.88 <-
+    l = l7
+    factorial = 120
+  -> State: 2.89 <-
+    l = l8
+    i = 6
+  -> State: 2.90 <-
+    l = l6
+    x = 5
+  -> State: 2.91 <-
+    l = l7
+    factorial = 720
+  -> State: 2.92 <-
+    l = l8
+    i = 7
+  -> State: 2.93 <-
+    l = l6
+    x = 6
+  -> State: 2.94 <-
+    l = l9
+  -> State: 2.95 <-
+    l = l3
+    j = 9
+  -> State: 2.96 <-
+    l = l10
+    primes = 4
+  -> State: 2.97 <-
+    l = l11
+  -> State: 2.98 <-
+    l = l14
+  -> State: 2.99 <-
+    l = l17
+-- specification (number = 5 -> !(EF l = l17))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: CTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 3.1 <-
+    number = 5
+    l = l2
+    i = 1
+    factorial = 1
+    sigma = 0
+    primes = 0
+    j = 3
+    x = 0
+    c = 0
+    MAX_FACTORIAL = 720
+  -> State: 3.2 <-
+    l = l3
+  -> State: 3.3 <-
+    l = l4
+    c = 1
+  -> State: 3.4 <-
+    l = l5
+  -> State: 3.5 <-
+    l = l6
+  -> State: 3.6 <-
+    l = l7
+  -> State: 3.7 <-
+    l = l8
+    i = 2
+  -> State: 3.8 <-
+    l = l6
+    x = 1
+  -> State: 3.9 <-
+    l = l9
+    sigma = 1
+  -> State: 3.10 <-
+    l = l3
+    j = 4
+  -> State: 3.11 <-
+    l = l4
+    c = 2
+  -> State: 3.12 <-
+    l = l5
+    i = 1
+  -> State: 3.13 <-
+    l = l6
+    x = 0
+  -> State: 3.14 <-
+    l = l7
+  -> State: 3.15 <-
+    l = l8
+    i = 2
+  -> State: 3.16 <-
+    l = l6
+    x = 1
+  -> State: 3.17 <-
+    l = l7
+    factorial = 2
+  -> State: 3.18 <-
+    l = l8
+    i = 3
+  -> State: 3.19 <-
+    l = l6
+    x = 2
+  -> State: 3.20 <-
+    l = l9
+    sigma = 3
+  -> State: 3.21 <-
+    l = l3
+    j = 5
+  -> State: 3.22 <-
+    l = l4
+    factorial = 1
+    c = 3
+  -> State: 3.23 <-
+    l = l5
+    i = 1
+  -> State: 3.24 <-
+    l = l6
+    x = 0
+  -> State: 3.25 <-
+    l = l7
+  -> State: 3.26 <-
+    l = l8
+    i = 2
+  -> State: 3.27 <-
+    l = l6
+    x = 1
+  -> State: 3.28 <-
+    l = l7
+    factorial = 2
+  -> State: 3.29 <-
+    l = l8
+    i = 3
+  -> State: 3.30 <-
+    l = l6
+    x = 2
+  -> State: 3.31 <-
+    l = l7
+    factorial = 6
+  -> State: 3.32 <-
+    l = l8
+    i = 4
+  -> State: 3.33 <-
+    l = l6
+    x = 3
+  -> State: 3.34 <-
+    l = l9
+    sigma = 4
+  -> State: 3.35 <-
+    l = l3
+    j = 6
+  -> State: 3.36 <-
+    l = l10
+    primes = 3
+  -> State: 3.37 <-
+    l = l11
+  -> State: 3.38 <-
+    l = l14
+  -> State: 3.39 <-
+    l = l17
